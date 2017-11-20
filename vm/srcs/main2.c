@@ -4,7 +4,7 @@ void	print_tab_cors(int *tab, int len)
 {
 	int	i;
 
-	i = 0;
+	i = 2;
 	ft_putendl("print_tab_cors");
 	while (tab != NULL && i < len)
 	{
