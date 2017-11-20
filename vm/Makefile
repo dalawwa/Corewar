@@ -15,7 +15,7 @@ LIB =	libft.a
 #				Compilation
 
 CC = 	gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 #			Sources
 
@@ -31,7 +31,8 @@ SRCS_NAME = main.c \
 			ft_stradd_c_end.c \
 			print_debug.c \
 			go_match.c \
-			create_arena.c
+			create_arena.c \
+			free_all.c
 
 CW_SRCS = $(addprefix $(PATH_SRCS), $(SRCS_NAME))
 CW_OBJS = $(addprefix $(PATH_OBJS), $(SRCS_NAME:.c=.o))

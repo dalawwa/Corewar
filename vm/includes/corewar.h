@@ -120,6 +120,8 @@ typedef struct	s_arena
 	struct s_bdd	*bdd;
 	t_proc			*first; // first elem of list PROC
 	t_proc			*last; // the last one
+	t_opt			*opts;
+	int				*fds;
 	int				ctd; // cycle to die
 	int				current_cycle; // cycle en cours
 	int				max_check;
@@ -141,26 +143,32 @@ typedef struct	s_bdd
 }				t_bdd;
 
 /* CREATE ARENA */
-
 int				get_nb_cors(int ac, char **av, int **tab);
 t_opt			*check_opts(int ac, char **av);
 t_play			*create_players(int *tab, int nb_cor);
 t_arena			*create_arena(int ac, char **av);
 int				*get_fds(int ac, char **av);
-
+int				is_cor(char *s);
+void			close_cors(int *fds);
 
 /* GO MATCH */
 void	go_match(t_arena *arena);
 
 void			print_usage(void);
 
-/* FONCTIONS DEBUG */
-void	print_tab_cors(int *tab, int len);
-void	print_players(t_play *players, int nb_players);
+/* FREE MEMORY */
+void	free_arena(t_arena **arena);
+void	free_fds(int **fds);
+void	free_opts(t_opt **opts);
+void	free_players(t_play *players);
+void	free_bdd(t_bdd *bdd);
 
+/* FONCTIONS DEBUG */
+void	print_tab_cors(int *tab);
+void	print_players(t_play *players, int nb_players);
+void	print_arena(t_arena *arena);
 
 /* ADD TO LIB ? */
-
 char			*ft_stradd_c_end(char *s, char c);
 
 #endif
