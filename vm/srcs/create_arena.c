@@ -77,6 +77,6 @@ t_arena *create_arena(int ac, char **av)
 			return (NULL);
 	}
 	//     // ensuite on créée la mémoire dans arena et on load les champs dedans
-//	close_cors(arena->fds);
+	close_cors(arena->fds);
     return (arena);
 }
