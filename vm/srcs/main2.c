@@ -1,5 +1,5 @@
 #include "corewar.h"
-
+// coucou on fout le bordel
 void	print_tab_cors(int *tab, int len)
 {
 	int	i;
