@@ -1,5 +1,5 @@
 #include "corewar.h"
-
+/*
 int		has_nb_magic(char *cor)
 {
 	char	*magic;
@@ -32,85 +32,69 @@ int		has_nb_magic(char *cor)
 	free(magic);
 	magic = NULL;
 	return (ret);
-}
-
-char	*find_name(char *cor)
+}*/
+char	*find_body(int fd)
 {
-	int		i;
-	int		j;
-	int		len;
-	char	*name;
+	char *line;
 
-	i = PROG_NAME_LENGTH + 2;
-	j = 0;
-	len = 0;
-	name = NULL;
-	if ((int)ft_strlen(cor) < i + 1)
-	{
-		ft_putendl("Error : Name not well formated");
-		return (NULL);
-	}
-	while (cor[i] == '0' && cor[i + 1] == '0' && i > 3)
-		i--;
-	len = PROG_NAME_LENGTH - i;
-	name = malloc(sizeof(char) * len);
-	if (name == NULL)
-		return (NULL);
-	while (j < len)
-	{
-		name[j] = cor[i];
-		i++;
-		j++;
-	}
-	name[j] = '\0';
-	return (name);
+	line = ft_strnew(CHAMP_MAX_SIZE);
+	lseek(fd, 2192, SEEK_SET);
+	read(fd, line, CHAMP_MAX_SIZE);
+	ft_printf("BODY =_%s_\n", line);
+	return (line);
 }
 
-char	*extract_cor(int fd)
+char	*find_comment(int fd)
+{
+	char *line;
+
+	line = ft_strnew(COMMENT_LENGTH);
+	lseek(fd, 140, SEEK_SET);
+	read(fd, line, COMMENT_LENGTH);
+	ft_printf("COMMENT =_%s_\n", line);
+	return (line);
+}
+
+char	*find_name(int fd)
 {
 	char	*line;
-	char	*cor;
 
-	cor = NULL;
-	line = NULL;
-	ft_printf("debug extract_cor\n");
-	while (get_next_line(fd, &line) != 0)
-	{
-		ft_printf("line = _%s_\n", line);
-		cor = ft_strjoin_leakless(cor, line);
-		cor = ft_stradd_c_end(cor, '\n');
-	}
-	if (line)
-		free(line);
-	ft_printf("COR =\n%s__END\n", cor);
-	return (cor);
+	line = ft_strnew(PROG_NAME_LENGTH);
+	lseek(fd, 4, SEEK_SET);
+	read(fd, line, PROG_NAME_LENGTH);
+	ft_printf("NAME =_%s_\n", line);
+	return (line);
 }
 
 int		create_a_player(int fd, t_play *player)
 {
-	char *cor;
-
-	cor = extract_cor(fd);
-	if (has_nb_magic(cor) != 1)
-		return (0);
-	player->name = find_name(cor);
+	player->name = find_name(fd);
 	if (player->name == NULL)
 		return (0);
+	player->comment = find_comment(fd);
+	if (player->comment == NULL)
+		return (0);
+	player->body = find_body(fd);
+	if (player->body == NULL)
+		return (0);
+//	if (has_nb_magic(cor) != 1)
+//		return (0);
 	return (1);
 }
 
-t_play		*create_players(int *tab, int nb_cor)
+t_play		*create_players(t_arena *arena)
 {
 	t_play	*players;
 	int		i;
 
 	i = 0;
-	players = malloc(sizeof(t_play) * nb_cor);
+	ft_printf("Let's create %d Player(s) !\n", arena->nb_players);
+	players = malloc(sizeof(t_play) * arena->nb_players);
 	if (players == NULL)
 		return (NULL);
-	while (i < nb_cor)
+	while (i < arena->nb_players)
 	{
-		create_a_player(tab[i], &players[i]);
+		create_a_player(arena->fds[arena->nb_players - 1 - i], &players[i]);
 		i++;
 	}
 	return (players);

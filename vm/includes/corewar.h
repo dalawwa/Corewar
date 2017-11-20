@@ -115,6 +115,7 @@ typedef struct	s_exe
 
 typedef struct	s_arena
 {
+	int				nb_players;
 	t_play			*players; // tableau de struct t_play de nb_cor len
 	char			mem[MEM_SIZE];
 	struct s_bdd	*bdd;
@@ -145,9 +146,9 @@ typedef struct	s_bdd
 /* CREATE ARENA */
 int				get_nb_cors(int ac, char **av, int **tab);
 t_opt			*check_opts(int ac, char **av);
-t_play			*create_players(int *tab, int nb_cor);
+t_play			*create_players(t_arena *arena);
 t_arena			*create_arena(int ac, char **av);
-int				*get_fds(int ac, char **av);
+int				*get_fds(t_arena *arena, int ac, char **av);
 int				is_cor(char *s);
 void			close_cors(int *fds);
 
