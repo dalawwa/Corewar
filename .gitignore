@@ -7,3 +7,4 @@ libft.a
 .DS_Store
 vm/.DS_Store
 vm/corewar.dSYM/Contents
+vm/corewar
