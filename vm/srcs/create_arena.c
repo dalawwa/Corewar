@@ -43,7 +43,7 @@ int		*get_fds(int ac, char **av)
 	res[len] = -1;
 	while (i < ac)
 	{
-		if (is_cor(av[i]))
+		if (is_cor(av[i])) // gerer les erreurs d'open
 			res[j++] = open(av[i], O_RDONLY);
 		i++;
 	}
