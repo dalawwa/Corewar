@@ -47,8 +47,9 @@ int		*get_fds(int ac, char **av)
 		{
 			if ((res[j++] = open(av[i], O_RDONLY)) == -1)
 			{
-				ft_putendl("inside get_fds, open returned -1");
-				break ;
+				ft_printf("Can't read source file %s\n", av[i]); // meme gestion que la VM de zaz 
+				free(res);
+				return (NULL);
 			}
 		}
 		i++;
