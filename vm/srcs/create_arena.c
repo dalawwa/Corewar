@@ -43,8 +43,14 @@ int		*get_fds(int ac, char **av)
 	res[len] = -1;
 	while (i < ac)
 	{
-		if (is_cor(av[i])) // gerer les erreurs d'open
-			res[j++] = open(av[i], O_RDONLY);
+		if (is_cor(av[i]))
+		{
+			if ((res[j++] = open(av[i], O_RDONLY)) == -1)
+			{
+				ft_putendl("inside get_fds, open returned -1");
+				break ;
+			}
+		}
 		i++;
 	}
 	return (res);
@@ -68,7 +74,6 @@ t_arena *create_arena(int ac, char **av)
 	if (!(arena->opts = check_opts(ac, av)))
 	{
 		ft_putendl("inside create_arena, check_opts returned NULL");
-		
 		return (NULL);
 	}
 	if (!(arena->fds = get_fds(ac, av)))
@@ -76,7 +81,7 @@ t_arena *create_arena(int ac, char **av)
 		ft_putendl("inside create_arena, get_fds returned NULL");
 			return (NULL);
 	}
-	//     // ensuite on créée la mémoire dans arena et on load les champs dedans
+	// ensuite on créée la mémoire dans arena et on load les champs dedans
 	close_cors(arena->fds);
     return (arena);
 }
