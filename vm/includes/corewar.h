@@ -87,11 +87,11 @@ typedef struct	s_proc
 
 typedef struct	s_play
 {
+	int		play_num; // Numero du joueur
 	char	*name;
 	char	*comment;
-
-	int		play_no; // Numero du joueur
-	char	*body; // le code du champion a charger dans la MEM
+	int		body_len; // longueur du char* body --> car ne finis pas par un '\0'
+	unsigned char	*body; // le code du champion a charger dans la MEM
 }				t_play;
 
 typedef struct	s_arg
@@ -115,7 +115,8 @@ typedef struct	s_exe
 
 typedef struct	s_arena
 {
-	t_play			*players; // tableau de struct t_play de nb_cor len
+	int				nb_players;
+	t_play			**players; // tableau de struct t_play de nb_cor len
 	char			mem[MEM_SIZE];
 	struct s_bdd	*bdd;
 	t_proc			*first; // first elem of list PROC
@@ -145,9 +146,9 @@ typedef struct	s_bdd
 /* CREATE ARENA */
 int				get_nb_cors(int ac, char **av, int **tab);
 t_opt			*check_opts(int ac, char **av);
-t_play			*create_players(int *tab, int nb_cor);
+int				create_players(t_arena *arena);
 t_arena			*create_arena(int ac, char **av);
-int				*get_fds(int ac, char **av);
+int				*get_fds(t_arena *arena, int ac, char **av);
 int				is_cor(char *s);
 void			close_cors(int *fds);
 
@@ -165,7 +166,7 @@ void	free_bdd(t_bdd *bdd);
 
 /* FONCTIONS DEBUG */
 void	print_tab_cors(int *tab);
-void	print_players(t_play *players, int nb_players);
+void	print_players(t_arena *arena);
 void	print_arena(t_arena *arena);
 
 /* ADD TO LIB ? */
