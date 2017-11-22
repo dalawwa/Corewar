@@ -341,24 +341,24 @@ all: $(NAME)
 $(PATH_LIB)$(LIB): $(LIBFT_OFILES)
 
 $(NAME): $(PATH_LIB)$(LIB) $(LIBFT_OFILES) $(CW_OBJS)
-	make -C $(PATH_LIB)
+	@make -C $(PATH_LIB)
 	@echo "$(GRE)--::$(NAME)-> Compilation::--$(DEF)"
 	$(CC) $(CFLAGS) -o $@ $(CW_OBJS) $(PATH_LIB)$(LIB)
 
 re: fclean all
 
-$(PATH_OBJS)%.o: $(PATH_SRCS)%.c
+$(PATH_OBJS)%.o: $(PATH_SRCS)%.c | $(PATH_LIB)$(LIB)
 	$(CC) $(CFLAGS) -I$(PATH_HEAD) -o $@ -c $^
 
 $(PATH_LIB)%.o: $(PATH_LIB)%.c
 	$(CC) $(CFLAGS) -I$(PATH_LIBFT_HEAD) -o $@ -c $^
 
 clean:
-	make clean -C $(PATH_LIB)
-	rm -f $(CW_OBJS)
+	@make clean -C $(PATH_LIB)
 	@echo "$(PUR)--::$(NAME)-> Deleting Objects::--$(DEF)"
+	rm -f $(CW_OBJS)
 
 fclean: clean
-	rm -rf $(PATH_LIB)$(LIB)
+	make fclean -C $(PATH_LIB)
 	@echo "$(RED)--::$(NAME)-> Deleting Exec::--$(DEF)"
 	rm -rf $(NAME)
