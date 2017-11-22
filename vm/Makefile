@@ -353,6 +353,7 @@ $(PATH_LIB)%.o: $(PATH_LIB)%.c
 
 clean:
 	make clean -C $(PATH_LIB)
+	rm -f $(CW_OBJS)
 	@echo "$(PUR)--::$(NAME)-> Deleting Objects::--$(DEF)"
 
 fclean: clean
