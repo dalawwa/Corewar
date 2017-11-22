@@ -334,17 +334,14 @@ BACK_WHI =		\033[47m
 .PHONY: all conv ft_printf get_next is lst mem put sort str tab to wstr \
 	indexion re glu  clean fclean
 
-all: create_libft $(NAME)
+all: $(NAME)
 
-create_path_obj:
-	mkdir -p $(PATH_OBJS) 2> /dev/null
+$(PATH_LIB)$(LIB): $(LIBFT_OFILES)
 
-create_libft: $(LIBFT_OFILES)
+$(NAME): $(PATH_LIB)$(LIB) $(LIBFT_OFILES) $(CW_OBJS)
 	make -C $(PATH_LIB)
-
-$(NAME): $(LIBFT_OFILES) $(CW_OBJS)
+	@echo "$(GRE)--::$(NAME)-> Compilation::--$(DEF)"
 	$(CC) $(CFLAGS) -o $@ $(CW_OBJS) $(PATH_LIB)$(LIB)
-
 
 re: fclean all
 
@@ -356,9 +353,9 @@ $(PATH_LIB)%.o: $(PATH_LIB)%.c
 
 clean:
 	make clean -C $(PATH_LIB)
-	@echo "$(PUR)--::$(NAME) Binary Deleting::--$(DEF)"
+	@echo "$(PUR)--::$(NAME)-> Deleting Objects::--$(DEF)"
 
 fclean: clean
 	rm -rf $(PATH_LIB)$(LIB)
-	@echo "$(RED)--::$(NAME) Deleting::--$(DEF)"
+	@echo "$(RED)--::$(NAME)-> Deleting Exec::--$(DEF)"
 	rm -rf $(NAME)
