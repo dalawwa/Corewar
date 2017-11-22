@@ -117,7 +117,7 @@ typedef struct	s_arena
 {
 	int				nb_players;
 	t_play			**players; // tableau de struct t_play de nb_cor len
-	char			mem[MEM_SIZE];
+	unsigned char	mem[MEM_SIZE];
 	struct s_bdd	*bdd;
 	t_proc			*first; // first elem of list PROC
 	t_proc			*last; // the last one
@@ -151,6 +151,7 @@ t_arena			*create_arena(int ac, char **av);
 int				*get_fds(t_arena *arena, int ac, char **av);
 int				is_cor(char *s);
 void			close_cors(int *fds);
+int				create_mem(t_arena *arena);
 
 /* GO MATCH */
 void	go_match(t_arena *arena);
@@ -168,6 +169,7 @@ void	free_bdd(t_bdd *bdd);
 void	print_tab_cors(int *tab);
 void	print_players(t_arena *arena);
 void	print_arena(t_arena *arena);
+void	print_mem(t_arena *arena);
 
 /* ADD TO LIB ? */
 char			*ft_stradd_c_end(char *s, char c);
