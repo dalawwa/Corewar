@@ -348,7 +348,7 @@ $(NAME): $(LIBFT_OFILES) $(CW_OBJS)
 
 re: fclean all
 
-$(PATH_OBJS)%.o: $(PATH_SRCS)%.c | create_path_obj
+$(PATH_OBJS)%.o: $(PATH_SRCS)%.c
 	$(CC) $(CFLAGS) -I$(PATH_HEAD) -o $@ -c $^
 
 $(PATH_LIB)%.o: $(PATH_LIB)%.c
@@ -357,9 +357,8 @@ $(PATH_LIB)%.o: $(PATH_LIB)%.c
 clean:
 	make clean -C $(PATH_LIB)
 	@echo "$(PUR)--::$(NAME) Binary Deleting::--$(DEF)"
-	@rm -rf $(PATH_OBJS)
 
 fclean: clean
-	make fclean -C $(PATH_LIB)
+	rm -rf $(PATH_LIB)$(LIB)
 	@echo "$(RED)--::$(NAME) Deleting::--$(DEF)"
-	@rm -rf $(NAME)
+	rm -rf $(NAME)
