@@ -27,20 +27,6 @@ void	print_arena_fds(t_arena *arena)
 	ft_putchar('\n');
 }
 
-void print_players(t_play *players, int nb_players)
-{
-	int		i;
-
-	i = 0;
-	ft_putendl("print_players");
-	while (i < nb_players)
-	{
-		ft_printf("\nPLAYER %d :\nName = _%s_\nComment = _%s_\nBody = _%s_\n", players[i].play_no, players[i].name, players[i].comment, players[i].body);
-		i++;
-	}
-	ft_putendl("\nprint_players__END");
-}
-
 void	print_arena(t_arena *arena)
 {
 	if (!arena)
