@@ -300,7 +300,9 @@ SRCS_NAME = main.c \
 			go_match.c \
 			create_arena.c \
 			free_all.c \
-			print_players.c
+			print_players.c \
+			create_mem.c \
+			print_mem.c
 
 CW_SRCS = $(addprefix $(PATH_SRCS), $(SRCS_NAME))
 CW_OBJS = $(addprefix $(PATH_OBJS), $(SRCS_NAME:.c=.o))
