@@ -52,7 +52,7 @@ int		*get_fds(t_arena *arena, int ac, char **av)
 			if (fds[j] == -1)
 			{
 				free(fds);
-				ft_putendl("Error : Failed to open");
+				ft_printf("Can't read source file %s\n", av[i]); // meme gestion que la VM de zaz
 				return (NULL);
 			}
 			j++;
@@ -92,7 +92,7 @@ t_arena *create_arena(int ac, char **av)
 		ft_putendl("inside create_arena, create_players returned NULL");
 		return (NULL);
 	}
-	//     // ensuite on créée la mémoire dans arena et on load les champs dedans
+	// ensuite on créée la mémoire dans arena et on load les champs dedans
 	close_cors(arena->fds);
     return (arena);
 }
