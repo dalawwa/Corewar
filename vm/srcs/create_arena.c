@@ -39,7 +39,7 @@ int		*get_fds(t_arena *arena, int ac, char **av)
 	j = 0;
 	if (arena->nb_players > MAX_PLAYERS)
 	{
-		ft_putendl("Error : Too many players");
+		ft_putendl("Error : Too many champions");
 		return (NULL);
 	}
 	if (!(fds = (int *)malloc(sizeof(int) * (arena->nb_players))))
@@ -80,18 +80,17 @@ t_arena *create_arena(int ac, char **av)
 	if (!(arena->opts = check_opts(ac, av)))
 	{
 		ft_putendl("inside create_arena, check_opts returned NULL");
-		
 		return (NULL);
 	}
 	if (!(arena->fds = get_fds(arena, ac, av)))
 	{
 		ft_putendl("inside create_arena, get_fds returned NULL");
-			return (NULL);
+		return (NULL);
 	}
-	if (!(arena->players = create_players(arena)))
+	if (!create_players(arena))
 	{
 		ft_putendl("inside create_arena, create_players returned NULL");
-			return (NULL);
+		return (NULL);
 	}
 	//     // ensuite on créée la mémoire dans arena et on load les champs dedans
 	close_cors(arena->fds);
