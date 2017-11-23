@@ -110,7 +110,7 @@ typedef struct	s_exe
 	t_arg			*arg2;
 	t_arg			*arg3;
 	int				to_wait;
-	struct s_bdd	*bdd_op; // la struct d'op BDD corespondant a cet exe
+	struct s_bdd	**bdd_op; // la struct d'op BDD corespondant a cet exe
 }				t_exe;
 
 typedef struct	s_arena
@@ -118,7 +118,7 @@ typedef struct	s_arena
 	int				nb_players;
 	t_play			**players; // tableau de struct t_play de nb_cor len
 	unsigned char	mem[MEM_SIZE];
-	struct s_bdd	*bdd;
+	struct s_bdd	**bdd;
 	t_proc			*first; // first elem of list PROC
 	t_proc			*last; // the last one
 	t_opt			*opts;
@@ -129,18 +129,27 @@ typedef struct	s_arena
 	int				c_delta;
 }				t_arena;
 
+typedef struct	s_ocp
+{
+	unsigned char		ocp;
+//	int		nb_args;
+	int		size_adv;
+	char	type_arg1;
+	char	type_arg2;
+	char	type_arg3;
+	int		(*fct)(t_arena*, t_exe*);
+}				t_ocp;
+
 typedef struct	s_bdd
 {
-	char	*op_name;
-	int		opcode;
-	int		ocp;
+	char	*name;
+	unsigned char	opcode;
+	int		has_ocp;
+	int		nb_ocp;
+	t_ocp	**ocp;
 	int		nb_args;
-	int		type_arg1;
 	int		nb_cycle;
 	char	*meaning;
-	int		has_ocp;
-	int		size_glob;
-	int		(*fct)(t_arena*, t_exe*);
 }				t_bdd;
 
 /* CREATE ARENA */
@@ -152,6 +161,13 @@ int				*get_fds(t_arena *arena, int ac, char **av);
 int				is_cor(char *s);
 void			close_cors(int *fds);
 int				create_mem(t_arena *arena);
+int				create_bdd(t_arena *arena);
+int				set_bdd_ocp(t_arena *arena);
+int				set_ocp_and_size(t_bdd **bdd);
+
+int				perror_int(char *s, int ret);
+void			*perror_ptr(char *s, void *ret);
+char			*addstr(char *s);
 
 /* GO MATCH */
 void	go_match(t_arena *arena);
@@ -170,6 +186,7 @@ void	print_tab_cors(int *tab);
 void	print_players(t_arena *arena);
 void	print_arena(t_arena *arena);
 void	print_mem(t_arena *arena);
+void	print_bdd(t_arena *arena);
 
 /* ADD TO LIB ? */
 char			*ft_stradd_c_end(char *s, char c);

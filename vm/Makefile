@@ -302,7 +302,13 @@ SRCS_NAME = main.c \
 			free_all.c \
 			print_players.c \
 			create_mem.c \
-			print_mem.c
+			print_mem.c \
+			create_bdd.c \
+			set_bdd_ocp.c \
+			perror_int.c \
+			perror_ptr.c \
+			addstr.c \
+			set_ocp.c
 
 CW_SRCS = $(addprefix $(PATH_SRCS), $(SRCS_NAME))
 CW_OBJS = $(addprefix $(PATH_OBJS), $(SRCS_NAME:.c=.o))
