@@ -11,5 +11,5 @@ int		create_mem(t_arena *arena)
 		i++;
 	}
 	print_mem(arena);
-	return (0);
+	return (1);
 }
