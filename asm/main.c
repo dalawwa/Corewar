@@ -2,7 +2,7 @@
 
 int	main(int argc, char **argv)
 {
-	if (argc != 2)
+	if (argc < 2)
 	{
 		ft_putstr("Usage: ./asm [-a] <sourcefile.s>\n");
 		return (0);
