@@ -98,6 +98,11 @@ t_arena *create_arena(int ac, char **av)
 		ft_putendl("inside create_arena, create_mem returned NULL");
 		return (NULL);
 	}
+	if (create_bdd(arena) == 0)
+	{
+		ft_putendl("inside create_arena, create_bdd returned NULL");
+		return (NULL);
+	}
 	// ensuite on créée la mémoire dans arena et on load les champs dedans
 	close_cors(arena->fds);
     return (arena);

@@ -21,7 +21,7 @@ unsigned char	*add_that(unsigned char *body, char c, int where)
 	{
 		tmp = malloc(sizeof(char) * (len + 1));
 		if (tmp == NULL)
-			return (NULL);
+			return (perror_ptr("Error ", NULL));
 		while (i < len)
 		{
 			tmp[i] = body[i];
@@ -60,7 +60,7 @@ unsigned char	*clean_body(unsigned char *body, int *body_len)
 //	ft_printf("i = %d\n", i);
 	cleaned = malloc(sizeof(unsigned char) * i);
 	if (cleaned == NULL)
-		return (NULL);
+		return (perror_ptr("Error ", NULL));
 	while (j < i)
 	{
 		cleaned[j] = body[1 + j] % 0x100;
@@ -81,8 +81,8 @@ unsigned char	*clean_body(unsigned char *body, int *body_len)
 
 int		has_nb_magic(int fd)
 {
-	char	*magic;
-	char	*tmp;
+	unsigned char	*magic;
+	unsigned char	*tmp;
 	int		ret;
 	int		i;
 
@@ -92,17 +92,21 @@ int		has_nb_magic(int fd)
 	tmp = NULL;
 	while (i < 4)
 	{
-		tmp = ft_strnew(1);
+		tmp = (unsigned char*)malloc(sizeof(unsigned char) * 4);
+		if (tmp == NULL)
+			return (perror_int("Error ", 0));
 		if (i != 0)
 			lseek(fd, i, SEEK_SET);
 		read(fd, tmp, 1);
 //		ft_printf("tmp = %x\n", tmp[0]);
-		magic = (char*)add_that((unsigned char*)magic, tmp[0], i);
+		magic = add_that((unsigned char*)magic, tmp[0], i);
+		if (magic == NULL)
+			return (0);
 		i++;
 		free(tmp);
 		tmp = NULL;
 	}
-	if (magic[0] == '0' && magic[1] == (char)4294967274 && magic[2] == (char)4294967171 && magic[3] == (char)4294967283)
+	if (magic[0] == '0' && magic[1] == (unsigned char)4294967274 && magic[2] == (unsigned char)4294967171 && magic[3] == (unsigned char)4294967283)
 		ret = 1;
 	free(magic);
 	magic = NULL;
@@ -127,6 +131,8 @@ unsigned char	*find_body(int fd)
 	while (red < CHAMP_MAX_SIZE + 140 + 4 + COMMENT_LENGTH)
 	{
 		line = (unsigned char*)ft_strnew(1);
+		if (line == NULL)
+			return (perror_ptr("Error ", NULL));
 		lseek(fd, red, SEEK_SET);
 		read(fd, line, 1);
 		body = add_that(body, line[0], i);
@@ -149,6 +155,8 @@ char	*find_comment(int fd)
 	char *line;
 
 	line = ft_strnew(COMMENT_LENGTH);
+	if (line == NULL)
+		return (perror_ptr("Error ", NULL));
 	lseek(fd, 140, SEEK_SET);
 	read(fd, line, COMMENT_LENGTH);
 //	ft_printf("COMMENT =_%s_\n", line);
@@ -160,6 +168,8 @@ char	*find_name(int fd)
 	char	*line;
 
 	line = ft_strnew(PROG_NAME_LENGTH);
+	if (line == NULL)
+		return (perror_ptr("Error ", NULL));
 	lseek(fd, 4, SEEK_SET);
 	read(fd, line, PROG_NAME_LENGTH);
 //	ft_printf("NAME =_%s_\n", line);
@@ -188,7 +198,6 @@ int		create_a_player(int fd, t_play *player, t_arena *arena)
 	if (has_nb_magic(fd) != 1)
 		return (0);
 	player->name = find_name(fd);
-//	ft_printf("player->name = %s\n", player->name);
 	if (player->name == NULL)
 		return (0);
 	player->comment = find_comment(fd);
@@ -208,7 +217,7 @@ t_play		*init_player(int i)
 	t_play *player;
 	player = (t_play*)malloc(sizeof(t_play));
 	if (player == NULL)
-		return (NULL);
+		return (perror_ptr("Error ", NULL));
 	player->play_num = i + 1;
 	player->name = NULL;
 	player->comment = NULL;
@@ -225,7 +234,7 @@ int		create_players(t_arena *arena)
 //	ft_printf("Let's create %d Player(s) !\n", arena->nb_players);
 	arena->players = (t_play **)malloc(sizeof(t_play *) * arena->nb_players);
 	if (arena->players == NULL)
-		return (0);
+		return (perror_int("Error ", 0));
 	while (i < arena->nb_players)
 	{
 		arena->players[i] = init_player(i);
