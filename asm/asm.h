@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   asm.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/24 11:29:39 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/11/24 11:29:41 by bfruchar         ###   ########.fr       */
+/*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
+/*   Updated: 2017/11/24 11:44:18 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
+#ifndef ASM_H
+# define ASM_H
 
-int	main(int argc, char **argv)
+# include "libft/libft.h"
+
+//get the file
+typedef					s_champion
 {
-	if (argc < 2)
-	{
-		ft_putstr("Usage: ./asm [-a] <sourcefile.s>\n");
-		return (0);
-	}
-	else
-	{
-//		launch_compilation(argv[1]);
-		return (1);
-	}
-	return (0);
-}
+	char 				*line;
+	struct s_champion	*next;
+}						t_champion;
+
+#endif
