@@ -1,8 +1,8 @@
 #ifndef COREWAR_H
 # define COREWAR_H
-# include "../../libft/includes/libft.h"
-# include "../../libft/includes/get_next_line.h"
-# include "../../libft/includes/ft_printf.h"
+# include "../../Libft/includes/libft.h"
+# include "../../Libft/includes/get_next_line.h"
+# include "../../Libft/includes/ft_printf.h"
 # include <fcntl.h>
 
 //typedef int		(*t_fct)(struct s_vm*, struct s_exe*);
