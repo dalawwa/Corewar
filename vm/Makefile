@@ -308,7 +308,8 @@ SRCS_NAME = main.c \
 			perror_int.c \
 			perror_ptr.c \
 			addstr.c \
-			set_ocp.c
+			set_ocp.c \
+			setup_players.c
 
 CW_SRCS = $(addprefix $(PATH_SRCS), $(SRCS_NAME))
 CW_OBJS = $(addprefix $(PATH_OBJS), $(SRCS_NAME:.c=.o))
@@ -348,7 +349,7 @@ $(PATH_LIB)$(LIB): $(LIBFT_OFILES)
 
 $(NAME): $(PATH_LIB)$(LIB) $(LIBFT_OFILES) $(CW_OBJS)
 	@make -C $(PATH_LIB)
-	@echo "$(GRE)--::$(NAME)-> Compilation::--$(DEF)"
+	@echo "$(GRE)--::$(NAME) -> Compilation::--$(DEF)"
 	$(CC) $(CFLAGS) -o $@ $(CW_OBJS) $(PATH_LIB)$(LIB)
 
 re: fclean all
@@ -361,10 +362,10 @@ $(PATH_LIB)%.o: $(PATH_LIB)%.c
 
 clean:
 	@make clean -C $(PATH_LIB)
-	@echo "$(PUR)--::$(NAME)-> Deleting Objects::--$(DEF)"
+	@echo "$(PUR)--::$(NAME) -> Deleting Objects::--$(DEF)"
 	rm -f $(CW_OBJS)
 
 fclean: clean
 	make fclean -C $(PATH_LIB)
-	@echo "$(RED)--::$(NAME)-> Deleting Exec::--$(DEF)"
+	@echo "$(RED)--::$(NAME) -> Deleting Exec::--$(DEF)"
 	rm -rf $(NAME)

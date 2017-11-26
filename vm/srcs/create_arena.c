@@ -103,6 +103,7 @@ t_arena *create_arena(int ac, char **av)
 		ft_putendl("inside create_arena, create_bdd returned NULL");
 		return (NULL);
 	}
+	setup_players(arena);
 	// ensuite on créée la mémoire dans arena et on load les champs dedans
 	close_cors(arena->fds);
     return (arena);
