@@ -104,6 +104,11 @@ t_arena *create_arena(int ac, char **av)
 		return (NULL);
 	}
 	setup_players(arena);
+	if (initialized_start_process(arena) == 0)
+	{
+		ft_putendl("inside create_arena, initialized_start_process returned 0");
+		return (NULL);
+	}
 	// ensuite on créée la mémoire dans arena et on load les champs dedans
 	close_cors(arena->fds);
     return (arena);

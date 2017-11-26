@@ -16,6 +16,45 @@ void print_tab_cors(int *tab)
 	ft_putendl("\nprint_tab_cors__END");
 }
 
+void		print_one_process(t_proc *process)
+{
+	ft_printf("Process num %d :\nPlayer : %s\nCarry = %d - pc = %d\n", process->process_num, process->player->name, process->carry, process->pc);
+	print_regs(process);
+}
+
+void		print_all_process(t_arena *arena)
+{
+	int	i;
+	t_proc	*elem;
+
+	i = 0;
+	elem = NULL;
+	ft_putendl("print_all_process");
+	if (arena && arena->list_proc)
+	{
+		elem = arena->list_proc->first;
+		while (i++ < arena->list_proc->nb_proc)
+		{
+			print_one_process(elem);
+			elem = elem->next;
+		}
+	}
+	ft_putendl("print_all_process__END");
+}
+
+void		print_regs(t_proc *process)
+{
+	int	i;
+
+	i = 1;
+	while (i < 17)
+	{
+		ft_printf("reg[%d] = %d - ", i, process->reg[i]);
+		i++;
+	}
+	ft_putchar('\n');
+}
+
 void		print_bdd(t_arena *arena)
 {
 	int	i;
