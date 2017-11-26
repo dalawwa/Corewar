@@ -88,6 +88,8 @@ typedef struct	s_proc
 typedef struct	s_play
 {
 	int		play_num; // Numero du joueur
+	int		size; // size du player
+	int		idx_start; // index de chargement sur la mem
 	char	*name;
 	char	*comment;
 	int		body_len; // longueur du char* body --> car ne finis pas par un '\0'
@@ -164,6 +166,7 @@ int				create_mem(t_arena *arena);
 int				create_bdd(t_arena *arena);
 int				set_bdd_ocp(t_arena *arena);
 int				set_ocp_and_size(t_bdd **bdd);
+int				setup_players(t_arena *arena);
 
 int				perror_int(char *s, int ret);
 void			*perror_ptr(char *s, void *ret);
