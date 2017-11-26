@@ -74,11 +74,11 @@ typedef struct	s_opt
 
 typedef struct	s_proc
 {
-	int				process_no;
-	int				reg[17]; // les registres du process --> reg[0] est unitilable
+	int				process_num;
+	char				reg[17]; // les registres du process --> reg[0] est unitilable --> CHAR ???
 	int				pc;
 	int				carry;
-	struct s_play	*player; // potentiellemt useless
+	struct s_play	*player; // potentiellemt useless --> Si pour inittialized le reg1
 	struct s_exe	*exe_op;
 	int				op_success; // retour de la fct appele par l'exe (vias la BDD)
 	struct s_proc	*next;
@@ -89,6 +89,7 @@ typedef struct	s_play
 {
 	int		play_num; // Numero du joueur
 	int		size; // size du player
+	char	play_live_num; // numero du joueur dans reg1 et pour le live
 	int		idx_start; // index de chargement sur la mem
 	char	*name;
 	char	*comment;
@@ -112,8 +113,16 @@ typedef struct	s_exe
 	t_arg			*arg2;
 	t_arg			*arg3;
 	int				to_wait;
+	t_proc			*process; // process qui read l'exe
 	struct s_bdd	**bdd_op; // la struct d'op BDD corespondant a cet exe
 }				t_exe;
+
+typedef struct	s_proc_base
+{
+	int		nb_proc;
+	t_proc	*first; // first elem of list PROC
+	t_proc	*last; // the last one
+}				t_proc_base;
 
 typedef struct	s_arena
 {
@@ -121,8 +130,7 @@ typedef struct	s_arena
 	t_play			**players; // tableau de struct t_play de nb_cor len
 	unsigned char	mem[MEM_SIZE];
 	struct s_bdd	**bdd;
-	t_proc			*first; // first elem of list PROC
-	t_proc			*last; // the last one
+	t_proc_base		*list_proc;
 	t_opt			*opts;
 	int				*fds;
 	int				ctd; // cycle to die
@@ -167,10 +175,18 @@ int				create_bdd(t_arena *arena);
 int				set_bdd_ocp(t_arena *arena);
 int				set_ocp_and_size(t_bdd **bdd);
 int				setup_players(t_arena *arena);
+int				initialized_start_process(t_arena *arena);
 
 int				perror_int(char *s, int ret);
 void			*perror_ptr(char *s, void *ret);
 char			*addstr(char *s);
+
+/* Initialized Process */
+int		create_new_process(t_arena *arena, t_play *player, t_proc *parent);
+
+/* OP & Outils pour les OP */
+char	*find_reg_ptr(char arg_value, t_exe *exe);
+int		op_ld(t_arena *arena, t_exe *exe);
 
 /* GO MATCH */
 void	go_match(t_arena *arena);
@@ -190,6 +206,8 @@ void	print_players(t_arena *arena);
 void	print_arena(t_arena *arena);
 void	print_mem(t_arena *arena);
 void	print_bdd(t_arena *arena);
+void	print_all_process(t_arena *arena);
+void	print_regs(t_proc *process);
 
 /* ADD TO LIB ? */
 char			*ft_stradd_c_end(char *s, char c);
