@@ -44,7 +44,7 @@ void			swap_second(unsigned char *body)
 	body[0] = tmp;
 }
 
-unsigned char	*clean_body(unsigned char *body, int *body_len)
+unsigned char	*clean_body(unsigned char *body, t_play **player)
 {
 	unsigned char	*cleaned;
 	int		i;
@@ -56,8 +56,7 @@ unsigned char	*clean_body(unsigned char *body, int *body_len)
 	swap_second(body);
 	while (body[i] == 0)
 		i--;
-	*body_len = i;
-//	ft_printf("i = %d\n", i);
+	(*player)->body_len = i;
 	cleaned = malloc(sizeof(unsigned char) * i);
 	if (cleaned == NULL)
 		return (perror_ptr("Error ", NULL));
@@ -176,49 +175,31 @@ char	*find_name(int fd)
 	return (line);
 }
 
-int		check_size(int fd, t_arena *arena)
+int		check_size(int fd, t_play **player)
 {
 	int size;
 
 	size = 0;
-	arena = arena + 0;
 	size = lseek(fd, 0, SEEK_END);
 	if (size > CHAMP_MAX_SIZE + PROG_NAME_LENGTH + 4 + COMMENT_LENGTH)
 	{
 		ft_printf("Error: File %s has too large code (%d bytes > 682 bytes)\n", "FILE_NAME", size - 140 - 4 - COMMENT_LENGTH);
 		return (0);
 	}
-	return (1);
-}
-
-int		create_a_player(int fd, t_play *player, t_arena *arena)
-{
-	if (check_size(fd, arena) == 0)
-		return (0);
-	if (has_nb_magic(fd) != 1)
-		return (0);
-	player->name = find_name(fd);
-	if (player->name == NULL)
-		return (0);
-	player->comment = find_comment(fd);
-	if (player->comment == NULL)
-		return (0);
-	player->body = find_body(fd);
-	if (player->body == NULL)
-		return (0);
-	player->body = clean_body(player->body, &player->body_len);
-	if (player->body == NULL)
-		return (0);
+	(*player)->size = size - 140 - 4- COMMENT_LENGTH;
 	return (1);
 }
 
 t_play		*init_player(int i)
 {
 	t_play *player;
+
 	player = (t_play*)malloc(sizeof(t_play));
 	if (player == NULL)
 		return (perror_ptr("Error ", NULL));
 	player->play_num = i + 1;
+	player->idx_start = 0;
+	player->size = 0;
 	player->name = NULL;
 	player->comment = NULL;
 	player->body = NULL;
@@ -226,22 +207,61 @@ t_play		*init_player(int i)
 	return (player);
 }
 
+t_play		*create_a_player(int i, int fd)
+{
+	t_play	*player;
+
+	player = init_player(i);
+	if (player == NULL)
+		return (NULL);
+	if (check_size(fd, &player) == 0)
+		return (NULL);
+	if (has_nb_magic(fd) != 1)
+		return (NULL);
+	player->name = find_name(fd);
+	if (player->name == NULL)
+		return (NULL);
+	player->comment = find_comment(fd);
+	if (player->comment == NULL)
+		return (NULL);
+	player->body = find_body(fd);
+	if (player->body == NULL)
+		return (NULL);
+	player->body = clean_body(player->body, &player);
+	if (player->body == NULL)
+		return (NULL);
+	return (player);
+}
+
+
+int		set_players_idx_start(t_arena *arena)
+{
+	int	i;
+
+	i = 0;
+	while (i < arena->nb_players)
+	{
+		arena->players[i]->idx_start = MEM_SIZE / arena->nb_players * i;
+		i++;
+	}
+	return (1);
+}
+
 int		create_players(t_arena *arena)
 {
 	int		i;
 
 	i = 0;
-//	ft_printf("Let's create %d Player(s) !\n", arena->nb_players);
 	arena->players = (t_play **)malloc(sizeof(t_play *) * arena->nb_players);
 	if (arena->players == NULL)
 		return (perror_int("Error ", 0));
 	while (i < arena->nb_players)
 	{
-		arena->players[i] = init_player(i);
-		if (create_a_player(arena->fds[arena->nb_players - 1 - i], arena->players[i], arena) == 0)
+		if ((arena->players[i] = create_a_player(i, arena->fds[i])) == NULL)
 			return (0);
 		i++;
 	}
+	set_players_idx_start(arena);
 	print_players(arena);
 	return (1);
 }
