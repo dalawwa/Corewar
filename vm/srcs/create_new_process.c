@@ -12,7 +12,7 @@ void		initialized_from_scratch(t_play *player, t_proc *process)
 		process->reg[i] = 0;
 		i++;
 	}
-	process->pc = 0;
+	process->pc = player->idx_start;
 	process->carry = 0;
 
 }
