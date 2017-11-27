@@ -26,7 +26,10 @@ int				set_size_adv(t_ocp *ocp_j, t_bdd *bdd_i, int i)
 	result = 0;
 	if (i >= 8 && i <= 14 && i != 12)
 		is_idx = 1;
-	ocp_j->size_adv = count_size_arg(ocp_j->type_arg1, is_idx) + count_size_arg(ocp_j->type_arg2, is_idx) + count_size_arg(ocp_j->type_arg3, is_idx) + bdd_i->has_ocp + 1;
+	ocp_j->size_arg1 = count_size_arg(ocp_j->type_arg1, is_idx);
+	ocp_j->size_arg2 = count_size_arg(ocp_j->type_arg2, is_idx);
+	ocp_j->size_arg3 = count_size_arg(ocp_j->type_arg3, is_idx);
+	ocp_j->size_adv = ocp_j->size_arg1 + ocp_j->size_arg2 + ocp_j->size_arg3 + bdd_i->has_ocp + 1;
 	return (1);
 }
 
