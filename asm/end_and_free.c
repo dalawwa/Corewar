@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   end_and_free.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/24 11:29:39 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/11/27 17:49:04 by bfruchar         ###   ########.fr       */
+/*   Created: 2017/11/27 17:46:01 by bfruchar          #+#    #+#             */
+/*   Updated: 2017/11/27 17:46:31 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-int	main(int ac, char **av)
+//quitter l ex en cas de pb
+////il faudra rajouter les struct pour tout free
+void	ciao_bye_bye(int i)
 {
-	int		i;
-
-	i = 1;
-	if (ac > 1)
+	if (i > 0)
 	{
-		if (av[i][0] == '-' && av[i][1] == 'a' && ac > 2)
-			i++;
-		launch_parsing(av[i]);
-	}
-	else
 		ft_putstr("Usage: ./asm <sourcefile.s>\n");
-	return (0);
+		_exit(0);
+	}
 }
+

@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   parsing2_asm.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/24 11:29:39 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/11/27 17:49:04 by bfruchar         ###   ########.fr       */
+/*   Created: 2017/11/27 17:45:13 by bfruchar          #+#    #+#             */
+/*   Updated: 2017/11/27 17:59:54 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-int	main(int ac, char **av)
+//on va recuperer la liste du fichier que l on va mettre dans une liste doublement chainee
+//a continuer ici
+void	get_champ_data(t_champ *champ, int fd)
 {
-	int		i;
+	char	*line;
 
-	i = 1;
-	if (ac > 1)
+	line = NULL;
+	champ->position = 1;
+	while (get_next_line(fd, &line) > 0)
 	{
-		if (av[i][0] == '-' && av[i][1] == 'a' && ac > 2)
-			i++;
-		launch_parsing(av[i]);
+		while (check_no_printable_char(line))
+			get_next_line(fd, &line);
 	}
-	else
-		ft_putstr("Usage: ./asm <sourcefile.s>\n");
-	return (0);
+	return ;
 }
