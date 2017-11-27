@@ -10,19 +10,40 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
+#include "../libft/includes/libft.h"
 
-int	main(int argc, char **argv)
+void	check_valid_name(char *str)
 {
-	if (argc < 2)
+	int	i;
+
+	i = ft_strlen(str);
+	if (i < 3 || str[i - 1] != 's' || str[i - 2] != '.')
 	{
-		ft_putstr("Usage: ./asm [-a] <sourcefile.s>\n");
-		return (0);
+		ft_putstr("Usage: ./asm <sourcefile.s>\n");
+		_exit(0);
+	}
+	return ;
+}
+
+int	launch_parsing(char *str)
+{
+	check_valid_name(str);
+	ft_putstr("OK\n");
+	return (0);
+}
+
+int	main(int ac, char **av)
+{
+	int	i;
+
+	i = 1;
+	if (ac > 1)
+	{
+		if (av[i][0] == '-' && av[i][1] == 'a' && ac > 2)
+			i++;
+		launch_parsing(av[i]);
 	}
 	else
-	{
-//		launch_compilation(argv[1]);
-		return (1);
-	}
+		ft_putstr("Usage: ./asm <sourcefile.s>\n");
 	return (0);
 }
