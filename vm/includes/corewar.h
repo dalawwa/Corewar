@@ -75,7 +75,7 @@ typedef struct	s_opt
 typedef struct	s_proc
 {
 	int				process_num;
-	char				reg[17]; // les registres du process --> reg[0] est unitilable --> CHAR ???
+	unsigned char	reg[17]; // les registres du process --> reg[0] est unitilable --> CHAR ???
 	int				pc;
 	int				carry;
 	struct s_play	*player; // potentiellemt useless --> Si pour inittialized le reg1
@@ -99,22 +99,25 @@ typedef struct	s_play
 
 typedef struct	s_arg
 {
-	char	*value; // la valeur de lóctet correspondant a l'ARG dan le .cor
-	int		d_value; // l'equivqlent decimal du char
+	unsigned char	*value; // la valeur de lóctet correspondant a l'ARG dan le .cor
+	int		d_value; // l'equivqlent decimal du char* value
 	char	type; // le type d'arg (deduis de l'OCP) 'd'= direct í'= indirect ...
-	char	*data; // la data contunu dans qui sert a executer la fct (data a l'adresse ou valeur du direct)
+	unsigned char	data; // la data contunu dans qui sert a executer la fct (data a l'adresse ou valeur du direct)
+	int		d_data; // l'equivqlent du char* data
 }				t_arg;
 
 typedef struct	s_exe
 {
-	char			opcode;
-	char			ocp;
+	unsigned char	opcode;
+	unsigned char	ocp;
+//	int				nb_args;
 	t_arg			*arg1;
 	t_arg			*arg2;
 	t_arg			*arg3;
 	int				to_wait;
 	t_proc			*process; // process qui read l'exe
-	struct s_bdd	**bdd_op; // la struct d'op BDD corespondant a cet exe
+	struct s_bdd	*bdd_op; // la struct d'op BDD corespondant a cet exe
+	struct s_ocp	*ocp_op;
 }				t_exe;
 
 typedef struct	s_proc_base
@@ -145,8 +148,11 @@ typedef struct	s_ocp
 //	int		nb_args;
 	int		size_adv;
 	char	type_arg1;
+	int		size_arg1;
 	char	type_arg2;
+	int		size_arg2;
 	char	type_arg3;
+	int		size_arg3;
 	int		(*fct)(t_arena*, t_exe*);
 }				t_ocp;
 
@@ -185,7 +191,7 @@ char			*addstr(char *s);
 int		create_new_process(t_arena *arena, t_play *player, t_proc *parent);
 
 /* OP & Outils pour les OP */
-char	*find_reg_ptr(char arg_value, t_exe *exe);
+unsigned char	*find_reg_ptr(int arg_value, t_exe *exe);
 int		op_ld(t_arena *arena, t_exe *exe);
 
 /* GO MATCH */
