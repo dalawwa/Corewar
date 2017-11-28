@@ -74,7 +74,7 @@ void		close_cors(int *fds, t_arena *arena)
 
 int		 create_arena(int ac, char **av, t_arena **arena)
 {
-	if (!(*arena = (t_arena *)malloc(sizeof(t_arena))))
+	if ((*arena = (t_arena *)malloc(sizeof(t_arena))) == NULL)
 		return (perror_int("Error ", 0));
 	if (!((*arena)->opts = check_opts(ac, av)))
 	{
@@ -108,8 +108,5 @@ int		 create_arena(int ac, char **av, t_arena **arena)
 		return (0);
 	}
 	close_cors((*arena)->fds, *arena);
-//	go_match(*arena);
-	if (*arena == NULL)
-		ft_putendl("!!! WTF !!!");
     return (1);
 }

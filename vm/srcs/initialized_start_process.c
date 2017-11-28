@@ -14,6 +14,6 @@ int		initialized_start_process(t_arena *arena)
 		}
 		i++;
 	}
-	print_all_process(arena);
+//	print_all_process(arena);
 	return (1);
 }
