@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:37:17 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/11/27 17:45:01 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/11/28 15:45:07 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	check_valid_name(char *str)
 }
 
 //recuperer le char* entre parentheses, c est a dire le nom et le comment et le mettre dans la structure head
-void	value_parent(char *str, t_head *head, int x, int j)
+void	value_parent(char *str, int x, int j, t_header *op)
 {
 	int		i;
 
@@ -41,13 +41,21 @@ void	value_parent(char *str, t_head *head, int x, int j)
 			}
 			if (x == 1)
 			{
-				head->name = ft_strnew(j + 1);
-				head->name = ft_strncpy(head->name, &str[i - j], j);
+				i--;
+				while (j--)
+				{
+					op->prog_name[j] = str[i];
+					i--;
+				}
 			}
 			if (x == 2)
 			{
-				head->comment = ft_strnew(j + 1);
-				head->comment = ft_strncpy(head->comment, &str[i - j], j);
+				i--;
+				while (j--)
+				{
+					op->comment[j] = str[i];
+					i--;
+				}
 			}
 			return ;
 		}
@@ -71,22 +79,32 @@ int		check_no_printable_char(char *str)
 }
 
 //check que l on retrouve bien .name et .comment au debut du fichier, il peut y avoir des lignes vides avant/apres/entre name et comment et il n y a pas un ordre precis
-void	check_name_comment(t_head *head, int fd)
+void	check_name_comment(int fd, t_header *op)
 {
 	char	*line;
 	int		i;
+	int		x;
+	int		y;
 
+	x = 0;
+	y = 0;
 	i = 0;
 	line = NULL;
 	while (get_next_line(fd, &line) > 0)
 	{
 		if (ft_strnequ(".name", line, 5))
-			value_parent(line, head, 1, 0);
+		{
+			value_parent(line, 1, 0, op);
+			x = 1;
+		}
 		else if (ft_strnequ(".comment", line, 8))
-			value_parent(line, head, 2, 0);
+		{
+			value_parent(line, 2, 0, op);
+			y = 1;
+		}
 		else if (check_no_printable_char(line) == 0)
 			ciao_bye_bye(1);
-		if (head->name != NULL && head->comment != NULL)
+		if (x == 1 && y == 1)
 			return ;
 		i++;
 	}
@@ -96,17 +114,15 @@ void	check_name_comment(t_head *head, int fd)
 ////dans un second temps on va recuperer toutes les instructions
 int	launch_parsing(char *str)
 {
-	int		fd;
-	t_head	header;
-	t_champ	champ;
+	int			fd;
+	t_champ		champ;
+	t_header	op;
 
 	if ((fd = open(str, O_RDONLY)) == -1)
 		return (-1);
 	check_valid_name(str);
-	start_struct(&header);
 	start_struct_champ(&champ);
-	check_name_comment(&header, fd);
-	ft_printf("%s\n%s\n", header.name, header.comment);
+	check_name_comment(fd, &op);
 	get_champ_data(&champ, fd);
 	return (0);
 }
