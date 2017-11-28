@@ -6,24 +6,42 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:45:13 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/11/27 17:59:54 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/11/28 19:29:44 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
+//lignes vide ou commentaire non merci
+int		this_is_a_comment(char *str)
+{
+	int	i;
+	
+	i = 0;
+	while (str[i] == ' ' || str[i] == '\t')
+		i++;
+	if (str[i] == '#')
+		return (1);
+	else
+		return (0);
+}
+
 //on va recuperer la liste du fichier que l on va mettre dans une liste doublement chainee
-//a continuer ici
+//on ne va pas recuperer les lignes vides et les commentaires
 void	get_champ_data(t_champ *champ, int fd)
 {
 	char	*line;
+	int		i;
 
+	i = 0;
 	line = NULL;
-	champ->position = 1;
 	while (get_next_line(fd, &line) > 0)
 	{
-		while (check_no_printable_char(line))
-			get_next_line(fd, &line);
+		i++;
+		if (check_no_printable_char(line) || this_is_a_comment(line))
+			;
+		else 
+			ft_lstadd_lines(&champ, line, i);
 	}
 	return ;
 }
