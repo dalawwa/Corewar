@@ -198,8 +198,11 @@ t_play		*init_player(int i)
 	if (player == NULL)
 		return (perror_ptr("Error ", NULL));
 	player->play_num = i + 1;
+	player->play_live_num[0] = (unsigned char)(255);
+	player->play_live_num[1] = (unsigned char)(255 - i);
 	player->idx_start = 0;
 	player->size = 0;
+	player->last_live = 0;
 	player->name = NULL;
 	player->comment = NULL;
 	player->body = NULL;

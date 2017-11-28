@@ -312,8 +312,9 @@ SRCS_NAME = main.c \
 			setup_players.c \
 			initialized_start_process.c \
 			create_new_process.c \
-			find_reg_ptr.c \
-			op_ld.c
+			create_new_exe.c \
+#			find_reg_ptr.c \
+#			op_ld.c
 
 CW_SRCS = $(addprefix $(PATH_SRCS), $(SRCS_NAME))
 CW_OBJS = $(addprefix $(PATH_OBJS), $(SRCS_NAME:.c=.o))

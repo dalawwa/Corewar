@@ -47,10 +47,12 @@ void		print_regs(t_proc *process)
 	int	i;
 
 	i = 1;
-	while (i < 17)
+	while (i <= REG_NUMBER)
 	{
-		ft_printf("reg[%d] = %d - ", i, process->reg[i]);
+		ft_printf("reg[%d] = %.2x%.2x", i, process->reg[i][0], process->reg[i][1]);
 		i++;
+		if (i <= REG_NUMBER)
+			ft_putstr(" - ");
 	}
 	ft_putchar('\n');
 }
@@ -93,10 +95,14 @@ void	print_arena_fds(t_arena *arena)
 
 void	print_arena(t_arena *arena)
 {
-	if (!arena)
-		return ;
 	ft_putendl("Inside print_arena");
-	print_arena_fds(arena);
+	if (arena)
+	{
+		ft_putendl("ARENA != NULL");
+//		print_arena_fds(arena);
+	}
+	else
+		ft_putendl("ARENA = NULL");
 }
 
 void print_usage(void)
