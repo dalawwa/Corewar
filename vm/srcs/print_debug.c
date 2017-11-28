@@ -29,7 +29,7 @@ void		print_all_process(t_arena *arena)
 
 	i = 0;
 	elem = NULL;
-	ft_putendl("print_all_process");
+	ft_putendl("__________print_all_PROCESS");
 	if (arena && arena->list_proc)
 	{
 		elem = arena->list_proc->first;
@@ -39,7 +39,7 @@ void		print_all_process(t_arena *arena)
 			elem = elem->next;
 		}
 	}
-	ft_putendl("print_all_process__END");
+	ft_putendl("__________print_all_PROCESS__END");
 }
 
 void		print_regs(t_proc *process)
@@ -64,7 +64,7 @@ void		print_bdd(t_arena *arena)
 
 	i = 0;
 	j = 0;
-	ft_putendl("print_bdd");
+	ft_putendl("__________print_BDD");
 	if (arena)
 	{
 		while (i < 16)
@@ -79,7 +79,7 @@ void		print_bdd(t_arena *arena)
 			i++;
 		}
 	}
-	ft_putendl("print_bdd__END");
+	ft_putendl("__________print_BDD__END");
 }
 
 void	print_arena_fds(t_arena *arena)
@@ -87,22 +87,38 @@ void	print_arena_fds(t_arena *arena)
 	int i;
 
 	i = 0;
-	ft_putendl("inside print_arena_fds");
-	while (arena->fds && arena->fds[i] != -1)
-		ft_printf("%d - ", arena->fds[i++]);
-	ft_putchar('\n');
+	ft_putendl("__________print_FDS");
+	while (arena->fds && i < arena->nb_players)
+	{
+		ft_printf("%d", arena->fds[i++]);
+		if (i < arena->nb_players)
+			ft_printf(" - ");
+		else
+			ft_putchar('\n');
+	}
+	ft_putendl("__________print_FDS__END");
 }
 
 void	print_arena(t_arena *arena)
 {
-	ft_putendl("Inside print_arena");
+	ft_putendl("____________PRINT ARENA______________");
 	if (arena)
 	{
-		ft_putendl("ARENA != NULL");
+		print_bdd(arena);
+		ft_putchar('\n');
+		print_arena_fds(arena);
+		ft_putchar('\n');
+		print_players(arena);
+		ft_putchar('\n');
+		print_mem(arena);
+		ft_putchar('\n');
+		print_all_process(arena);
+		ft_putchar('\n');
 //		print_arena_fds(arena);
 	}
 	else
 		ft_putendl("ARENA = NULL");
+	ft_putendl("____________PRINT ARENA______________END");
 }
 
 void print_usage(void)

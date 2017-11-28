@@ -116,6 +116,6 @@ int		create_bdd(t_arena *arena)
 	set_meaning(arena->bdd);
 	if (set_bdd_ocp(arena) == 0)
 		return (0);
-	print_bdd(arena);
+//	print_bdd(arena);
 	return (1);
 }
