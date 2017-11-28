@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:37:17 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/11/28 15:45:07 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/11/28 19:56:06 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ int		check_no_printable_char(char *str)
 }
 
 //check que l on retrouve bien .name et .comment au debut du fichier, il peut y avoir des lignes vides avant/apres/entre name et comment et il n y a pas un ordre precis
+//verifier de ne pas avoir de ligne a la suite et qui va demarrer par "."
+//accepter les commentaires lors de la recherche de ces infos 
 void	check_name_comment(int fd, t_header *op)
 {
 	char	*line;
@@ -112,6 +114,7 @@ void	check_name_comment(int fd, t_header *op)
 
 //lancement du parsing, on va d abord chercher a recuperer le nom + comment
 ////dans un second temps on va recuperer toutes les instructions
+//une fois que l on a recupere les datas du champion, il va falloir faire leur analyse
 int	launch_parsing(char *str)
 {
 	int			fd;

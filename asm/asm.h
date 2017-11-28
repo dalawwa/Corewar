@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/11/28 15:58:31 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/11/28 18:27:03 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include "../libft/includes/get_next_line.h"
 # include "../libft/includes/ft_printf.h"
 
+/*
 typedef struct		s_champ_data
 {
 	int				nb_struct;
@@ -34,7 +35,7 @@ typedef struct		s_label
 	t_label			*next;
 	int				size_between;
 }					t_label;
-
+*/
 typedef struct		s_champ
 {
 	char			*line; //on recupere la ligne du champion
@@ -66,5 +67,6 @@ int		check_no_printable_char(char *str);
 void	value_parent(char *str, int x, int j, t_header *op);
 void	check_valid_name(char *str);
 void	ciao_bye_bye(int i);
+void	ft_lstadd_lines(t_champ **begin, char *line, int i);
 
 #endif
