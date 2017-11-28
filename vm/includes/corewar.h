@@ -75,12 +75,13 @@ typedef struct	s_opt
 typedef struct	s_proc
 {
 	int				process_num;
-	unsigned char	reg[17]; // les registres du process --> reg[0] est unitilable --> CHAR ???
+	unsigned char	reg[REG_NUMBER + 1][2]; // les registres du process --> reg[0] --> char ** car reg1 = num player 0xffff
 	int				pc;
 	int				carry;
 	struct s_play	*player; // potentiellemt useless --> Si pour inittialized le reg1
 	struct s_exe	*exe_op;
 	int				op_success; // retour de la fct appele par l'exe (vias la BDD)
+	int				nb_live; // nb live init 0
 	struct s_proc	*next;
 	struct s_proc	*prev;
 }				t_proc;
@@ -89,12 +90,13 @@ typedef struct	s_play
 {
 	int		play_num; // Numero du joueur
 	int		size; // size du player
-	char	play_live_num; // numero du joueur dans reg1 et pour le live
+	unsigned char	play_live_num[2]; // numero du joueur dans reg1 et pour le live
 	int		idx_start; // index de chargement sur la mem
 	char	*name;
 	char	*comment;
 	int		body_len; // longueur du char* body --> car ne finis pas par un '\0'
 	unsigned char	*body; // le code du champion a charger dans la MEM
+	int		last_live; // init a 0 --> si OP = live  play_live_num --> last_live = 1 et les last_live des uatres players = 0 Mettre plutot dans Arena ???
 }				t_play;
 
 typedef struct	s_arg
@@ -146,7 +148,7 @@ typedef struct	s_ocp
 {
 	unsigned char		ocp;
 //	int		nb_args;
-	int		size_adv;
+	int		size_adv; // Taille Total de la ligne en char
 	char	type_arg1;
 	int		size_arg1;
 	char	type_arg2;
@@ -172,10 +174,10 @@ typedef struct	s_bdd
 int				get_nb_cors(int ac, char **av, int **tab);
 t_opt			*check_opts(int ac, char **av);
 int				create_players(t_arena *arena);
-t_arena			*create_arena(int ac, char **av);
-int				*get_fds(t_arena *arena, int ac, char **av);
+int			create_arena(int ac, char **av, t_arena **arena);
+int				*get_fds(t_arena **arena, int ac, char **av);
 int				is_cor(char *s);
-void			close_cors(int *fds);
+void			close_cors(int *fds, t_arena *arena);
 int				create_mem(t_arena *arena);
 int				create_bdd(t_arena *arena);
 int				set_bdd_ocp(t_arena *arena);
@@ -189,10 +191,11 @@ char			*addstr(char *s);
 
 /* Initialized Process */
 int		create_new_process(t_arena *arena, t_play *player, t_proc *parent);
+int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent);
 
 /* OP & Outils pour les OP */
-unsigned char	*find_reg_ptr(int arg_value, t_exe *exe);
-int		op_ld(t_arena *arena, t_exe *exe);
+//unsigned char	*find_reg_ptr(int arg_value, t_exe *exe);
+//int		op_ld(t_arena *arena, t_exe *exe);
 
 /* GO MATCH */
 void	go_match(t_arena *arena);

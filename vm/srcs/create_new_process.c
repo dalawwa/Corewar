@@ -5,16 +5,19 @@ void		initialized_from_scratch(t_play *player, t_proc *process)
 	int	i;
 
 	i = 2;
-	process->reg[0] = 0;
-	process->reg[1] = player->play_live_num;
+	process->reg[0][0] = 0;
+	process->reg[0][1] = 0;
+	process->reg[1][0] = player->play_live_num[0];
+	process->reg[1][1] = player->play_live_num[1];
 	while (i < 17)
 	{
-		process->reg[i] = 0;
+		process->reg[i][0] = 0;
+		process->reg[i][1] = 0;
 		i++;
 	}
 	process->pc = player->idx_start;
 	process->carry = 0;
-
+	process->nb_live = 0;
 }
 
 void		copy_parent_data(t_proc *parent, t_proc *son)
@@ -22,13 +25,15 @@ void		copy_parent_data(t_proc *parent, t_proc *son)
 	int	i;
 
 	i = 0;
-	while (i < 17)
+	while (i <= REG_NUMBER)
 	{
-		son->reg[i] = parent->reg[i];
+		son->reg[i][0] = parent->reg[i][0];
+		son->reg[i][1] = parent->reg[i][1];
 		i++;
 	}
 	son->pc = parent->pc;
 	son->carry = parent->carry;
+	son->nb_live = parent->nb_live; // REALLY ??
 }
 
 void		link_it(t_proc_base *list, t_proc *process)
