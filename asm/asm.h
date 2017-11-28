@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/11/28 15:43:50 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/11/28 15:58:31 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,38 @@
 # include "../libft/includes/get_next_line.h"
 # include "../libft/includes/ft_printf.h"
 
-
-typedef struct		s_head
+typedef struct		s_champ_data
 {
-	char			*name;
-	char			*comment;
-}					t_head;
+	int				nb_struct;
+	t_champ			*first;
+	t_champ			*last;
+}					t_champ_data;
+
+typedef struct		s_label
+{
+	t_champ			*label_declare;
+	t_champ			*label_find;
+	t_label			*next;
+	int				size_between;
+}					t_label;
 
 typedef struct		s_champ
 {
-	char			*line;
-	char			*op;
+	char			*line; //on recupere la ligne du champion
+	char			*name; // on recupere l ordre
+	char			op_code;
 	int				is_label;
 	int				position;
 	char			**params;
+	int				nb_params;
+	int				size_param1;
+	int				size_param2;
+	int				size_param3;
+	int				has_ocp;
+	char			ocp;
+	int				size_octets;
+//	struct s_label	*label; //a voir 
+//	int				octet_cumul; //a voir
 	struct s_champ	*next;
 	struct s_champ	*prev;
 }					t_champ;
