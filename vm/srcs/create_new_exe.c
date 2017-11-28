@@ -132,7 +132,7 @@ void		init_exe(t_exe *exe_op)
 	exe_op->to_wait = 0;
 }
 
-int		create_new_exe(t_arena *arena, t_proc *process)
+int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent)
 {
 	process->exe_op = (t_exe *)malloc(sizeof(t_exe));
 	if (process->exe_op == NULL)
@@ -147,7 +147,10 @@ int		create_new_exe(t_arena *arena, t_proc *process)
 		process->exe_op->ocp = arena->mem[process->pc];
 	}
 	find_struct_ocp(process->exe_op, process->exe_op->bdd_op);
-	process->exe_op->to_wait = process->exe_op->bdd_op->nb_cycle;
+	if (parent != NULL)
+		process->exe_op->to_wait = process->exe_op->bdd_op->nb_cycle + parent->exe_op->to_wait;
+	else
+		process->exe_op->to_wait = process->exe_op->bdd_op->nb_cycle;
 	if (set_args_values(process, arena) == 0)
 		return (0);
 	return (1);
