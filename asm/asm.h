@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/11/27 17:37:47 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/11/28 18:27:03 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,45 @@
 # define ASM_H
 # include <sys/types.h>
 # include <sys/stat.h>
+# include "../vm/includes/corewar.h"
 # include <fcntl.h>
 # include "../libft/includes/libft.h"
 # include "../libft/includes/get_next_line.h"
 # include "../libft/includes/ft_printf.h"
 
-
-typedef struct		s_head
+/*
+typedef struct		s_champ_data
 {
-	char			*name;
-	char			*comment;
-}					t_head;
+	int				nb_struct;
+	t_champ			*first;
+	t_champ			*last;
+}					t_champ_data;
 
+typedef struct		s_label
+{
+	t_champ			*label_declare;
+	t_champ			*label_find;
+	t_label			*next;
+	int				size_between;
+}					t_label;
+*/
 typedef struct		s_champ
 {
-	char			*line;
-	char			*op;
+	char			*line; //on recupere la ligne du champion
+	char			*name; // on recupere l ordre
+	char			op_code;
 	int				is_label;
 	int				position;
 	char			**params;
+	int				nb_params;
+	int				size_param1;
+	int				size_param2;
+	int				size_param3;
+	int				has_ocp;
+	char			ocp;
+	int				size_octets;
+//	struct s_label	*label; //a voir 
+//	int				octet_cumul; //a voir
 	struct s_champ	*next;
 	struct s_champ	*prev;
 }					t_champ;
@@ -40,13 +60,13 @@ typedef struct		s_champ
 int		main(int ac, char **av);
 int		launch_parsing(char *str);
 void	get_champ_data(t_champ *champ, int fd);
-void	start_struct(t_head *head);
 void	start_struct_champ(t_champ *champ);
 void	get_champ_data(t_champ *champ, int fd);
-void	check_name_comment(t_head *head, int fd);
+void	check_name_comment(int fd, t_header *op);
 int		check_no_printable_char(char *str);
-void	value_parent(char *str, t_head *head, int x, int j);
+void	value_parent(char *str, int x, int j, t_header *op);
 void	check_valid_name(char *str);
 void	ciao_bye_bye(int i);
+void	ft_lstadd_lines(t_champ **begin, char *line, int i);
 
 #endif
