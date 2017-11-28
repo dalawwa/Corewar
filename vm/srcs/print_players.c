@@ -9,8 +9,10 @@ void	print_one_player(t_play *player)
 	{
 		ft_printf("Player Numero %d\n", player->play_num);
 		ft_printf("Name = _%s_\n", player->name);
+		ft_printf("Live_num = _%.2x%.2x_\n", player->play_live_num[0], player->play_live_num[1]);
 		ft_printf("Size = _%d_\n", player->size);
 		ft_printf("Idx_start = _%d_\n", player->idx_start);
+		ft_printf("Last live = _%d_\n", player->last_live);
 		ft_printf("Comment = _%s_\n", player->comment);
 		ft_printf("Body_len = _%d_\n", player->body_len);
 		ft_printf("Body = ");
