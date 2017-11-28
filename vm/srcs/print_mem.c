@@ -5,7 +5,7 @@ void	print_mem(t_arena *arena)
 	int	i;
 
 	i = 0;
-	ft_putendl("print_mem");
+	ft_putendl("____________print_MEM");
 	if (arena)
 	{
 		while (i < MEM_SIZE)
@@ -20,5 +20,5 @@ void	print_mem(t_arena *arena)
 				ft_putchar('\n');
 		}
 	}
-	ft_putendl("print_mem_END");
+	ft_putendl("____________print_MEM_END");
 }

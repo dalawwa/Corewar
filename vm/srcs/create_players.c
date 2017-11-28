@@ -265,6 +265,6 @@ int		create_players(t_arena *arena)
 		i++;
 	}
 	set_players_idx_start(arena);
-	print_players(arena);
+//	print_players(arena);
 	return (1);
 }

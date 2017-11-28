@@ -32,7 +32,7 @@ void	print_players(t_arena *arena)
 	int	i;
 
 	i = 0;
-	ft_putendl("print_players");
+	ft_putendl("____________print_PLAYERS");
 	if (arena != NULL)
 	{
 		ft_printf("There is %d Champion(s) to print !\n", arena->nb_players);
@@ -44,5 +44,5 @@ void	print_players(t_arena *arena)
 			i++;
 		}
 	}
-	ft_putendl("print_players__END");
+	ft_putendl("____________print_PLAYERS__END");
 }
