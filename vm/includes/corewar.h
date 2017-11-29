@@ -212,8 +212,9 @@ int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent);
 void	go_match(t_arena *arena);
 void	kill_process(t_proc *to_kill, t_proc_base *list_proc);
 int		start_match(t_arena *arena);
-
+unsigned char	*find_reg_ptr(int arg_value, t_exe *exe);
 void			print_usage(void);
+int		a_hexa_to_i(unsigned char *s, int len);
 
 /* FREE MEMORY */
 void	free_arena(t_arena **arena);
