@@ -127,18 +127,17 @@ void	print_arena(t_arena *arena)
 	ft_putendl("____________PRINT ARENA______________");
 	if (arena)
 	{
-//		print_bdd(arena);
-//		ft_putchar('\n');
-//		print_arena_fds(arena);
+		print_bdd(arena);
 		ft_putchar('\n');
-		print_players(arena);
 		ft_putchar('\n');
 		print_mem(arena);
 		ft_putchar('\n');
 		print_all_process(arena);
 		ft_putchar('\n');
 		print_opts(arena);
-//		print_arena_fds(arena);
+		ft_putchar('\n');
+		print_players(arena);
+		ft_putchar('\n');
 	}
 	else
 		ft_putendl("ARENA = NULL");

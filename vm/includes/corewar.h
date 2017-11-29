@@ -187,7 +187,7 @@ int				create_players(t_arena *arena);
 int			create_arena(int ac, char **av, t_arena **arena);
 int				*get_fds(t_arena **arena, int ac, char **av);
 int				is_cor(char *s);
-void			close_cors(int *fds, t_arena *arena);
+void			close_cors(t_arena *arena);
 int				create_mem(t_arena *arena);
 int				create_bdd(t_arena *arena);
 int				set_bdd_ocp(t_arena *arena);

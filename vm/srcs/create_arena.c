@@ -63,26 +63,44 @@ int		*get_fds(t_arena **arena, int ac, char **av)
 	return (fds);
 }
 
-void		close_cors(int *fds, t_arena *arena)
+void		close_cors(t_arena *arena)
 {
 	int i;
 
 	i = 0;
-	if (!fds)
+	if (!arena || !arena->opts || !arena->opts->fds)
 		return ;
 	while (i < arena->nb_players)
-		close(fds[i++]);
+		close(arena->opts->fds[i++]);
+}
+
+int		init_arena(t_arena **arena)
+{
+	if (!(*arena = (t_arena *)malloc(sizeof(t_arena))))
+		return (0);
+	(*arena)->players = NULL;
+	(*arena)->bdd = NULL;
+	(*arena)->list_proc = NULL;
+	(*arena)->opts = NULL;
+	(*arena)->fds = NULL;
+	(*arena)->nb_players = 0;
+	(*arena)->ctd = CYCLE_TO_DIE;
+	(*arena)->current_cycle = 0;
+	(*arena)->max_check = MAX_CHECKS;
+	(*arena)->c_delta = CYCLE_DELTA;
+	return (1);
 }
 
 int		 create_arena(int ac, char **av, t_arena **arena)
 {
-	if ((*arena = (t_arena *)malloc(sizeof(t_arena))) == NULL)
-		return (perror_int("Error ", 0));
+	if (!init_arena(arena))
+		return (perror_int("Error in init_arena", 0));
 	if (!((*arena)->opts = check_opts(ac, av)))
 	{
 		ft_putendl("inside create_arena, check_opts returned NULL");
 		return (0);
 	}
+	(*arena)->nb_players = (*arena)->opts->fds_nb;
 	if (!((*arena)->fds = (*arena)->opts->fds))
 	{
 		ft_putendl("inside create_arena, get_fds returned NULL");
@@ -109,6 +127,6 @@ int		 create_arena(int ac, char **av, t_arena **arena)
 		ft_putendl("inside create_arena, initialized_start_process returned 0");
 		return (0);
 	}
-	close_cors((*arena)->opts->fds, *arena);
+	close_cors(*arena);
     return (1);
 }
