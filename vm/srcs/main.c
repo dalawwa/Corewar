@@ -18,5 +18,6 @@ int		main(int ac, char **av)
 		else
 			ft_putendl("WHAT THE FUCK ");
 	}
+//	while (1);
 	return (0);
 }

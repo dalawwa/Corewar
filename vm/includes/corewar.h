@@ -110,7 +110,7 @@ typedef struct	s_arg
 	unsigned char	*value; // la valeur de lóctet correspondant a l'ARG dan le .cor
 	int		d_value; // l'equivqlent decimal du char* value
 	char	type; // le type d'arg (deduis de l'OCP) 'd'= direct í'= indirect ...
-	unsigned char	data; // la data contunu dans qui sert a executer la fct (data a l'adresse ou valeur du direct)
+	unsigned char	*data; // la data contunu dans qui sert a executer la fct (data a l'adresse ou valeur du direct)
 	int		d_data; // l'equivqlent du char* data
 }				t_arg;
 
@@ -205,15 +205,16 @@ int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent);
 
 /* GO MATCH */
 void	go_match(t_arena *arena);
-
+void	kill_process(t_proc *to_kill, t_proc_base *list_proc);
 void			print_usage(void);
 
 /* FREE MEMORY */
 void	free_arena(t_arena **arena);
 void	free_fds(int **fds);
 void	free_opts(t_opt **opts);
-void	free_players(t_play *players);
-void	free_bdd(t_bdd *bdd);
+void	free_players(t_play **players, int nb_players);
+void	free_bdd(t_bdd **bdd);
+void	free_exe(t_exe *exe, t_proc *process);
 
 /* FONCTIONS DEBUG */
 void	print_tab_cors(int *tab);
