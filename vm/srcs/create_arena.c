@@ -98,6 +98,7 @@ int		 create_arena(int ac, char **av, t_arena **arena)
 	if (!((*arena)->opts = check_opts(ac, av)))
 	{
 		ft_putendl("inside create_arena, check_opts returned NULL");
+		free_arena(arena);
 		return (0);
 	}
 	(*arena)->nb_players = (*arena)->opts->fds_nb;

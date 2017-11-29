@@ -154,12 +154,18 @@ t_opt		*check_opts(int ac, char **av)
 		if (flag_indx[0] < 6 && flag_indx[0] > 0)
 		{
 			if (!(check_opts_flags(opts, flag_indx, ac, av)))
+			{
+				free_opts(&opts);
 				return (NULL);
+			}
 		}
 		else
 		{
 			if (!(check_opts_fds(opts, flag_indx, av)))
+			{
+				free_opts(&opts);
 				return (NULL);
+			}
 		}
 		flag_indx[1]++;
 	}
