@@ -19,7 +19,8 @@ void	go_match(t_arena *arena)
 	{
 		ft_putendl("\n\n________________go_match it's magic !____________________");
 		put_starting_facts(arena);
+		start_match(arena);
 	}
 	else
-		ft_putendl("go_match : ARENA = NULL");
+		ft_putendl("DON'T Match : ARENA = NULL");
 }

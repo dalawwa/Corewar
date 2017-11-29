@@ -8,7 +8,7 @@ void	print_opts(t_arena *arena)
 	ft_putendl("__________PRINT_OPTS");
 	if (!arena || !arena->opts)
 		return ;
-	ft_printf("Opts:\nhas %d fds\nhas_d: %d | d: %d\nhas_s: %d | v: %d\nhas_v: %d | v: %d\nhas_a: %d | a_stealth: %d\nhas_b: %d | b_stealth: %d\n", arena->opts->fds_nb, arena->opts->has_d, arena->opts->d, arena->opts->has_s, arena->opts->s, arena->opts->has_v, arena->opts->v, arena->opts->has_a, arena->opts->a_stealth, arena->opts->has_b, arena->opts->b_stealth);
+	ft_printf("Opts:\nhas %d fds\nhas_d: %d | d: %d\nhas_s: %d | s: %d\nhas_v: %d | v: %d\nhas_a: %d | a_stealth: %d\nhas_b: %d | b_stealth: %d\n", arena->opts->fds_nb, arena->opts->has_d, arena->opts->d, arena->opts->has_s, arena->opts->s, arena->opts->has_v, arena->opts->v, arena->opts->has_a, arena->opts->a_stealth, arena->opts->has_b, arena->opts->b_stealth);
 	ft_printf("Printing opts->fds\n");
 	if (!arena->opts->fds)
 		ft_printf("opts->fds = NULL\n");

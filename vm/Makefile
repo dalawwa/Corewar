@@ -313,7 +313,10 @@ SRCS_NAME = main.c \
 			initialized_start_process.c \
 			create_new_process.c \
 			create_new_exe.c \
-			kill_process.c
+			kill_process.c \
+			ft_power.c \
+			ft_unsi_strdup.c
+			start_match.c
 #			find_reg_ptr.c \
 #			op_ld.c
 
