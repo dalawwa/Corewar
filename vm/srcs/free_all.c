@@ -2,12 +2,13 @@
 
 void	free_opts(t_opt **opts)
 {
-	free(*opts);
-}
-
-void	free_fds(int **fds)
-{
-	free(*fds);
+	if (*opts)
+	{
+		if ((*opts)->fds)
+			free((*opts)->fds);
+		free(*opts);
+		*opts = NULL;
+	}
 }
 
 void	free_players(t_play **players, int nb_players)
@@ -64,7 +65,7 @@ void	free_bdd(t_bdd **bdd)
 				bdd[i]->ocp[j] = NULL;
 				j++;
 			}
-			ft_putchar('\n');
+//			ft_putchar('\n');
 			free(bdd[i]->ocp);
 			bdd[i]->ocp = NULL;
 			free(bdd[i]);
@@ -94,7 +95,7 @@ void	free_arena(t_arena **arena)
 	if ((*arena)->opts)
 		free_opts(&(*arena)->opts);
 	if ((*arena)->fds)
-		free_fds(&(*arena)->fds);
+		free((*arena)->fds);
 	if ((*arena)->players)
 		free_players((*arena)->players, (*arena)->nb_players);
 	if ((*arena)->bdd)
