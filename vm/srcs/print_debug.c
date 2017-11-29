@@ -1,5 +1,27 @@
 #include "corewar.h"
 
+void	print_opts(t_arena *arena)
+{
+	int	i;
+
+	i = 0;
+	if (!arena || !arena->opts)
+		return ;
+	ft_printf("Opts:\nhas %d fds\nhas_d: %d | d: %d\nhas_s: %d | v: %d\nhas_v: %d | v: %d\n", arena->opts->fds_nb, arena->opts->has_d, arena->opts->d, arena->opts->has_s, arena->opts->s, arena->opts->has_v, arena->opts->v);
+	ft_printf("Printing opts->fds\n");
+	if (!arena->opts->fds)
+		ft_printf("opts->fds = NULL\n");
+	else
+	{
+		while (i < arena->opts->fds_nb)
+		{
+			ft_printf("%d\n", arena->opts->fds[i]);
+			i++;
+		}
+	}
+	ft_printf("EOF_print_opts\n");
+}
+
 void print_tab_cors(int *tab)
 {
 	int i;
@@ -106,7 +128,8 @@ void	print_arena(t_arena *arena)
 	{
 		print_bdd(arena);
 		ft_putchar('\n');
-		print_arena_fds(arena);
+		print_opts(arena);
+//		print_arena_fds(arena);
 		ft_putchar('\n');
 		print_players(arena);
 		ft_putchar('\n');
