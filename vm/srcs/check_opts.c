@@ -57,7 +57,7 @@ static void	set_opt_flag(t_opt *opts, int flag, int val)
 	}
 }
 
-void		append_fds_tab(t_opt *opts, int size, int val)
+static void		append_fds_tab(t_opt *opts, int size, int val)
 {
 	// free_leaks
 	int i;
@@ -80,7 +80,7 @@ void		append_fds_tab(t_opt *opts, int size, int val)
 	old = NULL;
 }
 
-int		check_opts_flags(t_opt *opts, int *flag_indx, int ac, char **av)
+static int		check_opts_flags(t_opt *opts, int *flag_indx, int ac, char **av)
 {
 	if (flag_indx[0] < 4 && flag_indx[0] > 0 && flag_indx[1] + 1 >= ac)
 	{
@@ -125,7 +125,7 @@ int		check_opts_flags(t_opt *opts, int *flag_indx, int ac, char **av)
 	return (1);
 }
 
-int			check_opts_fds(t_opt *opts, int *flag_indx, char **av)
+static int			check_opts_fds(t_opt *opts, int *flag_indx, char **av)
 {
 	if ((flag_indx[0] = open(av[flag_indx[1]], O_RDONLY)) == -1)
 	{
