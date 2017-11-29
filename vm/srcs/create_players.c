@@ -22,7 +22,7 @@ unsigned char	*add_that(unsigned char *body, char c, int where)
 		tmp = malloc(sizeof(char) * (len + 1));
 		if (tmp == NULL)
 			return (perror_ptr("Error ", NULL));
-		while (i < len)
+		while (i < len - 1)
 		{
 			tmp[i] = body[i];
 			i++;
@@ -77,13 +77,13 @@ unsigned char	*clean_body(unsigned char *body, t_play **player)
 	return (cleaned);
 }
 
-
 int		has_nb_magic(int fd)
 {
 	unsigned char	*magic;
 	unsigned char	*tmp;
 	int		ret;
 	int		i;
+	int		j;
 
 	i = 0;
 	ret = 1;
@@ -91,9 +91,12 @@ int		has_nb_magic(int fd)
 	tmp = NULL;
 	while (i < 4)
 	{
+		j = 0;
 		tmp = (unsigned char*)malloc(sizeof(unsigned char) * 4);
 		if (tmp == NULL)
 			return (perror_int("Error ", 0));
+		while (j < 4)
+			tmp[j++] = 0;
 		if (i != 0)
 			lseek(fd, i, SEEK_SET);
 		read(fd, tmp, 1);
@@ -260,7 +263,7 @@ int		create_players(t_arena *arena)
 		return (perror_int("Error ", 0));
 	while (i < arena->nb_players)
 	{
-		if ((arena->players[i] = create_a_player(i, arena->fds[i])) == NULL)
+		if ((arena->players[i] = create_a_player(i, arena->opts->fds[i])) == NULL)
 			return (0);
 		i++;
 	}
