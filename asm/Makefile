@@ -6,7 +6,7 @@
 #    By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/27 17:48:19 by bfruchar          #+#    #+#              #
-#    Updated: 2017/11/28 16:33:31 by bfruchar         ###   ########.fr        #
+#    Updated: 2017/11/29 11:14:42 by bfruchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,12 +16,12 @@ FLAGS =				-Wall -Wextra -Werror
 
 CC =				gcc
 
-SRC =				main.c \
-					end_and_free.c \
-					initialize_struct.c \
-					parsing_asm.c \
-					parsing2_asm.c \
-					add_lines_champ.c
+SRC =				srcs/main.c \
+					srcs/end_and_free.c \
+					srcs/initialize_struct.c \
+					srcs/parsing_asm.c \
+					srcs/parsing2_asm.c \
+					srcs/add_lines_champ.c
 
 OBJ =				main.o \
 					end_and_free.o \
