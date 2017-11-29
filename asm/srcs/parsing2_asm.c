@@ -6,11 +6,11 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:45:13 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/11/28 19:29:44 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/11/29 18:01:48 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "asm.h"
+#include "../includes/asm.h"
 
 //lignes vide ou commentaire non merci
 int		this_is_a_comment(char *str)
@@ -42,6 +42,11 @@ void	get_champ_data(t_champ *champ, int fd)
 			;
 		else 
 			ft_lstadd_lines(&champ, line, i);
+	}
+	while (champ->next)
+	{
+		ft_printf("%s %i\n", champ->name, champ->op_code);
+		champ = champ->next;
 	}
 	return ;
 }

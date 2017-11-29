@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/11/28 18:27:03 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/11/29 17:37:58 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 # define ASM_H
 # include <sys/types.h>
 # include <sys/stat.h>
-# include "../vm/includes/corewar.h"
+# include "../../vm/includes/corewar.h"
 # include <fcntl.h>
-# include "../libft/includes/libft.h"
-# include "../libft/includes/get_next_line.h"
-# include "../libft/includes/ft_printf.h"
+# include "../../libft/includes/libft.h"
+# include "../../libft/includes/get_next_line.h"
+# include "../../libft/includes/ft_printf.h"
 
 /*
 typedef struct		s_champ_data
@@ -40,7 +40,7 @@ typedef struct		s_champ
 {
 	char			*line; //on recupere la ligne du champion
 	char			*name; // on recupere l ordre
-	char			op_code;
+	int				op_code;
 	int				is_label;
 	int				position;
 	char			**params;

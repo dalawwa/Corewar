@@ -6,11 +6,11 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:37:17 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/11/28 19:56:06 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/11/29 11:14:03 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "asm.h"
+#include "../includes/asm.h"
 
 //On verifie que le fichier est compatible, ".s"
 void	check_valid_name(char *str)
