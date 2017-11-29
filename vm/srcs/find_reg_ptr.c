@@ -7,5 +7,5 @@ unsigned char	*find_reg_ptr(int arg_value, t_exe *exe)
 	i = 1;
 	while (i != arg_value)
 		i++;
-	return (&exe->process->reg[i]);
+	return (exe->process->reg[i]);
 }

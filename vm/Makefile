@@ -6,7 +6,7 @@
 #    By: mapandel <mapandel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 03:03:10 by mapandel          #+#    #+#              #
-#    Updated: 2017/09/26 12:24:57 by mapandel         ###   ########.fr        #
+#    Updated: 2017/11/29 18:38:02 by dalawwa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -315,10 +315,11 @@ SRCS_NAME = main.c \
 			create_new_exe.c \
 			kill_process.c \
 			ft_power.c \
-			ft_unsi_strdup.c
-			start_match.c
-#			find_reg_ptr.c \
-#			op_ld.c
+			ft_unsi_strdup.c \
+			start_match.c \
+			find_reg_ptr.c \
+			op_ld.c \
+			a_hexa_toi.c
 
 CW_SRCS = $(addprefix $(PATH_SRCS), $(SRCS_NAME))
 CW_OBJS = $(addprefix $(PATH_OBJS), $(SRCS_NAME:.c=.o))
