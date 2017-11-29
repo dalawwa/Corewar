@@ -171,6 +171,7 @@ t_opt		*check_opts(int ac, char **av)
 	}
 	if (!opts->fds)
 	{
+		free_opts(&opts);
 		ft_putendl("Print Usage here");
 		return (NULL);
 	}
