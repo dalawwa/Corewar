@@ -49,6 +49,7 @@ static void	set_opt_flag(t_opt *opts, int flag, int val)
 
 void		append_fds_tab(t_opt *opts, int size, int val)
 {
+	// free_leaks
 	int i;
 	int	*old;
 
@@ -88,7 +89,8 @@ t_opt		*check_opts(int ac, char **av)
 			}
 			else
 			{
-				ft_putendl("check_opts flag with num not followed by any argument");
+				ft_printf("Can't read source file %s\n", av[i]);
+//				ft_putendl("check_opts flag with num not followed by any argument");
 				return (NULL);
 			}
 		}
