@@ -44,7 +44,8 @@ int		set_arg_x_value(t_arg *arg, int arg_num, t_arena *arena, t_proc *process)
 	if (arg_num == 1)
 	{
 		arg->type = process->exe_op->ocp_op->type_arg1;
-		arg->value = (unsigned char *)malloc(sizeof(unsigned char) * process->exe_op->ocp_op->size_arg1);
+		arg->size = process->exe_op->ocp_op->size_arg1;
+		arg->value = (unsigned char *)malloc(sizeof(unsigned char) * arg->size);
 		if (arg->value == NULL)
 			return (perror_int("Error ", 0));
 		while (i < process->exe_op->ocp_op->size_arg1)
@@ -52,11 +53,12 @@ int		set_arg_x_value(t_arg *arg, int arg_num, t_arena *arena, t_proc *process)
 			arg->value[i] = arena->mem[process->pc + i];
 			i++;
 		}
-//		arg->d_value = (int)arg->value;
+		arg->d_value = a_hexa_to_i(arg->value, process->exe_op->ocp_op->size_arg1);
 	}
 	else if (arg_num == 2)
 	{
 		arg->type = process->exe_op->ocp_op->type_arg2;
+		arg->size = process->exe_op->ocp_op->size_arg2;
 		arg->value = (unsigned char *)malloc(sizeof(unsigned char) * process->exe_op->ocp_op->size_arg2);
 		if (arg->value == NULL)
 			return (perror_int("Error ", 0));
@@ -65,10 +67,12 @@ int		set_arg_x_value(t_arg *arg, int arg_num, t_arena *arena, t_proc *process)
 			arg->value[i] = arena->mem[process->pc + i];
 			i++;
 		}
+		arg->d_value = a_hexa_to_i(arg->value, process->exe_op->ocp_op->size_arg2);
 	}
 	else
 	{
 		arg->type = process->exe_op->ocp_op->type_arg3;
+		arg->size = process->exe_op->ocp_op->size_arg3;
 		arg->value = (unsigned char *)malloc(sizeof(unsigned char) * process->exe_op->ocp_op->size_arg3);
 		if (arg->value == NULL)
 			return (perror_int("Error ", 0));
@@ -77,38 +81,59 @@ int		set_arg_x_value(t_arg *arg, int arg_num, t_arena *arena, t_proc *process)
 			arg->value[i] = arena->mem[process->pc + i];
 			i++;
 		}
+		arg->d_value = a_hexa_to_i(arg->value, process->exe_op->ocp_op->size_arg3);
 	}
 	process->pc += i;
 	return (1);
 }
 
-void			set_data(t_arg *arg, t_arena *arena, t_proc *process)
+int			set_data(t_arg *arg, t_arena *arena, t_proc *process)
 {
 	if (arg->type == 'r')
+	{
 		arg->d_data = (int)process->reg[arg->d_value];
+		arg->data = ft_unsi_strdup(process->reg[arg->d_value], 2);
+	}
 	else if (arg->type == 'd')
+	{
+		arg->data = ft_unsi_strdup(arg->data, arg->size);
 		arg->d_data = arg->d_value;
+	}
 	else if (arg->type == 'i')
-		arg->d_data = (int)arena->mem[arg->d_value];
+	{
+		arg->data = malloc(sizeof(unsigned char) * 1);
+		if (arg->data == NULL)
+			return (perror_int("Error ", 0));
+		arg->data[0] = arena->mem[arg->d_value];
+		arg->d_data = a_hexa_to_i(arg->data, 1);
+	}
 	else
+	{
 		arg->data = 0;
-//	ADD data en char* ou char 
+		arg->d_data = 0;
+	}
+	return (1);
 }
 
 int			set_args_values(t_proc *process, t_arena *arena)
 {
+	int	ret;
+
+	ret = 0;
 	process->exe_op->arg1 = (t_arg *)malloc(sizeof(t_arg));
 	if (process->exe_op->arg1 == NULL)
 		return (perror_int("Error ", 0));
 	set_arg_x_value(process->exe_op->arg1, 1, arena, process); 
-	set_data(process->exe_op->arg1, arena, process);
+	if (set_data(process->exe_op->arg1, arena, process) == 0)
+		return (0);
 	if (process->exe_op->bdd_op->nb_args > 1)
 	{
 		process->exe_op->arg2 = (t_arg *)malloc(sizeof(t_arg));
 		if (process->exe_op->arg2 == NULL)
 			return (perror_int("Error ", 0));
 		set_arg_x_value(process->exe_op->arg2, 2, arena, process); 
-		set_data(process->exe_op->arg1, arena, process);
+		if (set_data(process->exe_op->arg1, arena, process) == 0)
+			return (0);
 	}
 	if (process->exe_op->bdd_op->nb_args == 3)
 	{
@@ -116,7 +141,8 @@ int			set_args_values(t_proc *process, t_arena *arena)
 		if (process->exe_op->arg3 == NULL)
 			return (perror_int("Error ", 0));
 		set_arg_x_value(process->exe_op->arg3, 3, arena, process); 
-		set_data(process->exe_op->arg1, arena, process);
+		if (set_data(process->exe_op->arg1, arena, process) == 0)
+			return (0);
 	}
 	return (1);
 }
@@ -160,5 +186,5 @@ int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent)
  *
  * LE PC avance lors de la creation de l'EXE : Attention si PC == MEM_SIZE
  * DATA --> en char ou char * --> Attention Limit
- * la Value et la data d'un arg en INT non geree (cas ou size > 1)
+ * la Value et la data d'un arg en INT non geree (cas ou size > 1) --> done
  */
