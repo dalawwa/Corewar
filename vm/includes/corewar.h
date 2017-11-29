@@ -69,6 +69,12 @@ typedef struct	s_opt
 {
 	int		has_d;  // init a 0
 	int		d; // init a -1
+	int		has_v;  // init a 0
+	int		v; // init a -1
+	int		has_s;  // init a 0
+	int		s; // init a -1
+	int		*fds;
+	int		fds_nb;
 
 }				t_opt;
 
@@ -217,6 +223,7 @@ void	print_mem(t_arena *arena);
 void	print_bdd(t_arena *arena);
 void	print_all_process(t_arena *arena);
 void	print_regs(t_proc *process);
+void	print_opts(t_arena *arena);
 
 /* ADD TO LIB ? */
 char			*ft_stradd_c_end(char *s, char c);
