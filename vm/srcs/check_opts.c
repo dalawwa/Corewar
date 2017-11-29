@@ -54,6 +54,7 @@ void		append_fds_tab(t_opt *opts, int size, int val)
 
 	i = 0;
 	old = opts->fds;
+	opts->fds = NULL;
 	if (size < 0)
 		return ;
 	if (!(opts->fds = (int *)malloc(sizeof(int) * (size + 1))))
@@ -64,6 +65,8 @@ void		append_fds_tab(t_opt *opts, int size, int val)
 		i++;
 	}
 	opts->fds[size] = val;
+	free(old);
+	old = NULL;
 }
 
 t_opt		*check_opts(int ac, char **av)
