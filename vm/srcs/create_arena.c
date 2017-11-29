@@ -68,7 +68,9 @@ void		close_cors(int *fds, t_arena *arena)
 	int i;
 
 	i = 0;
-	while (fds && i < arena->nb_players)
+	if (!fds)
+		return ;
+	while (i < arena->nb_players)
 		close(fds[i++]);
 }
 
@@ -81,7 +83,7 @@ int		 create_arena(int ac, char **av, t_arena **arena)
 		ft_putendl("inside create_arena, check_opts returned NULL");
 		return (0);
 	}
-	if (!((*arena)->fds = get_fds(arena, ac, av)))
+	if (!((*arena)->fds = (*arena)->opts->fds))
 	{
 		ft_putendl("inside create_arena, get_fds returned NULL");
 		return (0);
