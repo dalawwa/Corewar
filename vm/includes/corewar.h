@@ -73,6 +73,10 @@ typedef struct	s_opt
 	int		v; // init a -1
 	int		has_s;  // init a 0
 	int		s; // init a -1
+	int		has_a;  // init a 0
+	int		a_stealth; // init a 0
+	int		has_b;  // init a 0
+	int		b_stealth; // init a 0
 	int		*fds;
 	int		fds_nb;
 
