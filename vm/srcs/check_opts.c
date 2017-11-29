@@ -1,6 +1,6 @@
 #include "corewar.h"
 
-static int		is_flag_with_nb(char *s)
+static int		is_flag(char *s)
 {
 	if (!ft_strcmp("-d", s))
 		return (1);
@@ -8,6 +8,12 @@ static int		is_flag_with_nb(char *s)
 		return (2);
 	if (!ft_strcmp("-v", s))
 		return (3);
+	if (!ft_strcmp("-a", s))
+		return (4);
+	if (!ft_strcmp("-b", s))
+		return (5);
+	if (!ft_strcmp("--stealth", s))
+		return (6);
 	return (0);
 }
 
@@ -20,6 +26,10 @@ static t_opt	*init_opts(void)
 	res->has_d = 0;
 	res->has_v = 0;
 	res->has_s = 0;
+	res->has_a = 0;
+	res->a_stealth = 0;
+	res->has_b = 0;
+	res->b_stealth = 0;
 	res->fds = NULL;
 	res->fds_nb = 0;
 	res->d = -1;
@@ -70,46 +80,88 @@ void		append_fds_tab(t_opt *opts, int size, int val)
 	old = NULL;
 }
 
-t_opt		*check_opts(int ac, char **av)
+int		check_opts_flags(t_opt *opts, int *flag_indx, int ac, char **av)
 {
-	// free_leaks;
-	int		i;
-	t_opt	*opts;
-	int		flag;
-
-	i = 1;
-	if (!(opts = init_opts()))
-		return (NULL);
-	while (i < ac)
+	if (flag_indx[0] < 4 && flag_indx[0] > 0 && flag_indx[1] + 1 >= ac)
 	{
-		flag = is_flag_with_nb(av[i]);
-		if (flag)
+		ft_printf("Can't read source file %s\n", av[flag_indx[1]]);
+		return (0);
+	}
+	if (flag_indx[0] < 6 && flag_indx[0] > 0)
+	{
+		if (flag_indx[1] + 1 < ac && flag_indx[0] < 4)
 		{
-			if (i + 1 < ac)
+			flag_indx[1]++;
+			set_opt_flag(opts, flag_indx[0], ft_atoi(av[flag_indx[1]]));
+			flag_indx[0] = 0;
+		}
+		else if (flag_indx[0] == 4)
+		{
+			opts->a_stealth = 0;
+			opts->has_a = 1;
+			if (flag_indx[1] + 1 < ac && !ft_strcmp(av[flag_indx[1] + 1], "--stealth"))
 			{
-				set_opt_flag(opts, flag, ft_atoi(av[++i]));
-				flag = 0;
+				opts->a_stealth = 1;
+				flag_indx[1]++;
 			}
-			else
+		}
+		else if (flag_indx[0] == 5)
+		{
+			opts->b_stealth = 0;
+			opts->has_b = 1;
+			if (flag_indx[1] + 1 < ac && !ft_strcmp(av[flag_indx[1] + 1], "--stealth"))
 			{
-				ft_printf("Can't read source file %s\n", av[i]);
-//				ft_putendl("check_opts flag with num not followed by any argument");
-				return (NULL);
+				opts->b_stealth = 1;
+				flag_indx[1]++;
 			}
+			flag_indx[0] = 0;
 		}
 		else
 		{
-			if ((flag = open(av[i], O_RDONLY)) == -1)
-			{
-				ft_printf("Can't read source file %s\n", av[i]);
-				return (NULL);
-			}
-			else
-				append_fds_tab(opts, opts->fds_nb, flag);
-			opts->fds_nb++;
-			flag = 0;
+			ft_printf("Can't read source file %s\n", av[flag_indx[1]]);
+			return (0);
 		}
-		i++;
+	}
+	return (1);
+}
+
+int			check_opts_fds(t_opt *opts, int *flag_indx, char **av)
+{
+	if ((flag_indx[0] = open(av[flag_indx[1]], O_RDONLY)) == -1)
+	{
+		ft_printf("Can't read source file %s\n", av[flag_indx[1]]);
+		return (0);
+	}
+	else
+		append_fds_tab(opts, opts->fds_nb, flag_indx[0]);
+	opts->fds_nb++;
+	flag_indx[0] = 0;
+	return (1);
+}
+
+t_opt		*check_opts(int ac, char **av)
+{
+	// free_leaks;
+	t_opt	*opts;
+	int		flag_indx[2];
+
+	flag_indx[1] = 1;
+	if (!(opts = init_opts()))
+		return (perror_ptr("Error: inside check_opts", NULL));
+	while (flag_indx[1] < ac)
+	{
+		flag_indx[0] = is_flag(av[flag_indx[1]]);
+		if (flag_indx[0] < 6 && flag_indx[0] > 0)
+		{
+			if (!(check_opts_flags(opts, flag_indx, ac, av)))
+				return (NULL);
+		}
+		else
+		{
+			if (!(check_opts_fds(opts, flag_indx, av)))
+				return (NULL);
+		}
+		flag_indx[1]++;
 	}
 	if (!opts->fds)
 	{

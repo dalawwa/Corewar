@@ -94,8 +94,6 @@ void	free_arena(t_arena **arena)
 		return ;
 	if ((*arena)->opts)
 		free_opts(&(*arena)->opts);
-	if ((*arena)->fds)
-		free((*arena)->fds);
 	if ((*arena)->players)
 		free_players((*arena)->players, (*arena)->nb_players);
 	if ((*arena)->bdd)
