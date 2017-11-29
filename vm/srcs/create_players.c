@@ -54,7 +54,7 @@ unsigned char	*clean_body(unsigned char *body, t_play **player)
 	cleaned = NULL;
 	j = 0;
 	swap_second(body);
-	while (body[i] == 0)
+	while (i && body[i] == 0)
 		i--;
 	(*player)->body_len = i;
 	cleaned = malloc(sizeof(unsigned char) * i);
