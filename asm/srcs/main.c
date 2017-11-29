@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   initialize_struct.c                                :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/27 17:39:24 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/11/28 18:29:12 by bfruchar         ###   ########.fr       */
+/*   Created: 2017/11/24 11:29:39 by bfruchar          #+#    #+#             */
+/*   Updated: 2017/11/29 11:13:42 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "asm.h"
+#include "../includes/asm.h"
 
-void	start_struct_champ(t_champ *champ)
+int	main(int ac, char **av)
 {
-	champ->line = NULL;
-	champ->name = NULL;
-	champ->op_code = '\0';
-	champ->is_label = 0;
-	champ->position = 1;
-	champ->params = NULL;
-	champ->size_param1 = 0;
-	champ->size_param2 = 0;
-	champ->size_param3 = 0;
-	champ->has_ocp = 0;
-	champ->ocp = '\0';
-	champ->size_octets = 0;
-	champ->next = NULL;
-	champ->prev = NULL;
+	int		i;
+
+	i = 1;
+	if (ac > 1)
+	{
+		if (av[i][0] == '-' && av[i][1] == 'a' && ac > 2)
+			i++;
+		launch_parsing(av[i]);
+	}
+	else
+		ft_putstr("Usage: ./asm <sourcefile.s>\n");
+	return (0);
 }
