@@ -107,6 +107,6 @@ int		 create_arena(int ac, char **av, t_arena **arena)
 		ft_putendl("inside create_arena, initialized_start_process returned 0");
 		return (0);
 	}
-	close_cors((*arena)->fds, *arena);
+	close_cors((*arena)->opts->fds, *arena);
     return (1);
 }
