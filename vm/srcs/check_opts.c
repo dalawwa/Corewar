@@ -84,7 +84,7 @@ int		check_opts_flags(t_opt *opts, int *flag_indx, int ac, char **av)
 {
 	if (flag_indx[0] < 4 && flag_indx[0] > 0 && flag_indx[1] + 1 >= ac)
 	{
-		ft_printf("flag %s needs to have a value\n", av[flag_indx[1]]);
+		ft_printf("Can't read source file %s\n", av[flag_indx[1]]);
 		return (0);
 	}
 	if (flag_indx[0] < 6 && flag_indx[0] > 0)
