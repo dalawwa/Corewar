@@ -55,6 +55,8 @@ typedef char					t_arg_type;
 # define COMMENT_LENGTH			(2048)
 # define COREWAR_EXEC_MAGIC		0xea83f3
 
+# define NB_OP					16
+
 typedef struct	s_header
 {
 	unsigned int	magic;
@@ -155,7 +157,8 @@ typedef struct	s_arena
 	t_opt			*opts;
 	t_file			**files;
 	int				ctd; // cycle to die
-	int				current_cycle; // cycle en cours
+	int				current_cycle; // cycle en cours (init a 0 tous les ctd
+	int				total_cycle; // nb_cycle depuis le debut
 	int				max_check;
 	int				c_delta;
 }				t_arena;
@@ -212,7 +215,8 @@ int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent);
 
 /* OP & Outils pour les OP */
 //unsigned char	*find_reg_ptr(int arg_value, t_exe *exe);
-//int		op_ld(t_arena *arena, t_exe *exe);
+int		op_ld(t_arena *arena, t_exe *exe);
+int		op_st(t_arena *arena, t_exe *exe);
 
 /* GO MATCH */
 void	go_match(t_arena *arena);
@@ -221,6 +225,9 @@ int		start_match(t_arena *arena);
 unsigned char	*find_reg_ptr(int arg_value, t_exe *exe);
 void			print_usage(void);
 int		a_hexa_to_i(unsigned char *s, int len);
+int		is_carry_to_modify(t_exe *exe);
+
+int		is_valid_op(t_arena *arena, t_proc *proc);
 
 /* FREE MEMORY */
 void	free_arena(t_arena **arena);
@@ -245,5 +252,6 @@ char			*ft_stradd_c_end(char *s, char c);
 int				ft_power(int nb, int pow);
 int				a_hexa_to_i(unsigned char *s, int len);
 unsigned char	*ft_unsi_strdup(unsigned char *s, int len);
+unsigned char	*ft_ito_hexa(uintmax_t nb);
 
 #endif

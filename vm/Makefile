@@ -6,7 +6,7 @@
 #    By: mapandel <mapandel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 03:03:10 by mapandel          #+#    #+#              #
-#    Updated: 2017/11/29 22:21:27 by dalawwa          ###   ########.fr        #
+#    Updated: 2017/09/26 12:24:57 by mapandel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -261,7 +261,7 @@ WSTR =			wstr/ft_wstradd.c \
 				wstr/ft_wstrsub.c \
 				wstr/ft_wstrsub_leakless.c \
 
-SRC :=			$(CONV) $(FT_PRINTF) $(GET_NEXT) $(IS) $(LST) $(MEM) $(PUT) \
+SRC =			$(CONV) $(FT_PRINTF) $(GET_NEXT) $(IS) $(LST) $(MEM) $(PUT) \
 				$(SORT) $(STR) $(TAB) $(TO) $(WSTR)
 
 OBJ =			$(SRC:.c=.o)
@@ -315,11 +315,15 @@ SRCS_NAME = main.c \
 			create_new_exe.c \
 			kill_process.c \
 			ft_power.c \
-			ft_unsi_strdup.c \
+			ft_unsi_strdup.c
 			start_match.c \
-			find_reg_ptr.c \
 			op_ld.c \
-			a_hexa_toi.c
+			ft_ito_hexa.c \
+			op_st.c \
+			a_hexa_toi.c \
+			op_add.c \
+			is_carry_to_modify.c \
+			is_valid_op.c
 
 CW_SRCS = $(addprefix $(PATH_SRCS), $(SRCS_NAME))
 CW_OBJS = $(addprefix $(PATH_OBJS), $(SRCS_NAME:.c=.o))

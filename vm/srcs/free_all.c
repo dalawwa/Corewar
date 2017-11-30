@@ -18,10 +18,8 @@ void	free_players(t_play **players, int nb_players)
 	{
 		while (i < nb_players)
 		{
-			ft_printf("i = %d\n", i);
 			if (players[i])
 			{
-				ft_printf("IN FREE_Player[i] - i = %d\n", i);
 				if (players[i]->name)
 					free(players[i]->name);
 				players[i]->name = NULL;
