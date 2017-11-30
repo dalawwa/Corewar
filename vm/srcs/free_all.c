@@ -4,8 +4,7 @@ void	free_opts(t_opt *opts)
 {
 	if (opts)
 	{
-		(opts)->files = NULL;
-//		free(*opts);
+		free(opts);
 		opts = NULL;
 	}
 }
