@@ -68,10 +68,10 @@ void		close_cors(t_arena *arena)
 	int i;
 
 	i = 0;
-	if (!arena || !arena->opts || !arena->opts->fds)
+	if (!arena || !arena->opts || !arena->opts->files)
 		return ;
 	while (i < arena->nb_players)
-		close(arena->opts->fds[i++]);
+		close(arena->opts->files[i++]->fd);
 }
 
 int		init_arena(t_arena **arena)
@@ -82,7 +82,7 @@ int		init_arena(t_arena **arena)
 	(*arena)->bdd = NULL;
 	(*arena)->list_proc = NULL;
 	(*arena)->opts = NULL;
-	(*arena)->fds = NULL;
+	(*arena)->files = NULL;
 	(*arena)->nb_players = 0;
 	(*arena)->ctd = CYCLE_TO_DIE;
 	(*arena)->current_cycle = 0;
@@ -93,41 +93,19 @@ int		init_arena(t_arena **arena)
 
 int		 create_arena(int ac, char **av, t_arena **arena)
 {
-	if (!init_arena(arena))
-		return (perror_int("Error in init_arena", 0));
-	if (!((*arena)->opts = check_opts(ac, av)))
-	{
-		ft_putendl("inside create_arena, check_opts returned NULL");
-		free_arena(arena);
+//	if (!init_arena(arena))
+//		return (perror_int("Error in init_arena", 0));
+	if (!(check_opts(*arena, ac, av)))
 		return (0);
-	}
-	(*arena)->nb_players = (*arena)->opts->fds_nb;
-	if (!((*arena)->fds = (*arena)->opts->fds))
-	{
-		ft_putendl("inside create_arena, get_fds returned NULL");
+	if (create_players(*arena) == 0)
 		return (0);
-	}
-	if (!create_players(*arena))
-	{
-		ft_putendl("inside create_arena, create_players returned NULL");
-		return (0);
-	}
 	if (create_mem(*arena) == 0)
-	{
-		ft_putendl("inside create_arena, create_mem returned NULL");
 		return (0);
-	}
 	if (create_bdd(*arena) == 0)
-	{
-		ft_putendl("inside create_arena, create_bdd returned NULL");
 		return (0);
-	}
 	setup_players(*arena);
 	if (initialized_start_process(*arena) == 0)
-	{
-		ft_putendl("inside create_arena, initialized_start_process returned 0");
 		return (0);
-	}
 	close_cors(*arena);
     return (1);
 }

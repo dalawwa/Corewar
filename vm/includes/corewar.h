@@ -77,10 +77,15 @@ typedef struct	s_opt
 	int		a_stealth; // init a 0
 	int		has_b;  // init a 0
 	int		b_stealth; // init a 0
-	int		*fds;
-	int		fds_nb;
-
+//	struct s_file	**files;
+//	int		fds_nb;
 }				t_opt;
+
+typedef struct	s_file
+{
+	int		fd;
+	char	*name;
+}				t_file;
 
 typedef struct	s_proc
 {
@@ -148,7 +153,7 @@ typedef struct	s_arena
 	struct s_bdd	**bdd;
 	t_proc_base		*list_proc;
 	t_opt			*opts;
-	int				*fds;
+	t_file			**files;
 	int				ctd; // cycle to die
 	int				current_cycle; // cycle en cours
 	int				max_check;
@@ -182,8 +187,9 @@ typedef struct	s_bdd
 }				t_bdd;
 
 /* CREATE ARENA */
+int				init_arena(t_arena **arena);
 int				get_nb_cors(int ac, char **av, int **tab);
-t_opt			*check_opts(int ac, char **av);
+int				check_opts(t_arena *arena, int ac, char **av);
 int				create_players(t_arena *arena);
 int			create_arena(int ac, char **av, t_arena **arena);
 int				*get_fds(t_arena **arena, int ac, char **av);
@@ -219,7 +225,7 @@ int		a_hexa_to_i(unsigned char *s, int len);
 /* FREE MEMORY */
 void	free_arena(t_arena **arena);
 void	free_fds(int **fds);
-void	free_opts(t_opt **opts);
+void	free_opts(t_opt *opts);
 void	free_players(t_play **players, int nb_players);
 void	free_bdd(t_bdd **bdd);
 void	free_exe(t_exe *exe, t_proc *process);

@@ -17,25 +17,23 @@ static int		is_flag(char *s)
 	return (0);
 }
 
-static t_opt	*init_opts(void)
+int		init_opts(t_arena *arena)
 {
-	t_opt	*res;
-
-	if (!(res = (t_opt *)malloc(sizeof(t_opt))))
-		return (NULL);
-	res->has_d = 0;
-	res->has_v = 0;
-	res->has_s = 0;
-	res->has_a = 0;
-	res->a_stealth = 0;
-	res->has_b = 0;
-	res->b_stealth = 0;
-	res->fds = NULL;
-	res->fds_nb = 0;
-	res->d = -1;
-	res->v = -1;
-	res->s = -1;
-	return (res);
+	if (!(arena->opts = (t_opt *)malloc(sizeof(t_opt))))
+		return (perror_int("error ", 0));
+	arena->opts->has_d = 0;
+	arena->opts->has_v = 0;
+	arena->opts->has_s = 0;
+	arena->opts->has_a = 0;
+	arena->opts->has_b = 0;
+	arena->opts->d = -1;
+	arena->opts->v = -1;
+	arena->opts->s = -1;
+	arena->opts->a_stealth = 0;
+	arena->opts->b_stealth = 0;
+	arena->opts->files = NULL;
+	arena->opts->fds_nb = 0;
+	return (1);
 }
 
 static void	set_opt_flag(t_opt *opts, int flag, int val)
@@ -56,29 +54,29 @@ static void	set_opt_flag(t_opt *opts, int flag, int val)
 		opts->v = val;
 	}
 }
-
-static void		append_fds_tab(t_opt *opts, int size, int val)
+/*
+static void		append_fds_tab(t_opt *opts, int i, int size, int val)
 {
 	// free_leaks
-	int i;
-	int	*old;
+	int j;
+	int	old;
 
-	i = 0;
-	old = opts->fds;
-	opts->fds = NULL;
+	j = 0;
+	old = opts->files[i]->fd;
+	opts->files[i]->fd = NULL;
 	if (size < 0)
 		return ;
-	if (!(opts->fds = (int *)malloc(sizeof(int) * (size + 1))))
+//	if (!(opts->files[i]->fd = (int *)malloc(sizeof(int) * (size + 1))))
 		return ;
-	while (i < size)
+	while (j < size)
 	{
-		opts->fds[i] = old[i];
+		opts->files[i]->fd = old;
 		i++;
 	}
-	opts->fds[size] = val;
+	opts->files[i]->fd[size] = val;
 	free(old);
 	old = NULL;
-}
+}*/
 
 static int		check_opts_flags(t_opt *opts, int *flag_indx, int ac, char **av)
 {
@@ -125,55 +123,81 @@ static int		check_opts_flags(t_opt *opts, int *flag_indx, int ac, char **av)
 	return (1);
 }
 
-static int			check_opts_fds(t_opt *opts, int *flag_indx, char **av)
+static int			check_opts_fds(t_file *file, int *flag_indx, char **av)
 {
-	if ((flag_indx[0] = open(av[flag_indx[1]], O_RDONLY)) == -1)
+//	opts->files[i] = (t_file *)malloc(sizeof(t_file));
+//	if (opts->files[i] == NULL)
+//		return (perror_int("Error ", 0));
+	file->name = addstr(av[flag_indx[1]]);
+	if ((file->fd = open(av[flag_indx[1]], O_RDONLY)) == -1)
 	{
-		ft_printf("Can't read source file %s\n", av[flag_indx[1]]);
+		ft_printf("Can't read source file %s\n", file->name);
 		return (0);
 	}
-	else
-		append_fds_tab(opts, opts->fds_nb, flag_indx[0]);
-	opts->fds_nb++;
+//	else
+//		append_fds_tab(opts, opts->fds_nb, flag_indx[0]);
+//	opts->fds_nb++;
 	flag_indx[0] = 0;
 	return (1);
 }
 
-t_opt		*check_opts(int ac, char **av)
+int		init_files(t_arena *arena)
+{
+	int	i;
+
+	i = 0;
+	arena->files = malloc(sizeof(t_file*) * 4);
+	if (arena->files == NULL)
+		return (perror_int("Error ", 0));
+	while (i < 4)
+	{
+		arena->files[i] = malloc(sizeof(t_file));
+		if (arena->files[i] == NULL)
+			return(perror_int("Error ", 0));
+		arena->files[i]->name = NULL;
+		arena->files[i]->fd = -1;
+		i++;
+	}
+	return (1);
+}
+
+int		check_opts(t_arena *arena, int ac, char **av)
 {
 	// free_leaks;
-	t_opt	*opts;
 	int		flag_indx[2];
 
 	flag_indx[1] = 1;
-	if (!(opts = init_opts()))
-		return (perror_ptr("Error: inside check_opts", NULL));
-	while (flag_indx[1] < ac)
+	if (!(init_opts(arena)))
+		return (0);
+	if (init_files(arena) == 0)
+		return (0);
+	while (flag_indx[1] < ac && arena->nb_players < 4)
 	{
+//		ft_printf("flag_indx[1] = %d - ac = %d arena->nb_players = %d\n", flag_indx[1], ac, arena->nb_players);
 		flag_indx[0] = is_flag(av[flag_indx[1]]);
 		if (flag_indx[0] < 6 && flag_indx[0] > 0)
 		{
-			if (!(check_opts_flags(opts, flag_indx, ac, av)))
-			{
-				free_opts(&opts);
-				return (NULL);
-			}
+			if (!(check_opts_flags(arena->opts, flag_indx, ac, av)))
+				return (0);
 		}
 		else
 		{
-			if (!(check_opts_fds(opts, flag_indx, av)))
-			{
-				free_opts(&opts);
-				return (NULL);
-			}
+			if (!(check_opts_fds(arena->files[arena->nb_players], flag_indx, av)))
+				return (0);
+			arena->nb_players++;
 		}
 		flag_indx[1]++;
 	}
-	if (!opts->fds)
+//	arena->nb_players++;
+	if (arena->nb_players > 3)
 	{
-		free_opts(&opts);
-		ft_putendl("Print Usage here");
-		return (NULL);
+		ft_putendl("Error : Too many champions");
+		return (0);
 	}
-	return (opts);
+	if (arena->nb_players == 0)
+	{
+		ft_putendl("Print Usage here");
+		return (0);
+	}
+	return (1);
 }
