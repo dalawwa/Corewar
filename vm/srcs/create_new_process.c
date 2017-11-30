@@ -31,7 +31,7 @@ void		copy_parent_data(t_proc *parent, t_proc *son)
 		son->reg[i][1] = parent->reg[i][1];
 		i++;
 	}
-	son->pc = parent->pc;
+	son->pc = parent->pc + (parent->exe_op->arg1->d_value % IDX_MOD);
 	son->carry = parent->carry;
 	son->nb_live = parent->nb_live; // REALLY ??
 }
