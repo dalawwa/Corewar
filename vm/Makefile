@@ -315,7 +315,7 @@ SRCS_NAME = main.c \
 			create_new_exe.c \
 			kill_process.c \
 			ft_power.c \
-			ft_unsi_strdup.c
+			ft_unsi_strdup.c \
 			start_match.c \
 			op_ld.c \
 			ft_ito_hexa.c \
