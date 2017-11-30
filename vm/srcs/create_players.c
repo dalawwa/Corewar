@@ -178,7 +178,7 @@ char	*find_name(t_file *file)
 	return (line);
 }
 
-int		check_size(t_file *file, t_play **player)
+int		check_size(t_file *file)
 {
 	int size;
 
@@ -197,8 +197,8 @@ int		check_size(t_file *file, t_play **player)
 		ft_printf("Error: File %s has too large code (%d bytes > 682 bytes)\n", file->name, size - 140 - 4 - COMMENT_LENGTH);
 		return (0);
 	}
-	(*player)->size = size - 140 - 4 - COMMENT_LENGTH;
-	return (1);
+//	(*player)->size = size - 140 - 4 - COMMENT_LENGTH;
+	return (size);
 }
 
 t_play		*init_player(int i)
@@ -224,12 +224,17 @@ t_play		*init_player(int i)
 t_play		*create_a_player(int i, t_file *file)
 {
 	t_play	*player;
+	int		size;
 
+	size = check_size(file);
+	if (size == 0)
+		return (NULL);
 	player = init_player(i);
 	if (player == NULL)
 		return (NULL);
-	if (check_size(file, &player) == 0)
-		return (NULL);
+	player->size = size;
+//	if (check_size(file, &player) == 0)
+//		return (NULL);
 //	if (has_nb_magic(fd) != 1)
 //		return (NULL);
 	player->name = find_name(file);
