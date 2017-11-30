@@ -77,7 +77,7 @@ unsigned char	*clean_body(unsigned char *body, t_play **player)
 	return (cleaned);
 }
 
-int		has_nb_magic(int fd)
+int		has_nb_magic(t_file *file)
 {
 	unsigned char	*magic;
 	unsigned char	*tmp;
@@ -86,7 +86,7 @@ int		has_nb_magic(int fd)
 	int		j;
 
 	i = 0;
-	ret = 1;
+	ret = 0;
 	magic = NULL;
 	tmp = NULL;
 	while (i < 4)
@@ -98,8 +98,8 @@ int		has_nb_magic(int fd)
 		while (j < 4)
 			tmp[j++] = 0;
 		if (i != 0)
-			lseek(fd, i, SEEK_SET);
-		read(fd, tmp, 1);
+			lseek(file->fd, i, SEEK_SET);
+		read(file->fd, tmp, 1);
 //		ft_printf("tmp = %x\n", tmp[0]);
 		magic = add_that((unsigned char*)magic, tmp[0], i);
 		if (magic == NULL)
@@ -108,18 +108,18 @@ int		has_nb_magic(int fd)
 		free(tmp);
 		tmp = NULL;
 	}
-	if (magic[0] == '0' && magic[1] == (unsigned char)4294967274 && magic[2] == (unsigned char)4294967171 && magic[3] == (unsigned char)4294967283)
+	if (magic[0] == 0 && magic[1] == (unsigned char)4294967274 && magic[2] == (unsigned char)4294967171 && magic[3] == (unsigned char)4294967283)
 		ret = 1;
 	free(magic);
 	magic = NULL;
 //	if (ret == 1)
 //		ft_putendl("Magic Number Found !");
 	if (ret == 0)
-		ft_putendl("Error : Something wrong with Magic Number");
+		ft_printf("Error: File %s has an invalid header\n", file->name);
 	return (ret);
 }
 
-unsigned char	*find_body(int fd)
+unsigned char	*find_body(t_file *file)
 {
 	unsigned char	*line;
 	unsigned char	*body;
@@ -135,8 +135,8 @@ unsigned char	*find_body(int fd)
 		line = (unsigned char*)ft_strnew(1);
 		if (line == NULL)
 			return (perror_ptr("Error ", NULL));
-		lseek(fd, red, SEEK_SET);
-		read(fd, line, 1);
+		lseek(file->fd, red, SEEK_SET);
+		read(file->fd, line, 1);
 		body = add_that(body, line[0], i);
 		red++;
 		free(line);
@@ -152,44 +152,52 @@ unsigned char	*find_body(int fd)
 	return (body);
 }
 
-char	*find_comment(int fd)
+char	*find_comment(t_file *file)
 {
 	char *line;
 
 	line = ft_strnew(COMMENT_LENGTH);
 	if (line == NULL)
 		return (perror_ptr("Error ", NULL));
-	lseek(fd, 140, SEEK_SET);
-	read(fd, line, COMMENT_LENGTH);
+	lseek(file->fd, 140, SEEK_SET);
+	read(file->fd, line, COMMENT_LENGTH);
 //	ft_printf("COMMENT =_%s_\n", line);
 	return (line);
 }
 
-char	*find_name(int fd)
+char	*find_name(t_file *file)
 {
 	char	*line;
 
 	line = ft_strnew(PROG_NAME_LENGTH);
 	if (line == NULL)
 		return (perror_ptr("Error ", NULL));
-	lseek(fd, 4, SEEK_SET);
-	read(fd, line, PROG_NAME_LENGTH);
+	lseek(file->fd, 4, SEEK_SET);
+	read(file->fd, line, PROG_NAME_LENGTH);
 //	ft_printf("NAME =_%s_\n", line);
 	return (line);
 }
 
-int		check_size(int fd, t_play **player)
+int		check_size(t_file *file, t_play **player)
 {
 	int size;
 
 	size = 0;
-	size = lseek(fd, 0, SEEK_END);
-	if (size > CHAMP_MAX_SIZE + PROG_NAME_LENGTH + 4 + COMMENT_LENGTH)
+	size = lseek(file->fd, 0, SEEK_END);
+//	ft_printf("SIZE = %d\n", size);
+	if (size - 140 - 4 - COMMENT_LENGTH < 0)
 	{
-		ft_printf("Error: File %s has too large code (%d bytes > 682 bytes)\n", "FILE_NAME", size - 140 - 4 - COMMENT_LENGTH);
+		ft_printf("Error: File %s is too small to be a champion\n", file->name);
 		return (0);
 	}
-	(*player)->size = size - 140 - 4- COMMENT_LENGTH;
+	if (has_nb_magic(file) == 0)
+		return (0);
+	if (size > CHAMP_MAX_SIZE + PROG_NAME_LENGTH + 4 + COMMENT_LENGTH)
+	{
+		ft_printf("Error: File %s has too large code (%d bytes > 682 bytes)\n", file->name, size - 140 - 4 - COMMENT_LENGTH);
+		return (0);
+	}
+	(*player)->size = size - 140 - 4 - COMMENT_LENGTH;
 	return (1);
 }
 
@@ -213,24 +221,24 @@ t_play		*init_player(int i)
 	return (player);
 }
 
-t_play		*create_a_player(int i, int fd)
+t_play		*create_a_player(int i, t_file *file)
 {
 	t_play	*player;
 
 	player = init_player(i);
 	if (player == NULL)
 		return (NULL);
-	if (check_size(fd, &player) == 0)
+	if (check_size(file, &player) == 0)
 		return (NULL);
-	if (has_nb_magic(fd) != 1)
-		return (NULL);
-	player->name = find_name(fd);
+//	if (has_nb_magic(fd) != 1)
+//		return (NULL);
+	player->name = find_name(file);
 	if (player->name == NULL)
 		return (NULL);
-	player->comment = find_comment(fd);
+	player->comment = find_comment(file);
 	if (player->comment == NULL)
 		return (NULL);
-	player->body = find_body(fd);
+	player->body = find_body(file);
 	if (player->body == NULL)
 		return (NULL);
 	player->body = clean_body(player->body, &player);
@@ -258,12 +266,13 @@ int		create_players(t_arena *arena)
 	int		i;
 
 	i = 0;
+//	ft_printf("arena->nb_players = %d\n", arena->nb_players);
 	arena->players = (t_play **)malloc(sizeof(t_play *) * arena->nb_players);
 	if (arena->players == NULL)
 		return (perror_int("Error ", 0));
 	while (i < arena->nb_players)
 	{
-		if ((arena->players[i] = create_a_player(i, arena->opts->fds[i])) == NULL)
+		if ((arena->players[i] = create_a_player(i, arena->files[i])) == NULL)
 			return (0);
 		i++;
 	}

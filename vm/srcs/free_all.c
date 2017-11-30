@@ -1,13 +1,12 @@
 #include "corewar.h"
 
-void	free_opts(t_opt **opts)
+void	free_opts(t_opt *opts)
 {
-	if (*opts)
+	if (opts)
 	{
-		if ((*opts)->fds)
-			free((*opts)->fds);
-		free(*opts);
-		*opts = NULL;
+		(opts)->files = NULL;
+//		free(*opts);
+		opts = NULL;
 	}
 }
 
@@ -88,17 +87,45 @@ void	free_list_proc(t_proc_base *list)
 	}
 }
 
+void	free_files(t_file **files)
+{
+	int	i;
+
+	i = 0;
+	if (files)
+	{
+		while (i < 4)
+		{
+			if (files[i])
+			{
+				if (files[i]->name)
+					free(files[i]->name);
+				files[i]->name = NULL;
+				free(files[i]);
+				files[i] = NULL;
+			}
+			i++;
+		}
+		free(files);
+		files = NULL;
+	}
+}
+
 void	free_arena(t_arena **arena)
 {
-	if (!arena || !*arena)
-		return ;
-	if ((*arena)->opts)
-		free_opts(&(*arena)->opts);
-	if ((*arena)->players)
-		free_players((*arena)->players, (*arena)->nb_players);
-	if ((*arena)->bdd)
-		free_bdd((*arena)->bdd);
-	if ((*arena)->list_proc)
-		free_list_proc((*arena)->list_proc);
-	free(*arena);
+	if (*arena)
+	{
+		if ((*arena)->opts)
+			free_opts((*arena)->opts);
+		if ((*arena)->players)
+			free_players((*arena)->players, (*arena)->nb_players);
+		if ((*arena)->bdd)
+			free_bdd((*arena)->bdd);
+		if ((*arena)->list_proc)
+			free_list_proc((*arena)->list_proc);
+		if ((*arena)->files)
+			free_files((*arena)->files);
+		free(*arena);
+		arena = NULL;
+	}
 }
