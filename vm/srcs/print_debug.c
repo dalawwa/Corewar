@@ -8,18 +8,7 @@ void	print_opts(t_arena *arena)
 	ft_putendl("__________PRINT_OPTS");
 	if (!arena || !arena->opts)
 		return ;
-	ft_printf("Opts:\nhas %d fds\nhas_d: %d | d: %d\nhas_s: %d | s: %d\nhas_v: %d | v: %d\nhas_a: %d | a_stealth: %d\nhas_b: %d | b_stealth: %d\n", arena->opts->fds_nb, arena->opts->has_d, arena->opts->d, arena->opts->has_s, arena->opts->s, arena->opts->has_v, arena->opts->v, arena->opts->has_a, arena->opts->a_stealth, arena->opts->has_b, arena->opts->b_stealth);
-	ft_printf("Printing opts->fds\n");
-	if (!arena->opts->fds)
-		ft_printf("opts->fds = NULL\n");
-	else
-	{
-		while (i < arena->opts->fds_nb)
-		{
-			ft_printf("%d\n", arena->opts->fds[i]);
-			i++;
-		}
-	}
+	ft_printf("Opts:\nhas_d: %d | d: %d\nhas_s: %d | s: %d\nhas_v: %d | v: %d\nhas_a: %d | a_stealth: %d\nhas_b: %d | b_stealth: %d\n", arena->opts->has_d, arena->opts->d, arena->opts->has_s, arena->opts->s, arena->opts->has_v, arena->opts->v, arena->opts->has_a, arena->opts->a_stealth, arena->opts->has_b, arena->opts->b_stealth);
 	ft_printf("EOF_PRINT_OPS_END_____\n\n");
 }
 
@@ -43,6 +32,27 @@ void		print_one_process(t_proc *process)
 {
 	ft_printf("Process num %d :\nPlayer : %s\nCarry = %d - pc = %d\n", process->process_num, process->player->name, process->carry, process->pc);
 	print_regs(process);
+}
+
+void		print_files(t_arena *arena)
+{
+	int	i;
+
+	i = 0;
+	ft_putendl("__________print_FILES");
+	ft_printf("%d files to print\n", arena->nb_players);
+	if (arena && arena->files)
+	{
+		while (i < arena->nb_players)
+		{
+			if (arena->files[i])
+			{
+				ft_printf("file %d : Name = %s - fd = %d\n", i + 1, arena->files[i]->name, arena->files[i]->fd);
+				i++;
+			}
+		}
+	}
+	ft_putendl("__________print_FILES__END");
 }
 
 void		print_all_process(t_arena *arena)
@@ -105,38 +115,27 @@ void		print_bdd(t_arena *arena)
 	ft_putendl("__________print_BDD__END");
 }
 
-void	print_arena_fds(t_arena *arena)
-{
-	int i;
-
-	i = 0;
-	ft_putendl("__________print_FDS");
-	while (arena->fds && i < arena->nb_players)
-	{
-		ft_printf("%d", arena->fds[i++]);
-		if (i < arena->nb_players)
-			ft_printf(" - ");
-		else
-			ft_putchar('\n');
-	}
-	ft_putendl("__________print_FDS__END");
-}
-
 void	print_arena(t_arena *arena)
 {
 	ft_putendl("____________PRINT ARENA______________");
 	if (arena)
 	{
-		print_bdd(arena);
+		if (arena->opts)
+			print_opts(arena);
 		ft_putchar('\n');
+		if (arena->files)
+			print_files(arena);
+		ft_putchar('\n');
+		if (arena->bdd)
+			print_bdd(arena);
 		ft_putchar('\n');
 		print_mem(arena);
 		ft_putchar('\n');
-		print_all_process(arena);
+		if (arena->list_proc)
+			print_all_process(arena);
 		ft_putchar('\n');
-		print_opts(arena);
-		ft_putchar('\n');
-		print_players(arena);
+		if (arena->players)
+			print_players(arena);
 		ft_putchar('\n');
 	}
 	else
