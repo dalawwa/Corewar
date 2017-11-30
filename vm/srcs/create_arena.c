@@ -68,10 +68,10 @@ void		close_cors(t_arena *arena)
 	int i;
 
 	i = 0;
-	if (!arena || !arena->opts || !arena->opts->files)
+	if (!arena || !arena->files)
 		return ;
 	while (i < arena->nb_players)
-		close(arena->opts->files[i++]->fd);
+		close(arena->files[i++]->fd);
 }
 
 int		init_arena(t_arena **arena)

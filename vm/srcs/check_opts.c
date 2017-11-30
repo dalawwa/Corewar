@@ -31,8 +31,6 @@ int		init_opts(t_arena *arena)
 	arena->opts->s = -1;
 	arena->opts->a_stealth = 0;
 	arena->opts->b_stealth = 0;
-	arena->opts->files = NULL;
-	arena->opts->fds_nb = 0;
 	return (1);
 }
 
@@ -171,7 +169,7 @@ int		check_opts(t_arena *arena, int ac, char **av)
 		return (0);
 	if (init_files(arena) == 0)
 		return (0);
-	while (flag_indx[1] < ac && arena->nb_players < 4)
+	while (flag_indx[1] < ac)
 	{
 //		ft_printf("flag_indx[1] = %d - ac = %d arena->nb_players = %d\n", flag_indx[1], ac, arena->nb_players);
 		flag_indx[0] = is_flag(av[flag_indx[1]]);
@@ -182,18 +180,18 @@ int		check_opts(t_arena *arena, int ac, char **av)
 		}
 		else
 		{
-			if (!(check_opts_fds(arena->files[arena->nb_players], flag_indx, av)))
-				return (0);
 			arena->nb_players++;
+			if (arena->nb_players > 4)
+			{
+				ft_putendl("Error : Too many champions");
+				return (0);
+			}
+			if (!(check_opts_fds(arena->files[arena->nb_players - 1], flag_indx, av)))
+				return (0);
 		}
 		flag_indx[1]++;
 	}
 //	arena->nb_players++;
-	if (arena->nb_players > 3)
-	{
-		ft_putendl("Error : Too many champions");
-		return (0);
-	}
 	if (arena->nb_players == 0)
 	{
 		ft_putendl("Print Usage here");
