@@ -105,6 +105,21 @@ int		set_args_type(t_bdd *bdd_i, int i)
 	return (set_args_type2(bdd_i, i));
 }
 
+void	set_ptr_op(t_bdd *bdd_i, int i)
+{
+	int	j;
+
+	j = 0;
+	if (i == 1)
+	{
+		while (j < bdd_i->nb_ocp)
+		{
+			bdd_i->ocp[j]->fct = &op_ld;
+			j++;
+		}
+	}
+}
+
 int		create_ocp(t_bdd *bdd_i, int i)
 {
 	int	j;

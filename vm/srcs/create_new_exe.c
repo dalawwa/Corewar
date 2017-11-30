@@ -179,6 +179,7 @@ int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent)
 		process->exe_op->to_wait = process->exe_op->bdd_op->nb_cycle;
 	if (set_args_values(process, arena) == 0)
 		return (0);
+	process->pc -= process->exe_op->ocp_op->size_adv;
 	return (1);
 }
 
