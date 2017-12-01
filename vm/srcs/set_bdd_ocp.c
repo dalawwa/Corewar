@@ -126,6 +126,8 @@ void	set_ptr_op(t_bdd *bdd_i, int i)
 			j++;
 		}
 	}
+	else if (i == 15)
+		bdd_i->ocp[j]->fct = &op_aff;
 }
 
 int		create_ocp(t_bdd *bdd_i, int i)

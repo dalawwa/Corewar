@@ -220,6 +220,7 @@ int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent);
 //unsigned char	*find_reg_ptr(int arg_value, t_exe *exe);
 int		op_ld(t_arena *arena, t_exe *exe);
 int		op_st(t_arena *arena, t_exe *exe);
+int		op_aff(t_arena *arena, t_exe *exe);
 
 /* GO MATCH */
 void	go_match(t_arena *arena);
