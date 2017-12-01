@@ -118,6 +118,14 @@ void	set_ptr_op(t_bdd *bdd_i, int i)
 			j++;
 		}
 	}
+	else if (i == 2)
+	{
+		while (j < bdd_i->nb_ocp)
+		{
+			bdd_i->ocp[j]->fct = &op_st;
+			j++;
+		}
+	}
 }
 
 int		create_ocp(t_bdd *bdd_i, int i)
