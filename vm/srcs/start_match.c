@@ -66,7 +66,7 @@ int		start_match(t_arena *arena)
 	ft_printf("There is %d process to start\n", arena->list_proc->nb_proc);
 	while (arena->list_proc->nb_proc > 0)
 	{
-//		ft_printf("Cycle %d :\n", arena->total_cycle);
+		ft_printf("Cycle %d :\n", arena->total_cycle);
 		if (arena->current_cycle == arena->ctd)
 		{
 			arena->ctd -= CYCLE_DELTA;

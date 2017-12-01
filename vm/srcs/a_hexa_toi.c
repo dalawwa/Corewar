@@ -2,9 +2,8 @@
 
 int		a_hexa_to_i(unsigned char *s, int len)
 {
-	// transformer un char *s en decimal a revoir je pense.a tester
-	int	result;
-	int	i;
+	int		result;
+	int		i;
 
 	result = 0;
 	i = 0;
