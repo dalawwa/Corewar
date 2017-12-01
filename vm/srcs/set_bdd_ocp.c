@@ -155,7 +155,7 @@ int		set_bdd_ocp(t_arena *arena)
 	int	i;
 
 	i = 0;
-	while (i < 16)
+	while (i < NB_OP)
 	{
 		arena->bdd[i]->nb_ocp = 0;
 		create_ocp(arena->bdd[i], i);
@@ -164,5 +164,11 @@ int		set_bdd_ocp(t_arena *arena)
 		i++;
 	}
 	set_ocp_and_size(arena->bdd);
+	i = 0;
+	while (i < NB_OP)
+	{
+		set_ptr_op(arena->bdd[i], i);
+		i++;
+	}
 	return (1);
 }
