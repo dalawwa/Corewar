@@ -175,11 +175,11 @@ void	print_arena(t_arena *arena)
 		ft_putchar('\n');
 		if (arena->players)
 			print_players(arena);
-		ft_putchar('\n');
-	}
-	else
-		ft_putendl("ARENA = NULL");
-	ft_putendl("____________PRINT ARENA______________END");
+		//ft_putchar('\n');
+		}
+		else
+			ft_putendl("ARENA = NULL");
+		ft_putendl("____________PRINT ARENA______________END");	
 }
 
 void print_usage(void)

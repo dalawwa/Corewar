@@ -126,7 +126,6 @@ void	set_ptr_op(t_bdd *bdd_i, int i)
 			j++;
 		}
 	}
-
 }
 
 int		create_ocp(t_bdd *bdd_i, int i)
