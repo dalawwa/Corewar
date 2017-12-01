@@ -76,6 +76,11 @@ int		start_match(t_arena *arena)
 		deal_exe(arena);
 		arena->current_cycle++;
 		arena->total_cycle++;
+		if (arena->opts->has_d == 1 && arena->total_cycle == arena->opts->d)
+		{
+			print_mem(arena);
+			return (1);
+		}
 	}
 	ft_putendl("End of MATCH");
 	return (1);
