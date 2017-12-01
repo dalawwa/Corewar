@@ -199,7 +199,7 @@ int		check_size(t_file *file)
 		return (0);
 	}
 //	(*player)->size = size - 140 - 4 - COMMENT_LENGTH;
-	return (size);
+	return (size - 1400 - 4 - COMMENT_LENGTH);
 }
 
 t_play		*init_player(int i)
