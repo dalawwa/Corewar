@@ -15,13 +15,17 @@
 unsigned char	*ft_unsi_strdup(unsigned char *s, int len)
 {
 	unsigned char	*dup;
-	size_t			i;
+	int			i;
 
 	i = 0;
+	if (s == NULL)
+		return (NULL);
 	if (!(dup = (unsigned char*)malloc(sizeof(unsigned char) * len)))
 		return (NULL);
-	while (s[i])
+//	ft_printf("len = %d\n", len);
+	while (i < len)
 	{
+//		ft_printf("i = %d\n", i);
 		dup[i] = s[i];
 		i++;
 	}

@@ -35,13 +35,18 @@ void		deal_exe(t_arena *arena)
 			elem->exe_op->to_wait--;
 			if (elem->exe_op->to_wait == 0)
 			{
+				ft_putendl("\nPROCESS AVANT OP :");
+				print_one_process(elem);
 				elem->exe_op->ocp_op->fct(arena, elem->exe_op);
 				elem->pc += elem->exe_op->ocp_op->size_adv;
 				free_exe(elem->exe_op, elem);
+				ft_putendl("\nPROCESS APRES OP :");
+				print_one_process(elem);
 			}
 		}
 		else
 		{
+//			ft_printf("Cycle %d :\n Process %d\n", arena->total_cycle, elem->process_num);
 			if (is_valid_op(arena, elem) == 1)
 				create_new_exe(arena, elem, NULL);
 			else
@@ -54,8 +59,11 @@ void		deal_exe(t_arena *arena)
 
 int		start_match(t_arena *arena)
 {
+	ft_putendl("Let's the MATCH begins ...");
+	ft_printf("There is %d process to start\n", arena->list_proc->nb_proc);
 	while (arena->list_proc->nb_proc > 0)
 	{
+//		ft_printf("Cycle %d :\n", arena->total_cycle);
 		if (arena->current_cycle == arena->ctd)
 		{
 			arena->ctd -= CYCLE_DELTA;
@@ -66,5 +74,10 @@ int		start_match(t_arena *arena)
 		arena->current_cycle++;
 		arena->total_cycle++;
 	}
+	ft_putendl("End of MATCH");
 	return (1);
 }
+
+/* TODOs
+ * les MAX_CHECKS ne sont pas pris en comptent
+ */
