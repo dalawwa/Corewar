@@ -6,7 +6,7 @@ int		a_hexa_to_i(unsigned char *s, int len)
 	int	i;
 
 	result = 0;
-	i = 1;
+	i = 0;
 	len--;
 	while (len >= 0)
 	{

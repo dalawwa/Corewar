@@ -244,8 +244,10 @@ void	print_arena(t_arena *arena);
 void	print_mem(t_arena *arena);
 void	print_bdd(t_arena *arena);
 void	print_all_process(t_arena *arena);
+void	print_one_process(t_proc *process);
 void	print_regs(t_proc *process);
 void	print_opts(t_arena *arena);
+void	print_exe(t_exe *exe);
 
 /* ADD TO LIB ? */
 char			*ft_stradd_c_end(char *s, char c);

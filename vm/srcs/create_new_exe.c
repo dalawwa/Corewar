@@ -29,11 +29,16 @@ int			find_struct_ocp(t_exe *exe_op, t_bdd *bdd_op)
 	}
 	while (i < bdd_op->nb_ocp)
 	{
+//		ft_printf("exe->ocp = %.2x - bbd->ocp[%d] = %.2x\n", exe_op->ocp, i, bdd_op->ocp[i]->ocp);
 		if (exe_op->ocp == bdd_op->ocp[i]->ocp)
+		{
 			exe_op->ocp_op = bdd_op->ocp[i];
+			return (1);
+		}
 		i++;
 	}
-	return (1);
+//	ft_putendl("no STRUCT OCP FOUND");
+	return (0);
 }
 
 int		set_arg_x_value(t_arg *arg, int arg_num, t_arena *arena, t_proc *process)
@@ -57,7 +62,9 @@ int		set_arg_x_value(t_arg *arg, int arg_num, t_arena *arena, t_proc *process)
 	}
 	else if (arg_num == 2)
 	{
+//		ft_printf("arg num = 2 dans exe OCP : type->arg2 = %c\n", process->exe_op->ocp_op->type_arg2);
 		arg->type = process->exe_op->ocp_op->type_arg2;
+//		ft_printf("Dans EXE : arg2 type = %c\n", arg->type);
 		arg->size = process->exe_op->ocp_op->size_arg2;
 		arg->value = (unsigned char *)malloc(sizeof(unsigned char) * process->exe_op->ocp_op->size_arg2);
 		if (arg->value == NULL)
@@ -89,14 +96,16 @@ int		set_arg_x_value(t_arg *arg, int arg_num, t_arena *arena, t_proc *process)
 
 int			set_data(t_arg *arg, t_arena *arena, t_proc *process)
 {
+//	ft_printf("arg Type = %c\n", arg->type);
 	if (arg->type == 'r')
 	{
-		arg->d_data = (int)process->reg[arg->d_value];
+		arg->d_data = a_hexa_to_i(process->reg[arg->d_value], 2);
 		arg->data = ft_unsi_strdup(process->reg[arg->d_value], 2);
+//		ft_printf("type R : data[0] = %.2x - data[1] = %2x\n", arg->data[0], arg->data[1]);
 	}
 	else if (arg->type == 'd')
 	{
-		arg->data = ft_unsi_strdup(arg->data, arg->size);
+		arg->data = ft_unsi_strdup(arg->value, arg->size);
 		arg->d_data = arg->d_value;
 	}
 	else if (arg->type == 'i')
@@ -123,7 +132,8 @@ int			set_args_values(t_proc *process, t_arena *arena)
 	process->exe_op->arg1 = (t_arg *)malloc(sizeof(t_arg));
 	if (process->exe_op->arg1 == NULL)
 		return (perror_int("Error ", 0));
-	set_arg_x_value(process->exe_op->arg1, 1, arena, process); 
+	set_arg_x_value(process->exe_op->arg1, 1, arena, process);
+//	ft_printf("arg1->d_value = %d\n", process->exe_op->arg1->d_value);
 	if (set_data(process->exe_op->arg1, arena, process) == 0)
 		return (0);
 	if (process->exe_op->bdd_op->nb_args > 1)
@@ -132,7 +142,7 @@ int			set_args_values(t_proc *process, t_arena *arena)
 		if (process->exe_op->arg2 == NULL)
 			return (perror_int("Error ", 0));
 		set_arg_x_value(process->exe_op->arg2, 2, arena, process); 
-		if (set_data(process->exe_op->arg1, arena, process) == 0)
+		if (set_data(process->exe_op->arg2, arena, process) == 0)
 			return (0);
 	}
 	if (process->exe_op->bdd_op->nb_args == 3)
@@ -148,7 +158,7 @@ int			set_args_values(t_proc *process, t_arena *arena)
 }
 
 
-void		init_exe(t_exe *exe_op)
+void		init_exe(t_exe *exe_op, t_proc *process)
 {
 	exe_op->opcode = 0;
 	exe_op->ocp = 0;
@@ -156,21 +166,23 @@ void		init_exe(t_exe *exe_op)
 	exe_op->arg2 = NULL;
 	exe_op->arg3 = NULL;
 	exe_op->to_wait = 0;
+	exe_op->process = process;
 }
 
 int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent)
 {
+	ft_putendl("\n--------------------->  NEW EXE in Creation");
 	process->exe_op = (t_exe *)malloc(sizeof(t_exe));
 	if (process->exe_op == NULL)
 		return (perror_int("Error ", 0));
-	init_exe(process->exe_op);
+	init_exe(process->exe_op, process);
 	process->exe_op->opcode = arena->mem[process->pc];
 	process->pc++;
 	find_bdd_op(process->exe_op, arena->bdd);
 	if (process->exe_op->bdd_op->has_ocp == 1)
 	{
-		process->pc++;
 		process->exe_op->ocp = arena->mem[process->pc];
+		process->pc++;
 	}
 	find_struct_ocp(process->exe_op, process->exe_op->bdd_op);
 	if (parent != NULL)
@@ -180,6 +192,7 @@ int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent)
 	if (set_args_values(process, arena) == 0)
 		return (0);
 	process->pc -= process->exe_op->ocp_op->size_adv;
+	print_exe(process->exe_op);
 	return (1);
 }
 
