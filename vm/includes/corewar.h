@@ -8,6 +8,9 @@
 //typedef int		(*t_fct)(struct s_vm*, struct s_exe*);
 // op.h
 //
+
+// checker la taille des datas...
+
 # define IND_SIZE				2
 # define REG_SIZE				4
 # define DIR_SIZE				REG_SIZE
@@ -226,7 +229,6 @@ unsigned char	*find_reg_ptr(int arg_value, t_exe *exe);
 void			print_usage(void);
 int		a_hexa_to_i(unsigned char *s, int len);
 int		is_carry_to_modify(t_exe *exe);
-
 int		is_valid_op(t_arena *arena, t_proc *proc);
 
 /* FREE MEMORY */
