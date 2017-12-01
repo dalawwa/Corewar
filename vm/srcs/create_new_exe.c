@@ -60,7 +60,9 @@ int		set_arg_x_value(t_arg *arg, int arg_num, t_arena *arena, t_proc *process)
 			i++;
 		}
 //		ft_printf("i = %d - dans bdd size = %d dans exe size = %d\n", i, process->exe_op->ocp_op->size_arg1, arg->size);
+		ft_putendl("arg1");
 		arg->d_value = a_hexa_to_i(arg->value, process->exe_op->ocp_op->size_arg1);
+		ft_putendl("OUT arg1");
 	}
 	else if (arg_num == 2)
 	{
@@ -101,6 +103,7 @@ int			set_data(t_arg *arg, t_arena *arena, t_proc *process)
 //	ft_printf("arg Type = %c\n", arg->type);
 	if (arg->type == 'r')
 	{
+		ft_putendl("REGISTRE SET DATA");
 		arg->d_data = a_hexa_to_i(process->reg[arg->d_value], 2);
 		arg->data = ft_unsi_strdup(process->reg[arg->d_value], 2);
 //		ft_printf("type R : data[0] = %.2x - data[1] = %2x\n", arg->data[0], arg->data[1]);
