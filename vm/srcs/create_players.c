@@ -53,16 +53,16 @@ unsigned char	*clean_body(unsigned char *body, t_play **player)
 	i = CHAMP_MAX_SIZE - 1;
 	cleaned = NULL;
 	j = 0;
-	swap_second(body);
+//	swap_second(body);
 	while (i && body[i] == 0)
 		i--;
-	(*player)->body_len = i;
-	cleaned = malloc(sizeof(unsigned char) * i);
+	(*player)->body_len = i + 1;
+	cleaned = malloc(sizeof(unsigned char) * (i + 1));
 	if (cleaned == NULL)
 		return (perror_ptr("Error ", NULL));
-	while (j < i)
+	while (j <= i)
 	{
-		cleaned[j] = body[1 + j] % 0x100;
+		cleaned[j] = body[j] % 0x100;
 //		ft_printf("body_cleaned[%d] = %.2x\n", j, cleaned[j]);
 		j++;
 	}
@@ -143,12 +143,13 @@ unsigned char	*find_body(t_file *file)
 		line = NULL;
 		i++;
 	}
-/*	i = 0;
+	ft_putendl("Print Players Initial BODY :\n");
+	i = 0;
 	while (i < CHAMP_MAX_SIZE)
 	{
 		ft_printf("body[%d] = %.2x\n", i, body[i]);
 		i++;
-	}*/
+	}
 	return (body);
 }
 

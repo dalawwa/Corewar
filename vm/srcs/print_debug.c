@@ -30,8 +30,10 @@ void print_tab_cors(int *tab)
 
 void		print_one_process(t_proc *process)
 {
+	ft_putendl("__________print_ONE_PROCESS");
 	ft_printf("Process num %d :\nPlayer : %s\nCarry = %d - pc = %d\n", process->process_num, process->player->name, process->carry, process->pc);
 	print_regs(process);
+	ft_putendl("__________print_ONE_PROCESS__END");
 }
 
 void		print_files(t_arena *arena)
@@ -53,6 +55,43 @@ void		print_files(t_arena *arena)
 		}
 	}
 	ft_putendl("__________print_FILES__END");
+}
+
+void		print_exe(t_exe *exe)
+{
+	ft_putendl("__________print_EXE");
+	if (exe)
+	{
+		ft_printf("EXE from Process %d :\nOpcode = %.2x - OCP = %.2x\nBDD_op = %s\n", exe->process->process_num, exe->opcode, exe->ocp, exe->bdd_op->name);
+		ft_printf("Arg1 : type = %c - ", exe->arg1->type);
+		if (exe->arg1->type == 'r')
+			ft_printf("value = %.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->d_value, exe->arg1->d_data);
+		else if ((exe->arg1->type == 'd' && exe->arg1->size == 2) || exe->arg1->type == 'i')
+			ft_printf("value = %.2x%.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->value[1], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->d_value, exe->arg1->d_data);
+		else if (exe->arg1->type == 'd' && exe->arg1->size == 4)
+			ft_printf("value = %.2x%.2x %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->value[1], exe->arg1->value[2], exe->arg1->value[3], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->data[2], exe->arg1->data[3], exe->arg1->d_value, exe->arg1->d_data);
+		if (exe->arg2)
+		{
+			ft_printf("Arg2 : type = %c - ", exe->arg2->type);
+			if (exe->arg2->type == 'r')
+				ft_printf("value = %.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->d_value, exe->arg2->d_data);
+			else if ((exe->arg2->type == 'd' && exe->arg2->size == 2) || exe->arg2->type == 'i')
+				ft_printf("value = %.2x%.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->value[1], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->d_value, exe->arg2->d_data);
+			else if (exe->arg2->type == 'd' && exe->arg2->size == 4)
+				ft_printf("value = %.2x%.2x %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->value[1], exe->arg2->value[2], exe->arg2->value[3], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->data[2], exe->arg2->data[3], exe->arg2->d_value, exe->arg2->d_data);
+			if (exe->arg3)
+			{
+				ft_printf("Arg3 : type = %c - ", exe->arg3->type);
+				if (exe->arg3->type == 'r')
+					ft_printf("value = %.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->d_value, exe->arg3->d_data);
+				else if ((exe->arg3->type == 'd' && exe->arg3->size == 2) || exe->arg3->type == 'i')
+					ft_printf("value = %.2x%.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->value[1], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->d_value, exe->arg3->d_data);
+				else if (exe->arg3->type == 'd' && exe->arg3->size == 4)
+				ft_printf("value = %.2x%.2x %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->value[1], exe->arg3->value[2], exe->arg3->value[3], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->data[2], exe->arg3->data[3], exe->arg3->d_value, exe->arg3->d_data);
+			}
+		}
+	}
+	ft_putendl("__________print_EXE__END");
 }
 
 void		print_all_process(t_arena *arena)
@@ -105,7 +144,7 @@ void		print_bdd(t_arena *arena)
 			ft_printf("\nNAME = %s\nOpcode = %.2x Meaning = %s Nb_cycle = %d Nb_args = %d has_ocp = %d Nb_ocp = %d\nOCPs:\n", arena->bdd[i]->name, arena->bdd[i]->opcode, arena->bdd[i]->meaning, arena->bdd[i]->nb_cycle, arena->bdd[i]->nb_args, arena->bdd[i]->has_ocp, arena->bdd[i]->nb_ocp);
 			while (j < arena->bdd[i]->nb_ocp)
 			{
-				ft_printf("OCP Numero %d : ocp = %.2x size_adv = %d type_arg1 = %c - type_arg2 = %c - type_arg3 = %c\n", j + 1, arena->bdd[i]->ocp[j]->ocp, arena->bdd[i]->ocp[j]->size_adv, arena->bdd[i]->ocp[j]->type_arg1, arena->bdd[i]->ocp[j]->type_arg2, arena->bdd[i]->ocp[j]->type_arg3);
+				ft_printf("OCP Numero %d : ocp = %.2x size_adv = %d type_arg1 = %c - type_arg2 = %c - type_arg3 = %c - Size_arg1 = %d - Size_arg2 = %d - Size_arg3 = %d\n", j + 1, arena->bdd[i]->ocp[j]->ocp, arena->bdd[i]->ocp[j]->size_adv, arena->bdd[i]->ocp[j]->type_arg1, arena->bdd[i]->ocp[j]->type_arg2, arena->bdd[i]->ocp[j]->type_arg3, arena->bdd[i]->ocp[j]->size_arg1, arena->bdd[i]->ocp[j]->size_arg2, arena->bdd[i]->ocp[j]->size_arg3);
 				j++;
 			}
 			j = 0;

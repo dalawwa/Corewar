@@ -18,6 +18,10 @@ int	ft_power(int nb, int pow)
 	int i;
 
 	i = 1;
+	if (pow == 0)
+		return (1);
+	if (pow == 1)
+		return (nb);
 	result = nb;
 	while (i < pow)
 	{
