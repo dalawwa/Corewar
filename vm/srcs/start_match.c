@@ -37,7 +37,10 @@ void		deal_exe(t_arena *arena)
 			{
 				ft_putendl("\nPROCESS AVANT OP :");
 				print_one_process(elem);
-				elem->exe_op->ocp_op->fct(arena, elem->exe_op);
+				if (elem->exe_op->ocp_op->fct != NULL)
+					elem->exe_op->ocp_op->fct(arena, elem->exe_op);
+				else
+					ft_putendl("OP Not linked - But everything is allright");
 				elem->pc += elem->exe_op->ocp_op->size_adv;
 				free_exe(elem->exe_op, elem);
 				ft_putendl("\nPROCESS APRES OP :");
