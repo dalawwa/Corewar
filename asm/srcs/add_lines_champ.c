@@ -6,11 +6,72 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 16:24:32 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/11/29 18:01:47 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/01 17:44:25 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/asm.h"
+
+/*
+//je vais recuperer les arguments
+void		add_args_champ(t_champ *list)
+{
+	int	i;
+	int	j;
+
+	while (list->prev)
+		list = list->prev;
+	list = list->next;
+	while (list->next)
+	{
+		i = 0;
+		j = 0;
+		while (list->is_label == 1 && list->next)
+			list = list->next;
+		if (list->next == NULL)
+			break ;
+		while ((list->line[i + 1] != 'r' || list->line[i + 1] != '%') && (list->line[i] != ' ' || list->line[i] != '\t') && list->line[i] != '\0')
+			i++;
+		i++;
+		while (list->line[i] != ' ' && list->line[i] != ',' && list->line[i] != '\t' && list->line[i] != '\0')
+		{
+			ft_putchar(list->line[i]);
+			i++;
+			j++;
+		}
+		ft_putchar(' ');
+		list = list->next;
+	}
+}
+*/
+
+//je recupere le nombre d arguments
+void		add_number_args(t_champ *list)
+{
+	int		i;
+	int		j;
+
+	j = 0;
+	list = list->next;
+	while (list->next)
+	{
+		j = 0;
+		i = 0;
+		while (list->is_label == 1 && list->next)
+			list = list->next;
+		if (list->next == NULL)
+			break ;
+		while (list->line[i] != '\0')
+		{
+			if (list->line[i] == ',')
+				j++;
+			i++;
+		}
+		list->nb_params = j + 1;
+		list = list->next;
+	}
+//	add_args_champ(list);
+}
 
 //je verifie si il s agit d un label
 int			get_two_points(char *str)
@@ -131,6 +192,9 @@ void		add_infos_list(t_champ **begin)
 	while (list->next)
 		list = list->next;
 	add_name_list(list);
+	while (list->prev)
+		list = list->prev;
+	add_number_args(list);
 }
 
 t_champ		*ft_lstnew_line(char *line)
