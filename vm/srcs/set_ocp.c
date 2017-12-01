@@ -13,7 +13,7 @@ int				count_size_arg(char type, int is_idx)
 		return (4);
 	}
 	if (type == 'i')
-		return (4);
+		return (2);
 	return (-1);
 }
 

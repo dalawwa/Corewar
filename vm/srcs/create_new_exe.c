@@ -46,6 +46,7 @@ int		set_arg_x_value(t_arg *arg, int arg_num, t_arena *arena, t_proc *process)
 	int	i;
 
 	i = 0;
+//	ft_printf("Set value arg %d - pc = %d\n", arg_num, process->pc);
 	if (arg_num == 1)
 	{
 		arg->type = process->exe_op->ocp_op->type_arg1;
@@ -58,6 +59,7 @@ int		set_arg_x_value(t_arg *arg, int arg_num, t_arena *arena, t_proc *process)
 			arg->value[i] = arena->mem[process->pc + i];
 			i++;
 		}
+//		ft_printf("i = %d - dans bdd size = %d dans exe size = %d\n", i, process->exe_op->ocp_op->size_arg1, arg->size);
 		arg->d_value = a_hexa_to_i(arg->value, process->exe_op->ocp_op->size_arg1);
 	}
 	else if (arg_num == 2)

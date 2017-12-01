@@ -143,13 +143,13 @@ unsigned char	*find_body(t_file *file)
 		line = NULL;
 		i++;
 	}
-	ft_putendl("Print Players Initial BODY :\n");
+/*	ft_putendl("Print Players Initial BODY :\n");
 	i = 0;
 	while (i < CHAMP_MAX_SIZE)
 	{
 		ft_printf("body[%d] = %.2x\n", i, body[i]);
 		i++;
-	}
+	}*/
 	return (body);
 }
 
