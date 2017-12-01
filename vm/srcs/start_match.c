@@ -64,9 +64,15 @@ int		start_match(t_arena *arena)
 {
 	ft_putendl("Let's the MATCH begins ...");
 	ft_printf("There is %d process to start\n", arena->list_proc->nb_proc);
+	if (arena->opts->has_d == 1 && arena->opts->d == 0)
+	{
+		print_mem(arena);
+		return (0);
+	}
 	while (arena->list_proc->nb_proc > 0)
 	{
-		ft_printf("Cycle %d :\n", arena->total_cycle);
+		if (arena->opts->has_v == 1 && arena->opts->v >= 2)
+			ft_printf("It is now cycle %d\n", arena->total_cycle);
 		if (arena->current_cycle == arena->ctd)
 		{
 			arena->ctd -= CYCLE_DELTA;
@@ -74,13 +80,13 @@ int		start_match(t_arena *arena)
 			kill_processes_dead(arena->list_proc);
 		}
 		deal_exe(arena);
-		arena->current_cycle++;
-		arena->total_cycle++;
 		if (arena->opts->has_d == 1 && arena->total_cycle == arena->opts->d)
 		{
 			print_mem(arena);
 			return (1);
 		}
+		arena->current_cycle++;
+		arena->total_cycle++;
 	}
 	ft_putendl("End of MATCH");
 	return (1);
