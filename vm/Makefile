@@ -318,6 +318,7 @@ SRCS_NAME = main.c \
 			ft_unsi_strdup.c \
 			start_match.c \
 			op_ld.c \
+			op_aff.c \
 			ft_ito_hexa.c \
 			op_st.c \
 			a_hexa_toi.c \
