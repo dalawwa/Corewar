@@ -319,8 +319,15 @@ SRCS_NAME = main.c \
 			start_match.c \
 			op_ld.c \
 			op_aff.c \
+			op_sub.c \
+			op_or.c \
+			op_xor.c \
+			op_and.c \
+			op_fork.c \
+			op_lfork.c \
 			ft_ito_hexa.c \
 			op_st.c \
+			op_live.c \
 			a_hexa_toi.c \
 			op_add.c \
 			is_carry_to_modify.c \

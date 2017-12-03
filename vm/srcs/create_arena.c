@@ -88,6 +88,7 @@ int		init_arena(t_arena **arena)
 	(*arena)->current_cycle = 0;
 	(*arena)->max_check = MAX_CHECKS;
 	(*arena)->c_delta = CYCLE_DELTA;
+	(*arena)->last_player_alive = 0;
 	return (1);
 }
 

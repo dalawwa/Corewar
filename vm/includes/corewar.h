@@ -159,6 +159,7 @@ typedef struct	s_arena
 	t_proc_base		*list_proc;
 	t_opt			*opts;
 	t_file			**files;
+	int				last_player_alive;
 	int				ctd; // cycle to die
 	int				current_cycle; // cycle en cours (init a 0 tous les ctd
 	int				total_cycle; // nb_cycle depuis le debut
@@ -221,6 +222,14 @@ int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent);
 int		op_ld(t_arena *arena, t_exe *exe);
 int		op_st(t_arena *arena, t_exe *exe);
 int		op_aff(t_arena *arena, t_exe *exe);
+int		op_live(t_arena *arena, t_exe *exe);
+int		op_and(t_arena *arena, t_exe *exe);
+int		op_add(t_arena *arena, t_exe *exe);
+int		op_or(t_arena *arena, t_exe *exe);
+int		op_xor(t_arena *arena, t_exe *exe);
+int		op_sub(t_arena *arena, t_exe *exe);
+int		op_fork(t_arena *arena, t_exe *exe);
+int		op_lfork(t_arena *arena, t_exe *exe);
 
 /* GO MATCH */
 void	go_match(t_arena *arena);
