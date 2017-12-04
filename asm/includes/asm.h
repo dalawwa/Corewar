@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/01 17:44:29 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/04 11:04:04 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,9 @@ typedef struct		s_champ
 	int				position;
 	char			**params;
 	int				nb_params;
+	char			*param1;
+	char			*param2;
+	char			*param3;
 	int				size_param1;
 	int				size_param2;
 	int				size_param3;
@@ -68,5 +71,6 @@ void	value_parent(char *str, int x, int j, t_header *op);
 void	check_valid_name(char *str);
 void	ciao_bye_bye(int i);
 void	ft_lstadd_lines(t_champ **begin, char *line, int i);
+char	**ft_strsplit_three(const char *s, char c, char d, char e);
 
 #endif

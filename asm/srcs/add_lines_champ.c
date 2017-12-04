@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 16:24:32 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/01 17:44:25 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/04 16:52:19 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void		add_number_args(t_champ *list)
 {
 	int		i;
 	int		j;
+	char	**tab;
 
 	j = 0;
 	list = list->next;
@@ -70,6 +71,16 @@ void		add_number_args(t_champ *list)
 		list->nb_params = j + 1;
 		list = list->next;
 	}
+//	tab = ft_strsplit_three(list->line, ' ', '\t', ',');
+//	i = 0;
+//	while (tab[i])
+//	{
+//		ft_putstr(tab[i]);
+//		ft_putchar('\n');
+//		i++;
+//	}
+//	ft_putchar('\n');
+//	ft_putchar('\n');
 //	add_args_champ(list);
 }
 
@@ -152,12 +163,23 @@ int		get_the_op_code(char *str)
 //next step: recuperer les params 
 //+ ocp
 //et ensuite size_octets
+//ce qui serait bien c est de me retrouver au bon endroit dans la ligne pour pouvoir recuperer les arguments et verifier que ce qu on trouve est plausible
 void		is_a_line_of_life(t_champ *list)
 {
+	int		i;
+	int		op;
+
+	i = 0;
 	while (list->next)
 		list = list->next;
 	list->op_code = get_the_op_code(list->name);
 	list->is_label = 0;
+	op = list->op_code;
+	while (list->line[i] == ' ' || list->line[i] == '\t')
+		i++;
+	if (op == 1 || op == 9 || op == 12 || op == 14)
+		i = i + 4;
+	else if (op == 2 || op == 5)
 }
 
 //je rajoute le nom dans la liste + label et on lance la recherche des autres infos
