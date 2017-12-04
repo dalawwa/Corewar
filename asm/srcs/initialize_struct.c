@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:39:24 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/11/29 11:13:33 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/04 11:16:51 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,7 @@ void	start_struct_champ(t_champ *champ)
 	champ->size_octets = 0;
 	champ->next = NULL;
 	champ->prev = NULL;
+	champ->param1 = NULL;
+	champ->param2 = NULL;
+	champ->param3 = NULL;
 }
