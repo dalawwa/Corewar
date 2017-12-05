@@ -2,9 +2,9 @@
 
 int		is_carry_to_modify(t_exe *exe)
 {
-	if ((exe->opcode >= 4 && exe->opcode <= 6) || exe->opcode == 14)
+	if ((exe->opcode >= 4 && exe->opcode <= 6) || exe->opcode == 14 || exe->opcode == 2)
 	{
-		if (exe->arg1 == 0 || exe->arg2 == 0 || exe->arg3 == 0)
+		if (exe->arg1->d_value == 0 || (exe->arg2 && exe->arg2->d_value == 0) || (exe->arg3 && exe->arg3->d_value == 0))
 			exe->process->carry = 1;
 		else
 			exe->process->carry = 0;
