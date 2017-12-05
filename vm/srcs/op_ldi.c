@@ -1,24 +1,21 @@
 #include "corewar.h"
 
-int		op_ld(t_arena *arena, t_exe *exe)
+int		op_ldi(t_arena *arena, t_exe *exe)
 {
-	// Pas change : C'est une copie de op_ld.c
-	if (exe->arg1->type == 'd')
+	uintmax_t result;
+
+	result = (uintmax_t)exe->arg1->d_data + (uintmax_t)exe->arg2->d_data;
+	if (result > 0xffffffff)
 	{
-		if (exe->arg1->d_value > IDX_MOD)
-		{
-			exe->arg1->d_value = exe->arg1->d_value % IDX_MOD;
-			free(exe->arg1->value);
-			exe->arg1->value = ft_ito_hexa(exe->arg1->d_value);
-		}
-		ft_printf("NEW arg1->value = %x\n", exe->arg1->value);
-		exe->process->reg[exe->arg2->d_value][0] = exe->arg1->value[2];
-		exe->process->reg[exe->arg2->d_value][1] = exe->arg1->value[3];
+		ft_putendl("op_ldi failed");
+		return (0);
 	}
-	else
-	{
-		exe->process->reg[exe->arg2->d_value][0] = 0;
-		exe->process->reg[exe->arg2->d_value][1] = arena->mem[exe->arg1->d_value];
-	}
+	result = result % IDX_MOD;
+//	ft_printf("result = %u\n", result);
+	exe->process->reg[exe->arg3->d_value][0] = arena->mem[exe->process->pc + result];
+	exe->process->reg[exe->arg3->d_value][1] = arena->mem[exe->process->pc + result + 1];
+	exe->process->reg[exe->arg3->d_value][2] = arena->mem[exe->process->pc + result + 2];
+	exe->process->reg[exe->arg3->d_value][3] = arena->mem[exe->process->pc + result + 3];
 	return (1);
 }
+/* attention si result + 3 > mem_size */

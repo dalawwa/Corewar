@@ -211,7 +211,9 @@ t_play		*init_player(int i)
 		return (perror_ptr("Error ", NULL));
 	player->play_num = i + 1;
 	player->play_live_num[0] = (unsigned char)(255);
-	player->play_live_num[1] = (unsigned char)(255 - i);
+	player->play_live_num[1] = (unsigned char)(255);
+	player->play_live_num[2] = (unsigned char)(255);
+	player->play_live_num[3] = (unsigned char)(255 - i);
 	player->idx_start = 0;
 	player->size = 0;
 	player->last_live = 0;

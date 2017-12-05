@@ -32,15 +32,17 @@ int		set_name(t_bdd **bdd)
 
 void		set_cycle(t_bdd *bdd_i, int i)
 {
-	if (i == 0 || i == 3 || i == 4 || i == 11 || i == 12)
+	if (i == 0 || i == 3 || i == 4 || i == 12)
 		bdd_i->nb_cycle = 10;
 	else if (i == 1 || i == 2)
 		bdd_i->nb_cycle = 5;
 	else if (i == 5 || i == 6 || i == 7)
 		bdd_i->nb_cycle = 6;
-	else if (i == 8 || i == 9)
+	else if (i == 8)
+		bdd_i->nb_cycle = 20;
+	else if (i == 10 || i == 9)
 		bdd_i->nb_cycle = 25;
-	else if (i == 10)
+	else if (i == 11)
 		bdd_i->nb_cycle = 800;
 	else if (i == 13)
 		bdd_i->nb_cycle = 50;
@@ -84,7 +86,7 @@ void		set_nb_args(t_bdd *bdd_i, int i)
 {
 	if (i == 0 || i == 8 || i == 11 || i == 14 || i == 15)
 		bdd_i->nb_args = 1;
-	else if (i == 1 || i == 2 || i == 3 || i == 12)
+	else if (i == 1 || i == 2 || i == 12)
 		bdd_i->nb_args = 2;
 	else
 		bdd_i->nb_args = 3;
