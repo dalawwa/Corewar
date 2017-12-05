@@ -77,6 +77,11 @@ typedef struct	s_opt
 	int		has_v;  // init a 0
 	int		v; // init a -1
 	int		has_s;  // init a 0
+	int		show_cycle; // all init a 0
+	int		show_op;
+	int		show_death;
+	int		show_live;
+	int		show_pc_mvt; 
 	int		s; // init a -1
 	int		has_a;  // init a 0
 	int		a_stealth; // init a 0
@@ -95,13 +100,14 @@ typedef struct	s_file
 typedef struct	s_proc
 {
 	int				process_num;
-	unsigned char	reg[REG_NUMBER + 1][2]; // les registres du process --> reg[0] --> char ** car reg1 = num player 0xffff
+	unsigned char	reg[REG_NUMBER + 1][REG_SIZE]; // les registres du process --> reg[0] --> char ** car reg1 = num player 0xffff
 	int				pc;
 	int				carry;
 	struct s_play	*player; // potentiellemt useless --> Si pour inittialized le reg1
 	struct s_exe	*exe_op;
 	int				op_success; // retour de la fct appele par l'exe (vias la BDD)
 	int				nb_live; // nb live init 0
+	int				last_cycle_alive;
 	struct s_proc	*next;
 	struct s_proc	*prev;
 }				t_proc;
@@ -110,7 +116,7 @@ typedef struct	s_play
 {
 	int		play_num; // Numero du joueur
 	int		size; // size du player
-	unsigned char	play_live_num[2]; // numero du joueur dans reg1 et pour le live
+	unsigned char	play_live_num[REG_SIZE]; // numero du joueur dans reg1 et pour le live
 	int		idx_start; // index de chargement sur la mem
 	char	*name;
 	char	*comment;
@@ -146,6 +152,8 @@ typedef struct	s_exe
 typedef struct	s_proc_base
 {
 	int		nb_proc;
+	int		total_proc;
+	int		nb_live_total; // depuis last check
 	t_proc	*first; // first elem of list PROC
 	t_proc	*last; // the last one
 }				t_proc_base;
@@ -153,13 +161,14 @@ typedef struct	s_proc_base
 typedef struct	s_arena
 {
 	int				nb_players;
+	int				current_nb_check;
 	t_play			**players; // tableau de struct t_play de nb_cor len
 	unsigned char	mem[MEM_SIZE];
 	struct s_bdd	**bdd;
 	t_proc_base		*list_proc;
 	t_opt			*opts;
 	t_file			**files;
-	int				last_player_alive;
+	t_play			*last_player_alive;
 	int				ctd; // cycle to die
 	int				current_cycle; // cycle en cours (init a 0 tous les ctd
 	int				total_cycle; // nb_cycle depuis le debut
@@ -213,6 +222,9 @@ int				perror_int(char *s, int ret);
 void			*perror_ptr(char *s, void *ret);
 char			*addstr(char *s);
 
+void			print_exe_opts(t_arena *arena, t_exe *exe);
+void			print_failed_exe(t_arena *arena, t_exe *exe);
+
 /* Initialized Process */
 int		create_new_process(t_arena *arena, t_play *player, t_proc *parent);
 int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent);
@@ -220,7 +232,10 @@ int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent);
 /* OP & Outils pour les OP */
 //unsigned char	*find_reg_ptr(int arg_value, t_exe *exe);
 int		op_ld(t_arena *arena, t_exe *exe);
+int		op_lld(t_arena *arena, t_exe *exe);
+int		op_ldi(t_arena *arena, t_exe *exe);
 int		op_st(t_arena *arena, t_exe *exe);
+int		op_sti(t_arena *arena, t_exe *exe);
 int		op_aff(t_arena *arena, t_exe *exe);
 int		op_live(t_arena *arena, t_exe *exe);
 int		op_and(t_arena *arena, t_exe *exe);
@@ -230,6 +245,7 @@ int		op_xor(t_arena *arena, t_exe *exe);
 int		op_sub(t_arena *arena, t_exe *exe);
 int		op_fork(t_arena *arena, t_exe *exe);
 int		op_lfork(t_arena *arena, t_exe *exe);
+int		op_zjmp(t_arena *arena, t_exe *exe);
 
 /* GO MATCH */
 void	go_match(t_arena *arena);
@@ -240,6 +256,8 @@ void			print_usage(void);
 int		a_hexa_to_i(unsigned char *s, int len);
 int		is_carry_to_modify(t_exe *exe);
 int		is_valid_op(t_arena *arena, t_proc *proc);
+int		inc_pc(t_proc *process, int adv);
+unsigned char	find_char_at_mem_pc_adv(int pc, int adv, t_arena *arena);
 
 /* FREE MEMORY */
 void	free_arena(t_arena **arena);
@@ -266,6 +284,6 @@ char			*ft_stradd_c_end(char *s, char c);
 int				ft_power(int nb, int pow);
 int				a_hexa_to_i(unsigned char *s, int len);
 unsigned char	*ft_unsi_strdup(unsigned char *s, int len);
-unsigned char	*ft_ito_hexa(uintmax_t nb);
+unsigned char	*ft_ito_hexa(uintmax_t n);
 
 #endif

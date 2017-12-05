@@ -65,7 +65,7 @@ void		print_exe(t_exe *exe)
 		ft_printf("EXE from Process %d :\nOpcode = %.2x - OCP = %.2x\nBDD_op = %s\n", exe->process->process_num, exe->opcode, exe->ocp, exe->bdd_op->name);
 		ft_printf("Arg1 : type = %c - ", exe->arg1->type);
 		if (exe->arg1->type == 'r')
-			ft_printf("value = %.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->d_value, exe->arg1->d_data);
+			ft_printf("value = %.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->data[2], exe->arg1->data[3], exe->arg1->d_value, exe->arg1->d_data);
 		else if ((exe->arg1->type == 'd' && exe->arg1->size == 2) || exe->arg1->type == 'i')
 			ft_printf("value = %.2x%.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->value[1], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->d_value, exe->arg1->d_data);
 		else if (exe->arg1->type == 'd' && exe->arg1->size == 4)
@@ -74,7 +74,7 @@ void		print_exe(t_exe *exe)
 		{
 			ft_printf("Arg2 : type = %c - ", exe->arg2->type);
 			if (exe->arg2->type == 'r')
-				ft_printf("value = %.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->d_value, exe->arg2->d_data);
+				ft_printf("value = %.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->data[2], exe->arg2->data[3], exe->arg2->d_value, exe->arg2->d_data);
 			else if ((exe->arg2->type == 'd' && exe->arg2->size == 2) || exe->arg2->type == 'i')
 				ft_printf("value = %.2x%.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->value[1], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->d_value, exe->arg2->d_data);
 			else if (exe->arg2->type == 'd' && exe->arg2->size == 4)
@@ -83,7 +83,7 @@ void		print_exe(t_exe *exe)
 			{
 				ft_printf("Arg3 : type = %c - ", exe->arg3->type);
 				if (exe->arg3->type == 'r')
-					ft_printf("value = %.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->d_value, exe->arg3->d_data);
+					ft_printf("value = %.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->data[2], exe->arg3->data[3], exe->arg3->d_value, exe->arg3->d_data);
 				else if ((exe->arg3->type == 'd' && exe->arg3->size == 2) || exe->arg3->type == 'i')
 					ft_printf("value = %.2x%.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->value[1], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->d_value, exe->arg3->d_data);
 				else if (exe->arg3->type == 'd' && exe->arg3->size == 4)
@@ -104,6 +104,7 @@ void		print_all_process(t_arena *arena)
 	ft_putendl("__________print_all_PROCESS");
 	if (arena && arena->list_proc)
 	{
+		ft_printf("mn_proc = %d - Total proc = %d\n", arena->list_proc->nb_proc, arena->list_proc->total_proc);
 		elem = arena->list_proc->first;
 		while (i++ < arena->list_proc->nb_proc)
 		{
@@ -121,7 +122,7 @@ void		print_regs(t_proc *process)
 	i = 1;
 	while (i <= REG_NUMBER)
 	{
-		ft_printf("reg[%d] = %.2x%.2x", i, process->reg[i][0], process->reg[i][1]);
+		ft_printf("reg[%d] = %.2x%.2x %.2x%.2x", i, process->reg[i][0], process->reg[i][1], process->reg[i][2], process->reg[i][3]);
 		i++;
 		if (i <= REG_NUMBER)
 			ft_putstr(" - ");
@@ -165,8 +166,8 @@ void	print_arena(t_arena *arena)
 //		if (arena->files)
 //			print_files(arena);
 //		ft_putchar('\n');
-//		if (arena->bdd)
-//			print_bdd(arena);
+		if (arena->bdd)
+			print_bdd(arena);
 //		ft_putchar('\n');
 //		print_mem(arena);
 //		ft_putchar('\n');
