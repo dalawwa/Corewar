@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 16:24:32 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/04 16:52:19 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/06 10:55:38 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,45 +45,6 @@ void		add_args_champ(t_champ *list)
 }
 */
 
-//je recupere le nombre d arguments
-void		add_number_args(t_champ *list)
-{
-	int		i;
-	int		j;
-	char	**tab;
-
-	j = 0;
-	list = list->next;
-	while (list->next)
-	{
-		j = 0;
-		i = 0;
-		while (list->is_label == 1 && list->next)
-			list = list->next;
-		if (list->next == NULL)
-			break ;
-		while (list->line[i] != '\0')
-		{
-			if (list->line[i] == ',')
-				j++;
-			i++;
-		}
-		list->nb_params = j + 1;
-		list = list->next;
-	}
-//	tab = ft_strsplit_three(list->line, ' ', '\t', ',');
-//	i = 0;
-//	while (tab[i])
-//	{
-//		ft_putstr(tab[i]);
-//		ft_putchar('\n');
-//		i++;
-//	}
-//	ft_putchar('\n');
-//	ft_putchar('\n');
-//	add_args_champ(list);
-}
-
 //je verifie si il s agit d un label
 int			get_two_points(char *str)
 {
@@ -116,70 +77,21 @@ void		is_a_label(t_champ *list)
 	list->size_octets = 0;
 }
 
-int		next_get_the_op_code(char *str)
-{
-	if (ft_strequ(str, "fork"))
-		return (12);
-	if (ft_strequ(str, "lld"))
-		return (13);
-	if (ft_strequ(str, "lldi"))
-		return (14);
-	if (ft_strequ(str, "lfork"))
-		return (15);
-	if (ft_strequ(str, "aff"))
-		return (16);
-	return ('0');
-}
-
-//on recupere un int avec l op_code
-int		get_the_op_code(char *str)
-{
-	if (ft_strequ(str, "live"))
-		return (1);
-	if (ft_strequ(str, "ld"))
-		return (2);
-	if (ft_strequ(str, "st"))
-		return (3);
-	if (ft_strequ(str, "add"))
-		return (4);
-	if (ft_strequ(str, "sub"))
-		return (5);
-	if (ft_strequ(str, "and"))
-		return (6);
-	if (ft_strequ(str, "or"))
-		return (7);
-	if (ft_strequ(str, "xor"))
-		return (8);
-	if (ft_strequ(str, "zjmp"))
-		return (9);
-	if (ft_strequ(str, "ldi"))
-		return (10);
-	if (ft_strequ(str, "sti"))
-		return (11);
-	return (next_get_the_op_code(str));
-}
-
 //la il va falloir chercher un max d infos pour remplir la structure, les params et tout
 //next step: recuperer les params 
 //+ ocp
-//et ensuite size_octets
-//ce qui serait bien c est de me retrouver au bon endroit dans la ligne pour pouvoir recuperer les arguments et verifier que ce qu on trouve est plausible
 void		is_a_line_of_life(t_champ *list)
 {
 	int		i;
-	int		op;
+//	int		op;
 
 	i = 0;
 	while (list->next)
 		list = list->next;
 	list->op_code = get_the_op_code(list->name);
+	if (check_args_valid(list->line, list->op_code) == 0)
+		ciao_bye_bye(1);
 	list->is_label = 0;
-	op = list->op_code;
-	while (list->line[i] == ' ' || list->line[i] == '\t')
-		i++;
-	if (op == 1 || op == 9 || op == 12 || op == 14)
-		i = i + 4;
-	else if (op == 2 || op == 5)
 }
 
 //je rajoute le nom dans la liste + label et on lance la recherche des autres infos

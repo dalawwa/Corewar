@@ -6,7 +6,7 @@
 #    By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/27 17:48:19 by bfruchar          #+#    #+#              #
-#    Updated: 2017/12/04 10:34:41 by bfruchar         ###   ########.fr        #
+#    Updated: 2017/12/06 09:21:10 by bfruchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ SRC =				srcs/main.c \
 					srcs/parsing_asm.c \
 					srcs/parsing2_asm.c \
 					srcs/add_lines_champ.c \
+					srcs/get_op_code.c \
+					srcs/check_args.c \
 					srcs/ft_strsplit_three.c
 
 OBJ =				main.o \
@@ -30,6 +32,8 @@ OBJ =				main.o \
 					parsing_asm.o \
 					parsing2_asm.o \
 					add_lines_champ.o \
+					get_op_code.o \
+					check_args.o \
 					ft_strsplit_three.o
 
 $(NAME):
