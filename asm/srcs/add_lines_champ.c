@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 16:24:32 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/06 10:55:38 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/06 17:16:05 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,12 +83,18 @@ void		is_a_label(t_champ *list)
 void		is_a_line_of_life(t_champ *list)
 {
 	int		i;
-//	int		op;
+	int		op;
 
 	i = 0;
 	while (list->next)
 		list = list->next;
 	list->op_code = get_the_op_code(list->name);
+	op = list->op_code;
+	if (op == 1 || op == 9 || op == 12 || op == 15)
+		list->has_ocp = 0;
+	else if (op > 0 && op < 17)
+		list->has_ocp = 1;
+	add_number_args(list);
 	if (check_args_valid(list->line, list->op_code) == 0)
 		ciao_bye_bye(1);
 	list->is_label = 0;
@@ -128,7 +134,6 @@ void		add_infos_list(t_champ **begin)
 	add_name_list(list);
 	while (list->prev)
 		list = list->prev;
-	add_number_args(list);
 }
 
 t_champ		*ft_lstnew_line(char *line)
