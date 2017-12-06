@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 09:21:43 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/06 14:46:24 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/06 15:44:42 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,28 +92,31 @@ int		check_args_valid(char *str, int op)
 	return (0);
 }
 
+
+//on va compter le nombre de virgules pour savoir combien d arguments sont suppose etre dans la ligne.
 void		add_number_args(t_champ *list)
 {
 	int		i;
 	int		j;
 
 	j = 0;
-	list = list->next;
-	while (list->next)
+	i = 0;
+	while (list->line[i] != '\0')
 	{
-		j = 0;
-		i = 0;
-		while (list->is_label == 1 && list->next)
-			list = list->next;
-		if (list->next == NULL)
+		if (list->line[i] == ';' || list->line[i] == '#')
 			break ;
-		while (list->line[i] != '\0')
-		{
-			if (list->line[i] == ',')
-				j++;
-			i++;
-		}
-		list->nb_params = j + 1;
-		list = list->next;
+		if (list->line[i] == ',')
+			j++;
+		i++;
 	}
+	list->nb_params = j + 1;
+	if (list->op_code == 15 || list->op_code == 12 || list->op_code == 16 || list->op_code == 1)
+		if (list->nb_params != 1)
+			ciao_bye_bye(1);
+	if (list->op_code == 2 || list->op_code == 3 || list->op_code == 13)
+		if (list->nb_params != 2)
+			ciao_bye_bye(1);
+	if (list->op_code == 4 || list->op_code == 5 || list->op_code == 6 || list->op_code == 7 || list->op_code == 8 || list->op_code == 10 || list->op_code == 11 || list->op_code == 14)
+		if (list->nb_params != 3)
+			ciao_bye_bye(1);
 }
