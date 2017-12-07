@@ -73,6 +73,12 @@ int		set_args_type2(t_bdd *bdd_i, int i)
 		bdd_i->ocp[6]->type_arg1 = 'i';
 		bdd_i->ocp[6]->type_arg2 = 'i';
 		bdd_i->ocp[6]->type_arg3 = 'r';
+		bdd_i->ocp[7]->type_arg1 = 'd';
+		bdd_i->ocp[7]->type_arg2 = 'r';
+		bdd_i->ocp[7]->type_arg3 = 'r';
+		bdd_i->ocp[8]->type_arg1 = 'i';
+		bdd_i->ocp[8]->type_arg2 = 'r';
+		bdd_i->ocp[8]->type_arg3 = 'r';
 	}
 	return (set_args_type3(bdd_i, i));
 }
@@ -198,7 +204,7 @@ int		create_ocp(t_bdd *bdd_i, int i)
 	if (i == 1 || i == 2 || i == 12)
 		bdd_i->nb_ocp = 2;
 	else if (i == 5 || i == 6 || i == 7)
-		bdd_i->nb_ocp = 7;
+		bdd_i->nb_ocp = 9;
 	else if (i == 9 || i == 10 || i == 13)
 		bdd_i->nb_ocp = 6;
 	else

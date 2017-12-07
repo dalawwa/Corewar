@@ -10,7 +10,11 @@ int		op_or(t_arena *arena, t_exe *exe)
 //	ft_printf("op_AND : Result = %u\n", result);
 	if (result > 0xffffffff)
 	{
-		ft_putendl("op_or FAILED");
+		ft_putendl("op_or > 0xffffffff put it in reg");
+		exe->process->reg[exe->arg3->d_value][0] = 0xff;
+		exe->process->reg[exe->arg3->d_value][1] = 0xff;
+		exe->process->reg[exe->arg3->d_value][2] = 0xff;
+		exe->process->reg[exe->arg3->d_value][3] = 0xff;
 		exe->process->carry = 0;
 		return (0);
 	}

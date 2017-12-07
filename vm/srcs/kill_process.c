@@ -61,9 +61,9 @@ void	kill_first(t_proc *to_kill, t_proc_base *list)
 
 void	kill_last(t_proc *to_kill, t_proc_base *list)
 {
-	ft_printf("Process to Kill num %d\n", to_kill->process_num);
+//	ft_printf("Process to Kill num %d\n", to_kill->process_num);
 	list->last = to_kill->prev;
-	ft_printf("List->last->num %d\n", list->last->process_num);
+//	ft_printf("List->last->num %d\n", list->last->process_num);
 	list->last->next = NULL;
 	free_process(to_kill);
 }
