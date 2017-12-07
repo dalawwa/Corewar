@@ -16,7 +16,7 @@ and		%1, 65, r3
 and		1, 65, r3
 and		1, %65, r3
 or		r1, r2, r3
-or		r1, %65, r3
+or		r3, %65, r3
 or		r1, 65, r3
 or		%1, %65, r3
 or		%1, r2, r3
