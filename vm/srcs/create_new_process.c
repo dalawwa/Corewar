@@ -107,8 +107,6 @@ int			create_new_process(t_arena *arena, t_play *player, t_proc *parent)
 	link_it(arena->list_proc, process);
 	arena->list_proc->nb_proc++;
 	arena->list_proc->total_proc++;
-	ft_printf("total_proc = %d\n", arena->list_proc->total_proc);
 	process->process_num = arena->list_proc->total_proc;
-	ft_printf("process_num = %d\n", process->process_num);
 	return (1);
 }

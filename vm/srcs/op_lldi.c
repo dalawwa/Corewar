@@ -5,9 +5,10 @@ int		op_lldi(t_arena *arena, t_exe *exe)
 	uintmax_t result;
 
 	result = (uintmax_t)exe->arg1->d_data + (uintmax_t)exe->arg2->d_data;
+	print_exe_opts(arena, exe);
 	if (result > 0xffffffff)
 	{
-		ft_putendl("op_ldi failed");
+		ft_putendl("op_lldi failed");
 		exe->process->carry = 0;
 		return (0);
 	}
