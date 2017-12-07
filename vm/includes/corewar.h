@@ -223,7 +223,7 @@ void			*perror_ptr(char *s, void *ret);
 char			*addstr(char *s);
 
 void			print_exe_opts(t_arena *arena, t_exe *exe);
-void			print_failed_exe(t_arena *arena, t_exe *exe);
+void			print_failed_exe(t_arena *arena, t_exe *exe, int size);
 
 /* Initialized Process */
 int		create_new_process(t_arena *arena, t_play *player, t_proc *parent);
@@ -233,6 +233,7 @@ int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent);
 //unsigned char	*find_reg_ptr(int arg_value, t_exe *exe);
 int		op_ld(t_arena *arena, t_exe *exe);
 int		op_lld(t_arena *arena, t_exe *exe);
+int		op_lldi(t_arena *arena, t_exe *exe);
 int		op_ldi(t_arena *arena, t_exe *exe);
 int		op_st(t_arena *arena, t_exe *exe);
 int		op_sti(t_arena *arena, t_exe *exe);
@@ -258,6 +259,8 @@ int		is_carry_to_modify(t_exe *exe);
 int		is_valid_op(t_arena *arena, t_proc *proc);
 int		inc_pc(t_proc *process, int adv);
 unsigned char	find_char_at_mem_pc_adv(int pc, int adv, t_arena *arena);
+int				count_failed_adv(t_arena *arena, t_exe *exe);
+int				find_pc_adv(t_proc *process, int adv);
 
 /* FREE MEMORY */
 void	free_arena(t_arena **arena);

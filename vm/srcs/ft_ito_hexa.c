@@ -58,7 +58,7 @@ unsigned char	*ft_ito_hexa(uintmax_t n)
 
 	res = NULL;
 	if (!(res = (unsigned char *)malloc(4)))
-		return (NULL);
+		return (perror_ptr("Error ", NULL));
 	ft_memset(res, 0, 4);
 	if (n <= 0xff)
 		res[3] = n;

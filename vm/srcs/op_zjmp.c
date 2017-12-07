@@ -10,5 +10,7 @@ int		op_zjmp(t_arena *arena, t_exe *exe)
 //		ft_printf("NEW PC = %d\n", exe->process->pc);
 		return (1);
 	}
+	inc_pc(exe->process, exe->ocp_op->size_adv);
+//	ft_printf("pc = %d char = %.2x\n", exe->process->pc, arena->mem[exe->process->pc]);
 	return (0);
 }

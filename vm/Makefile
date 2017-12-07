@@ -330,6 +330,7 @@ SRCS_NAME = main.c \
 			op_live.c \
 			op_ldi.c \
 			op_lld.c \
+			op_lldi.c \
 			op_zjmp.c \
 			op_sti.c \
 			a_hexa_toi.c \
@@ -338,6 +339,8 @@ SRCS_NAME = main.c \
 			print_failed_exe.c \
 			find_char_at_mem_pc_adv.c \
 			inc_pc.c \
+			find_pc_adv.c \
+			count_failed_adv.c \
 			is_carry_to_modify.c \
 			is_valid_op.c
 
