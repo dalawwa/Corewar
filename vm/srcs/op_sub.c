@@ -16,6 +16,8 @@ int		op_sub(t_arena *arena, t_exe *exe)
 		return (0);
 	}
 	s = ft_ito_hexa(result);
+	if (s == NULL)
+		return (-1);
 	exe->process->reg[exe->arg3->d_value][0] = s[0];
 	exe->process->reg[exe->arg3->d_value][1] = s[1];
 	exe->process->reg[exe->arg3->d_value][2] = s[2];

@@ -13,7 +13,7 @@ void		print_exe_opts(t_arena *arena, t_exe *exe)
 		if (arena->opts->v >= 4 && exe->bdd_op->opcode != 16)
 		{
 			ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
-			if (exe->arg1->type == 'r' && exe->bdd_op->opcode != 10 && exe->bdd_op->opcode != 11 && exe->bdd_op->opcode != 6 && exe->bdd_op->opcode != 7 && exe->bdd_op->opcode != 8)
+			if (exe->arg1->type == 'r' && exe->bdd_op->opcode != 10 && exe->bdd_op->opcode != 6 && exe->bdd_op->opcode != 7 && exe->bdd_op->opcode != 8)
 				ft_printf("r");
 			if (exe->bdd_op->opcode == 6 || exe->bdd_op->opcode == 7 || exe->bdd_op->opcode == 8 || exe->bdd_op->opcode == 10)
 				ft_printf("%d ", exe->arg1->d_data);
@@ -46,9 +46,11 @@ void		print_exe_opts(t_arena *arena, t_exe *exe)
 				else
 					ft_printf("FAILED");
 			}
+			if (exe->bdd_op->opcode == 15 || exe->bdd_op->opcode == 12)
+				ft_printf("(%d)", (short int)(exe->process->pc + exe->arg1->d_value));
 			ft_putchar('\n');
 		}
-		if (arena->opts->v >= 16 && exe->bdd_op->opcode != 9)
+		if (arena->opts->v >= 16)
 		{
 			if (exe->process->pc == 0)
 				ft_printf("ADV %d (0x0000 -> %#.4x)", exe->ocp_op->size_adv, exe->process->pc + (exe->ocp_op->size_adv));

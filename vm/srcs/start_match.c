@@ -26,23 +26,25 @@ int		kill_processes_dead(t_arena *arena, t_proc_base *list)
 	return (1);
 }
 
-void		deal_exe(t_arena *arena)
+int		deal_exe(t_arena *arena)
 {
 	int		i;
+	int		failed_adv;
 	t_proc	*elem;
 
 	i = 0;
+	failed_adv = 0;
 	elem = arena->list_proc->last;
 	while (i < arena->list_proc->nb_proc)
 	{
-//		if (arena->total_cycle > 1366)
-//		{
-//			ft_printf("Process %d : pc = %d ", elem->process_num, elem->pc);
-//			if (elem->exe_op != NULL)
-//				ft_printf("exe = %s - to wait = %d\n", elem->exe_op->bdd_op->name, elem->exe_op->to_wait);
-//			else
-//				ft_putchar('\n');
-//		}
+/*		if (arena->total_cycle > 222)
+		{
+			ft_printf("Process %d : pc = %d ", elem->process_num, elem->pc);
+			if (elem->exe_op != NULL)
+				ft_printf("exe = %s - to wait = %d\n", elem->exe_op->bdd_op->name, elem->exe_op->to_wait);
+			else
+				ft_putchar('\n');
+		}*/
 		if (elem->exe_op == NULL)
 		{
 //			ft_printf("Cycle %d -- Process NUM = %d Process->PC = %d\n", arena->current_cycle, elem->process_num, elem->pc);
@@ -70,7 +72,8 @@ void		deal_exe(t_arena *arena)
 							ft_putendl("______________Process AVANT OP_____________");
 							print_one_process(elem);
 						}
-						elem->exe_op->ocp_op->fct(arena, elem->exe_op);
+						if (elem->exe_op->ocp_op->fct(arena, elem->exe_op) == -1)
+							return (0);
 						if (arena->opts->has_b == 1)
 						{
 							ft_putendl("______________Process APRES OP_____________");
@@ -87,8 +90,9 @@ void		deal_exe(t_arena *arena)
 				}
 				else
 				{
-					print_failed_exe(arena, elem->exe_op);
-					inc_pc(elem, 2);
+					failed_adv = count_failed_adv(arena, elem->exe_op);
+					print_failed_exe(arena, elem->exe_op, failed_adv);
+					inc_pc(elem, failed_adv);
 				}
 				free_exe(elem->exe_op, elem);
 			}
@@ -98,8 +102,9 @@ void		deal_exe(t_arena *arena)
 		i++;
 		elem = elem->prev;
 		if (i < arena->list_proc->nb_proc && elem == NULL)
-			break ;
+			return (1);
 	}
+	return (1);
 }
 
 void			put_all_processes_live_zero(t_proc_base *list)
@@ -124,7 +129,7 @@ int		start_match(t_arena *arena)
 	if (arena->opts->has_d == 1 && arena->opts->d == 0)
 	{
 		print_mem(arena);
-		return (0);
+		return (1);
 	}
 	while (arena->list_proc->nb_proc > 0)
 	{
@@ -148,7 +153,8 @@ int		start_match(t_arena *arena)
 			put_all_processes_live_zero(arena->list_proc);
 			arena->current_cycle = 0;
 		}
-		deal_exe(arena);
+		if (deal_exe(arena) == 0)
+			return (0);
 		if (arena->opts->has_d == 1 && arena->total_cycle == arena->opts->d)
 		{
 			print_mem(arena);
