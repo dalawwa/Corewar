@@ -22,7 +22,7 @@ int		set_args_type4(t_bdd *bdd_i, int i)
 	}
 	else if (i == 15)
 		bdd_i->ocp[0]->type_arg1 = 'r';
-	else if (i == 0 || i == 8 || i == 14)
+	else if (i == 0 || i == 8 || i == 14 || i == 11)
 		bdd_i->ocp[0]->type_arg1 = 'd';
 	return (1);
 }
@@ -73,6 +73,12 @@ int		set_args_type2(t_bdd *bdd_i, int i)
 		bdd_i->ocp[6]->type_arg1 = 'i';
 		bdd_i->ocp[6]->type_arg2 = 'i';
 		bdd_i->ocp[6]->type_arg3 = 'r';
+		bdd_i->ocp[7]->type_arg1 = 'd';
+		bdd_i->ocp[7]->type_arg2 = 'r';
+		bdd_i->ocp[7]->type_arg3 = 'r';
+		bdd_i->ocp[8]->type_arg1 = 'i';
+		bdd_i->ocp[8]->type_arg2 = 'r';
+		bdd_i->ocp[8]->type_arg3 = 'r';
 	}
 	return (set_args_type3(bdd_i, i));
 }
@@ -110,7 +116,9 @@ void	set_ptr_op(t_bdd *bdd_i, int i)
 	int	j;
 
 	j = 0;
-	if (i == 1)
+	if (i == 0)
+		bdd_i->ocp[j]->fct = &op_live;
+	else if (i == 1)
 	{
 		while (j < bdd_i->nb_ocp)
 		{
@@ -126,6 +134,72 @@ void	set_ptr_op(t_bdd *bdd_i, int i)
 			j++;
 		}
 	}
+	else if (i == 3)
+		bdd_i->ocp[j]->fct = &op_add;
+	else if (i == 4)
+		bdd_i->ocp[j]->fct = &op_sub;
+	else if (i == 5)
+	{
+		while (j < bdd_i->nb_ocp)
+		{
+			bdd_i->ocp[j]->fct = &op_and;
+			j++;
+		}
+	}
+	else if (i == 6)
+	{
+		while (j < bdd_i->nb_ocp)
+		{
+			bdd_i->ocp[j]->fct = &op_or;
+			j++;
+		}
+	}
+	else if (i == 7)
+	{
+		while (j < bdd_i->nb_ocp)
+		{
+			bdd_i->ocp[j]->fct = &op_xor;
+			j++;
+		}
+	}
+	else if (i == 8)
+		bdd_i->ocp[j]->fct = &op_zjmp;
+	else if (i == 9)
+	{
+		while (j < bdd_i->nb_ocp)
+		{
+			bdd_i->ocp[j]->fct = &op_ldi;
+			j++;
+		}
+	}
+	else if (i == 10)
+	{
+		while (j < bdd_i->nb_ocp)
+		{
+			bdd_i->ocp[j]->fct = &op_sti;
+			j++;
+		}
+	}
+	else if (i == 11)
+		bdd_i->ocp[j]->fct = &op_fork;
+	else if (i == 12)
+	{
+		while (j < bdd_i->nb_ocp)
+		{
+			bdd_i->ocp[j]->fct = &op_lld;
+			j++;
+		}
+	}
+	else if (i == 13)
+	{
+		while (j < bdd_i->nb_ocp)
+		{
+			bdd_i->ocp[j]->fct = &op_lldi;
+			j++;
+		}
+	}
+	else if (i == 14)
+		bdd_i->ocp[j]->fct = &op_lfork;
 	else if (i == 15)
 		bdd_i->ocp[j]->fct = &op_aff;
 }
@@ -138,7 +212,7 @@ int		create_ocp(t_bdd *bdd_i, int i)
 	if (i == 1 || i == 2 || i == 12)
 		bdd_i->nb_ocp = 2;
 	else if (i == 5 || i == 6 || i == 7)
-		bdd_i->nb_ocp = 7;
+		bdd_i->nb_ocp = 9;
 	else if (i == 9 || i == 10 || i == 13)
 		bdd_i->nb_ocp = 6;
 	else

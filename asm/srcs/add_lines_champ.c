@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 16:24:32 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/11/29 18:01:47 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/08 14:02:38 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,58 +44,26 @@ void		is_a_label(t_champ *list)
 	list->size_octets = 0;
 }
 
-int		next_get_the_op_code(char *str)
-{
-	if (ft_strequ(str, "fork"))
-		return (12);
-	if (ft_strequ(str, "lld"))
-		return (13);
-	if (ft_strequ(str, "lldi"))
-		return (14);
-	if (ft_strequ(str, "lfork"))
-		return (15);
-	if (ft_strequ(str, "aff"))
-		return (16);
-	return ('0');
-}
-
-//on recupere un int avec l op_code
-int		get_the_op_code(char *str)
-{
-	if (ft_strequ(str, "live"))
-		return (1);
-	if (ft_strequ(str, "ld"))
-		return (2);
-	if (ft_strequ(str, "st"))
-		return (3);
-	if (ft_strequ(str, "add"))
-		return (4);
-	if (ft_strequ(str, "sub"))
-		return (5);
-	if (ft_strequ(str, "and"))
-		return (6);
-	if (ft_strequ(str, "or"))
-		return (7);
-	if (ft_strequ(str, "xor"))
-		return (8);
-	if (ft_strequ(str, "zjmp"))
-		return (9);
-	if (ft_strequ(str, "ldi"))
-		return (10);
-	if (ft_strequ(str, "sti"))
-		return (11);
-	return (next_get_the_op_code(str));
-}
-
 //la il va falloir chercher un max d infos pour remplir la structure, les params et tout
 //next step: recuperer les params 
 //+ ocp
-//et ensuite size_octets
 void		is_a_line_of_life(t_champ *list)
 {
+	int		i;
+	int		op;
+
+	i = 0;
 	while (list->next)
 		list = list->next;
 	list->op_code = get_the_op_code(list->name);
+	op = list->op_code;
+	if (op == 1 || op == 9 || op == 12 || op == 15)
+		list->has_ocp = 0;
+	else if (op > 0 && op < 17)
+		list->has_ocp = 1;
+	add_number_args(list);
+	if (check_args_valid(list->line, list->op_code, list) == 0)
+		ciao_bye_bye(1);
 	list->is_label = 0;
 }
 
@@ -123,6 +91,27 @@ void		add_name_list(t_champ *list)
 		free(str);
 }
 
+char	*ft_strdup_asm(const char *s)
+{
+	char		*dup;
+	int			j;
+	size_t		i;
+
+	i = 0;
+	j = 0;
+	while (s[j] != '\0' && s[j] != ';' && s[j] != '#')
+		j++;
+	if (!(dup = (char*)malloc(j + 1)))
+		return (NULL);
+	while (s[i] && s[i] != ';' && s[i] != '#')
+	{
+		dup[i] = s[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
+}
+
 void		add_infos_list(t_champ **begin)
 {
 	t_champ	*list;
@@ -131,6 +120,8 @@ void		add_infos_list(t_champ **begin)
 	while (list->next)
 		list = list->next;
 	add_name_list(list);
+	while (list->prev)
+		list = list->prev;
 }
 
 t_champ		*ft_lstnew_line(char *line)
@@ -140,7 +131,7 @@ t_champ		*ft_lstnew_line(char *line)
 	if (!(list = (t_champ *)ft_memalloc(sizeof(t_champ))))
 		ciao_bye_bye(1);
 	list->next = NULL;
-	list->line = line;
+	list->line = ft_strdup_asm(line);
 	return (list);
 }
 

@@ -86,8 +86,10 @@ int		init_arena(t_arena **arena)
 	(*arena)->nb_players = 0;
 	(*arena)->ctd = CYCLE_TO_DIE;
 	(*arena)->current_cycle = 0;
+	(*arena)->current_nb_check = 0;
 	(*arena)->max_check = MAX_CHECKS;
 	(*arena)->c_delta = CYCLE_DELTA;
+	(*arena)->last_player_alive = 0;
 	return (1);
 }
 
@@ -107,5 +109,6 @@ int		 create_arena(int ac, char **av, t_arena **arena)
 	if (initialized_start_process(*arena) == 0)
 		return (0);
 	close_cors(*arena);
+	(*arena)->last_player_alive = (*arena)->players[(*arena)->nb_players - 1];
     return (1);
 }
