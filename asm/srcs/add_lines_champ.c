@@ -6,44 +6,11 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 16:24:32 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/06 17:16:05 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/08 10:02:56 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/asm.h"
-
-/*
-//je vais recuperer les arguments
-void		add_args_champ(t_champ *list)
-{
-	int	i;
-	int	j;
-
-	while (list->prev)
-		list = list->prev;
-	list = list->next;
-	while (list->next)
-	{
-		i = 0;
-		j = 0;
-		while (list->is_label == 1 && list->next)
-			list = list->next;
-		if (list->next == NULL)
-			break ;
-		while ((list->line[i + 1] != 'r' || list->line[i + 1] != '%') && (list->line[i] != ' ' || list->line[i] != '\t') && list->line[i] != '\0')
-			i++;
-		i++;
-		while (list->line[i] != ' ' && list->line[i] != ',' && list->line[i] != '\t' && list->line[i] != '\0')
-		{
-			ft_putchar(list->line[i]);
-			i++;
-			j++;
-		}
-		ft_putchar(' ');
-		list = list->next;
-	}
-}
-*/
 
 //je verifie si il s agit d un label
 int			get_two_points(char *str)
@@ -95,7 +62,7 @@ void		is_a_line_of_life(t_champ *list)
 	else if (op > 0 && op < 17)
 		list->has_ocp = 1;
 	add_number_args(list);
-	if (check_args_valid(list->line, list->op_code) == 0)
+	if (check_args_valid(list->line, list->op_code, list) == 0)
 		ciao_bye_bye(1);
 	list->is_label = 0;
 }

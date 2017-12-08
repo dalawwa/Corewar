@@ -1,0 +1,4 @@
+- recuperer uniquement les commandes au debut 
+- gerer les labels suivis d une commande et rajouter un char * dans la structure
+- ameliorer ft_strsplit_three pour pouvoir recuperer uniquement les arguments au nombre de 1, 2 ou 3
+- reflechir a la suite pour transformer le fichier
