@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/08 10:09:11 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/08 17:58:14 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 # include "../../libft/includes/libft.h"
 # include "../../libft/includes/get_next_line.h"
 # include "../../libft/includes/ft_printf.h"
+
+int	position_;
 
 /*
 typedef struct		s_champ_data
