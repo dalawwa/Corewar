@@ -76,6 +76,12 @@ typedef struct	s_opt
 	int		d; // init a -1
 	int		has_v;  // init a 0
 	int		v; // init a -1
+	int		is_v0;
+	int		is_v1;
+	int		is_v2;
+	int		is_v4;
+	int		is_v8;
+	int		is_v16;
 	int		has_s;  // init a 0
 	int		show_cycle; // all init a 0
 	int		show_op;
@@ -206,6 +212,7 @@ typedef struct	s_bdd
 int				init_arena(t_arena **arena);
 int				get_nb_cors(int ac, char **av, int **tab);
 int				check_opts(t_arena *arena, int ac, char **av);
+void			set_v_values(t_opt *opts, int val);
 int				create_players(t_arena *arena);
 int			create_arena(int ac, char **av, t_arena **arena);
 int				*get_fds(t_arena **arena, int ac, char **av);

@@ -9,6 +9,7 @@ void	print_opts(t_arena *arena)
 	if (!arena || !arena->opts)
 		return ;
 	ft_printf("Opts:\nhas_d: %d | d: %d\nhas_s: %d | s: %d\nhas_v: %d | v: %d\nhas_a: %d | a_stealth: %d\nhas_b: %d | b_stealth: %d\n", arena->opts->has_d, arena->opts->d, arena->opts->has_s, arena->opts->s, arena->opts->has_v, arena->opts->v, arena->opts->has_a, arena->opts->a_stealth, arena->opts->has_b, arena->opts->b_stealth);
+	ft_printf("Total value for -v and its decomposition -v: %d | v0: %d | v1: %d | v2: %d | v4: %d | v8: %d | v16: %d\n", arena->opts->v, arena->opts->is_v0, arena->opts->is_v1, arena->opts->is_v2, arena->opts->is_v4, arena->opts->is_v8, arena->opts->is_v16);
 	ft_printf("EOF_PRINT_OPS_END_____\n\n");
 }
 
@@ -166,8 +167,8 @@ void	print_arena(t_arena *arena)
 	ft_putendl("____________PRINT ARENA______________");
 	if (arena)
 	{
-//		if (arena->opts)
-//			print_opts(arena);
+		if (arena->opts)
+			print_opts(arena);
 //		ft_putchar('\n');
 //		if (arena->files)
 //			print_files(arena);
