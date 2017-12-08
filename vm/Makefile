@@ -319,10 +319,28 @@ SRCS_NAME = main.c \
 			start_match.c \
 			op_ld.c \
 			op_aff.c \
+			op_sub.c \
+			op_or.c \
+			op_xor.c \
+			op_and.c \
+			op_fork.c \
+			op_lfork.c \
 			ft_ito_hexa.c \
 			op_st.c \
+			op_live.c \
+			op_ldi.c \
+			op_lld.c \
+			op_lldi.c \
+			op_zjmp.c \
+			op_sti.c \
 			a_hexa_toi.c \
 			op_add.c \
+			print_exe_opts.c \
+			print_failed_exe.c \
+			find_char_at_mem_pc_adv.c \
+			inc_pc.c \
+			find_pc_adv.c \
+			count_failed_adv.c \
 			is_carry_to_modify.c \
 			is_valid_op.c
 

@@ -7,17 +7,26 @@ void		initialized_from_scratch(t_play *player, t_proc *process)
 	i = 2;
 	process->reg[0][0] = 0;
 	process->reg[0][1] = 0;
+	process->reg[0][2] = 0;
+	process->reg[0][3] = 0;
+	process->reg[1][0] = 0;
+	process->reg[1][1] = 0;
 	process->reg[1][0] = player->play_live_num[0];
 	process->reg[1][1] = player->play_live_num[1];
+	process->reg[1][2] = player->play_live_num[2];
+	process->reg[1][3] = player->play_live_num[3];
 	while (i < 17)
 	{
 		process->reg[i][0] = 0;
 		process->reg[i][1] = 0;
+		process->reg[i][2] = 0;
+		process->reg[i][3] = 0;
 		i++;
 	}
 	process->pc = player->idx_start;
 	process->carry = 0;
 	process->nb_live = 0;
+	process->last_cycle_alive = 0;
 }
 
 void		copy_parent_data(t_proc *parent, t_proc *son)
@@ -29,11 +38,21 @@ void		copy_parent_data(t_proc *parent, t_proc *son)
 	{
 		son->reg[i][0] = parent->reg[i][0];
 		son->reg[i][1] = parent->reg[i][1];
+		son->reg[i][2] = parent->reg[i][2];
+		son->reg[i][3] = parent->reg[i][3];
 		i++;
 	}
-	son->pc = parent->pc + (parent->exe_op->arg1->d_value % IDX_MOD);
+	son->pc = parent->pc;
+	if (ft_strcmp(parent->exe_op->bdd_op->name, "fork") == 0)
+		inc_pc(son, parent->exe_op->arg1->d_value % IDX_MOD);
+	else if (ft_strcmp(parent->exe_op->bdd_op->name, "lfork") == 0)
+		inc_pc(son, parent->exe_op->arg1->d_value);
+	else
+		ft_putendl("Something Wrong with creation EXE with Parent");
 	son->carry = parent->carry;
-	son->nb_live = parent->nb_live; // REALLY ??
+//	ft_printf("New Process : parent pc = %d new pc = %d\n", parent->pc, son->pc);
+	son->nb_live = 0; // REALLY ??
+	son->last_cycle_alive = 0;
 }
 
 void		link_it(t_proc_base *list, t_proc *process)
@@ -62,6 +81,8 @@ int			initialized_proc_base(t_arena *arena)
 	arena->list_proc->first = NULL;
 	arena->list_proc->last = NULL;
 	arena->list_proc->nb_proc = 0;
+	arena->list_proc->total_proc = 0;
+	arena->list_proc->nb_live_total = 0;
 	return (1);
 }
 
@@ -78,11 +99,14 @@ int			create_new_process(t_arena *arena, t_play *player, t_proc *parent)
 		copy_parent_data(parent, process);
 	else
 		initialized_from_scratch(player, process);
+	process->next = NULL;
+	process->prev = NULL;
 	process->player = player;
 	process->exe_op = NULL;
 	process->op_success = 0;
 	link_it(arena->list_proc, process);
 	arena->list_proc->nb_proc++;
-	process->process_num = arena->list_proc->nb_proc;
+	arena->list_proc->total_proc++;
+	process->process_num = arena->list_proc->total_proc;
 	return (1);
 }

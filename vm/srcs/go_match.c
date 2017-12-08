@@ -13,13 +13,13 @@ void	put_starting_facts(t_arena *arena)
 	}
 }
 
-void		init_stat_match(t_arena *arena)
+void		init_stat_match(t_arena **arena)
 {
-	arena->ctd = CYCLE_TO_DIE;
-	arena->current_cycle = 0;
-	arena->total_cycle = 0;
-	arena->max_check = MAX_CHECKS;
-	arena->c_delta = CYCLE_DELTA;
+	(*arena)->ctd = CYCLE_TO_DIE;
+	(*arena)->current_cycle = 0;
+	(*arena)->total_cycle = 0;
+	(*arena)->max_check = MAX_CHECKS;
+	(*arena)->c_delta = CYCLE_DELTA;
 }
 
 void	go_match(t_arena *arena)
@@ -28,7 +28,7 @@ void	go_match(t_arena *arena)
 	{
 		ft_putendl("\n\n________________go_match it's magic !____________________");
 		put_starting_facts(arena);
-		init_stat_match(arena);
+		init_stat_match(&arena);
 		start_match(arena);
 	}
 	else

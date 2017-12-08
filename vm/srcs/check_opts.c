@@ -17,20 +17,26 @@ static int		is_flag(char *s)
 	return (0);
 }
 
-int		init_opts(t_arena *arena)
+int		init_opts(t_arena **arena)
 {
-	if (!(arena->opts = (t_opt *)malloc(sizeof(t_opt))))
+	if (!((*arena)->opts = (t_opt *)malloc(sizeof(t_opt))))
 		return (perror_int("error ", 0));
-	arena->opts->has_d = 0;
-	arena->opts->has_v = 0;
-	arena->opts->has_s = 0;
-	arena->opts->has_a = 0;
-	arena->opts->has_b = 0;
-	arena->opts->d = -1;
-	arena->opts->v = -1;
-	arena->opts->s = -1;
-	arena->opts->a_stealth = 0;
-	arena->opts->b_stealth = 0;
+	(*arena)->opts->has_d = 0;
+	(*arena)->opts->has_v = 0;
+	(*arena)->opts->has_s = 0;
+	(*arena)->opts->has_a = 0;
+	(*arena)->opts->has_b = 0;
+	(*arena)->opts->d = -1;
+	(*arena)->opts->v = -1;
+	(*arena)->opts->is_v0 = 1;
+	(*arena)->opts->is_v1 = 0;
+	(*arena)->opts->is_v2 = 0;
+	(*arena)->opts->is_v4 = 0;
+	(*arena)->opts->is_v8 = 0;
+	(*arena)->opts->is_v16 = 0;
+	(*arena)->opts->s = -1;
+	(*arena)->opts->a_stealth = 0;
+	(*arena)->opts->b_stealth = 0;
 	return (1);
 }
 
@@ -50,8 +56,32 @@ static void	set_opt_flag(t_opt *opts, int flag, int val)
 	{
 		opts->has_v = 1;
 		opts->v = val;
+		set_v_values(opts, val);
 	}
 }
+
+void	set_v_values(t_opt *opts, int val)
+{
+	if (val >= 31)
+	{
+		opts->is_v0 = 1;
+		opts->is_v1 = 1;
+		opts->is_v2 = 1;
+		opts->is_v4 = 1;
+		opts->is_v8 = 1;
+		opts->is_v16 = 1;
+	}
+	else
+	{
+		opts->is_v0 = 1;
+		opts->is_v1 = val & 1;
+		opts->is_v2 = val & 2;
+		opts->is_v4 = val & 4;
+		opts->is_v8 = val & 8;
+		opts->is_v16 = val & 16;
+	}
+}
+
 /*
 static void		append_fds_tab(t_opt *opts, int i, int size, int val)
 {
@@ -165,7 +195,7 @@ int		check_opts(t_arena *arena, int ac, char **av)
 	int		flag_indx[2];
 
 	flag_indx[1] = 1;
-	if (!(init_opts(arena)))
+	if (!(init_opts(&arena)))
 		return (0);
 	if (init_files(arena) == 0)
 		return (0);

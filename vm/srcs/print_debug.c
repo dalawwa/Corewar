@@ -9,6 +9,7 @@ void	print_opts(t_arena *arena)
 	if (!arena || !arena->opts)
 		return ;
 	ft_printf("Opts:\nhas_d: %d | d: %d\nhas_s: %d | s: %d\nhas_v: %d | v: %d\nhas_a: %d | a_stealth: %d\nhas_b: %d | b_stealth: %d\n", arena->opts->has_d, arena->opts->d, arena->opts->has_s, arena->opts->s, arena->opts->has_v, arena->opts->v, arena->opts->has_a, arena->opts->a_stealth, arena->opts->has_b, arena->opts->b_stealth);
+	ft_printf("Total value for -v and its decomposition -v: %d | v0: %d | v1: %d | v2: %d | v4: %d | v8: %d | v16: %d\n", arena->opts->v, arena->opts->is_v0, arena->opts->is_v1, arena->opts->is_v2, arena->opts->is_v4, arena->opts->is_v8, arena->opts->is_v16);
 	ft_printf("EOF_PRINT_OPS_END_____\n\n");
 }
 
@@ -65,29 +66,35 @@ void		print_exe(t_exe *exe)
 		ft_printf("EXE from Process %d :\nOpcode = %.2x - OCP = %.2x\nBDD_op = %s\n", exe->process->process_num, exe->opcode, exe->ocp, exe->bdd_op->name);
 		ft_printf("Arg1 : type = %c - ", exe->arg1->type);
 		if (exe->arg1->type == 'r')
-			ft_printf("value = %.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->d_value, exe->arg1->d_data);
-		else if ((exe->arg1->type == 'd' && exe->arg1->size == 2) || exe->arg1->type == 'i')
+			ft_printf("value = %.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->data[2], exe->arg1->data[3], exe->arg1->d_value, exe->arg1->d_data);
+		else if (exe->arg1->type == 'd' && exe->arg1->size == 2)
 			ft_printf("value = %.2x%.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->value[1], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->d_value, exe->arg1->d_data);
 		else if (exe->arg1->type == 'd' && exe->arg1->size == 4)
 			ft_printf("value = %.2x%.2x %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->value[1], exe->arg1->value[2], exe->arg1->value[3], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->data[2], exe->arg1->data[3], exe->arg1->d_value, exe->arg1->d_data);
+		else if (exe->arg1->type == 'i')
+			ft_printf("value = %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->value[1], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->data[2], exe->arg1->data[3], exe->arg1->d_value, exe->arg1->d_data);
 		if (exe->arg2)
 		{
 			ft_printf("Arg2 : type = %c - ", exe->arg2->type);
 			if (exe->arg2->type == 'r')
-				ft_printf("value = %.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->d_value, exe->arg2->d_data);
-			else if ((exe->arg2->type == 'd' && exe->arg2->size == 2) || exe->arg2->type == 'i')
+				ft_printf("value = %.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->data[2], exe->arg2->data[3], exe->arg2->d_value, exe->arg2->d_data);
+			else if (exe->arg2->type == 'd' && exe->arg2->size == 2)
 				ft_printf("value = %.2x%.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->value[1], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->d_value, exe->arg2->d_data);
 			else if (exe->arg2->type == 'd' && exe->arg2->size == 4)
 				ft_printf("value = %.2x%.2x %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->value[1], exe->arg2->value[2], exe->arg2->value[3], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->data[2], exe->arg2->data[3], exe->arg2->d_value, exe->arg2->d_data);
+			else if (exe->arg2->type == 'i')
+				ft_printf("value = %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->value[1], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->data[2], exe->arg2->data[3], exe->arg2->d_value, exe->arg2->d_data);
 			if (exe->arg3)
 			{
 				ft_printf("Arg3 : type = %c - ", exe->arg3->type);
 				if (exe->arg3->type == 'r')
-					ft_printf("value = %.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->d_value, exe->arg3->d_data);
-				else if ((exe->arg3->type == 'd' && exe->arg3->size == 2) || exe->arg3->type == 'i')
+					ft_printf("value = %.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->data[2], exe->arg3->data[3], exe->arg3->d_value, exe->arg3->d_data);
+				else if (exe->arg3->type == 'd' && exe->arg3->size == 2)
 					ft_printf("value = %.2x%.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->value[1], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->d_value, exe->arg3->d_data);
 				else if (exe->arg3->type == 'd' && exe->arg3->size == 4)
 				ft_printf("value = %.2x%.2x %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->value[1], exe->arg3->value[2], exe->arg3->value[3], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->data[2], exe->arg3->data[3], exe->arg3->d_value, exe->arg3->d_data);
+				else if (exe->arg3->type == 'i')
+				ft_printf("value = %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->value[1], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->data[2], exe->arg3->data[3], exe->arg3->d_value, exe->arg3->d_data);
 			}
 		}
 	}
@@ -104,6 +111,7 @@ void		print_all_process(t_arena *arena)
 	ft_putendl("__________print_all_PROCESS");
 	if (arena && arena->list_proc)
 	{
+		ft_printf("mn_proc = %d - Total proc = %d\n", arena->list_proc->nb_proc, arena->list_proc->total_proc);
 		elem = arena->list_proc->first;
 		while (i++ < arena->list_proc->nb_proc)
 		{
@@ -121,7 +129,7 @@ void		print_regs(t_proc *process)
 	i = 1;
 	while (i <= REG_NUMBER)
 	{
-		ft_printf("reg[%d] = %.2x%.2x", i, process->reg[i][0], process->reg[i][1]);
+		ft_printf("reg[%d] = %.2x%.2x %.2x%.2x", i, process->reg[i][0], process->reg[i][1], process->reg[i][2], process->reg[i][3]);
 		i++;
 		if (i <= REG_NUMBER)
 			ft_putstr(" - ");
@@ -159,14 +167,14 @@ void	print_arena(t_arena *arena)
 	ft_putendl("____________PRINT ARENA______________");
 	if (arena)
 	{
-//		if (arena->opts)
-//			print_opts(arena);
+		if (arena->opts)
+			print_opts(arena);
 //		ft_putchar('\n');
 //		if (arena->files)
 //			print_files(arena);
 //		ft_putchar('\n');
-//		if (arena->bdd)
-//			print_bdd(arena);
+		if (arena->bdd)
+			print_bdd(arena);
 //		ft_putchar('\n');
 //		print_mem(arena);
 //		ft_putchar('\n');
