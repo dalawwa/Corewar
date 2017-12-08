@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:45:13 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/01 17:44:27 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/08 11:40:54 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	get_champ_data(t_champ *champ, int fd)
 	}
 	while (champ->next)
 	{
-		ft_printf("%s %i nb_args: %i\n", champ->name, champ->op_code, champ->nb_params);
+		ft_printf("LINE: %s. NAME: %s. SIZE PARAMS: %i %i %i POSITION: %i\n", champ->line, champ->name, champ->size_param1, champ->size_param2, champ->size_param3, champ->position);
 		champ = champ->next;
 	}
 	return ;
