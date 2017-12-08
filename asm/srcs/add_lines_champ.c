@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 16:24:32 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/08 10:02:56 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/08 14:02:38 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,27 @@ void		add_name_list(t_champ *list)
 		free(str);
 }
 
+char	*ft_strdup_asm(const char *s)
+{
+	char		*dup;
+	int			j;
+	size_t		i;
+
+	i = 0;
+	j = 0;
+	while (s[j] != '\0' && s[j] != ';' && s[j] != '#')
+		j++;
+	if (!(dup = (char*)malloc(j + 1)))
+		return (NULL);
+	while (s[i] && s[i] != ';' && s[i] != '#')
+	{
+		dup[i] = s[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
+}
+
 void		add_infos_list(t_champ **begin)
 {
 	t_champ	*list;
@@ -110,7 +131,7 @@ t_champ		*ft_lstnew_line(char *line)
 	if (!(list = (t_champ *)ft_memalloc(sizeof(t_champ))))
 		ciao_bye_bye(1);
 	list->next = NULL;
-	list->line = line;
+	list->line = ft_strdup_asm(line);
 	return (list);
 }
 
