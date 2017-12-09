@@ -295,5 +295,7 @@ int				ft_power(int nb, int pow);
 int				a_hexa_to_i(unsigned char *s, int len);
 unsigned char	*ft_unsi_strdup(unsigned char *s, int len);
 unsigned char	*ft_ito_hexa(uintmax_t n);
+int		intlen(int n);
+void	put_n_char(char c, int n);
 
 #endif
