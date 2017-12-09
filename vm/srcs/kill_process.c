@@ -78,8 +78,10 @@ void		kill_process(t_proc *to_kill, t_proc_base *list_proc)
 			kill_last(to_kill, list_proc);
 		else
 		{
-			to_kill->next->prev = to_kill->prev;
-			to_kill->prev->next = to_kill->prev;
+			if (to_kill->next)
+				to_kill->next->prev = to_kill->prev;
+			if (to_kill->prev)
+				to_kill->prev->next = to_kill->prev;
 			free_process(to_kill);
 		}
 		list_proc->nb_proc--;

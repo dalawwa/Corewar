@@ -10,7 +10,7 @@ void		print_exe_opts(t_arena *arena, t_exe *exe)
 	if (arena->opts->has_v == 1)
 	{
 		//		ft_printf("Process num %d\n", exe->process->process_num);
-		if (arena->opts->v >= 4 && exe->bdd_op->opcode != 16)
+		if (arena->opts->is_v4 && exe->bdd_op->opcode != 16)
 		{
 			ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
 			if (exe->arg1->type == 'r' && exe->bdd_op->opcode != 10 && exe->bdd_op->opcode != 6 && exe->bdd_op->opcode != 7 && exe->bdd_op->opcode != 8)
@@ -26,16 +26,16 @@ void		print_exe_opts(t_arena *arena, t_exe *exe)
 				if (exe->arg2->type == 'r' && exe->bdd_op->opcode != 10 && exe->bdd_op->opcode != 11 && exe->bdd_op->opcode != 6 && exe->bdd_op->opcode != 7 && exe->bdd_op->opcode != 8)
 					ft_printf("r");
 				if (exe->bdd_op->opcode == 11 || exe->bdd_op->opcode == 6 || exe->bdd_op->opcode == 7 || exe->bdd_op->opcode == 8 || exe->bdd_op->opcode == 10)
-					ft_printf("%d ", exe->arg2->d_data);
+					ft_printf("%hd ", (short)exe->arg2->d_data);
 				else
-					ft_printf("%d ", (short int)exe->arg2->d_value);
+					ft_printf("%d ", (short)exe->arg2->d_value);
 			}
 			if (exe->arg3)
 			{
 				if (exe->arg3->type == 'r')
 					ft_printf("r");
 				if (exe->bdd_op->opcode == 11)
-					ft_printf("%d ", (short int)exe->arg3->d_data);
+					ft_printf("%hd \n", (short)exe->arg3->d_data);
 				else
 					ft_printf("%d", (short int)exe->arg3->d_value);
 			}
@@ -48,6 +48,12 @@ void		print_exe_opts(t_arena *arena, t_exe *exe)
 			}
 			if (exe->bdd_op->opcode == 15 || exe->bdd_op->opcode == 12)
 				ft_printf("(%d)", (short int)(exe->process->pc + exe->arg1->d_value));
+			if (exe->bdd_op->opcode == 11)
+			{
+				put_n_char(' ', intlen((short)(exe->process->process_num)));
+				put_n_char(' ', 6);
+				ft_printf("| -> store to %hd + %hd = %hd (with pc and mod %hd)", (short)exe->arg2->d_value, (short)exe->arg3->d_value, (short)exe->arg3->d_value + (short)exe->arg2->d_value, exe->process->pc + exe->arg3->d_value + exe->arg2->d_value );
+			}
 			ft_putchar('\n');
 		}
 		if (arena->opts->v >= 16)
