@@ -173,8 +173,8 @@ void	print_arena(t_arena *arena)
 //		if (arena->files)
 //			print_files(arena);
 //		ft_putchar('\n');
-		if (arena->bdd)
-			print_bdd(arena);
+//		if (arena->bdd)
+//			print_bdd(arena);
 //		ft_putchar('\n');
 //		print_mem(arena);
 //		ft_putchar('\n');
