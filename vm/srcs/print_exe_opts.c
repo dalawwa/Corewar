@@ -37,7 +37,7 @@ void		print_exe_opts(t_arena *arena, t_exe *exe)
 				if (exe->bdd_op->opcode == 11)
 					ft_printf("%hd \n", (short)exe->arg3->d_data);
 				else
-					ft_printf("%d", (short int)exe->arg3->d_value);
+					ft_printf("%d", exe->arg3->d_value);
 			}
 			if (exe->bdd_op->opcode == 9)
 			{
