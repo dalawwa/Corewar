@@ -85,5 +85,6 @@ void		kill_process(t_proc *to_kill, t_proc_base *list_proc)
 			free_process(to_kill);
 		}
 		list_proc->nb_proc--;
+
 	}
 }
