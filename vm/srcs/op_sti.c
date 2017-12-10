@@ -17,6 +17,7 @@ int		op_sti(t_arena *arena, t_exe *exe)
 	arena->mem[exe->process->pc + result + 1] = exe->process->reg[exe->arg1->d_value][1];
 	arena->mem[exe->process->pc + result + 2] = exe->process->reg[exe->arg1->d_value][2];
 	arena->mem[exe->process->pc + result + 3] = exe->process->reg[exe->arg1->d_value][3];
+
 	return (1);
 }
 /* attention si result + 3 > mem_size */

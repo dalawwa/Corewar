@@ -5,6 +5,8 @@ int		op_lldi(t_arena *arena, t_exe *exe)
 	uintmax_t result;
 
 	result = (uintmax_t)exe->arg1->d_data + (uintmax_t)exe->arg2->d_data;
+//	if (arena->opts->is_v4)
+//		ft_printf("P   %d | lldi %d %d r%d\n", exe->process->player->play_num, exe->arg1->d_value, exe->arg2->d_value, exe->arg3->d_data);
 	print_exe_opts(arena, exe);
 	if (result > 0xffffffff)
 	{
@@ -13,7 +15,7 @@ int		op_lldi(t_arena *arena, t_exe *exe)
 		return (0);
 	}
 //	result = result % IDX_MOD;
-	ft_printf("result = %u\n", result);
+//	ft_printf("result = %u\n", result);
 	exe->process->reg[exe->arg3->d_value][0] = arena->mem[exe->process->pc + result];
 	exe->process->reg[exe->arg3->d_value][1] = arena->mem[exe->process->pc + result + 1];
 	exe->process->reg[exe->arg3->d_value][2] = arena->mem[exe->process->pc + result + 2];
