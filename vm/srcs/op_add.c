@@ -1,20 +1,29 @@
 #include "corewar.h"
 
+void	print_add_sub(t_arena *arena, t_exe *exe)
+{
+	if (arena->opts->is_v4)
+	{
+		ft_printf("P    %d | %s r%hd r%hd r%hd\n", exe->process->process_num, exe->bdd_op->name, (short int)exe->arg1->d_value, (short int)exe->arg2->d_value, (short int)exe->arg3->d_value);
+	}
+}
+
 int		op_add(t_arena *arena, t_exe *exe)
 {
 	unsigned int	result;
 	unsigned char	*s;
 
-//	arena = arena + 0;
+	//	arena = arena + 0;
+	print_add_sub(arena, exe);
 	print_exe_opts(arena, exe);
 	result = exe->arg1->d_data + exe->arg2->d_data;
-//	ft_printf("Result = %d\n", result);
-	if (result > 0xffffffff)
-	{
-		ft_putendl("op_add FAILED");
-		exe->process->carry = 0;
-		return (0);
-	}
+	//	ft_printf("Result = %d\n", result);
+	//	if (result > 0xffffffff)
+	//	{
+	//		ft_putendl("op_add FAILED");
+	//		exe->process->carry = 0;
+	//		return (0);
+	//	}
 	s = ft_ito_hexa(result);
 	if (s == NULL)
 		return (-1);
