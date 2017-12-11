@@ -5,7 +5,7 @@ int		op_and(t_arena *arena, t_exe *exe)
 	uintmax_t		result;
 	unsigned char	*s;
 
-	print_exe_opts(arena, exe);
+//	print_exe_opts(arena, exe);
 	result = (uintmax_t)(exe->arg1->d_data & exe->arg2->d_data);
 //	ft_printf("op_AND : Result = %u\n", result);
 /*	if (result > 0xffffffff)
@@ -26,10 +26,12 @@ int		op_and(t_arena *arena, t_exe *exe)
 	{
 		ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
 		if (exe->arg1->type == 'i')
-			ft_printf("%d ", exe->arg1->d_data - MEM_SIZE);
+			ft_printf("%d ", exe->arg1->d_data);
 		else
 			ft_printf("%hd ", (short)exe->arg1->d_data);
-		if (exe->arg1->type == 'i')
+		if (exe->arg2->type == 'i')
+			ft_printf("%d ", exe->arg2->d_data);
+		else if (exe->arg2->type == 'r')
 			ft_printf("%d ", exe->arg2->d_data);
 		else
 			ft_printf("%hd ", (short)exe->arg2->d_data);
