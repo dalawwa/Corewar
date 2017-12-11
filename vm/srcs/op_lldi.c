@@ -14,10 +14,10 @@ int		op_lldi(t_arena *arena, t_exe *exe)
 	}
 //	result = result % IDX_MOD;
 	ft_printf("result = %u\n", result);
-	exe->process->reg[exe->arg3->d_value][0] = arena->mem[exe->process->pc + result];
-	exe->process->reg[exe->arg3->d_value][1] = arena->mem[exe->process->pc + result + 1];
-	exe->process->reg[exe->arg3->d_value][2] = arena->mem[exe->process->pc + result + 2];
-	exe->process->reg[exe->arg3->d_value][3] = arena->mem[exe->process->pc + result + 3];
+	exe->process->reg[exe->arg3->d_value][0] = find_char_at_mem_pc_adv(exe->process->pc, result, arena);
+	exe->process->reg[exe->arg3->d_value][1] = find_char_at_mem_pc_adv(exe->process->pc, result + 1, arena);
+	exe->process->reg[exe->arg3->d_value][2] = find_char_at_mem_pc_adv(exe->process->pc, result + 2, arena);
+	exe->process->reg[exe->arg3->d_value][3] = find_char_at_mem_pc_adv(exe->process->pc, result + 3, arena);
 	is_carry_to_modify(exe);
 	return (1);
 }

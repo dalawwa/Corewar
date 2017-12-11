@@ -1,5 +1,23 @@
 #include "corewar.h"
 
+
+int		is_failed_reg_nbr(t_exe *exe, t_arg *arg)
+{
+	if (arg && arg->type == 'r' && arg->d_value > REG_NUMBER)
+	{
+		if (exe->arg1)
+			free_arg(exe->arg1);
+		if (exe->arg2)
+			free_arg(exe->arg2);
+		if (exe->arg3)
+			free_arg(exe->arg3);
+		exe->size_failed_adv = exe->ocp_op->size_adv;
+		exe->ocp_op = NULL;
+		return (1);
+	}
+	return (0);
+}
+
 int		find_bdd_op(t_exe *exe_op, t_bdd **bdd)
 {
 	int	i;
@@ -179,6 +197,7 @@ void		init_exe(t_exe *exe_op, t_proc *process)
 	exe_op->arg2 = NULL;
 	exe_op->arg3 = NULL;
 	exe_op->to_wait = 0;
+	exe_op->size_failed_adv = 0;
 	exe_op->process = process;
 }
 
@@ -219,6 +238,11 @@ int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent)
 		return (0);
 //	ft_putendl("END --> go back to start");
 	inc_pc(process, -process->exe_op->ocp_op->size_adv);
+	if (is_failed_reg_nbr(process->exe_op, process->exe_op->arg1) == 0)
+	{
+		if (process->exe_op->arg2 && is_failed_reg_nbr(process->exe_op, process->exe_op->arg2) == 0)
+			is_failed_reg_nbr(process->exe_op, process->exe_op->arg3);
+	}
 	if (arena->opts->has_b == 1)
 		print_exe(process->exe_op);
 	return (1);
