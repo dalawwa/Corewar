@@ -55,4 +55,4 @@ lldi		2, r4, r5
 lldi		r2, %4, r5
 lldi		%2, %4, r5
 lldi		2, %4, r5
-lfork %0
+lfork %-65744
