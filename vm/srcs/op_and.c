@@ -8,12 +8,12 @@ int		op_and(t_arena *arena, t_exe *exe)
 	print_exe_opts(arena, exe);
 	result = (uintmax_t)exe->arg1->d_data & (uintmax_t)exe->arg2->d_data;
 //	ft_printf("op_AND : Result = %u\n", result);
-	if (result > 0xffffffff)
+/*	if (result > 0xffffffff)
 	{
 		ft_putendl("op_and FAILED");
 		exe->process->carry = 0;
 		return (0);
-	}
+	}*/
 	s = ft_ito_hexa(result);
 	if (s == NULL)
 		return (-1);

@@ -1,9 +1,10 @@
 .name "LD 42 = * dans r3 puis 58 = : dqns r2"
 .comment "let's try ld op"
 
-live	%1
 ld		%-63, r2
 ld		-63, r2
+ld		%63, r2
+ld		63, r2
 add		r1, r2, r3
 sub		r1, r2, r3
 and		r1, r2, r3
