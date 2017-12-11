@@ -72,8 +72,7 @@ int		deal_exe(t_arena *arena)
 							ft_putendl("______________Process AVANT OP_____________");
 							print_one_process(elem);
 						}
-						if (elem->exe_op->ocp_op->fct(arena, elem->exe_op) == -1)
-							return (0);
+						elem->exe_op->ocp_op->fct(arena, elem->exe_op);
 						if (arena->opts->has_b == 1)
 						{
 							ft_putendl("______________Process APRES OP_____________");
@@ -154,7 +153,7 @@ int		start_match(t_arena *arena)
 			arena->current_cycle = 0;
 		}
 		if (deal_exe(arena) == 0)
-			return (0);
+			return (-1);
 		if (arena->opts->has_d == 1 && arena->total_cycle == arena->opts->d)
 		{
 			print_mem(arena);
