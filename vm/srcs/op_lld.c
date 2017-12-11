@@ -32,5 +32,3 @@ int		op_lld(t_arena *arena, t_exe *exe)
 	is_carry_to_modify(exe);
 	return (1);
 }
-
-// + 1 + 2 + 3 ATTENTION si mem[arg1->d_va
