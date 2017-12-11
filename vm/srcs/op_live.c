@@ -11,7 +11,9 @@ int		op_live(t_arena *arena, t_exe *exe)
 	exe->process->last_cycle_alive = arena->total_cycle;
 	while (i < arena->nb_players)
 	{
-		if (arena->players[i]->play_num == exe->arg1->d_value)
+		// changement de logique
+//		if (arena->players[i]->play_num == exe->arg1->d_value)
+		if (!ft_unsi_strcmp(arena->players[i]->play_live_num, exe->arg1->data))
 		{
 			arena->last_player_alive = arena->players[i];
 			if (arena->opts->is_v1)
