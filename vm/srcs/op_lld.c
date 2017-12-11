@@ -24,13 +24,11 @@ int		op_lld(t_arena *arena, t_exe *exe)
 			exe->process->carry = 0;
 			return (0);
 		}
-		exe->process->reg[exe->arg2->d_value][0] = arena->mem[exe->arg1->d_value];
-		exe->process->reg[exe->arg2->d_value][1] = arena->mem[exe->arg1->d_value + 1];
-		exe->process->reg[exe->arg2->d_value][2] = arena->mem[exe->arg1->d_value + 2];
-		exe->process->reg[exe->arg2->d_value][3] = arena->mem[exe->arg1->d_value + 3];
+		exe->process->reg[exe->arg2->d_value][0] = find_char_at_mem_pc_adv(exe->process->pc, exe->arg1->d_value, arena);
+		exe->process->reg[exe->arg2->d_value][1] = find_char_at_mem_pc_adv(exe->process->pc, exe->arg1->d_value + 1, arena);
+		exe->process->reg[exe->arg2->d_value][2] = find_char_at_mem_pc_adv(exe->process->pc, exe->arg1->d_value + 2, arena);
+		exe->process->reg[exe->arg2->d_value][3] = find_char_at_mem_pc_adv(exe->process->pc, exe->arg1->d_value + 3, arena);
 	}
 	is_carry_to_modify(exe);
 	return (1);
 }
-
-// + 1 + 2 + 3 ATTENTION si mem[arg1->d_va
