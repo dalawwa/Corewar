@@ -2,7 +2,4 @@
 .comment "let's try ld op"
 
 ld	%2147483647, r3
-aff r3
-st	r3, r2
-aff r2
-st	r2, 2
+st	r2, 6

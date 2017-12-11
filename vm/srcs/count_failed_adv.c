@@ -9,6 +9,8 @@ int		count_failed_adv(t_arena *arena, t_exe *exe)
 	i = 0;
 	j = 0;
 	test = 0;
+	if (exe->size_failed_adv != 0)
+		return (exe->size_failed_adv);
 	while (i < NB_OP)
 	{
 		if (find_char_at_mem_pc_adv(exe->process->pc, 1, arena) == arena->bdd[i]->opcode)
