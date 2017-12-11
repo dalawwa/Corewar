@@ -6,44 +6,11 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 16:24:32 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/06 10:55:38 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/08 14:02:38 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/asm.h"
-
-/*
-//je vais recuperer les arguments
-void		add_args_champ(t_champ *list)
-{
-	int	i;
-	int	j;
-
-	while (list->prev)
-		list = list->prev;
-	list = list->next;
-	while (list->next)
-	{
-		i = 0;
-		j = 0;
-		while (list->is_label == 1 && list->next)
-			list = list->next;
-		if (list->next == NULL)
-			break ;
-		while ((list->line[i + 1] != 'r' || list->line[i + 1] != '%') && (list->line[i] != ' ' || list->line[i] != '\t') && list->line[i] != '\0')
-			i++;
-		i++;
-		while (list->line[i] != ' ' && list->line[i] != ',' && list->line[i] != '\t' && list->line[i] != '\0')
-		{
-			ft_putchar(list->line[i]);
-			i++;
-			j++;
-		}
-		ft_putchar(' ');
-		list = list->next;
-	}
-}
-*/
 
 //je verifie si il s agit d un label
 int			get_two_points(char *str)
@@ -83,13 +50,19 @@ void		is_a_label(t_champ *list)
 void		is_a_line_of_life(t_champ *list)
 {
 	int		i;
-//	int		op;
+	int		op;
 
 	i = 0;
 	while (list->next)
 		list = list->next;
 	list->op_code = get_the_op_code(list->name);
-	if (check_args_valid(list->line, list->op_code) == 0)
+	op = list->op_code;
+	if (op == 1 || op == 9 || op == 12 || op == 15)
+		list->has_ocp = 0;
+	else if (op > 0 && op < 17)
+		list->has_ocp = 1;
+	add_number_args(list);
+	if (check_args_valid(list->line, list->op_code, list) == 0)
 		ciao_bye_bye(1);
 	list->is_label = 0;
 }
@@ -118,6 +91,27 @@ void		add_name_list(t_champ *list)
 		free(str);
 }
 
+char	*ft_strdup_asm(const char *s)
+{
+	char		*dup;
+	int			j;
+	size_t		i;
+
+	i = 0;
+	j = 0;
+	while (s[j] != '\0' && s[j] != ';' && s[j] != '#')
+		j++;
+	if (!(dup = (char*)malloc(j + 1)))
+		return (NULL);
+	while (s[i] && s[i] != ';' && s[i] != '#')
+	{
+		dup[i] = s[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
+}
+
 void		add_infos_list(t_champ **begin)
 {
 	t_champ	*list;
@@ -128,7 +122,6 @@ void		add_infos_list(t_champ **begin)
 	add_name_list(list);
 	while (list->prev)
 		list = list->prev;
-	add_number_args(list);
 }
 
 t_champ		*ft_lstnew_line(char *line)
@@ -138,7 +131,7 @@ t_champ		*ft_lstnew_line(char *line)
 	if (!(list = (t_champ *)ft_memalloc(sizeof(t_champ))))
 		ciao_bye_bye(1);
 	list->next = NULL;
-	list->line = line;
+	list->line = ft_strdup_asm(line);
 	return (list);
 }
 
