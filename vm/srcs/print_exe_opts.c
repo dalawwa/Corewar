@@ -13,19 +13,19 @@ void		print_exe_opts(t_arena *arena, t_exe *exe)
 		if (arena->opts->is_v4 && exe->bdd_op->opcode != 16)
 		{
 			ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
-			if (exe->arg1->type == 'r' && exe->bdd_op->opcode != 10 && exe->bdd_op->opcode != 6 && exe->bdd_op->opcode != 7 && exe->bdd_op->opcode != 8)
+			if (exe->arg1->type == 'r' && exe->bdd_op->opcode != 10 && exe->bdd_op->opcode != 6 && exe->bdd_op->opcode != 7 && exe->bdd_op->opcode != 8 && exe->bdd_op->opcode != 14)
 				ft_printf("r");
 			if (exe->bdd_op->opcode == 6 || exe->bdd_op->opcode == 7 || exe->bdd_op->opcode == 8 || exe->bdd_op->opcode == 10)
 				ft_printf("%d ", exe->arg1->d_data);
-			else if (exe->bdd_op->opcode == 2 && exe->arg1->type == 'i')
+			else if (exe->bdd_op->opcode == 2 || exe->opcode == 14)
 				ft_printf("%d ", exe->arg1->d_data);
 			else
 				ft_printf("%d ", (short int)exe->arg1->d_value);
 			if (exe->arg2)
 			{
-				if (exe->arg2->type == 'r' && exe->bdd_op->opcode != 10 && exe->bdd_op->opcode != 11 && exe->bdd_op->opcode != 6 && exe->bdd_op->opcode != 7 && exe->bdd_op->opcode != 8)
+				if (exe->arg2->type == 'r' && exe->bdd_op->opcode != 10 && exe->bdd_op->opcode != 11 && exe->bdd_op->opcode != 6 && exe->bdd_op->opcode != 7 && exe->bdd_op->opcode != 8 && exe->bdd_op->opcode != 14)
 					ft_printf("r");
-				if (exe->bdd_op->opcode == 11 || exe->bdd_op->opcode == 6 || exe->bdd_op->opcode == 7 || exe->bdd_op->opcode == 8 || exe->bdd_op->opcode == 10)
+				if (exe->bdd_op->opcode == 11 || exe->bdd_op->opcode == 6 || exe->bdd_op->opcode == 7 || exe->bdd_op->opcode == 8 || exe->bdd_op->opcode == 10 || exe->bdd_op->opcode == 14)
 					ft_printf("%hd ", (short)exe->arg2->d_data);
 				else
 					ft_printf("%d ", (short)exe->arg2->d_value);
