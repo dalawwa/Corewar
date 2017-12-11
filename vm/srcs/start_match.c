@@ -11,7 +11,7 @@ int		kill_processes_dead(t_arena *arena, t_proc_base *list)
 	{
 		if (elem->nb_live == 0)
 		{
-			if (arena->opts->has_v == 1 && arena->opts->v >= 8)
+			if (arena->opts->has_v == 1 && arena->opts->is_v8)
 				ft_printf("Process %d hasn't lived for %d cycles (CTD %d)\n", elem->process_num, arena->total_cycle - elem->last_cycle_alive, arena->ctd);
 			kill_process(elem, list);
 			elem = list->last;
@@ -134,7 +134,7 @@ int		start_match(t_arena *arena)
 	{
 		arena->total_cycle++;
 		arena->current_cycle++;
-		if (arena->opts->has_v == 1 && arena->opts->v >= 2)
+		if (arena->opts->has_v == 1 && arena->opts->is_v2)
 			ft_printf("It is now cycle %d\n", arena->total_cycle);
 		if (arena->current_cycle == arena->ctd)
 		{
@@ -146,7 +146,7 @@ int		start_match(t_arena *arena)
 			{
 				arena->current_nb_check = 0;
 				arena->ctd -= CYCLE_DELTA;
-				if (arena->opts->has_v == 1 && arena->opts->v >= 2)
+				if (arena->opts->has_v == 1 && arena->opts->is_v2)
 					ft_printf("Cycle to die is now %d\n", arena->ctd);
 			}
 			put_all_processes_live_zero(arena->list_proc);
