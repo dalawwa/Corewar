@@ -8,10 +8,10 @@ void	print_ld(t_arena *arena, t_exe *exe)
 	if (arena->opts->is_v4)
 	{
 		ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
-		if (exe->arg1->type == 'd')
-			ft_printf("%hd ", (short int)exe->arg1->d_data);
-		else
+		if (exe->arg1->type == 'd' || exe->arg1->type == 'r')
 			ft_printf("%d ", exe->arg1->d_data);
+		else
+			ft_printf("%hd ", (short)exe->arg1->d_data);
 		ft_printf("r%hd\n", (short int)exe->arg2->d_value);
 	}
 }
@@ -40,6 +40,7 @@ int		op_ld(t_arena *arena, t_exe *exe)
 	exe->process->reg[exe->arg2->d_value][2] = exe->arg1->data[2];
 	exe->process->reg[exe->arg2->d_value][3] = exe->arg1->data[3];
 	//	}
+	print_exe_opts(arena, exe);
 	is_carry_to_modify(exe);
 	return (1);
 }

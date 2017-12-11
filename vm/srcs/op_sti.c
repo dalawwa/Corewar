@@ -4,7 +4,6 @@ int		op_sti(t_arena *arena, t_exe *exe)
 {
 	uintmax_t result;
 
-	print_exe_opts(arena, exe);
 	result = (uintmax_t)exe->arg2->d_data + (uintmax_t)exe->arg3->d_data;
 	if (result > 0xffffffff)
 	{
@@ -17,6 +16,26 @@ int		op_sti(t_arena *arena, t_exe *exe)
 	arena->mem[find_pc_adv(exe->process, result + 1)] = exe->process->reg[exe->arg1->d_value][1];
 	arena->mem[find_pc_adv(exe->process, result + 2)] = exe->process->reg[exe->arg1->d_value][2];
 	arena->mem[find_pc_adv(exe->process, result + 3)] = exe->process->reg[exe->arg1->d_value][3];
+	if (arena->opts->is_v4)
+	{
+		ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
+		ft_printf("r%d ", exe->arg1->d_value);
+		if (exe->arg2->type == 'i')
+			ft_printf("%d ", exe->arg2->d_data);
+		else if (exe->arg2->type == 'r')
+			ft_printf("%d ", exe->arg2->d_data);
+		else
+			ft_printf("%hd ", (short)exe->arg2->d_data);
+		ft_printf("%d", exe->arg3->d_data);
+		ft_putchar('\n');
+	}
+	if (exe->bdd_op->opcode == 11)
+	{
+		put_n_char(' ', intlen((short)(exe->process->process_num)));
+		put_n_char(' ', 6);
+		ft_printf("| -> store to %d + %d = %d (with pc and mod %d)\n", exe->arg2->d_data, exe->arg3->d_data, exe->arg3->d_data + exe->arg2->d_data, exe->process->pc + (exe->arg2->d_data + exe->arg3->d_data) % IDX_MOD);
+	}
+	print_exe_opts(arena, exe);
 	return (1);
 }
 /* attention si result + 3 > mem_size */
