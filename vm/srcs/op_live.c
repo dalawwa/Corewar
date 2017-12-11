@@ -5,6 +5,10 @@ int		op_live(t_arena *arena, t_exe *exe)
 	int	i;
 
 	i = 0;
+	if (arena->opts->is_v4)
+	{
+		ft_printf("P    %d | %s %d\n", exe->process->process_num, exe->bdd_op->name, exe->arg1->d_data);
+	}
 	print_exe_opts(arena, exe);
 	exe->process->nb_live++;
 	arena->list_proc->nb_live_total++;

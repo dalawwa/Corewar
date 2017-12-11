@@ -10,7 +10,7 @@ void	print_ldi(t_arena *arena, t_exe *exe)
 		else
 			ft_printf("%hd ", (short int)exe->arg1->d_data);
 		if (exe->arg2->type == 'r')
-			ft_printf("%d ", (short int)exe->arg1->d_data);
+			ft_printf("%d ", exe->arg2->d_data);
 		else
 			ft_printf("%d ", exe->arg2->d_data);
 		ft_printf("r%hd\n", (short int)exe->arg3->d_value);
