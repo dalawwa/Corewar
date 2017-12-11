@@ -34,8 +34,6 @@ void		print_one_process(t_proc *process)
 	ft_putendl("__________print_ONE_PROCESS");
 	ft_printf("Process num %d :\nPlayer : %s\nCarry = %d - pc = %d\n", process->process_num, process->player->name, process->carry, process->pc);
 	print_regs(process);
-	if (process->exe_op)
-		print_exe(process->exe_op);
 	ft_putendl("__________print_ONE_PROCESS__END");
 }
 
