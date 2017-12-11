@@ -12,5 +12,5 @@ int		ft_unsi_strcmp(unsigned char *s1, unsigned char *s2)
 		ss1++;
 		ss2++;
 	}
-	return (*ss2 - *ss1);
+	return (*ss1 - *ss2);
 }
