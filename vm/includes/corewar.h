@@ -144,6 +144,7 @@ typedef struct	s_exe
 	t_arg			*arg2;
 	t_arg			*arg3;
 	int				to_wait;
+	int				size_failed_adv;
 	t_proc			*process; // process qui read l'exe
 	struct s_bdd	*bdd_op; // la struct d'op BDD corespondant a cet exe
 	struct s_ocp	*ocp_op;
@@ -269,6 +270,7 @@ void	free_opts(t_opt *opts);
 void	free_players(t_play **players, int nb_players);
 void	free_bdd(t_bdd **bdd);
 void	free_exe(t_exe *exe, t_proc *process);
+void	free_arg(t_arg *arg);
 
 /* FONCTIONS DEBUG */
 void	print_tab_cors(int *tab);
