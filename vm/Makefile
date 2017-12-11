@@ -6,7 +6,7 @@
 #    By: mapandel <mapandel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 03:03:10 by mapandel          #+#    #+#              #
-#    Updated: 2017/12/09 18:59:39 by dalawwa          ###   ########.fr        #
+#    Updated: 2017/12/11 11:13:04 by dalawwa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -343,7 +343,8 @@ SRCS_NAME = main.c \
 			count_failed_adv.c \
 			is_carry_to_modify.c \
 			is_valid_op.c \
-			int_len.c
+			int_len.c \
+			ft_unsi_strcmp.c
 
 CW_SRCS = $(addprefix $(PATH_SRCS), $(SRCS_NAME))
 CW_OBJS = $(addprefix $(PATH_OBJS), $(SRCS_NAME:.c=.o))
