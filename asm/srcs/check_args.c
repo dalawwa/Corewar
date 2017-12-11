@@ -6,23 +6,19 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 09:21:43 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/08 11:57:09 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/11 20:26:08 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/asm.h"
 
+
+//not finish, some special moment where param should be equal to 2
 int		check_is_direct(char *str, t_champ *list, int num)
 {
 	int	i;
 
 	i = 1;
-	if (num == 1)
-		list->size_param1 = 4;
-	else if (num == 2)
-		list->size_param2 = 4;
-	else if (num == 3)
-		list->size_param3 = 4;
 	if (str[0] != '%')
 		return (0);
 	if (str[i] == ':')
@@ -35,6 +31,12 @@ int		check_is_direct(char *str, t_champ *list, int num)
 			return (0);
 		i++;
 	}
+	if (num == 1)
+		list->size_param1 = 4;
+	else if (num == 2)
+		list->size_param2 = 4;
+	else if (num == 3)
+		list->size_param3 = 4;
 	return (1);
 }
 
@@ -43,12 +45,6 @@ int		check_is_indirect(char *str, t_champ *list, int num)
 	int	i;
 
 	i = 0;
-	if (num == 1)
-		list->size_param1 = 2;
-	else if (num == 2)
-		list->size_param2 = 2;
-	else if (num == 3)
-		list->size_param3 = 2;
 	if (str[i] == ':')
 		return (1);
 	if (str[i] == '-' || str[i] == '+')
@@ -59,6 +55,12 @@ int		check_is_indirect(char *str, t_champ *list, int num)
 			return (0);
 		i++;
 	}
+	if (num == 1)
+		list->size_param1 = 2;
+	else if (num == 2)
+		list->size_param2 = 2;
+	else if (num == 3)
+		list->size_param3 = 2;
 	return (1);
 }
 
@@ -87,24 +89,36 @@ int		check_is_reg(char *str, t_champ *list, int num)
 int		check_args_valid(char *str, int op, t_champ *list)
 {
 	char	**tab;
+	int		i;
+	int		j;
+	int		g;
 
+	i = 1;
+	j = 2;
+	g = 3;
+	if (list->is_label_and == 1)
+	{
+		i++;
+		j++;
+		g++;
+	}
 	list->params = ft_strsplit_three(str, ' ', '\t', ',');
 	tab = ft_strsplit_three(str, ' ', '\t', ',');
-	if (tab[1] && (op == 1 || op == 9 || op == 15 || op == 12) && (check_is_direct(tab[1], list, 1)))
+	if (tab[i] && (op == 1 || op == 9 || op == 15 || op == 12) && (check_is_direct(tab[i], list, 1)))
 		return (1);
-	else if (tab[1] && tab[2] && (op == 2 || op == 13) && (check_is_indirect(tab[1], list, 1) || check_is_direct(tab[1], list, 1)) && (check_is_reg(tab[2], list, 2)))
+	else if (tab[i] && tab[j] && (op == 2 || op == 13) && (check_is_indirect(tab[i], list, 1) || check_is_direct(tab[i], list, 1)) && (check_is_reg(tab[j], list, 2)))
 		return (1);
-	else if (tab[1] && tab[2] && op == 3 && check_is_reg(tab[1], list, 1) && (check_is_reg(tab[2], list, 2) || check_is_indirect(tab[2], list, 2)))
+	else if (tab[i] && tab[j] && op == 3 && check_is_reg(tab[i], list, 1) && (check_is_reg(tab[j], list, 2) || check_is_indirect(tab[j], list, 2)))
 		return (1);
-	else if (tab[1] && tab[2] && tab[3] && (op == 4 || op == 5) && check_is_reg(tab[1], list, 1) && check_is_reg(tab[2], list, 2) && check_is_reg(tab[3], list, 3))
+	else if (tab[i] && tab[j] && tab[g] && (op == 4 || op == 5) && check_is_reg(tab[i], list, 1) && check_is_reg(tab[j], list, 2) && check_is_reg(tab[g], list, 3))
 		return (1);
-	else if (tab[1] && tab[2] && tab[3] && (op == 6 || op == 7 || op == 8) && (check_is_reg(tab[1], list, 1) || check_is_indirect(tab[1], list, 1) || check_is_direct(tab[1], list, 1)) && (check_is_reg(tab[2], list, 2) || check_is_indirect(tab[2], list, 2) || check_is_direct(tab[2], list, 2)) && check_is_reg(tab[3], list, 3))
+	else if (tab[i] && tab[j] && tab[g] && (op == 6 || op == 7 || op == 8) && (check_is_reg(tab[i], list, 1) || check_is_indirect(tab[i], list, 1) || check_is_direct(tab[i], list, 1)) && (check_is_reg(tab[j], list, 2) || check_is_indirect(tab[j], list, 2) || check_is_direct(tab[j], list, 2)) && check_is_reg(tab[g], list, 3))
 		return (1);
-	else if (tab[1] && tab[2] && tab[3] && (op == 10 ||op == 14) && (check_is_reg(tab[1], list, 1) || check_is_indirect(tab[1], list, 1) || check_is_direct(tab[1], list, 1)) && (check_is_reg(tab[2], list, 2) || check_is_direct(tab[2], list, 2)) && check_is_reg(tab[3], list, 3))
+	else if (tab[i] && tab[j] && tab[g] && (op == 10 ||op == 14) && (check_is_reg(tab[i], list, 1) || check_is_indirect(tab[i], list, 1) || check_is_direct(tab[i], list, 1)) && (check_is_reg(tab[j], list, 2) || check_is_direct(tab[j], list, 2)) && check_is_reg(tab[g], list, 3))
 		return (1);
-	else if (tab[1] && tab[2] && tab[3] && op == 11 && check_is_reg(tab[1], list, 1) && (check_is_reg(tab[2], list, 2) || check_is_indirect(tab[2], list, 2) || check_is_direct(tab[2], list, 2)) && (check_is_reg(tab[3], list, 3) || check_is_direct(tab[3], list, 3)))
+	else if (tab[i] && tab[j] && tab[g] && op == 11 && check_is_reg(tab[i], list, 1) && (check_is_reg(tab[j], list, 2) || check_is_indirect(tab[j], list, 2) || check_is_direct(tab[j], list, 2)) && (check_is_reg(tab[g], list, 3) || check_is_direct(tab[g], list, 3)))
 		return (1);
-	else if (tab[1] && op == 16 && check_is_reg(tab[1], list, 1))
+	else if (tab[1] && op == 16 && check_is_reg(tab[i], list, 1))
 		return (1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/08 17:58:14 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/11 15:39:43 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,11 @@ typedef struct		s_champ
 {
 	char			*line; //on recupere la ligne du champion
 	char			*name; // on recupere l ordre
+	char			*command;
+	char			*label;
 	int				op_code;
 	int				is_label;
+	int				is_label_and;
 	int				position;
 	char			**params;
 	int				nb_params;
