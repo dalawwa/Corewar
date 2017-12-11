@@ -299,5 +299,6 @@ unsigned char	*ft_unsi_strdup(unsigned char *s, int len);
 unsigned char	*ft_ito_hexa(uintmax_t n);
 int		intlen(int n);
 void	put_n_char(char c, int n);
+int		ft_unsi_strcmp(unsigned char *s1, unsigned char *s2);
 
 #endif

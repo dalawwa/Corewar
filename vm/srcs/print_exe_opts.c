@@ -20,7 +20,7 @@ void		print_exe_opts(t_arena *arena, t_exe *exe)
 			else if (exe->bdd_op->opcode == 2 || exe->opcode == 14 || exe->opcode == 13)
 				ft_printf("%d ", exe->arg1->d_data);
 			else
-				ft_printf("%d ", (short int)exe->arg1->d_value);
+				ft_printf("%hd ", (short int)exe->arg1->d_value);
 			if (exe->arg2)
 			{
 				if (exe->arg2->type == 'r' && exe->bdd_op->opcode != 10 && exe->bdd_op->opcode != 11 && exe->bdd_op->opcode != 6 && exe->bdd_op->opcode != 7 && exe->bdd_op->opcode != 8 && exe->bdd_op->opcode != 14)
