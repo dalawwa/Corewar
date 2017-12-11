@@ -10,7 +10,7 @@ void		print_exe_opts(t_arena *arena, t_exe *exe)
 	if (arena->opts->has_v == 1)
 	{
 		//		ft_printf("Process num %d\n", exe->process->process_num);
-		if (arena->opts->is_v4 && exe->bdd_op->opcode != 16)
+/*		if (arena->opts->is_v4 && exe->bdd_op->opcode != 16)
 		{
 			ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
 			if (exe->arg1->type == 'r' && exe->bdd_op->opcode != 10 && exe->bdd_op->opcode != 6 && exe->bdd_op->opcode != 7 && exe->bdd_op->opcode != 8 && exe->bdd_op->opcode != 14)
@@ -83,7 +83,7 @@ void		print_exe_opts(t_arena *arena, t_exe *exe)
 				ft_printf("| -> load from %d + %d = %d (with pc and mod %d)", exe->arg1->d_data, exe->arg2->d_data, exe->arg1->d_data + exe->arg2->d_data, exe->process->pc + (exe->arg1->d_data + exe->arg2->d_data) % IDX_MOD);
 			}
 			ft_putchar('\n');
-		}
+		}*/
 		if (arena->opts->v >= 16)
 		{
 			if (exe->process->pc == 0)

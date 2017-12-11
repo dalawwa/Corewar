@@ -6,6 +6,7 @@ int		op_sub(t_arena *arena, t_exe *exe)
 	unsigned char	*s;
 
 //	arena = arena + 0;
+	print_add_sub(arena, exe);
 	print_exe_opts(arena, exe);
 	result = exe->arg1->d_data - exe->arg2->d_data;
 //	ft_printf("Result = %d\n", result);
