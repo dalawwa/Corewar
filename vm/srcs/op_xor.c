@@ -6,14 +6,15 @@ int		op_xor(t_arena *arena, t_exe *exe)
 	unsigned char	*s;
 
 	print_exe_opts(arena, exe);
-	result = (uintmax_t)exe->arg1->d_data ^ (uintmax_t)exe->arg2->d_data;
-//	ft_printf("op_AND : Result = %u\n", result);
-	if (result > 0xffffffff)
+	result = (uintmax_t)(exe->arg1->d_data ^ exe->arg2->d_data);
+//	ft_printf("op_xor : Result = %u\n", result);
+/*	if (result > 0xffffffff)
 	{
 		ft_putendl("op_xor FAILED");
 		exe->process->carry = 0;
 		return (0);
-	}
+	}*/
+//	result = result % IDX_MOD;
 	s = ft_ito_hexa(result);
 	if (s == NULL)
 		return (-1);
