@@ -13,7 +13,7 @@ int		op_sti(t_arena *arena, t_exe *exe)
 	}
 	result = result % IDX_MOD;
 //	ft_printf("result = %u\n", result);
-	arena->mem[find_pc_adv(exe->process, result % IDX_MOD)] = exe->process->reg[exe->arg1->d_value][0];
+	arena->mem[find_pc_adv(exe->process, result)] = exe->process->reg[exe->arg1->d_value][0];
 	arena->mem[find_pc_adv(exe->process, result + 1)] = exe->process->reg[exe->arg1->d_value][1];
 	arena->mem[find_pc_adv(exe->process, result + 2)] = exe->process->reg[exe->arg1->d_value][2];
 	arena->mem[find_pc_adv(exe->process, result + 3)] = exe->process->reg[exe->arg1->d_value][3];
