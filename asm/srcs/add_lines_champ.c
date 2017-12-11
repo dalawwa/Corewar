@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 16:24:32 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/08 14:02:38 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/11 20:18:04 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,14 @@ void		is_a_label(t_champ *list)
 		list = list->next;
 	list->op_code = 0;
 	list->is_label = 1;
-	list->params = NULL;
-	list->nb_params = 0;
-	list->size_param1 = 0;
-	list->size_param2 = 0;
-	list->size_param3 = 0;
+//	list->params = NULL;
+//	list->nb_params = 0;
+//	list->size_param1 = 0;
+//	list->size_param2 = 0;
+//	list->size_param3 = 0;
 	list->has_ocp = 0;
 	list->ocp = '\0';
-	list->size_octets = 0;
+//	list->size_octets = 0;
 }
 
 //la il va falloir chercher un max d infos pour remplir la structure, les params et tout
@@ -53,9 +53,7 @@ void		is_a_line_of_life(t_champ *list)
 	int		op;
 
 	i = 0;
-	while (list->next)
-		list = list->next;
-	list->op_code = get_the_op_code(list->name);
+	list->op_code = get_the_op_code(list->command);
 	op = list->op_code;
 	if (op == 1 || op == 9 || op == 12 || op == 15)
 		list->has_ocp = 0;
@@ -64,7 +62,7 @@ void		is_a_line_of_life(t_champ *list)
 	add_number_args(list);
 	if (check_args_valid(list->line, list->op_code, list) == 0)
 		ciao_bye_bye(1);
-	list->is_label = 0;
+//	list->is_label = 0;
 }
 
 //je rajoute le nom dans la liste + label et on lance la recherche des autres infos
@@ -73,6 +71,7 @@ void		add_name_list(t_champ *list)
 	int i;
 	int j;
 	char *str;
+	char *str2;
 
 	i = 0;
 	while (list->line[i] == ' ' || list->line[i] == '\t')
@@ -83,10 +82,33 @@ void		add_name_list(t_champ *list)
 	str = ft_strnew(j - i + 1);
 	str = ft_strncpy(str, &list->line[i], (j - i));
 	list->name = ft_strdup(str);
+	while (list->line[j] == ' ' || list->line[j] == '\t')
+		j++;
 	if (get_two_points(list->name))
+	{
+		if (list->line[j] != '\0' && list->line[j] != '#' && list->line[j] != ';')
+		{
+			i = j;
+			while (list->line[j] != ' ' && list->line[j] != '\t' && list->line[j] != ',' && list->line[j] != '\0')
+				j++;
+			str2 = ft_strnew(j - i + 1);
+			str2 = ft_strncpy(str2, &list->line[i], (j - i));
+			if (get_the_op_code(str2) > 0)
+			{
+				list->is_label_and = 1;
+				list->command = ft_strdup(str2);
+				is_a_line_of_life(list);
+			}
+		}
+		list->label = ft_strdup(str);
 		is_a_label(list);
+	}
 	else
+	{
+		list->command = ft_strdup(str);
+		list->is_label_and = 0;
 		is_a_line_of_life(list);
+	}
 	if (str)
 		free(str);
 }
