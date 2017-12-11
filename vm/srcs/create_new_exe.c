@@ -65,7 +65,8 @@ int		set_arg_x_value(t_arg *arg, int arg_num, t_arena *arena, t_proc *process)
 	int	i;
 
 	i = 0;
-//	ft_printf("Set value arg %d - pc = %d\n", arg_num, process->pc);
+//	if (process->exe_op->bdd_op->opcode == 10)
+//		ft_printf("______________EXE : arg num %d\n", arg_num);
 	if (arg_num == 1)
 	{
 		arg->type = process->exe_op->ocp_op->type_arg1;

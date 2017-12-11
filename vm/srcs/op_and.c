@@ -5,7 +5,7 @@ int		op_and(t_arena *arena, t_exe *exe)
 	uintmax_t		result;
 	unsigned char	*s;
 
-//	print_exe_opts(arena, exe);
+	print_exe_opts(arena, exe);
 	result = (uintmax_t)(exe->arg1->d_data & exe->arg2->d_data);
 //	ft_printf("op_AND : Result = %u\n", result);
 /*	if (result > 0xffffffff)
