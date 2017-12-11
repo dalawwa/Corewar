@@ -1,5 +1,5 @@
 .name "LD 42 = * dans r3 puis 58 = : dqns r2"
-.comment "and_st.s"
+.comment "or_st.s"
 
 live	%1
 ld		%-63, r2
