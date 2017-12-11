@@ -7,7 +7,6 @@ int		op_lldi(t_arena *arena, t_exe *exe)
 	result = (uintmax_t)exe->arg1->d_data + (uintmax_t)exe->arg2->d_data;
 //	if (arena->opts->is_v4)
 //		ft_printf("P   %d | lldi %d %d r%d\n", exe->process->player->play_num, exe->arg1->d_value, exe->arg2->d_value, exe->arg3->d_data);
-	print_exe_opts(arena, exe);
 	if (result > 0xffffffff)
 	{
 		ft_putendl("op_lldi failed");
@@ -20,6 +19,23 @@ int		op_lldi(t_arena *arena, t_exe *exe)
 	exe->process->reg[exe->arg3->d_value][1] = find_char_at_mem_pc_adv(exe->process->pc, result + 1, arena);
 	exe->process->reg[exe->arg3->d_value][2] = find_char_at_mem_pc_adv(exe->process->pc, result + 2, arena);
 	exe->process->reg[exe->arg3->d_value][3] = find_char_at_mem_pc_adv(exe->process->pc, result + 3, arena);
+	if (arena->opts->is_v4)
+	{
+		ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
+		if (exe->arg1->type == 'i')
+			ft_printf("%d ", exe->arg1->d_data);
+		else
+			ft_printf("%hd ", (short int)exe->arg1->d_data);
+		if (exe->arg2->type == 'r')
+			ft_printf("%d ", exe->arg2->d_data);
+		else
+			ft_printf("%d ", exe->arg2->d_data);
+		ft_printf("r%hd\n", (short int)exe->arg3->d_value);
+		put_n_char(' ', intlen((short)(exe->process->process_num)));
+		put_n_char(' ', 6);
+		ft_printf("| -> load from %d + %d = %d (with pc %d)\n", exe->arg1->d_data, exe->arg2->d_data, exe->arg1->d_data + exe->arg2->d_data, exe->process->pc + exe->arg1->d_data + exe->arg2->d_data);
+	}
+	print_exe_opts(arena, exe);
 	is_carry_to_modify(exe);
 	return (1);
 }
