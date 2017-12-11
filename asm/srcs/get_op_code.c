@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 09:13:33 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/06 09:17:27 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/11 16:17:41 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		next_get_the_op_code(char *str)
 		return (15);
 	if (ft_strequ(str, "aff"))
 		return (16);
-	return ('0');
+	return (0);
 }
 
 int		get_the_op_code(char *str)
