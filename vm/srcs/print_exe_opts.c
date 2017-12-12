@@ -87,14 +87,14 @@ void		print_exe_opts(t_arena *arena, t_exe *exe)
 		if (arena->opts->v >= 16)
 		{
 			if (exe->process->pc == 0)
-				ft_printf("ADV %d (0x0000 -> %#.4x)", exe->ocp_op->size_adv, exe->process->pc + (exe->ocp_op->size_adv));
+				ft_printf("ADV %d (0x0000 -> %#.4x) ", exe->ocp_op->size_adv, exe->process->pc + (exe->ocp_op->size_adv));
 			else if (exe->process->pc + (exe->ocp_op->size_adv) == 0)
-				ft_printf("ADV %d (%#.4x -> 0x0000)", exe->ocp_op->size_adv, exe->process->pc);
+				ft_printf("ADV %d (%#.4x -> 0x0000) ", exe->ocp_op->size_adv, exe->process->pc);
 			else
-				ft_printf("ADV %d (%#.4x -> %#.4x)", exe->ocp_op->size_adv, exe->process->pc, exe->process->pc + exe->ocp_op->size_adv);
+				ft_printf("ADV %d (%#.4x -> %#.4x) ", exe->ocp_op->size_adv, exe->process->pc, exe->process->pc + exe->ocp_op->size_adv);
 			while (i < exe->ocp_op->size_adv)
 			{
-				ft_printf(" %.2x", arena->mem[exe->process->pc + i]);
+				ft_printf("%.2x ", arena->mem[exe->process->pc + i]);
 				i++;
 			}
 			ft_putchar('\n');

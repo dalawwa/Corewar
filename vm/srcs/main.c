@@ -15,7 +15,7 @@ int		main(int ac, char **av)
 			return (0);
 		if ((create_arena(ac, av, &arena)) != 0)
 		{
-			print_arena(arena);
+//			print_arena(arena);
 			go_match(arena);
 		}
 		free_arena(&arena);

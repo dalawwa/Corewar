@@ -28,9 +28,6 @@ int		op_sti(t_arena *arena, t_exe *exe)
 			ft_printf("%hd ", (short)exe->arg2->d_data);
 		ft_printf("%d", exe->arg3->d_data);
 		ft_putchar('\n');
-	}
-	if (exe->bdd_op->opcode == 11)
-	{
 		put_n_char(' ', intlen((short)(exe->process->process_num)));
 		put_n_char(' ', 6);
 		ft_printf("| -> store to %d + %d = %d (with pc and mod %d)\n", exe->arg2->d_data, exe->arg3->d_data, exe->arg3->d_data + exe->arg2->d_data, exe->process->pc + (exe->arg2->d_data + exe->arg3->d_data) % IDX_MOD);
