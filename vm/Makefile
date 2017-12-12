@@ -6,7 +6,7 @@
 #    By: mapandel <mapandel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 03:03:10 by mapandel          #+#    #+#              #
-#    Updated: 2017/12/11 11:13:04 by dalawwa          ###   ########.fr        #
+#    Updated: 2017/12/12 22:58:33 by dalawwa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -373,10 +373,18 @@ BACK_PUR =		\033[45m
 BACK_CYA =		\033[46m
 BACK_WHI =		\033[47m
 
+TEST_PATH = ../tests
+TESTSUITE_PATH = ../tests/test_suite
+
+TEST1 = -v 31 -d 1800
+TEST2 = -v 31 -d 1800
+TEST3 = -v 31 -d 1800
+TEST4 = -v 31 -d 1800
+
 #			Main Rules
 
 .PHONY: all conv ft_printf get_next is lst mem put sort str tab to wstr \
-	indexion re glu  clean fclean
+	indexion re glu  clean fclean diff
 
 all: $(NAME)
 
@@ -400,6 +408,9 @@ clean:
 	@echo "$(PUR)--::$(NAME) -> Deleting Objects::--$(DEF)"
 	rm -f $(CW_OBJS)
 
+diff: $(NAME)
+	@sh script_vm_test.sh
+	@cat list_working list_broken > diff_logs
 fclean: clean
 	make fclean -C $(PATH_LIB)
 	@echo "$(RED)--::$(NAME) -> Deleting Exec::--$(DEF)"
