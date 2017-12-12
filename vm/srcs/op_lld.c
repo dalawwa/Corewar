@@ -36,11 +36,11 @@ int		op_lld(t_arena *arena, t_exe *exe)
 		else
 			ft_printf("%hd ", exe->arg1->d_data);
 		if (exe->arg2->type == 'i')
-			ft_printf("%d ", exe->arg2->d_data);
+			ft_printf("%d", exe->arg2->d_data);
 		else if (exe->arg2->type == 'r')
-			ft_printf("r%d ", exe->arg2->d_value);
+			ft_printf("r%d", exe->arg2->d_value);
 		else
-			ft_printf("%hd ", (short)exe->arg2->d_data);
+			ft_printf("%hd", (short)exe->arg2->d_data);
 		ft_putchar('\n');
 	}
 	print_exe_opts(arena, exe);
