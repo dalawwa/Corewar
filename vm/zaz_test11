@@ -1,0 +1,16 @@
+Introducing contestants...
+* Player 1, weighing 378 bytes, "LD 42 = * dans r3 puis 58 = : dqns r2" ("and_st.s") !
+Process 1 hasn't lived for 2649 cycles (CTD 1486)
+Process 2 hasn't lived for 2412 cycles (CTD 1486)
+Process 3 hasn't lived for 2175 cycles (CTD 1486)
+Process 4 hasn't lived for 1977 cycles (CTD 1486)
+Process 5 hasn't lived for 1779 cycles (CTD 1486)
+Process 6 hasn't lived for 1581 cycles (CTD 1486)
+Process 7 hasn't lived for 2869 cycles (CTD 1486)
+Process 8 hasn't lived for 2671 cycles (CTD 1486)
+Process 9 hasn't lived for 2473 cycles (CTD 1486)
+Process 10 hasn't lived for 2225 cycles (CTD 1436)
+Process 11 hasn't lived for 1977 cycles (CTD 1436)
+Process 12 hasn't lived for 1729 cycles (CTD 1436)
+Process 13 hasn't lived for 1481 cycles (CTD 1436)
+Contestant 1, "LD 42 = * dans r3 puis 58 = : dqns r2", has won !

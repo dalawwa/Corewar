@@ -163,7 +163,7 @@ int		start_match(t_arena *arena)
 	//	arena->total_cycle++;
 	}
 	ft_printf("Contestant %d, \"%s\", has won !\n", arena->last_player_alive->play_num, arena->last_player_alive->name);
-	ft_putendl("End of MATCH");
+//	ft_putendl("End of MATCH");
 	return (1);
 }
 
