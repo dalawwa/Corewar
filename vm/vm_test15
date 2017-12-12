@@ -1,0 +1,110 @@
+Introducing contestants...
+* Player 1, weighing 378 bytes, "LD 42 = * dans r3 puis 58 = : dqns r2" ("and_st.s") !
+P    1 | live 1
+P    1 | ld -63 r2
+P    1 | ld 0 r2
+P    1 | add r1 r2 r3
+P    1 | sub r1 r2 r3
+P    1 | and -1 0 r3
+P    1 | and -1 65 r3
+P    1 | and -1 4260615 r3
+P    1 | and 1 65 r3
+P    1 | ld 1 r2
+P    1 | and 1 1 r3
+P    1 | and -738197246 1 r3
+P    1 | st r3 6
+P    1 | live 4260614
+P    1 | live 4260614
+P    1 | live 65
+P    1 | or 0 65 r3
+P    1 | or -1 16643 r3
+P    1 | or 1 65 r3
+P    1 | or 1 1 r3
+P    1 | or -738197246 1 r3
+P    1 | or 1 66051 r3
+P    1 | or -201326336 16793859 r3
+P    1 | or -469761792 65 r3
+P    1 | xor -1 1 r3
+P    1 | xor -1 65 r3
+P    1 | xor -1 -1811938812 r3
+P    1 | xor 1 65 r3
+P    1 | xor 1 1 r3
+P    1 | xor -738197246 1 r3
+P    1 | xor 1 192153088 r3
+P    1 | xor -201326336 460555 r3
+P    1 | xor -469761792 65 r3
+P    1 | zjmp 0 FAILED
+P    1 | ldi 1 0 r5
+       | -> load from 1 + 0 = 1 (with pc and mod 250)
+P    1 | ldi 2 0 r5
+       | -> load from 2 + 0 = 2 (with pc and mod 256)
+P    1 | ldi 132101 0 r5
+       | -> load from 132101 + 0 = 132101 (with pc and mod 265)
+P    1 | ldi 1 4 r5
+       | -> load from 1 + 4 = 5 (with pc and mod 271)
+P    1 | ldi 2 4 r5
+       | -> load from 2 + 4 = 6 (with pc and mod 278)
+P    1 | ldi 131076 4 r5
+       | -> load from 131076 + 4 = 131080 (with pc and mod 287)
+P    1 | sti r6 1678114823 0
+       | -> store to 1678114823 + 0 = 1678114823 (with pc and mod 293)
+P    1 | sti r6 191366656 7
+       | -> store to 191366656 + 7 = 191366663 (with pc and mod 310)
+P    1 | lld 23 r8
+P    1 | lld 0 r8
+P    1 | lldi 1 0 r5
+       | -> load from 1 + 0 = 1 (with pc 339)
+P    1 | lldi 2 0 r5
+       | -> load from 2 + 0 = 2 (with pc 345)
+P    1 | lldi 132101 0 r5
+       | -> load from 132101 + 0 = 132101 (with pc 132450)
+P    1 | lldi 1 4 r5
+       | -> load from 1 + 4 = 5 (with pc 360)
+P    1 | lldi 2 4 r5
+       | -> load from 2 + 4 = 6 (with pc 367)
+P    1 | lldi 131076 4 r5
+       | -> load from 131076 + 4 = 131080 (with pc 131448)
+P    1 | lfork -208 (167)
+P    2 | xor -1 1 r3
+P    2 | xor -1 65 r3
+P    2 | xor -1 -1811938812 r3
+P    2 | xor 1 65 r3
+P    2 | xor 1 1 r3
+P    2 | xor -738197246 1 r3
+P    2 | xor 1 192153088 r3
+P    2 | xor -201326336 1803 r3
+P    2 | xor -469761792 65 r3
+P    2 | zjmp 0 FAILED
+P    2 | ldi 1 0 r5
+       | -> load from 1 + 0 = 1 (with pc and mod 250)
+P    2 | ldi 2 0 r5
+       | -> load from 2 + 0 = 2 (with pc and mod 256)
+P    2 | ldi 132101 0 r5
+       | -> load from 132101 + 0 = 132101 (with pc and mod 265)
+P    2 | ldi 1 4 r5
+       | -> load from 1 + 4 = 5 (with pc and mod 271)
+P    2 | ldi 2 4 r5
+       | -> load from 2 + 4 = 6 (with pc and mod 278)
+P    2 | ldi 131076 4 r5
+       | -> load from 131076 + 4 = 131080 (with pc and mod 287)
+P    2 | sti r6 0 0
+       | -> store to 0 + 0 = 0 (with pc and mod 286)
+P    2 | sti r6 0 7
+       | -> store to 0 + 7 = 7 (with pc and mod 310)
+P    2 | lld 23 r8
+P    2 | lld 0 r8
+P    2 | lldi 1 0 r5
+       | -> load from 1 + 0 = 1 (with pc 339)
+P    2 | lldi 2 0 r5
+       | -> load from 2 + 0 = 2 (with pc 345)
+P    2 | lldi 132101 0 r5
+       | -> load from 132101 + 0 = 132101 (with pc 132450)
+P    2 | lldi 1 4 r5
+       | -> load from 1 + 4 = 5 (with pc 360)
+P    2 | lldi 2 4 r5
+       | -> load from 2 + 4 = 6 (with pc 367)
+P    2 | lldi 131076 4 r5
+       | -> load from 131076 + 4 = 131080 (with pc 131448)
+Process 2 hasn't lived for 3072 cycles (CTD 1536)
+Process 1 hasn't lived for 2943 cycles (CTD 1536)
+Contestant 1, "LD 42 = * dans r3 puis 58 = : dqns r2", has won !
