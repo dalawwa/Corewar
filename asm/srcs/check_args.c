@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 09:21:43 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/11 20:26:08 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/13 11:01:19 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,31 @@ int		check_is_reg(char *str, t_champ *list, int num)
 	return (1);
 }
 
+//same pour ceux qui ont aussi un label
+int		check_args_valid_with_label(char *str, int op, t_champ *list)
+{
+	char	**tab;
+
+	list->params = ft_strsplit_three(str, ' ', '\t', ',');
+	tab = ft_strsplit_three(str, ' ', '\t', ',');
+	if (tab[2] && (op == 1 || op == 9 || op == 15 || op == 12) && (check_is_direct(tab[2], list, 1)))
+		return (1);
+	else if (tab[2] && tab[3] && (op == 2 || op == 13) && (check_is_indirect(tab[2], list, 1) || check_is_direct(tab[2], list, 1)) && (check_is_reg(tab[3], list, 2)))
+		return (1);
+	else if (tab[2] && tab[3] && op == 3 && check_is_reg(tab[2], list, 1) && (check_is_reg(tab[3], list, 2) || check_is_indirect(tab[3], list, 2)))
+		return (1);
+	else if (tab[2] && tab[3] && tab[4] && (op == 4 || op == 5) && check_is_reg(tab[2], list, 1) && check_is_reg(tab[3], list, 2) && check_is_reg(tab[4], list, 3))
+		return (1);
+	else if (tab[2] && tab[3] && tab[4] && (op == 6 || op == 7 || op == 8) && (check_is_reg(tab[2], list, 1) || check_is_indirect(tab[2], list, 1) || check_is_direct(tab[2], list, 1)) && (check_is_reg(tab[3], list, 2) || check_is_indirect(tab[3], list, 2) || check_is_direct(tab[3], list, 2)) && check_is_reg(tab[4], list, 3))
+		return (1);
+	else if (tab[2] && tab[3] && tab[4] && (op == 10 ||op == 14) && (check_is_reg(tab[2], list, 1) || check_is_indirect(tab[2], list, 1) || check_is_direct(tab[2], list, 1)) && (check_is_reg(tab[3], list, 2) || check_is_direct(tab[3], list, 2)) && check_is_reg(tab[4], list, 3))
+		return (1);
+	else if (tab[2] && tab[3] && tab[4] && op == 11 && check_is_reg(tab[2], list, 1) && (check_is_reg(tab[3], list, 2) || check_is_indirect(tab[3], list, 2) || check_is_direct(tab[3], list, 2)) && (check_is_reg(tab[4], list, 3) || check_is_direct(tab[4], list, 3)))
+		return (1);
+	else if (tab[2] && op == 16 && check_is_reg(tab[2], list, 1))
+		return (1);
+	return (0);
+}
 
 //on va verifier pour chaque ligne si les arguments recus sont valides
 //il faudrait checker aussi que la suite de la phrase est coherente
@@ -89,36 +114,24 @@ int		check_is_reg(char *str, t_champ *list, int num)
 int		check_args_valid(char *str, int op, t_champ *list)
 {
 	char	**tab;
-	int		i;
-	int		j;
-	int		g;
 
-	i = 1;
-	j = 2;
-	g = 3;
-	if (list->is_label_and == 1)
-	{
-		i++;
-		j++;
-		g++;
-	}
 	list->params = ft_strsplit_three(str, ' ', '\t', ',');
 	tab = ft_strsplit_three(str, ' ', '\t', ',');
-	if (tab[i] && (op == 1 || op == 9 || op == 15 || op == 12) && (check_is_direct(tab[i], list, 1)))
+	if (tab[1] && (op == 1 || op == 9 || op == 15 || op == 12) && (check_is_direct(tab[1], list, 1)))
 		return (1);
-	else if (tab[i] && tab[j] && (op == 2 || op == 13) && (check_is_indirect(tab[i], list, 1) || check_is_direct(tab[i], list, 1)) && (check_is_reg(tab[j], list, 2)))
+	else if (tab[1] && tab[2] && (op == 2 || op == 13) && (check_is_indirect(tab[1], list, 1) || check_is_direct(tab[1], list, 1)) && (check_is_reg(tab[2], list, 2)))
 		return (1);
-	else if (tab[i] && tab[j] && op == 3 && check_is_reg(tab[i], list, 1) && (check_is_reg(tab[j], list, 2) || check_is_indirect(tab[j], list, 2)))
+	else if (tab[1] && tab[2] && op == 3 && check_is_reg(tab[1], list, 1) && (check_is_reg(tab[2], list, 2) || check_is_indirect(tab[2], list, 2)))
 		return (1);
-	else if (tab[i] && tab[j] && tab[g] && (op == 4 || op == 5) && check_is_reg(tab[i], list, 1) && check_is_reg(tab[j], list, 2) && check_is_reg(tab[g], list, 3))
+	else if (tab[1] && tab[2] && tab[3] && (op == 4 || op == 5) && check_is_reg(tab[1], list, 1) && check_is_reg(tab[2], list, 2) && check_is_reg(tab[3], list, 3))
 		return (1);
-	else if (tab[i] && tab[j] && tab[g] && (op == 6 || op == 7 || op == 8) && (check_is_reg(tab[i], list, 1) || check_is_indirect(tab[i], list, 1) || check_is_direct(tab[i], list, 1)) && (check_is_reg(tab[j], list, 2) || check_is_indirect(tab[j], list, 2) || check_is_direct(tab[j], list, 2)) && check_is_reg(tab[g], list, 3))
+	else if (tab[1] && tab[2] && tab[3] && (op == 6 || op == 7 || op == 8) && (check_is_reg(tab[1], list, 1) || check_is_indirect(tab[1], list, 1) || check_is_direct(tab[1], list, 1)) && (check_is_reg(tab[2], list, 2) || check_is_indirect(tab[2], list, 2) || check_is_direct(tab[2], list, 2)) && check_is_reg(tab[3], list, 3))
 		return (1);
-	else if (tab[i] && tab[j] && tab[g] && (op == 10 ||op == 14) && (check_is_reg(tab[i], list, 1) || check_is_indirect(tab[i], list, 1) || check_is_direct(tab[i], list, 1)) && (check_is_reg(tab[j], list, 2) || check_is_direct(tab[j], list, 2)) && check_is_reg(tab[g], list, 3))
+	else if (tab[1] && tab[2] && tab[3] && (op == 10 ||op == 14) && (check_is_reg(tab[1], list, 1) || check_is_indirect(tab[1], list, 1) || check_is_direct(tab[1], list, 1)) && (check_is_reg(tab[2], list, 2) || check_is_direct(tab[2], list, 2)) && check_is_reg(tab[3], list, 3))
 		return (1);
-	else if (tab[i] && tab[j] && tab[g] && op == 11 && check_is_reg(tab[i], list, 1) && (check_is_reg(tab[j], list, 2) || check_is_indirect(tab[j], list, 2) || check_is_direct(tab[j], list, 2)) && (check_is_reg(tab[g], list, 3) || check_is_direct(tab[g], list, 3)))
+	else if (tab[1] && tab[2] && tab[3] && op == 11 && check_is_reg(tab[1], list, 1) && (check_is_reg(tab[2], list, 2) || check_is_indirect(tab[2], list, 2) || check_is_direct(tab[2], list, 2)) && (check_is_reg(tab[3], list, 3) || check_is_direct(tab[3], list, 3)))
 		return (1);
-	else if (tab[1] && op == 16 && check_is_reg(tab[i], list, 1))
+	else if (tab[1] && op == 16 && check_is_reg(tab[1], list, 1))
 		return (1);
 	return (0);
 }
