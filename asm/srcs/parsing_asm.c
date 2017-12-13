@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:37:17 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/08 17:59:17 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/13 13:15:38 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ int		check_no_printable_char(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
+		if (str[i] == ';' || str[i] == '#')
+			return (1);
 		if (ft_isalpha(str[i]))
 			return (0);
 		i++;
