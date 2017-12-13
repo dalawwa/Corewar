@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:45:13 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/13 12:08:29 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/13 14:01:42 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,12 +65,12 @@ void	get_champ_data(t_champ *champ, int fd)
 	i = 0;
 	while (champ->next)
 	{
-		champ->size_octets = i + champ->size_param1 + champ->size_param2 + champ->size_param3;
-		i = champ->size_octets;
+		champ->size_octets = i;
+		i = i + champ->size_param1 + champ->size_param2 + champ->size_param3;
 		ft_printf("LINE: %s. COMMAND: %s. LABEL: %s. NAME: %s. NB PARAMS: %i. SIZE PARAMS: %i %i %i SIZE_TOTAL: %i. POSITION: %i\n", champ->line, champ->command, champ->label, champ->name, champ->nb_params, champ->size_param1, champ->size_param2, champ->size_param3, champ->size_octets, champ->position);
 		champ = champ->next;
 	}
-	champ->size_octets = i + champ->size_param1 + champ->size_param2 + champ->size_param3;
+	champ->size_octets = i;
 	ft_printf("LINE: %s. COMMAND: %s. LABEL: %s. NAME: %s. NB PARAMS: %i. SIZE PARAMS: %i %i %i SIZE_TOTAL: %i. POSITION: %i\n", champ->line, champ->command, champ->label, champ->name, champ->nb_params, champ->size_param1, champ->size_param2, champ->size_param3, champ->size_octets, champ->position);
 	return ;
 }
