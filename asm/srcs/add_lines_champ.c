@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 16:24:32 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/11 20:18:04 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/13 11:47:52 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,11 +65,39 @@ void		is_a_line_of_life(t_champ *list)
 //	list->is_label = 0;
 }
 
+void		is_a_line_of_life_with_label(t_champ *list)
+{
+	int		i;
+	int		op;
+
+	i = 0;
+	list->op_code = get_the_op_code(list->command);
+	op = list->op_code;
+	if (op == 1 || op == 9 || op == 12 || op == 15)
+		list->has_ocp = 0;
+	else if (op > 0 && op < 17)
+		list->has_ocp = 1;
+	add_number_args(list);
+	if (check_args_valid_with_label(list->line, list->op_code, list) == 0)
+		ciao_bye_bye(1);
+}
+
+int		ft_tablen(char **tab)
+{
+	int		i;
+
+	i = 0;
+	while (tab[i])
+		i++;
+	return (i);
+}
+
 //je rajoute le nom dans la liste + label et on lance la recherche des autres infos
 void		add_name_list(t_champ *list)
 {
 	int i;
 	int j;
+	int g;
 	char *str;
 	char *str2;
 
@@ -86,7 +114,10 @@ void		add_name_list(t_champ *list)
 		j++;
 	if (get_two_points(list->name))
 	{
-		if (list->line[j] != '\0' && list->line[j] != '#' && list->line[j] != ';')
+		list->label = ft_strdup(str);
+		is_a_label(list);
+		g = ft_tablen(ft_strsplit_three(list->line, ' ', '\t', ','));
+		if (list->line[j] != '\0' && list->line[j] != '#' && list->line[j] != ';' && g > 2)
 		{
 			i = j;
 			while (list->line[j] != ' ' && list->line[j] != '\t' && list->line[j] != ',' && list->line[j] != '\0')
@@ -97,11 +128,9 @@ void		add_name_list(t_champ *list)
 			{
 				list->is_label_and = 1;
 				list->command = ft_strdup(str2);
-				is_a_line_of_life(list);
+				is_a_line_of_life_with_label(list);
 			}
 		}
-		list->label = ft_strdup(str);
-		is_a_label(list);
 	}
 	else
 	{
@@ -141,6 +170,7 @@ void		add_infos_list(t_champ **begin)
 	list = *begin;
 	while (list->next)
 		list = list->next;
+	list->is_label_and = 0;
 	add_name_list(list);
 	while (list->prev)
 		list = list->prev;
