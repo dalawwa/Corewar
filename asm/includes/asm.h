@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/11 15:39:43 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/13 11:02:34 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,7 @@ char	**ft_strsplit_three(const char *s, char c, char d, char e);
 int		get_the_op_code(char *str);
 void	add_number_args(t_champ *list);
 int		check_args_valid(char *str, int op, t_champ *list);
+int		check_args_valid_with_label(char *str, int op, t_champ *list);
+
 
 #endif
