@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 16:24:32 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/13 11:47:52 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/13 15:18:48 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,8 +105,10 @@ void		add_name_list(t_champ *list)
 	while (list->line[i] == ' ' || list->line[i] == '\t')
 		i++;
 	j = i;
-	while (list->line[j] != ' ' && list->line[j] != '\t' && list->line[j] != ',')
+	while (list->line[j] != '\0' && list->line[j] != ' ' && list->line[j] != '\t' && list->line[j] != ',')
+	{
 		j++;
+	}
 	str = ft_strnew(j - i + 1);
 	str = ft_strncpy(str, &list->line[i], (j - i));
 	list->name = ft_strdup(str);

@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:45:13 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/13 14:01:42 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/13 15:28:39 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,17 @@ void	get_champ_data(t_champ *champ, int fd)
 	while (get_next_line(fd, &line) > 0)
 	{
 		if (line_not_empty(line) == 1)
+		{
 			i++;
+		}
 		if (check_no_printable_char(line) || this_is_a_comment(line) || line_not_empty(line) == 0)
+		{
 			;
+		}
 		else 
+		{
 			ft_lstadd_lines(&champ, line, i);
+		}
 	}
 	i = 0;
 	while (champ->next)
