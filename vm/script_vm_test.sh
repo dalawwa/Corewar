@@ -43,7 +43,21 @@ TEST16="-v 15"
 TEST17="-v 16"
 TEST18="-v 17"
 TEST19="-v 18"
-TEST_LEN=19
+TEST20="-v 19"
+TEST21="-v 20"
+TEST22="-v 21"
+TEST23="-v 22"
+TEST24="-v 23"
+TEST25="-v 24"
+TEST26="-v 25"
+TEST27="-v 26"
+TEST28="-v 27"
+TEST29="-v 28"
+TEST30="-v 29"
+TEST31="-v 30"
+TEST32="-v 31"
+#TEST33="-v 32"
+TEST_LEN=32
 
 TARGET_VM='vm_test'
 TARGET_ZAZ='zaz_test'
@@ -53,6 +67,10 @@ echo -n > list_broken
 for i in $TESTSUITE_PATH/*.s; do
 	name=$i;
 	echo "$SOU$CYA$name$DEF"
+	echo "$SOU$CYA$name$DEF" >> list_working
+	echo "" >> list_working
+	echo "$SOU$CYA$name$DEF" >> list_broken
+	echo "" >> list_broken
 	../tests/asm $name;
 	for j in $(seq 1 $TEST_LEN); do
 		TEST_STR="\$TEST$j"
@@ -76,6 +94,9 @@ for i in $TESTSUITE_PATH/*.s; do
 		fi
 	done ;
 	echo '';
+	echo "" >> list_broken
+	echo "" >> list_working
 done ;
 rm $TARGET_ZAZ* $TARGET_VM*
 rm $TESTSUITE_PATH/*.cor
+#rm $TESTSUITE_PATH/*.cor
