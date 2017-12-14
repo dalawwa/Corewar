@@ -6,5 +6,8 @@
 libft.a
 .DS_Store
 vm/.DS_Store
+vm/diff_logs
+vm/list_broken
+vm/list_working
 vm/corewar.dSYM/Contents
 vm/corewar
