@@ -1,5 +1,4 @@
 -n
-[32m OK [0m with -v 31 -d 1800
 [32m OK [0m with -v 0
 [32m OK [0m with -v 1
 [32m OK [0m with -v 0
@@ -12,9 +11,6 @@
 [32m OK [0m with -v 9
 [32m OK [0m with -v 10
 [32m OK [0m with -v 11
-[32m OK [0m with -v 16
-[32m OK [0m with -v 17
-[32m OK [0m with -v 18
 [32m OK [0m with -v 0
 [32m OK [0m with -v 1
 [32m OK [0m with -v 2
@@ -41,36 +37,6 @@
 [32m OK [0m with -v 16
 [32m OK [0m with -v 17
 [32m OK [0m with -v 18
-[32m OK [0m with -v 0
-[32m OK [0m with -v 1
-[32m OK [0m with -v 2
-[32m OK [0m with -v 3
-[32m OK [0m with -v 4
-[32m OK [0m with -v 5
-[32m OK [0m with -v 6
-[32m OK [0m with -v 7
-[32m OK [0m with -v 8
-[32m OK [0m with -v 9
-[32m OK [0m with -v 10
-[32m OK [0m with -v 11
-[32m OK [0m with -v 12
-[32m OK [0m with -v 13
-[32m OK [0m with -v 15
-[32m OK [0m with -v 0
-[32m OK [0m with -v 1
-[32m OK [0m with -v 2
-[32m OK [0m with -v 3
-[32m OK [0m with -v 4
-[32m OK [0m with -v 5
-[32m OK [0m with -v 6
-[32m OK [0m with -v 7
-[32m OK [0m with -v 8
-[32m OK [0m with -v 9
-[32m OK [0m with -v 10
-[32m OK [0m with -v 11
-[32m OK [0m with -v 12
-[32m OK [0m with -v 13
-[32m OK [0m with -v 15
 [32m OK [0m with -v 0
 [32m OK [0m with -v 1
 [32m OK [0m with -v 2
@@ -120,6 +86,40 @@
 [32m OK [0m with -v 12
 [32m OK [0m with -v 13
 [32m OK [0m with -v 15
+[32m OK [0m with -v 31 -d 1800
+[32m OK [0m with -v 0
+[32m OK [0m with -v 1
+[32m OK [0m with -v 2
+[32m OK [0m with -v 3
+[32m OK [0m with -v 4
+[32m OK [0m with -v 5
+[32m OK [0m with -v 6
+[32m OK [0m with -v 7
+[32m OK [0m with -v 8
+[32m OK [0m with -v 9
+[32m OK [0m with -v 10
+[32m OK [0m with -v 11
+[32m OK [0m with -v 12
+[32m OK [0m with -v 13
+[32m OK [0m with -v 15
+[32m OK [0m with -v 16
+[32m OK [0m with -v 17
+[32m OK [0m with -v 18
+[32m OK [0m with -v 0
+[32m OK [0m with -v 1
+[32m OK [0m with -v 2
+[32m OK [0m with -v 3
+[32m OK [0m with -v 4
+[32m OK [0m with -v 5
+[32m OK [0m with -v 6
+[32m OK [0m with -v 7
+[32m OK [0m with -v 8
+[32m OK [0m with -v 9
+[32m OK [0m with -v 10
+[32m OK [0m with -v 11
+[32m OK [0m with -v 12
+[32m OK [0m with -v 13
+[32m OK [0m with -v 15
 [32m OK [0m with -v 0
 [32m OK [0m with -v 1
 [32m OK [0m with -v 0
@@ -139,8 +139,6 @@
 [32m OK [0m with -v 15
 [32m OK [0m with -v 0
 [32m OK [0m with -v 1
-[32m OK [0m with -v 2
-[32m OK [0m with -v 3
 [32m OK [0m with -v 31 -d 1800
 [32m OK [0m with -v 0
 [32m OK [0m with -v 1
@@ -176,22 +174,6 @@
 [32m OK [0m with -v 13
 [32m OK [0m with -v 15
 -n
-[31m KO [0m with -v 2
-[31m KO [0m with -v 3
-[31m KO [0m with -v 4
-[31m KO [0m with -v 5
-[31m KO [0m with -v 6
-[31m KO [0m with -v 7
-[31m KO [0m with -v 8
-[31m KO [0m with -v 9
-[31m KO [0m with -v 10
-[31m KO [0m with -v 11
-[31m KO [0m with -v 12
-[31m KO [0m with -v 13
-[31m KO [0m with -v 15
-[31m KO [0m with -v 16
-[31m KO [0m with -v 17
-[31m KO [0m with -v 18
 [31m KO [0m with -v 31 -d 1800
 [31m KO [0m with -v 2
 [31m KO [0m with -v 3
@@ -206,42 +188,6 @@
 [31m KO [0m with -v 12
 [31m KO [0m with -v 13
 [31m KO [0m with -v 15
-[31m KO [0m with -v 16
-[31m KO [0m with -v 17
-[31m KO [0m with -v 18
-[31m KO [0m with -v 31 -d 1800
-[31m KO [0m with -v 4
-[31m KO [0m with -v 5
-[31m KO [0m with -v 6
-[31m KO [0m with -v 7
-[31m KO [0m with -v 12
-[31m KO [0m with -v 13
-[31m KO [0m with -v 15
-[31m KO [0m with -v 31 -d 1800
-[31m KO [0m with -v 16
-[31m KO [0m with -v 17
-[31m KO [0m with -v 18
-[31m KO [0m with -v 31 -d 1800
-[31m KO [0m with -v 4
-[31m KO [0m with -v 5
-[31m KO [0m with -v 6
-[31m KO [0m with -v 7
-[31m KO [0m with -v 12
-[31m KO [0m with -v 13
-[31m KO [0m with -v 15
-[31m KO [0m with -v 31 -d 1800
-[31m KO [0m with -v 16
-[31m KO [0m with -v 17
-[31m KO [0m with -v 18
-[31m KO [0m with -v 31 -d 1800
-[31m KO [0m with -v 16
-[31m KO [0m with -v 17
-[31m KO [0m with -v 18
-[31m KO [0m with -v 31 -d 1800
-[31m KO [0m with -v 16
-[31m KO [0m with -v 17
-[31m KO [0m with -v 18
-[31m KO [0m with -v 31 -d 1800
 [31m KO [0m with -v 16
 [31m KO [0m with -v 17
 [31m KO [0m with -v 18
@@ -263,10 +209,64 @@
 [31m KO [0m with -v 17
 [31m KO [0m with -v 18
 [31m KO [0m with -v 31 -d 1800
+[31m KO [0m with -v 4
+[31m KO [0m with -v 5
+[31m KO [0m with -v 6
+[31m KO [0m with -v 7
+[31m KO [0m with -v 12
+[31m KO [0m with -v 13
+[31m KO [0m with -v 15
 [31m KO [0m with -v 16
 [31m KO [0m with -v 17
 [31m KO [0m with -v 18
 [31m KO [0m with -v 31 -d 1800
+[31m KO [0m with -v 16
+[31m KO [0m with -v 17
+[31m KO [0m with -v 18
+[31m KO [0m with -v 31 -d 1800
+[31m KO [0m with -v 4
+[31m KO [0m with -v 5
+[31m KO [0m with -v 6
+[31m KO [0m with -v 7
+[31m KO [0m with -v 12
+[31m KO [0m with -v 13
+[31m KO [0m with -v 15
+[31m KO [0m with -v 31 -d 1800
+[31m KO [0m with -v 16
+[31m KO [0m with -v 17
+[31m KO [0m with -v 18
+[31m KO [0m with -v 31 -d 1800
+[31m KO [0m with -v 16
+[31m KO [0m with -v 17
+[31m KO [0m with -v 18
+[31m KO [0m with -v 31 -d 1800
+[31m KO [0m with -v 16
+[31m KO [0m with -v 17
+[31m KO [0m with -v 18
+[31m KO [0m with -v 31 -d 1800
+[31m KO [0m with -v 2
+[31m KO [0m with -v 3
+[31m KO [0m with -v 4
+[31m KO [0m with -v 5
+[31m KO [0m with -v 6
+[31m KO [0m with -v 7
+[31m KO [0m with -v 8
+[31m KO [0m with -v 9
+[31m KO [0m with -v 10
+[31m KO [0m with -v 11
+[31m KO [0m with -v 12
+[31m KO [0m with -v 13
+[31m KO [0m with -v 15
+[31m KO [0m with -v 16
+[31m KO [0m with -v 17
+[31m KO [0m with -v 18
+[31m KO [0m with -v 31 -d 1800
+[31m KO [0m with -v 16
+[31m KO [0m with -v 17
+[31m KO [0m with -v 18
+[31m KO [0m with -v 31 -d 1800
+[31m KO [0m with -v 2
+[31m KO [0m with -v 3
 [31m KO [0m with -v 4
 [31m KO [0m with -v 5
 [31m KO [0m with -v 6
