@@ -43,6 +43,10 @@
 [31m KO [0m with -v 29
 [31m KO [0m with -v 30
 [31m KO [0m with -v 31
+[31m KO [0m with -v 34
+[31m KO [0m with -v 35
+[31m KO [0m with -v 36
+[31m KO [0m with -v 37
 
 [4m[36m../tests/test_suite/and.s[0m
 
@@ -79,6 +83,10 @@
 [31m KO [0m with -v 29
 [31m KO [0m with -v 30
 [31m KO [0m with -v 31
+[31m KO [0m with -v 34
+[31m KO [0m with -v 35
+[31m KO [0m with -v 36
+[31m KO [0m with -v 37
 
 [4m[36m../tests/test_suite/fork.s[0m
 
@@ -101,6 +109,8 @@
 [31m KO [0m with -v 29
 [31m KO [0m with -v 30
 [31m KO [0m with -v 31
+[31m KO [0m with -v 36
+[31m KO [0m with -v 37
 
 [4m[36m../tests/test_suite/ld.s[0m
 
@@ -123,6 +133,8 @@
 [31m KO [0m with -v 29
 [31m KO [0m with -v 30
 [31m KO [0m with -v 31
+[31m KO [0m with -v 36
+[31m KO [0m with -v 37
 
 [4m[36m../tests/test_suite/ld_indirect.s[0m
 
@@ -162,6 +174,8 @@
 [31m KO [0m with -v 29
 [31m KO [0m with -v 30
 [31m KO [0m with -v 31
+[31m KO [0m with -v 36
+[31m KO [0m with -v 37
 
 [4m[36m../tests/test_suite/ld_st.s[0m
 
@@ -293,6 +307,10 @@
 [31m KO [0m with -v 29
 [31m KO [0m with -v 30
 [31m KO [0m with -v 31
+[31m KO [0m with -v 34
+[31m KO [0m with -v 35
+[31m KO [0m with -v 36
+[31m KO [0m with -v 37
 
 [4m[36m../tests/test_suite/reg_num34.s[0m
 
@@ -344,6 +362,8 @@
 [31m KO [0m with -v 29
 [31m KO [0m with -v 30
 [31m KO [0m with -v 31
+[31m KO [0m with -v 36
+[31m KO [0m with -v 37
 
 [4m[36m../tests/test_suite/sti.s[0m
 
@@ -363,6 +383,8 @@
 [31m KO [0m with -v 29
 [31m KO [0m with -v 30
 [31m KO [0m with -v 31
+[31m KO [0m with -v 36
+[31m KO [0m with -v 37
 
 [4m[36m../tests/test_suite/sti_1.s[0m
 

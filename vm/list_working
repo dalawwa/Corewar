@@ -33,6 +33,12 @@
 [32m OK [0m with -v 29
 [32m OK [0m with -v 30
 [32m OK [0m with -v 31
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/add_min.s[0m
 
@@ -68,6 +74,12 @@
 [32m OK [0m with -v 29
 [32m OK [0m with -v 30
 [32m OK [0m with -v 31
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/add_overf.s[0m
 
@@ -103,6 +115,12 @@
 [32m OK [0m with -v 29
 [32m OK [0m with -v 30
 [32m OK [0m with -v 31
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/aff.s[0m
 
@@ -138,11 +156,19 @@
 [32m OK [0m with -v 29
 [32m OK [0m with -v 30
 [32m OK [0m with -v 31
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/all.s[0m
 
 [32m OK [0m with -v 0
 [32m OK [0m with -v 1
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
 
 [4m[36m../tests/test_suite/and.s[0m
 
@@ -178,11 +204,19 @@
 [32m OK [0m with -v 29
 [32m OK [0m with -v 30
 [32m OK [0m with -v 31
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/and_st.s[0m
 
 [32m OK [0m with -v 0
 [32m OK [0m with -v 1
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
 
 [4m[36m../tests/test_suite/fork.s[0m
 
@@ -218,6 +252,12 @@
 [32m OK [0m with -v 29
 [32m OK [0m with -v 30
 [32m OK [0m with -v 31
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/fork_neg.s[0m
 
@@ -237,6 +277,10 @@
 [32m OK [0m with -v 25
 [32m OK [0m with -v 26
 [32m OK [0m with -v 27
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
 
 [4m[36m../tests/test_suite/ld.s[0m
 
@@ -272,6 +316,12 @@
 [32m OK [0m with -v 29
 [32m OK [0m with -v 30
 [32m OK [0m with -v 31
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/ld_all.s[0m
 
@@ -291,6 +341,10 @@
 [32m OK [0m with -v 25
 [32m OK [0m with -v 26
 [32m OK [0m with -v 27
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
 
 [4m[36m../tests/test_suite/ld_indirect.s[0m
 
@@ -309,6 +363,12 @@
 [32m OK [0m with -v 12
 [32m OK [0m with -v 13
 [32m OK [0m with -v 15
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/ld_indirect_max.s[0m
 
@@ -328,6 +388,10 @@
 [32m OK [0m with -v 25
 [32m OK [0m with -v 26
 [32m OK [0m with -v 27
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
 
 [4m[36m../tests/test_suite/ld_st.s[0m
 
@@ -346,6 +410,12 @@
 [32m OK [0m with -v 12
 [32m OK [0m with -v 13
 [32m OK [0m with -v 15
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/ld_st_max.s[0m
 
@@ -381,6 +451,12 @@
 [32m OK [0m with -v 29
 [32m OK [0m with -v 30
 [32m OK [0m with -v 31
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/ldi.s[0m
 
@@ -416,6 +492,12 @@
 [32m OK [0m with -v 29
 [32m OK [0m with -v 30
 [32m OK [0m with -v 31
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/ldi_fail.s[0m
 
@@ -451,6 +533,12 @@
 [32m OK [0m with -v 29
 [32m OK [0m with -v 30
 [32m OK [0m with -v 31
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/lfork.s[0m
 
@@ -469,6 +557,12 @@
 [32m OK [0m with -v 12
 [32m OK [0m with -v 13
 [32m OK [0m with -v 15
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/lld.s[0m
 
@@ -504,6 +598,12 @@
 [32m OK [0m with -v 29
 [32m OK [0m with -v 30
 [32m OK [0m with -v 31
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/lld_carry.s[0m
 
@@ -522,6 +622,12 @@
 [32m OK [0m with -v 12
 [32m OK [0m with -v 13
 [32m OK [0m with -v 15
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/lld_fail.s[0m
 
@@ -557,6 +663,12 @@
 [32m OK [0m with -v 29
 [32m OK [0m with -v 30
 [32m OK [0m with -v 31
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/lldi_fail.s[0m
 
@@ -592,6 +704,12 @@
 [32m OK [0m with -v 29
 [32m OK [0m with -v 30
 [32m OK [0m with -v 31
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/or.s[0m
 
@@ -610,11 +728,19 @@
 [32m OK [0m with -v 12
 [32m OK [0m with -v 13
 [32m OK [0m with -v 15
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/or_st.s[0m
 
 [32m OK [0m with -v 0
 [32m OK [0m with -v 1
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
 
 [4m[36m../tests/test_suite/reg_num34.s[0m
 
@@ -633,6 +759,12 @@
 [32m OK [0m with -v 12
 [32m OK [0m with -v 13
 [32m OK [0m with -v 15
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/st_all.s[0m
 
@@ -640,6 +772,10 @@
 [32m OK [0m with -v 1
 [32m OK [0m with -v 2
 [32m OK [0m with -v 3
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
 
 [4m[36m../tests/test_suite/sti.s[0m
 
@@ -659,6 +795,10 @@
 [32m OK [0m with -v 25
 [32m OK [0m with -v 26
 [32m OK [0m with -v 27
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
 
 [4m[36m../tests/test_suite/sti_1.s[0m
 
@@ -677,6 +817,12 @@
 [32m OK [0m with -v 12
 [32m OK [0m with -v 13
 [32m OK [0m with -v 15
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/sub.s[0m
 
@@ -712,6 +858,12 @@
 [32m OK [0m with -v 29
 [32m OK [0m with -v 30
 [32m OK [0m with -v 31
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/sub_neg.s[0m
 
@@ -747,6 +899,12 @@
 [32m OK [0m with -v 29
 [32m OK [0m with -v 30
 [32m OK [0m with -v 31
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/xor.s[0m
 
@@ -782,6 +940,12 @@
 [32m OK [0m with -v 29
 [32m OK [0m with -v 30
 [32m OK [0m with -v 31
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/zjmp.s[0m
 
@@ -800,4 +964,10 @@
 [32m OK [0m with -v 12
 [32m OK [0m with -v 13
 [32m OK [0m with -v 15
+[32m OK [0m with -v 32
+[32m OK [0m with -v 33
+[32m OK [0m with -v 34
+[32m OK [0m with -v 35
+[32m OK [0m with -v 36
+[32m OK [0m with -v 37
 
