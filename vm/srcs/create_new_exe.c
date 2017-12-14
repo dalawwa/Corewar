@@ -204,7 +204,7 @@ void		init_exe(t_exe *exe_op, t_proc *process)
 
 int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent)
 {
-//	ft_putendl("\n--------------------->  NEW EXE in Creation");
+//	ft_printf("\n--------------------->  NEW EXE in Creation from Process %d\n", process->process_num);
 	int	i;
 
 	i = 0;

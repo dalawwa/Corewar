@@ -55,6 +55,8 @@ int		deal_exe(t_arena *arena)
 			}
 			else
 			{
+				if (elem->exe_op && elem->exe_op->bdd_op->opcode == 15)
+					ft_printf("to_wait = %d\n", elem->exe_op->to_wait);
 				inc_pc(elem, 1);
 //			ft_printf("ELSE Cycle %d -- INCREASE Process->PC = %d\n", arena->current_cycle, elem->pc);
 			}
@@ -101,7 +103,10 @@ int		deal_exe(t_arena *arena)
 		i++;
 		elem = elem->prev;
 		if (i < arena->list_proc->nb_proc && elem == NULL)
+		{
+			ft_printf("deal_exe killed by 1 nb_proc = %d\n",arena->list_proc->nb_proc);
 			return (1);
+		}
 	}
 	return (1);
 }

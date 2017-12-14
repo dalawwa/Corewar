@@ -36,6 +36,6 @@ int		is_valid_op(t_arena *arena, t_proc *proc)
 		}
 		i++;
 	}
-//	ft_putendl("is a valid_process --> return 0.1");
+//	ft_putendl("is a valid_process --> return 0");
 	return (0);
 }
