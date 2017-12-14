@@ -84,7 +84,7 @@ void		print_exe_opts(t_arena *arena, t_exe *exe)
 			}
 			ft_putchar('\n');
 		}*/
-		if (arena->opts->v >= 16)
+		if (arena->opts->is_v16)
 		{
 			if (exe->process->pc == 0)
 				ft_printf("ADV %d (0x0000 -> %#.4x) ", exe->ocp_op->size_adv, exe->process->pc + (exe->ocp_op->size_adv));
