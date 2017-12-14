@@ -45,8 +45,9 @@ void		copy_parent_data(t_proc *parent, t_proc *son)
 	son->pc = parent->pc;
 	if (ft_strcmp(parent->exe_op->bdd_op->name, "fork") == 0)
 	{
+		ft_printf("d_value %d\n", parent->exe_op->arg1->d_value);
 		if (parent->exe_op->arg1->d_value >= 0)
-			inc_pc(son, parent->exe_op->arg1->d_value % IDX_MOD);
+			inc_pc(son, parent->exe_op->arg1->d_value);
 		else
 			inc_pc(son, parent->exe_op->arg1->d_value);
 	}

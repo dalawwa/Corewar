@@ -167,14 +167,14 @@ void	print_arena(t_arena *arena)
 	ft_putendl("____________PRINT ARENA______________");
 	if (arena)
 	{
-		if (arena->opts)
-			print_opts(arena);
+//		if (arena->opts)
+//			print_opts(arena);
 //		ft_putchar('\n');
 //		if (arena->files)
 //			print_files(arena);
 //		ft_putchar('\n');
-//		if (arena->bdd)
-//			print_bdd(arena);
+		if (arena->bdd)
+			print_bdd(arena);
 //		ft_putchar('\n');
 //		print_mem(arena);
 //		ft_putchar('\n');
