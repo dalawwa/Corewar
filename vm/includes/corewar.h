@@ -75,7 +75,7 @@ typedef struct	s_opt
 	int		has_d;  // init a 0
 	int		d; // init a -1
 	int		has_v;  // init a 0
-	int		v; // init a -1
+	char	v; // init a -1
 	int		is_v0;
 	int		is_v1;
 	int		is_v2;
