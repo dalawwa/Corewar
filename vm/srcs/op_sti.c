@@ -30,7 +30,7 @@ int		op_sti(t_arena *arena, t_exe *exe)
 		ft_putchar('\n');
 		put_n_char(' ', intlen((short)(exe->process->process_num)));
 		put_n_char(' ', 6);
-		ft_printf("| -> store to %d + %hd = %d (with pc and mod %hd)\n", exe->arg2->d_data, (short)exe->arg3->d_data, (short)(exe->arg3->d_data + exe->arg2->d_data), (short)(exe->process->pc + (exe->arg2->d_data + (short)exe->arg3->d_data) % IDX_MOD));
+		ft_printf("| -> store to %d + %hd = %d (with pc and mod %hd)\n", exe->arg2->d_data, (short)exe->arg3->d_data, ((exe->arg3->d_data + exe->arg2->d_data) % IDX_MOD), (short)(exe->process->pc + (exe->arg2->d_data + (short)exe->arg3->d_data) % IDX_MOD));
 	}
 	print_exe_opts(arena, exe);
 	return (1);
