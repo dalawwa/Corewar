@@ -6,7 +6,7 @@
 #    By: mapandel <mapandel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 03:03:10 by mapandel          #+#    #+#              #
-#    Updated: 2017/12/15 14:39:13 by dalawwa          ###   ########.fr        #
+#    Updated: 2017/12/15 15:19:22 by dalawwa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -375,11 +375,6 @@ BACK_WHI =		\033[47m
 
 TEST_PATH = ../tests
 TESTSUITE_PATH = ../tests/test_suite
-
-TEST1 = -v 31 -d 1800
-TEST2 = -v 31 -d 1800
-TEST3 = -v 31 -d 1800
-TEST4 = -v 31 -d 1800
 
 #			Main Rules
 

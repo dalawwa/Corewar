@@ -58,19 +58,17 @@ TEST35="-v 34"
 TEST36="-v 35"
 TEST37="-v 36"
 TEST38="-v 37"
-TEST_LEN=38
+TEST_LEN=37
 
 TARGET_VM='vm_test'
 TARGET_ZAZ='zaz_test'
 TEST_PATH=../tests
 TESTSUITE_PATH=../tests/test_suite
-TESTSUITE_PATH_WORKING=../tests/test_suite/working
 
 echo "$YEL===== launching diff on our testsuite$DEF"
-testfun(){
+> list_working
+> list_broken
 for i in $TESTSUITE_PATH/*/*.s; do
-	truncate -s 0 list_working
-	truncate -s 0 list_broken
 	name=$i;
 	echo "$SOU$CYA$name$DEF"
 	echo "$SOU$CYA$name$DEF" >> list_working
@@ -106,5 +104,3 @@ for i in $TESTSUITE_PATH/*/*.s; do
 done ;
 rm $TARGET_ZAZ* $TARGET_VM*
 rm $TESTSUITE_PATH/*/*.cor
-}
-testfun
