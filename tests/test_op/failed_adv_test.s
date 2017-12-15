@@ -1,7 +1,7 @@
 .name "LD 42 = * dans r3 puis 58 = : dqns r2"
 .comment "let's try ld op"
 
-sti		r1, r7, %58369
+sti		r3, r7, %58369
 add		r1, r2, r3
 fork	%-8
 sub		r1, r2, r3
