@@ -2,6 +2,9 @@
 
 int		inc_pc(t_proc *process, int adv)
 {
+	process->pc = find_pc_adv(process->pc, adv, 1);
+	return (1);
+/*
 	int	i;
 	short int neg;
 
@@ -37,5 +40,5 @@ int		inc_pc(t_proc *process, int adv)
 //	ft_printf(" - End PC = %d\n", process->pc);
 	}
 //	ft_printf(" - End PC = %d\n", process->pc);
-	return (process->pc);
+	return (process->pc);*/
 }

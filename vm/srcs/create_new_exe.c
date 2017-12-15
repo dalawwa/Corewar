@@ -123,7 +123,7 @@ int			set_data(t_arg *arg, t_arena *arena, t_proc *process, int i)
 //	ft_printf("arg Type = %c\n", arg->type);
 	int	pc_tmp;
 
-	pc_tmp = find_pc_adv(process->pc, -i);
+	pc_tmp = find_pc_adv(process->pc, -i, 0);
 	if (arg->type == 'r')
 	{
 		arg->d_data = a_hexa_to_i(process->reg[arg->d_value], 4);
@@ -136,17 +136,22 @@ int			set_data(t_arg *arg, t_arena *arena, t_proc *process, int i)
 	}
 	else if (arg->type == 'i')
 	{
+//		ft_putendl("\nHANDLE DATA");
 		arg->data = malloc(sizeof(unsigned char) * 4);
 		if (arg->data == NULL)
 			return (perror_int("Error ", 0));
-		pc_tmp = find_pc_adv(pc_tmp, arg->d_value);
+		pc_tmp = find_pc_adv(pc_tmp, arg->d_value, 0);
 		arg->data[0] = arena->mem[pc_tmp];
-		pc_tmp = find_pc_adv(pc_tmp, 1);
+//		ft_printf("Char found = %.2x\n", arg->data[0]);
+		pc_tmp = find_pc_adv(pc_tmp, 1, 0);
 		arg->data[1] = arena->mem[pc_tmp];
-		pc_tmp = find_pc_adv(pc_tmp, 1);
+//		ft_printf("Char found = %.2x\n", arg->data[1]);
+		pc_tmp = find_pc_adv(pc_tmp, 1, 0);
 		arg->data[2] = arena->mem[pc_tmp];
-		pc_tmp = find_pc_adv(pc_tmp, 1);
+//		ft_printf("Char found = %.2x\n", arg->data[2]);
+		pc_tmp = find_pc_adv(pc_tmp, 1, 0);
 		arg->data[3] = arena->mem[pc_tmp];
+//		ft_printf("Char found = %.2x\n", arg->data[3]);
 //		arg->data[1] = arena->mem[process->pc - i + arg->d_value + 1];
 //		arg->data[2] = arena->mem[process->pc - i + arg->d_value + 2];
 //		arg->data[3] = arena->mem[process->pc - i + arg->d_value + 3];
