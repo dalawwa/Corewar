@@ -1,4 +1,0 @@
-Introducing contestants...
-* Player 1, weighing 10 bytes, "add r1 et r2 dans r3 et r3 a ladresse 6" ("let's try add op") !
-P    1 | add r1 r2 r3
-P    1 | st r3 6
