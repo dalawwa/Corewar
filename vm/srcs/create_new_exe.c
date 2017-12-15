@@ -121,6 +121,9 @@ int		set_arg_x_value(t_arg *arg, int arg_num, t_arena *arena, t_proc *process)
 int			set_data(t_arg *arg, t_arena *arena, t_proc *process, int i)
 {
 //	ft_printf("arg Type = %c\n", arg->type);
+	int	pc_tmp;
+
+	pc_tmp = find_pc_adv(process->pc, -i);
 	if (arg->type == 'r')
 	{
 		arg->d_data = a_hexa_to_i(process->reg[arg->d_value], 4);
@@ -136,11 +139,14 @@ int			set_data(t_arg *arg, t_arena *arena, t_proc *process, int i)
 		arg->data = malloc(sizeof(unsigned char) * 4);
 		if (arg->data == NULL)
 			return (perror_int("Error ", 0));
-		process->pc -= i;
-		arg->data[0] = find_pc_adv(process->pc, arg->d_value, arena);
-		arg->data[1] = find_char_at_mem_pc_adv(process->pc, arg->d_value + 1, arena);
-		arg->data[2] = find_char_at_mem_pc_adv(process->pc, -i + arg->d_value + 2, arena);
-		arg->data[3] = find_char_at_mem_pc_adv(process->pc, -i + arg->d_value + 3, arena);
+		pc_tmp = find_pc_adv(pc_tmp, arg->d_value);
+		arg->data[0] = arena->mem[pc_tmp];
+		pc_tmp = find_pc_adv(pc_tmp, 1);
+		arg->data[1] = arena->mem[pc_tmp];
+		pc_tmp = find_pc_adv(pc_tmp, 1);
+		arg->data[2] = arena->mem[pc_tmp];
+		pc_tmp = find_pc_adv(pc_tmp, 1);
+		arg->data[3] = arena->mem[pc_tmp];
 //		arg->data[1] = arena->mem[process->pc - i + arg->d_value + 1];
 //		arg->data[2] = arena->mem[process->pc - i + arg->d_value + 2];
 //		arg->data[3] = arena->mem[process->pc - i + arg->d_value + 3];
