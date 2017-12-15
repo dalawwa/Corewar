@@ -3,6 +3,7 @@
 .nfs.*
 *.swp
 *.o
+*.cor
 libft.a
 .DS_Store
 vm/.DS_Store
