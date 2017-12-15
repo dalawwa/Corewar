@@ -1,6 +1,6 @@
 #include "corewar.h"
 
-int		find_pc_adv(int pc, int adv)
+int		find_pc_adv(int pc, int adv, int stop)
 {
 	int	i;
 	int	pc_tmp;
@@ -10,18 +10,24 @@ int		find_pc_adv(int pc, int adv)
 //	ft_printf("Process %d : ", process->process_num);
 //	if (process->exe_op != NULL)
 //		ft_printf("EXE = %.2x", process->exe_op->bdd_op->opcode);
-//	ft_printf("Adv = %d --> Start PC = %d", adv, process->pc);
+//	ft_printf("MEM_ZISE = %d - Adv = %d --> Start PC = %d\n", MEM_SIZE, adv, pc);
 	if (adv > 0)
 	{
 		while (i < adv)
 		{
-			if (pc_tmp == MEM_SIZE - 1)
+//			ft_printf("i = %d - pc_tmp = %d\n", i, pc_tmp);
+			if (pc_tmp == MEM_SIZE)
 			{
-				pc_tmp = 0;
-				return (1);
+				if (stop == 0)
+					pc_tmp = 0;
+				else
+					return (0);
 			}
 			pc_tmp++;
 			i++;
+			if (pc_tmp == MEM_SIZE && i == adv)
+				return (0);
+//			ft_printf("OUT : i = %d - pc_tmp = %d\n", i, pc_tmp);
 		}
 	}
 	else
