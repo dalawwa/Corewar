@@ -67,8 +67,8 @@ TEST_LEN=38
 TARGET_VM='vm_test'
 TARGET_ZAZ='zaz_test'
 echo "$YEL===== launching diff on our testsuite$DEF"
-echo -n > list_working
-echo -n > list_broken
+truncate -s 0 list_working
+truncate -s 0 list_broken
 for i in $TESTSUITE_PATH/*.s; do
 	name=$i;
 	echo "$SOU$CYA$name$DEF"
@@ -93,9 +93,10 @@ for i in $TESTSUITE_PATH/*.s; do
 		else
 			echo "$RED KO $DEF with $command"
 			echo "$RED KO $DEF with $command" >> list_broken
-			lines_conf="$TARGET_ZAZ$j $TARGET_VM$j | head -n 1 | cut -d , -f 1 -s";
-			conflicts=$(eval diff "$lines_conf")
-			echo "$conflicts conflicting lines"
+			lines_conf="$TARGET_ZAZ$j $TARGET_VM$j";
+			conflicts=$(eval cmp "$lines_conf")
+			echo "$conflicts"
+			echo "$conflicts" >> list_broken
 		fi
 	done ;
 	echo '';
