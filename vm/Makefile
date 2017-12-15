@@ -6,7 +6,7 @@
 #    By: mapandel <mapandel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 03:03:10 by mapandel          #+#    #+#              #
-#    Updated: 2017/12/15 15:19:22 by dalawwa          ###   ########.fr        #
+#    Updated: 2017/12/15 17:57:14 by dalawwa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -409,6 +409,9 @@ diff: $(NAME)
 
 diff_op: $(NAME)
 	@sh script_vm_test_op.sh $(op)
+
+diff_file: $(NAME)
+	@sh script_vm_test_file.sh $(file)
 
 fclean: clean
 	make fclean -C $(PATH_LIB)
