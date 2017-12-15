@@ -5,6 +5,8 @@ unsigned char	find_char_at_mem_pc_adv(int pc, int adv, t_arena *arena)
 	int	i;
 
 	i = 0;
+	return (arena->mem[find_pc_adv(pc, adv, 0)]);
+/*
 	ft_printf("pc = %d - adv = %d", pc, adv);
 	if (adv == 0)
 		return (arena->mem[pc]);
@@ -29,5 +31,5 @@ unsigned char	find_char_at_mem_pc_adv(int pc, int adv, t_arena *arena)
 		}
 	}
 	ft_printf(" - New_pc = %d\n", pc);
-	return (arena->mem[pc]);
+	return (arena->mem[pc]);*/
 }
