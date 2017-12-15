@@ -104,7 +104,7 @@ int		deal_exe(t_arena *arena)
 		elem = elem->prev;
 		if (i < arena->list_proc->nb_proc && elem == NULL)
 		{
-			ft_printf("deal_exe killed by 1 nb_proc = %d\n",arena->list_proc->nb_proc);
+//			ft_printf("deal_exe killed by 1 nb_proc = %d\n",arena->list_proc->nb_proc);
 			return (1);
 		}
 	}
