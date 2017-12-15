@@ -2,20 +2,23 @@
 
 int		op_sti(t_arena *arena, t_exe *exe)
 {
-	uintmax_t result;
+	short int	result;
+	int			pc_adv;
 
-	result = (uintmax_t)exe->arg2->d_data + (uintmax_t)exe->arg3->d_data;
-	if (result > 0xffffffff)
-	{
-		ft_putendl("op_sti failed");
-		return (0);
-	}
-	result = result % IDX_MOD;
-//	ft_printf("result = %u\n", result);
-	arena->mem[find_pc_adv(exe->process, result)] = exe->process->reg[exe->arg1->d_value][0];
-	arena->mem[find_pc_adv(exe->process, result + 1)] = exe->process->reg[exe->arg1->d_value][1];
-	arena->mem[find_pc_adv(exe->process, result + 2)] = exe->process->reg[exe->arg1->d_value][2];
-	arena->mem[find_pc_adv(exe->process, result + 3)] = exe->process->reg[exe->arg1->d_value][3];
+	result = (short int)(exe->arg2->d_data + exe->arg3->d_data);
+//	if (result > 0xffffffff)
+//	{
+//		ft_putendl("op_sti failed");
+//		return (0);
+//	}
+//	ft_printf("result AVANT IDX_MOD = %d\n", (intmax_t)result);
+//	result = result % IDX_MOD;
+//	ft_printf("result APRES IDX_MOD = %d\n", (intmax_t)result);
+	pc_adv = find_pc_adv(exe->process->pc, result % IDX_MOD);
+	arena->mem[find_pc_adv(exe->process->pc, result % IDX_MOD)] = exe->process->reg[exe->arg1->d_value][0];
+	arena->mem[find_pc_adv(exe->process->pc, (result) % IDX_MOD + 1)] = exe->process->reg[exe->arg1->d_value][1];
+	arena->mem[find_pc_adv(exe->process->pc, (result) % IDX_MOD + 2)] = exe->process->reg[exe->arg1->d_value][2];
+	arena->mem[find_pc_adv(exe->process->pc, (result) % IDX_MOD + 3)] = exe->process->reg[exe->arg1->d_value][3];
 	if (arena->opts->is_v4)
 	{
 		ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
@@ -30,7 +33,10 @@ int		op_sti(t_arena *arena, t_exe *exe)
 		ft_putchar('\n');
 		put_n_char(' ', intlen((short)(exe->process->process_num)));
 		put_n_char(' ', 6);
-		ft_printf("| -> store to %d + %hd = %d (with pc and mod %hd)\n", exe->arg2->d_data, (short)exe->arg3->d_data, exe->arg3->d_data + exe->arg2->d_data, (short)(exe->process->pc + (exe->arg2->d_data + (short)exe->arg3->d_data) % IDX_MOD));
+		ft_printf("| -> store to %d + %hd = %hd (with pc and mod %hd)\n", exe->arg2->d_data, (short)exe->arg3->d_data, result, result % IDX_MOD);
+//		ft_printf("| -> store to %d + %hd = %d (with pc and mod %hd)\n", exe->arg2->d_data, (short)exe->arg3->d_data, ((exe->arg3->d_data + exe->arg2->d_data) % IDX_MOD), (short)(exe->process->pc + (exe->arg2->d_data + (short)exe->arg3->d_data) % IDX_MOD));
+//		AU DESSUS C'EST TON ORIGINAL QUE J'ai mis en comment pour le garder, j'ai fait une modif par rapport a sti_1.s mais j'ai pas checker si ca casse pas qqch ailleurs, donc j'ai laisse ton code original la
+
 	}
 	print_exe_opts(arena, exe);
 	return (1);

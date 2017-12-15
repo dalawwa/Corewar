@@ -269,7 +269,7 @@ int		is_valid_op(t_arena *arena, t_proc *proc);
 int		inc_pc(t_proc *process, int adv);
 unsigned char	find_char_at_mem_pc_adv(int pc, int adv, t_arena *arena);
 int				count_failed_adv(t_arena *arena, t_exe *exe);
-int				find_pc_adv(t_proc *process, int adv);
+int				find_pc_adv(int pc, int adv);
 
 /* FREE MEMORY */
 void	free_arena(t_arena **arena);
