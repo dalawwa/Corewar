@@ -10,9 +10,11 @@ int		find_pc_adv(int pc, int adv, int stop)
 //	ft_printf("Process %d : ", process->process_num);
 //	if (process->exe_op != NULL)
 //		ft_printf("EXE = %.2x", process->exe_op->bdd_op->opcode);
-//	ft_printf("MEM_ZISE = %d - Adv = %d --> Start PC = %d\n", MEM_SIZE, adv, pc);
+//	ft_printf("MEM_ZISE = %d - Adv = %d --> Start PC = %d", MEM_SIZE, adv, pc);
 	if (adv > 0)
 	{
+//		if (adv > 65536)
+//			adv = 65536 - adv;
 		while (i < adv)
 		{
 //			ft_printf("i = %d - pc_tmp = %d\n", i, pc_tmp);
@@ -21,12 +23,18 @@ int		find_pc_adv(int pc, int adv, int stop)
 				if (stop == 0)
 					pc_tmp = 0;
 				else
+				{
+//					ft_printf(" - End PC = %d\n", 0);
 					return (0);
+				}
 			}
 			pc_tmp++;
 			i++;
 			if (pc_tmp == MEM_SIZE && i == adv)
+			{
+//				ft_printf(" - End PC = %d\n", 0);
 				return (0);
+			}
 //			ft_printf("OUT : i = %d - pc_tmp = %d\n", i, pc_tmp);
 		}
 	}
