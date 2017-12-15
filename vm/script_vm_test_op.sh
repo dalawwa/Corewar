@@ -65,18 +65,20 @@ TARGET_ZAZ='zaz_test'
 TEST_PATH=../tests
 TESTSUITE_PATH=../tests/test_suite
 TESTSUITE_PATH_WORKING=../tests/test_suite/working
+LOG_WORKING='list_op_working'
+LOG_BROKEN='list_op_broken'
 
 echo "$YEL===== launching diff on our testsuite$DEF"
 testfun(){
+> $LOG_WORKING
+> $LOG_BROKEN
 for i in $TESTSUITE_PATH/$1/**.s; do
-	truncate -s 0 list_working
-	truncate -s 0 list_broken
 	name=$i;
 	echo "$SOU$CYA$name$DEF"
-	echo "$SOU$CYA$name$DEF" >> list_working
-	echo "" >> list_working
-	echo "$SOU$CYA$name$DEF" >> list_broken
-	echo "" >> list_broken
+	echo "$SOU$CYA$name$DEF" >> $LOG_WORKING
+	echo "" >> $LOG_WORKING
+	echo "$SOU$CYA$name$DEF" >> $LOG_BROKEN
+	echo "" >> $LOG_BROKEN
 	../tests/asm $name;
 	for j in $(seq 1 $TEST_LEN); do
 		TEST_STR="\$TEST$j"
@@ -90,19 +92,21 @@ for i in $TESTSUITE_PATH/$1/**.s; do
 		res=$(diff -s $TARGET_ZAZ$j $TARGET_VM$j);
 		if [[ $res == "Files $TARGET_ZAZ$j and $TARGET_VM$j are identical" ]] ; then
 			echo "$GRE OK $DEF with $command"
-			echo "$name:$GRE OK $DEF with $command"  >> list_working
+			echo "$name:$GRE OK $DEF with $command"  >> $LOG_WORKING
 		else
 			echo "$RED KO $DEF with $command"
-			echo "$name:$RED KO $DEF with $command" >> list_broken
+			echo "$name:$RED KO $DEF with $command" >> $LOG_BROKEN
 			lines_conf="$TARGET_ZAZ$j $TARGET_VM$j";
 			conflicts=$(eval cmp "$lines_conf")
 			echo "$conflicts"
-			echo "$conflicts" >> list_broken
+			echo "$conflicts" >> $LOG_BROKEN
+			conflicts_diff=$(eval diff -u "$lines_conf")
+			echo "$conflicts_diff" >> $LOG_BROKEN
 		fi
 	done ;
 	echo '';
-	echo "" >> list_broken
-	echo "" >> list_working
+	echo "" >> $LOG_WORKING
+	echo "" >> $LOG_BROKEN
 done ;
 rm $TARGET_ZAZ* $TARGET_VM*
 rm $TESTSUITE_PATH/*/*.cor
