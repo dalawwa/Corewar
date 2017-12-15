@@ -76,7 +76,7 @@ int		label_or_not(char *line)
 			return (1);
 		return (2);
 	}
-	else if (line[j] && line[j] != ' ' && line[j] != '\0' && line[j] != ';' && line[j] != '\n' && line[j] != '\t' && char_label(line[j]) == 0 && line[j] != ',')
+	else if (line[j] && line[j] != ' ' && line[j] != '\0' && line[j] != ';' && line[j] != '\n' && line[j] != '\t' && char_label(line[j]) == 1 && line[j] != ',')
 		ciao_bye_bye(1);
 	return (0);
 }
@@ -98,16 +98,23 @@ t_champ		*get_champ_data(char **file, int fd)
 		if (line[i] && line[i] != '#' && line[i] != ';' && label_or_not(line) == 1)
 		{
 			new = ft_lstadd_lines(new, line, i);
-			while (line[i] != LABEL_CHAR)
+			while (line[i] != ':')
 				i++;
 			i++;
 		}
 		*file = ft_strjoin_without_empty(*file, line, i);
-		ft_putstr(*file);
-		ft_putchar('\n');
 		size_line++;
 		i = 0;
 	}
+	ft_putstr(*file);
+	ft_putstr("\nLabels are : \n");
+	while (new->next)
+	{
+		ft_putstr(new->label);
+		ft_putchar('\n');
+		new = new->next;
+	}
+	ft_putstr(new->label);
 	if (line)
 		free(line);
 	return (new);
