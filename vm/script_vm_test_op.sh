@@ -68,7 +68,7 @@ TESTSUITE_PATH_WORKING=../tests/test_suite/working
 
 echo "$YEL===== launching diff on our testsuite$DEF"
 testfun(){
-for i in $TESTSUITE_PATH/*/*.s; do
+for i in $TESTSUITE_PATH/$1/**.s; do
 	truncate -s 0 list_working
 	truncate -s 0 list_broken
 	name=$i;
@@ -107,4 +107,4 @@ done ;
 rm $TARGET_ZAZ* $TARGET_VM*
 rm $TESTSUITE_PATH/*/*.cor
 }
-testfun
+testfun $1
