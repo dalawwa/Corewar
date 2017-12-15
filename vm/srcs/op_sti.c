@@ -14,11 +14,11 @@ int		op_sti(t_arena *arena, t_exe *exe)
 //	ft_printf("result AVANT IDX_MOD = %d\n", (intmax_t)result);
 //	result = result % IDX_MOD;
 //	ft_printf("result APRES IDX_MOD = %d\n", (intmax_t)result);
-	pc_adv = find_pc_adv(exe->process, result % IDX_MOD);
-	arena->mem[find_pc_adv(exe->process, result % IDX_MOD)] = exe->process->reg[exe->arg1->d_value][0];
-	arena->mem[find_pc_adv(exe->process, (result) % IDX_MOD + 1)] = exe->process->reg[exe->arg1->d_value][1];
-	arena->mem[find_pc_adv(exe->process, (result) % IDX_MOD + 2)] = exe->process->reg[exe->arg1->d_value][2];
-	arena->mem[find_pc_adv(exe->process, (result) % IDX_MOD + 3)] = exe->process->reg[exe->arg1->d_value][3];
+	pc_adv = find_pc_adv(exe->process->pc, result % IDX_MOD);
+	arena->mem[find_pc_adv(exe->process->pc, result % IDX_MOD)] = exe->process->reg[exe->arg1->d_value][0];
+	arena->mem[find_pc_adv(exe->process->pc, (result) % IDX_MOD + 1)] = exe->process->reg[exe->arg1->d_value][1];
+	arena->mem[find_pc_adv(exe->process->pc, (result) % IDX_MOD + 2)] = exe->process->reg[exe->arg1->d_value][2];
+	arena->mem[find_pc_adv(exe->process->pc, (result) % IDX_MOD + 3)] = exe->process->reg[exe->arg1->d_value][3];
 	if (arena->opts->is_v4)
 	{
 		ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
