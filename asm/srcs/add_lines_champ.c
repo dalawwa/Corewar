@@ -12,6 +12,7 @@
 
 #include "../includes/asm.h"
 
+/*
 //je verifie si il s agit d un label
 int			get_two_points(char *str)
 {
@@ -34,14 +35,14 @@ void		is_a_label(t_champ *list)
 		list = list->next;
 	list->op_code = 0;
 	list->is_label = 1;
-//	list->params = NULL;
-//	list->nb_params = 0;
-//	list->size_param1 = 0;
-//	list->size_param2 = 0;
-//	list->size_param3 = 0;
+	//	list->params = NULL;
+	//	list->nb_params = 0;
+	//	list->size_param1 = 0;
+	//	list->size_param2 = 0;
+	//	list->size_param3 = 0;
 	list->has_ocp = 0;
 	list->ocp = '\0';
-//	list->size_octets = 0;
+	//	list->size_octets = 0;
 }
 
 //la il va falloir chercher un max d infos pour remplir la structure, les params et tout
@@ -62,7 +63,7 @@ void		is_a_line_of_life(t_champ *list)
 	add_number_args(list);
 	if (check_args_valid(list->line, list->op_code, list) == 0)
 		ciao_bye_bye(1);
-//	list->is_label = 0;
+	//	list->is_label = 0;
 }
 
 void		is_a_line_of_life_with_label(t_champ *list)
@@ -188,24 +189,20 @@ t_champ		*ft_lstnew_line(char *line)
 	list->line = ft_strdup_asm(line);
 	return (list);
 }
-
-void		ft_lstadd_lines(t_champ **begin, char *line, int i)
+*/
+t_champ		*ft_lstadd_lines(t_champ *begin, char *line, int i)
 {
-	t_champ	*list;
-	t_champ *tmp;
+	t_champ	*next;
+	int	j;
 
-	if (*begin == NULL)
-		*begin = ft_lstnew_line(line);
-	else
-	{
-		list = *begin;
-		while (list->next)
-			list = list->next;
-		list->next = ft_lstnew_line(line);
-		tmp = list;
-		list = list->next;
-		list->prev = tmp;
-		list->position = i;
-	}
-	add_infos_list(begin);
+	j = 0;
+	i = 0;
+	if (!(next = malloc(sizeof(t_champ))))
+		return (NULL);
+	while (char_label(line[j] == 0))
+		j++;
+	next->label = ft_strsub(line, 0, j);
+	next->position = position;
+	next->next = begin;
+	return (next);
 }

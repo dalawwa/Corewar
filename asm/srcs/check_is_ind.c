@@ -12,6 +12,7 @@
 
 #include "../includes/asm.h"
 
+/*
 int		check_is_indirect(char *str, t_champ *list, int num)
 {
 	int	i;
@@ -35,3 +36,4 @@ int		check_is_indirect(char *str, t_champ *list, int num)
 		list->size_param3 = 2;
 	return (1);
 }
+*/
