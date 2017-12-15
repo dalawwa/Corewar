@@ -136,8 +136,9 @@ int			set_data(t_arg *arg, t_arena *arena, t_proc *process, int i)
 		arg->data = malloc(sizeof(unsigned char) * 4);
 		if (arg->data == NULL)
 			return (perror_int("Error ", 0));
-		arg->data[0] = find_char_at_mem_pc_adv(process->pc, -i + arg->d_value, arena);
-		arg->data[1] = find_char_at_mem_pc_adv(process->pc, -i + arg->d_value + 1, arena);
+		process->pc -= i;
+		arg->data[0] = find_pc_adv(process->pc, arg->d_value, arena);
+		arg->data[1] = find_char_at_mem_pc_adv(process->pc, arg->d_value + 1, arena);
 		arg->data[2] = find_char_at_mem_pc_adv(process->pc, -i + arg->d_value + 2, arena);
 		arg->data[3] = find_char_at_mem_pc_adv(process->pc, -i + arg->d_value + 3, arena);
 //		arg->data[1] = arena->mem[process->pc - i + arg->d_value + 1];

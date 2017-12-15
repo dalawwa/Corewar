@@ -30,7 +30,7 @@ int		inc_pc(t_proc *process, int adv)
 		while (i > neg)
 		{
 			if (process->pc == 0)
-				process->pc = MEM_SIZE - 1;
+				process->pc = MEM_SIZE;
 			process->pc--;
 			i--;
 		}
