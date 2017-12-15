@@ -13,6 +13,7 @@
 #include "../includes/asm.h"
 
 //same pour ceux qui ont aussi un label
+/*
 int		check_args_valid_with_label(char *str, int op, t_champ *list)
 {
 	char	**tab;
@@ -94,3 +95,4 @@ void		add_number_args(t_champ *list)
 		if (list->nb_params != 3)
 			ciao_bye_bye(1);
 }
+*/

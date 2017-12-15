@@ -15,6 +15,7 @@
 //on va verifier qu il s agit bien d un registre
 //on va regarder si il commence par r et si il est compris entre 1 et 16
 //on va mettre sa taille dans la struct
+/*
 int		check_is_reg(char *str, t_champ *list, int num)
 {
 	int		i;
@@ -31,4 +32,4 @@ int		check_is_reg(char *str, t_champ *list, int num)
 	else if (num == 3)
 		list->size_param3 = 1;
 	return (1);
-}
+}*/

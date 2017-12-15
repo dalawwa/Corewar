@@ -12,71 +12,103 @@
 
 #include "../includes/asm.h"
 
-//lignes vide ou commentaire non merci
-int		this_is_a_comment(char *str)
+int		char_label(char c)
 {
-	int	i;
-	
-	i = 0;
-	while (str[i] == ' ' || str[i] == '\t')
-		i++;
-	if (str[i] == '#' || str[i] == '\t' || str[i] == '\0' || str[i] == ';')
+	if ((c >= 99 && c <= 122) || c == 95 || (c >= 48 && c <= 39))
 		return (1);
-	else
-		return (0);
-}
-
-int		line_not_empty(char *str)
-{
-	int		i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		while ((str[i] == ' ' || str[i] == '\t') && str[i] != '\0')
-			i++;
-		if (str[i] == '#' || str[i] == ';' || str[i] == '\0')
-			return (0);
-		else
-			return (1);
-		i++;
-	}
 	return (0);
 }
 
-//on va recuperer la liste du fichier que l on va mettre dans une liste doublement chainee
-//on ne va pas recuperer les lignes vides et les commentaires
-void	get_champ_data(t_champ *champ, int fd)
+int	line_is_valid(char *str)
+{
+	int	op;
+
+	op = get_the_op_code(str);
+	if (op == 0)
+		return (0);
+	if (op)
+		position++;
+	if (op == 1 || op == 9 || op == 12 || op == 14)
+		str = str + 4;
+	else if (op == 2 || op == 3 || op == 7)
+		str = str + 2;
+	else if (op == 15)
+		str = str + 5;
+	else
+		str = str + 3;
+	if (op != 1 && op != 9 && op != 12 & op != 15)
+		position++;
+	//add check to see if command are well formated
+	//then check if after direct indirect and register, everything is well formated, mean there is just comment or nothing
+	return (1);
+}
+
+char	*ft_strjoin_without_empty(char *file, char *line, int j)
+{
+	while (line[j] == '\t' || line[j] == ' ')
+		j++;
+	if (line[j] && line[j] != '#' && line[j] != ';' && line_is_valid(&line[j]))
+	{
+		file = ft_strjoin(file, line);
+		file = ft_strjoin(file, "\n");
+	}
+	if (line)
+		free(line);
+	return (file);
+}
+
+//on va checker que c est bien un label, si c est pas le cas et qu on a un char bizarre, on va quitter le programme (get struct in the function because of fucking leaks)
+int		label_or_not(char *line)
+{
+	int	j;
+
+	j = 0;
+	while (line[j] == '\t' || line[j] == ' ')
+		j++;
+	while (line[j] && char_label(line[j]) == 1)
+		j++;
+	if (j > 0 && line[j] == ':')
+	{
+		j++;
+		while (line[j] == ' ' || line[j] == '\t')
+			j++;
+		if (line[j] == '\n' || line[j] == '\0' || char_label(line[j]))
+			return (1);
+		return (2);
+	}
+	else if (line[j] && line[j] != ' ' && line[j] != '\0' && line[j] != ';' && line[j] != '\n' && line[j] != '\t' && char_label(line[j]) == 0 && line[j] != ',')
+		ciao_bye_bye(1);
+	return (0);
+}
+
+// dans cette fonction, on va recuperer les labels et stocker le fichier dans le char * file
+t_champ		*get_champ_data(char **file, int fd)
 {
 	char	*line;
 	int		i;
+	t_champ	*new;
 
 	i = 0;
 	line = NULL;
+	new = NULL;
 	while (get_next_line(fd, &line) > 0)
 	{
-		if (line_not_empty(line) == 1)
+		while (line[i] == ' ' || line[i] == '\t')
+			i++;
+		if (line[i] && line[i] != '#' && line[i] != ';' && label_or_not(line) == 1)
 		{
+			new = ft_lstadd_lines(new, line, i);
+			while (line[i] != LABEL_CHAR)
+				i++;
 			i++;
 		}
-		if (check_no_printable_char(line) || this_is_a_comment(line) || line_not_empty(line) == 0)
-		{
-			;
-		}
-		else 
-		{
-			ft_lstadd_lines(&champ, line, i);
-		}
+		*file = ft_strjoin_without_empty(*file, line, i);
+		ft_putstr(*file);
+		ft_putchar('\n');
+		size_line++;
+		i = 0;
 	}
-	i = 0;
-	while (champ->next)
-	{
-		champ->size_octets = i;
-		i = i + champ->size_param1 + champ->size_param2 + champ->size_param3;
-		ft_printf("LINE: %s. COMMAND: %s. LABEL: %s. NAME: %s. NB PARAMS: %i. SIZE PARAMS: %i %i %i SIZE_TOTAL: %i. POSITION: %i\n", champ->line, champ->command, champ->label, champ->name, champ->nb_params, champ->size_param1, champ->size_param2, champ->size_param3, champ->size_octets, champ->position);
-		champ = champ->next;
-	}
-	champ->size_octets = i;
-	ft_printf("LINE: %s. COMMAND: %s. LABEL: %s. NAME: %s. NB PARAMS: %i. SIZE PARAMS: %i %i %i SIZE_TOTAL: %i. POSITION: %i\n", champ->line, champ->command, champ->label, champ->name, champ->nb_params, champ->size_param1, champ->size_param2, champ->size_param3, champ->size_octets, champ->position);
-	return ;
+	if (line)
+		free(line);
+	return (new);
 }
