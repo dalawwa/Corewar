@@ -6,7 +6,7 @@
 #    By: mapandel <mapandel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 03:03:10 by mapandel          #+#    #+#              #
-#    Updated: 2017/12/12 22:58:33 by dalawwa          ###   ########.fr        #
+#    Updated: 2017/12/15 14:39:13 by dalawwa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -411,6 +411,10 @@ clean:
 diff: $(NAME)
 	@sh script_vm_test.sh
 	@cat list_working list_broken > diff_logs
+
+diff_op: $(NAME)
+	@sh script_vm_test_op.sh $(op)
+
 fclean: clean
 	make fclean -C $(PATH_LIB)
 	@echo "$(RED)--::$(NAME) -> Deleting Exec::--$(DEF)"
