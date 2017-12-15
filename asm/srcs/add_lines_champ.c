@@ -199,7 +199,7 @@ t_champ		*ft_lstadd_lines(t_champ *begin, char *line, int i)
 	i = 0;
 	if (!(next = malloc(sizeof(t_champ))))
 		return (NULL);
-	while (char_label(line[j] == 0))
+	while (line[j] != ':')
 		j++;
 	next->label = ft_strsub(line, 0, j);
 	next->position = position;
