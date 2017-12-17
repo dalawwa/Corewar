@@ -15,21 +15,33 @@
 //on va verifier qu il s agit bien d un registre
 //on va regarder si il commence par r et si il est compris entre 1 et 16
 //on va mettre sa taille dans la struct
-/*
-int		check_is_reg(char *str, t_champ *list, int num)
-{
-	int		i;
 
-	if (str[0] != 'r')
-		return (0);
-	i = ft_atoi(&str[1]);
-	if (i > 16 || i < 1)
-		return (0);
-	if (num == 1)
-		list->size_param1 = 1;
-	else if (num == 2)
-		list->size_param2 = 1;
-	else if (num == 3)
-		list->size_param3 = 1;
-	return (1);
-}*/
+int		check_is_reg(int i, char **str)
+{
+	int j;
+
+	j = 0;
+	if (**str == 'r')
+	{
+		(*str)++;
+		j = ft_atoi(*str);
+		if (j > 99 || j <= 0)
+			ciao_bye_bye(1);
+		(*str)++;
+		if (j > 9)
+			(*str)++;
+		position = position + 1;
+		if (i == 1)
+		{
+			while (**str == '\t' || **str == ' ')
+				(*str)++;
+			if (**str != ',')
+				ciao_bye_bye(1);
+			(*str)++;
+			while (**str == '\t' || **str == ' ')
+				(*str)++;
+		}
+		return (1);
+	}
+	return (0);
+}

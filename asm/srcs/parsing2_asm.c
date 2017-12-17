@@ -14,7 +14,7 @@
 
 int		char_label(char c)
 {
-	if ((c >= 99 && c <= 122) || c == 95 || (c >= 48 && c <= 39))
+	if ((c >= 97 && c <= 122) || c == 95 || (c >= 48 && c <= 57))
 		return (1);
 	return (0);
 }
@@ -39,6 +39,7 @@ int	line_is_valid(char *str)
 	if (op != 1 && op != 9 && op != 12 & op != 15)
 		position++;
 	//add check to see if command are well formated
+	check_args_valid(&str, op);
 	//then check if after direct indirect and register, everything is well formated, mean there is just comment or nothing
 	return (1);
 }
@@ -69,12 +70,14 @@ int		label_or_not(char *line)
 		j++;
 	if (j > 0 && line[j] == ':')
 	{
+		ft_putstr(line);
+		ft_putchar('\n');
 		j++;
 		while (line[j] == ' ' || line[j] == '\t')
 			j++;
-		if (line[j] == '\n' || line[j] == '\0' || char_label(line[j]))
+		if (line[j] == '\n' || line[j] == '\0' || line[j] == '#')
 			return (1);
-		return (2);
+		return (1);
 	}
 	else if (line[j] && line[j] != ' ' && line[j] != '\0' && line[j] != ';' && line[j] != '\n' && line[j] != '\t' && char_label(line[j]) == 1 && line[j] != ',')
 		ciao_bye_bye(1);
