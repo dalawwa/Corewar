@@ -1,6 +1,18 @@
 [4m[36m../tests/test_suite/fork/fork.s[0m
 
 
+[4m[36m../tests/test_suite/fork/fork2.s[0m
+
+
+[4m[36m../tests/test_suite/fork/fork3.s[0m
+
+
+[4m[36m../tests/test_suite/fork/fork4.s[0m
+
+
+[4m[36m../tests/test_suite/fork/fork5.s[0m
+
+
 [4m[36m../tests/test_suite/fork/fork_neg.s[0m
 
 
@@ -11,5 +23,17 @@
 
 
 [4m[36m../tests/test_suite/fork/fork_neg4.s[0m
+
+
+[4m[36m../tests/test_suite/fork/fork_neg5.s[0m
+
+
+[4m[36m../tests/test_suite/fork/fork_neg6.s[0m
+
+
+[4m[36m../tests/test_suite/fork/fork_neg7.s[0m
+
+
+[4m[36m../tests/test_suite/fork/fork_neg8.s[0m
 
 
