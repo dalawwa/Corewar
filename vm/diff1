@@ -1,3 +1,4 @@
+HAX
 afsc_type5
 auditpipe
 auditsessions
@@ -11,9 +12,9 @@ bpf1
 bpf2
 bpf3
 console
+cu.35CTL-SPPDev
+cu.35CTL-SPPDev-1
 cu.Bluetooth-Incoming-Port
-cu.BoseQuietComfort35-SPPD
-cu.BoseQuietComfort35-SPPD-1
 disk0
 disk0s1
 disk0s2
@@ -31,6 +32,7 @@ io8logmt
 io8logtemp
 lockstat
 machtrace
+nsmb0
 null
 oslog
 oslog_stream
@@ -181,9 +183,9 @@ stdin
 stdout
 systrace
 tty
+tty.35CTL-SPPDev
+tty.35CTL-SPPDev-1
 tty.Bluetooth-Incoming-Port
-tty.BoseQuietComfort35-SPPD
-tty.BoseQuietComfort35-SPPD-1
 ttyp0
 ttyp1
 ttyp2
@@ -236,6 +238,7 @@ ttys0
 ttys000
 ttys001
 ttys002
+ttys003
 ttys1
 ttys2
 ttys3
