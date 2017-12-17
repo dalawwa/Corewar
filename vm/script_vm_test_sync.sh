@@ -83,7 +83,7 @@ osascript -e 'tell application "System Events" to keystroke "d" using command do
 sleep 2
 next=$(ls /dev > diff2)
 diff_str=$(eval diff diff2 diff1 | tail -1 | cut -c 3-)
-echo '' > /dev/$diff_str
+echo "=======ZAZ======" > /dev/$diff_str
 ../tests/corewar -v $2 $champ > /dev/$diff_str;
 rm $champ
 }
