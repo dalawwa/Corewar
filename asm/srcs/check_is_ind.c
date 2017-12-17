@@ -12,28 +12,37 @@
 
 #include "../includes/asm.h"
 
-/*
-int		check_is_indirect(char *str, t_champ *list, int num)
-{
-	int	i;
 
-	i = 0;
-	if (str[i] == ':')
-		return (1);
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] != '\0')
+int		check_is_indirect(int i, char **str)
+{
+	if (**str == ':')
 	{
-		if (ft_isdigit(str[i]) == 0)
-			return (0);
-		i++;
+		(*str)++;
+		while (**str && char_label(**str))
+			(*str)++;
 	}
-	if (num == 1)
-		list->size_param1 = 2;
-	else if (num == 2)
-		list->size_param2 = 2;
-	else if (num == 3)
-		list->size_param3 = 2;
+	else if (((**str == '+' || **str == '-') && (*str)++) || ft_isdigit(**str))
+	{
+		while (ft_isdigit(**str))
+			(*str)++;
+	}
+	else
+	{
+		ft_putstr("out");
+		return (0);
+	}
+	if (**str != '\0' && **str != '\n' && **str != ',' && **str != ' ' && **str != '\t')
+		ciao_bye_bye(1);
+	position = position + 2;
+	if (i == 1)
+	{
+		while (**str == '\t' || **str == ' ')
+			(*str)++;
+		if (**str != ',')
+			ciao_bye_bye(1);
+		(*str)++;
+		while (**str == '\t' || **str == ' ')
+			(*str)++;
+	}
 	return (1);
 }
-*/

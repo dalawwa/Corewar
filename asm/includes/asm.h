@@ -80,10 +80,10 @@ t_champ	*ft_lstadd_lines(t_champ *begin, char *line, int i);
 char	**ft_strsplit_three(const char *s, char c, char d, char e);
 int		get_the_op_code(char *str);
 void	add_number_args(t_champ *list);
-int		check_args_valid(char *str, int op, t_champ *list);
+int		check_args_valid(char **str, int op);
 int		check_args_valid_with_label(char *str, int op, t_champ *list);
-int		check_is_indirect(char *str, t_champ *list, int num);
-int		check_is_direct(char *str, t_champ *list, int num);
-int		check_is_reg(char *str, t_champ *list, int num);
+int		check_is_indirect(int i, char **str);
+int		check_is_direct(int i, char **str, int opc);
+int		check_is_reg(int i, char **str);
 
 #endif
