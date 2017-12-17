@@ -1,5 +1,15 @@
-[4m[36m../tests/test_suite/sti/sti.s[0m
+[4m[36m../tests/test_suite/fork/fork.s[0m
 
 
-[4m[36m../tests/test_suite/sti/sti_2.s[0m
+[4m[36m../tests/test_suite/fork/fork_neg.s[0m
+
+
+[4m[36m../tests/test_suite/fork/fork_neg2.s[0m
+
+
+[4m[36m../tests/test_suite/fork/fork_neg3.s[0m
+
+
+[4m[36m../tests/test_suite/fork/fork_neg4.s[0m
+
 

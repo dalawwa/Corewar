@@ -1,0 +1,5 @@
+Introducing contestants...
+* Player 1, weighing 27 bytes, "LD 42 = * dans r3 puis 58 = : dqns r2" ("let's try ld op") !
+P    1 | and 0 0 r3
+P    1 | fork 12 (23)
+Contestant 1, "LD 42 = * dans r3 puis 58 = : dqns r2", has won !
