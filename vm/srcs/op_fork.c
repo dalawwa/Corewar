@@ -5,9 +5,9 @@ int		op_fork(t_arena *arena, t_exe *exe)
 	if (arena->opts->is_v4)
 	{
 		if (exe->arg1->d_value > 0x7fff)
-			ft_printf("P    %d | %s %hi (%hi)\n", exe->process->process_num, exe->bdd_op->name, exe->arg1->d_value, (short)(((exe->arg1->d_value + exe->process->pc) - 0x10000) % IDX_MOD));
+			ft_printf("P    %d | %s %hd (%hd)\n", exe->process->process_num, exe->bdd_op->name, exe->arg1->d_value, (short)(((exe->arg1->d_value + exe->process->pc) - 0x10000) % IDX_MOD));
 		else
-			ft_printf("P    %d | %s %hi (%hi)\n", exe->process->process_num, exe->bdd_op->name, exe->arg1->d_value, (short)(((exe->arg1->d_value + exe->process->pc)) % IDX_MOD));
+			ft_printf("P    %d | %s %hd (%hd)\n", exe->process->process_num, exe->bdd_op->name, exe->arg1->d_value, (short)(((exe->arg1->d_value + exe->process->pc)) % IDX_MOD));
 
 	}
 	print_exe_opts(arena, exe);
