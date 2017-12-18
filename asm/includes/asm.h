@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/13 15:38:44 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/18 11:16:40 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,6 @@ int		check_args_valid_with_label(char *str, int op, t_champ *list);
 int		check_is_indirect(int i, char **str);
 int		check_is_direct(int i, char **str, int opc);
 int		check_is_reg(int i, char **str);
+int		label_is_real(char *line, t_champ *champ);
 
 #endif
