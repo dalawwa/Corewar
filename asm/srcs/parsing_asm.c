@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:37:17 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/13 13:15:38 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/13 14:35:08 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,15 +119,18 @@ void	check_name_comment(int fd, t_header *op)
 //une fois que l on a recupere les datas du champion, il va falloir faire leur analyse
 int	launch_parsing(char *str)
 {
-	int			fd;
-	t_champ		champ;
+	int		fd;
+	char		*file;
+	t_champ		*champ;
 	t_header	op;
 
+	file = NULL;
+	champ = NULL;
+	check_valid_name(str);
 	if ((fd = open(str, O_RDONLY)) == -1)
 		return (-1);
-	check_valid_name(str);
-	start_struct_champ(&champ);
+//	start_struct_champ(champ);
 	check_name_comment(fd, &op);
-	get_champ_data(&champ, fd);
+	champ = get_champ_data(&file, fd);
 	return (0);
 }
