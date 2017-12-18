@@ -6,7 +6,7 @@
 #    By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/27 17:48:19 by bfruchar          #+#    #+#              #
-#    Updated: 2017/12/13 15:40:07 by bfruchar         ###   ########.fr        #
+#    Updated: 2017/12/18 11:17:26 by bfruchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRC =				srcs/main.c \
 					srcs/check_is_reg.c \
 					srcs/check_is_dir.c \
 					srcs/check_is_ind.c \
+					srcs/check_labels.c \
 					srcs/ft_strsplit_three.c
 
 OBJ =				main.o \
@@ -40,6 +41,7 @@ OBJ =				main.o \
 					check_is_reg.o \
 					check_is_dir.o \
 					check_is_ind.o \
+					check_labels.o \
 					ft_strsplit_three.o
 
 $(NAME):

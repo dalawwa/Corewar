@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:37:17 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/13 14:35:08 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/18 11:06:01 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,5 +132,7 @@ int	launch_parsing(char *str)
 //	start_struct_champ(champ);
 	check_name_comment(fd, &op);
 	champ = get_champ_data(&file, fd);
+	if (label_is_real(file, champ) == 0)
+		ciao_bye_bye(1);
 	return (0);
 }
