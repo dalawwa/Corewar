@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/13 15:37:16 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/13 15:39:14 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/18 16:34:52 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int		check_is_indirect(int i, char **str)
 	}
 	else
 	{
-		ft_putstr("out");
 		return (0);
 	}
 	if (**str != '\0' && **str != '\n' && **str != ',' && **str != ' ' && **str != '\t')

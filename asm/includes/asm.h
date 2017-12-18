@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/18 11:16:40 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/18 17:41:53 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,51 +14,76 @@
 # define ASM_H
 # include <sys/types.h>
 # include <sys/stat.h>
-# include "../../vm/includes/corewar.h"
 # include <fcntl.h>
 # include "../../libft/includes/libft.h"
 # include "../../libft/includes/get_next_line.h"
 # include "../../libft/includes/ft_printf.h"
 
+#define IND_SIZE				2
+#define REG_SIZE				4
+#define DIR_SIZE				REG_SIZE
+
+
+# define REG_CODE				1
+# define DIR_CODE				2
+# define IND_CODE				3
+
+
+#define MAX_ARGS_NUMBER			4
+#define MAX_PLAYERS				4
+#define MEM_SIZE				(4*1024)
+#define IDX_MOD					(MEM_SIZE / 8)
+#define CHAMP_MAX_SIZE			(MEM_SIZE / 6)
+
+#define COMMENT_CHAR			'#'
+#define LABEL_CHAR				':'
+#define DIRECT_CHAR				'%'
+#define SEPARATOR_CHAR			','
+
+#define LABEL_CHARS				"abcdefghijklmnopqrstuvwxyz_0123456789"
+
+#define NAME_CMD_STRING			".name"
+#define COMMENT_CMD_STRING		".comment"
+
+#define REG_NUMBER				16
+
+#define CYCLE_TO_DIE			1536
+#define CYCLE_DELTA				50
+#define NBR_LIVE				21
+#define MAX_CHECKS				10
 
 /*
-typedef struct		s_champ_data
-{
-	int				nb_struct;
-	t_champ			*first;
-	t_champ			*last;
-}					t_champ_data;
+ * **
+ * */
 
-typedef struct		s_label
+typedef char	t_arg_type;
+
+#define T_REG					1
+#define T_DIR					2
+#define T_IND					4
+#define T_LAB					8
+
+/*
+ * **
+ * */
+
+# define PROG_NAME_LENGTH		(128)
+# define COMMENT_LENGTH			(2048)
+# define COREWAR_EXEC_MAGIC		0xea83f3
+
+typedef struct		header_s
 {
-	t_champ			*label_declare;
-	t_champ			*label_find;
-	t_label			*next;
-	int				size_between;
-}					t_label;
-*/
+	unsigned int		magic;
+	char				prog_name[PROG_NAME_LENGTH + 1];
+	unsigned int		prog_size;
+	char				comment[COMMENT_LENGTH + 1];
+}					header_t;
+
 typedef struct		s_champ
 {
-//	char			*line; //on recupere la ligne du champion
-//	char			*name; // on recupere l ordre
-//	char			*command;
 	char			*label;
-//	int				op_code;
-//	int				is_label;
-//	int				is_label_and;
 	int				position;
-//	char			**params;
-//	int				nb_params;
-//	int				size_param1;
-//	int				size_param2;
-//	int				size_param3;
-//	int				has_ocp;
-//	char			ocp;
-//	int				size_octets;
-//	struct s_label	*label; //a voir 
-//	int				octet_cumul; //a voir
 	struct s_champ	*next;
-	struct s_champ	*prev;
 }					t_champ;
 
 int	position;
@@ -71,10 +96,10 @@ int             label_or_not(char *line);
 int             char_label(char c);
 void	start_struct_champ(t_champ *champ);
 t_champ		*get_champ_data(char **file, int fd);
-void	check_name_comment(int fd, t_header *op);
+int		check_name_comment(int fd, header_t *op);
 int		check_no_printable_char(char *str);
-void	value_parent(char *str, int x, int j, t_header *op);
-void	check_valid_name(char *str);
+int		value_parent(char *str, int x, int j, header_t *op);
+int		check_valid_name(char *str);
 void	ciao_bye_bye(int i);
 t_champ	*ft_lstadd_lines(t_champ *begin, char *line, int i);
 char	**ft_strsplit_three(const char *s, char c, char d, char e);
@@ -86,5 +111,9 @@ int		check_is_indirect(int i, char **str);
 int		check_is_direct(int i, char **str, int opc);
 int		check_is_reg(int i, char **str);
 int		label_is_real(char *line, t_champ *champ);
+int		ciao_bye(int i, char *str);
+int		ciao_bye_name(int i, header_t *top);
+int		ciao_bye_bye_fr(int i, t_champ *champ);
+int		launch_creation_cor(char *file, t_champ *champ, header_t *op, char *str);
 
 #endif
