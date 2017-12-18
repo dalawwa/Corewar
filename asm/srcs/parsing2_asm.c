@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:45:13 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/13 15:28:39 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/18 16:32:46 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,6 @@ int		label_or_not(char *line)
 		j++;
 	if (j > 0 && line[j] == ':')
 	{
-		ft_putstr(line);
-		ft_putchar('\n');
 		j++;
 		while (line[j] == ' ' || line[j] == '\t')
 			j++;
@@ -109,15 +107,6 @@ t_champ		*get_champ_data(char **file, int fd)
 		size_line++;
 		i = 0;
 	}
-	ft_putstr(*file);
-	ft_putstr("\nLabels are : \n");
-	while (new->next)
-	{
-		ft_putstr(new->label);
-		ft_putchar('\n');
-		new = new->next;
-	}
-	ft_putstr(new->label);
 	if (line)
 		free(line);
 	return (new);
