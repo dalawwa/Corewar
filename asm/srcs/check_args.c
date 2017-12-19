@@ -6,83 +6,14 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 09:21:43 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/13 11:01:19 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/13 15:39:08 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/asm.h"
 
-
-//not finish, some special moment where param should be equal to 2
-int		check_is_direct(char *str, t_champ *list, int num)
-{
-	int	i;
-
-	i = 1;
-	if (str[0] != '%')
-		return (0);
-	if (str[i] == ':')
-		return (1);
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] != '\0')
-	{
-		if (ft_isdigit(str[i]) == 0)
-			return (0);
-		i++;
-	}
-	if (num == 1)
-		list->size_param1 = 4;
-	else if (num == 2)
-		list->size_param2 = 4;
-	else if (num == 3)
-		list->size_param3 = 4;
-	return (1);
-}
-
-int		check_is_indirect(char *str, t_champ *list, int num)
-{
-	int	i;
-
-	i = 0;
-	if (str[i] == ':')
-		return (1);
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] != '\0')
-	{
-		if (ft_isdigit(str[i]) == 0)
-			return (0);
-		i++;
-	}
-	if (num == 1)
-		list->size_param1 = 2;
-	else if (num == 2)
-		list->size_param2 = 2;
-	else if (num == 3)
-		list->size_param3 = 2;
-	return (1);
-}
-
-int		check_is_reg(char *str, t_champ *list, int num)
-{
-	int		i;
-
-	if (str[0] != 'r')
-		return (0);
-	i = ft_atoi(&str[1]);
-	if (i > 16 || i < 1)
-		return (0);
-	if (num == 1)
-		list->size_param1 = 1;
-	else if (num == 2)
-		list->size_param2 = 1;
-	else if (num == 3)
-		list->size_param3 = 1;
-	return (1);
-}
-
 //same pour ceux qui ont aussi un label
+/*
 int		check_args_valid_with_label(char *str, int op, t_champ *list)
 {
 	char	**tab;
@@ -107,36 +38,34 @@ int		check_args_valid_with_label(char *str, int op, t_champ *list)
 		return (1);
 	return (0);
 }
-
+*/
 //on va verifier pour chaque ligne si les arguments recus sont valides
 //il faudrait checker aussi que la suite de la phrase est coherente
 //il faudrait verfiier qu il n y a pas plus d arguments
-int		check_args_valid(char *str, int op, t_champ *list)
+int		check_args_valid(char **str, int opc)
 {
-	char	**tab;
-
-	list->params = ft_strsplit_three(str, ' ', '\t', ',');
-	tab = ft_strsplit_three(str, ' ', '\t', ',');
-	if (tab[1] && (op == 1 || op == 9 || op == 15 || op == 12) && (check_is_direct(tab[1], list, 1)))
+	while (**str == '\t' || **str == ' ')
+		(*str)++;
+	if ((opc == 1 || opc == 9 || opc == 15 || opc == 12) && (check_is_direct(0, str, opc)))
 		return (1);
-	else if (tab[1] && tab[2] && (op == 2 || op == 13) && (check_is_indirect(tab[1], list, 1) || check_is_direct(tab[1], list, 1)) && (check_is_reg(tab[2], list, 2)))
+	else if ((opc == 2 || opc == 13) && (check_is_indirect(1, str) || check_is_direct(1, str, opc)) && (check_is_reg(0, str)))
 		return (1);
-	else if (tab[1] && tab[2] && op == 3 && check_is_reg(tab[1], list, 1) && (check_is_reg(tab[2], list, 2) || check_is_indirect(tab[2], list, 2)))
+	else if (opc == 3 && check_is_reg(1, str) && (check_is_reg(0, str) || check_is_indirect(0, str)))
 		return (1);
-	else if (tab[1] && tab[2] && tab[3] && (op == 4 || op == 5) && check_is_reg(tab[1], list, 1) && check_is_reg(tab[2], list, 2) && check_is_reg(tab[3], list, 3))
+	else if ((opc == 4 || opc == 5) && check_is_reg(1, str) && check_is_reg(1, str) && check_is_reg(0, str))
 		return (1);
-	else if (tab[1] && tab[2] && tab[3] && (op == 6 || op == 7 || op == 8) && (check_is_reg(tab[1], list, 1) || check_is_indirect(tab[1], list, 1) || check_is_direct(tab[1], list, 1)) && (check_is_reg(tab[2], list, 2) || check_is_indirect(tab[2], list, 2) || check_is_direct(tab[2], list, 2)) && check_is_reg(tab[3], list, 3))
+	else if ((opc == 6 || opc == 7 || opc == 8) && (check_is_reg(1, str) || check_is_indirect(1, str) || check_is_direct(1, str, opc)) && (check_is_reg(1, str) || check_is_indirect(1, str) || check_is_direct(1, str, opc)) && check_is_reg(0, str))
 		return (1);
-	else if (tab[1] && tab[2] && tab[3] && (op == 10 ||op == 14) && (check_is_reg(tab[1], list, 1) || check_is_indirect(tab[1], list, 1) || check_is_direct(tab[1], list, 1)) && (check_is_reg(tab[2], list, 2) || check_is_direct(tab[2], list, 2)) && check_is_reg(tab[3], list, 3))
+	else if ((opc == 10 ||opc == 14) && (check_is_reg(1, str) || check_is_indirect(1, str) || check_is_direct(1, str, opc)) && (check_is_reg(0, str) || check_is_direct(1, str, opc)) && check_is_reg(0, str))
 		return (1);
-	else if (tab[1] && tab[2] && tab[3] && op == 11 && check_is_reg(tab[1], list, 1) && (check_is_reg(tab[2], list, 2) || check_is_indirect(tab[2], list, 2) || check_is_direct(tab[2], list, 2)) && (check_is_reg(tab[3], list, 3) || check_is_direct(tab[3], list, 3)))
+	else if (opc == 11 && check_is_reg(1, str) && (check_is_reg(1, str) || check_is_indirect(1, str) || check_is_direct(1, str, opc)) && (check_is_reg(0, str) || check_is_direct(0, str ,opc)))
 		return (1);
-	else if (tab[1] && op == 16 && check_is_reg(tab[1], list, 1))
+	else if (opc == 16 && check_is_reg(0, str))
 		return (1);
 	return (0);
 }
 
-
+/*
 //on va compter le nombre de virgules pour savoir combien d arguments sont suppose etre dans la ligne.
 void		add_number_args(t_champ *list)
 {
@@ -164,3 +93,4 @@ void		add_number_args(t_champ *list)
 		if (list->nb_params != 3)
 			ciao_bye_bye(1);
 }
+*/

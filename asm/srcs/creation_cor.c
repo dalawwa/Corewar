@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   initialize_struct.c                                :+:      :+:    :+:   */
+/*   creation_cor.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/27 17:39:24 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/18 17:06:39 by bfruchar         ###   ########.fr       */
+/*   Created: 2017/12/18 17:39:50 by bfruchar          #+#    #+#             */
+/*   Updated: 2017/12/18 17:50:06 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/asm.h"
 
-void	global_variables_size(void)
-{
-	size_line = 0;
-	position = 0;
-}
 
-void	start_struct_champ(t_champ *champ)
+//obtenir le nom du fichier et creer un char *.cor qui servira a enregistrer le new file
+//create and launch with OPEN (READ &WRITE) with the file.cor
+//create file with magic numbers, name of the program, then command
+//then use the file to print everything to have a good asm
+int		launch_creation_cor(char *file, t_champ *champ, header_t *op, char *str)
 {
-	champ->label = NULL;
-	champ->position = 0;
-	champ->next = NULL;
+	str = NULL;
+	file = NULL;
+	champ  = NULL;
+	op = NULL;
+	return (1);
 }
