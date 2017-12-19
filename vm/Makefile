@@ -6,7 +6,7 @@
 #    By: dalawwa <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/16 01:01:45 by dalawwa           #+#    #+#              #
-#    Updated: 2017/12/16 01:02:47 by dalawwa          ###   ########.fr        #
+#    Updated: 2017/12/17 16:44:31 by dalawwa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -356,7 +356,8 @@ SRCS_NAME = main.c \
 			is_carry_to_modify.c \
 			is_valid_op.c \
 			int_len.c \
-			ft_unsi_strcmp.c
+			ft_unsi_strcmp.c \
+			print_sti.c
 
 CW_SRCS = $(addprefix $(PATH_SRCS), $(SRCS_NAME))
 CW_OBJS = $(addprefix $(PATH_OBJS), $(SRCS_NAME:.c=.o))
