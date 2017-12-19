@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:37:17 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/18 17:45:32 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/19 14:31:21 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,5 +151,7 @@ int	launch_parsing(char *str)
 		return (ciao_bye_bye_fr(1, champ));
 	if (launch_creation_cor(file, champ, &op, str) == 0)
 		ciao_bye_bye(1);
+	if (file)
+		free(file);
 	return (0);
 }
