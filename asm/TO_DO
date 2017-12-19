@@ -1,3 +1,2 @@
-- improve the argument size functions to have the correct ones
-- ameliorer ft_strsplit_three pour pouvoir recuperer uniquement les arguments au nombre de 1, 2 ou 3
-- reflechir a la suite pour transformer le fichier
+- Continuer de comparer l asm pour preparer les bons messages d erreurs
+- Commencer a enregistrer le debut du fichier avec magic number, name et comment

@@ -14,42 +14,42 @@
 
 int		next_get_the_op_code(char *str)
 {
-	if (ft_strequ(str, "fork"))
+	if (ft_strnequ(str, "fork", 4))
 		return (12);
-	if (ft_strequ(str, "lld"))
-		return (13);
-	if (ft_strequ(str, "lldi"))
+	if (ft_strnequ(str, "lldi", 4))
 		return (14);
-	if (ft_strequ(str, "lfork"))
+	if (ft_strnequ(str, "lld", 3))
+		return (13);
+	if (ft_strnequ(str, "lfork", 5))
 		return (15);
-	if (ft_strequ(str, "aff"))
+	if (ft_strnequ(str, "aff", 3))
 		return (16);
 	return (0);
 }
 
 int		get_the_op_code(char *str)
 {
-	if (ft_strequ(str, "live"))
+	if (ft_strnequ(str, "live", 4))
 		return (1);
-	if (ft_strequ(str, "ld"))
-		return (2);
-	if (ft_strequ(str, "st"))
-		return (3);
-	if (ft_strequ(str, "add"))
-		return (4);
-	if (ft_strequ(str, "sub"))
-		return (5);
-	if (ft_strequ(str, "and"))
-		return (6);
-	if (ft_strequ(str, "or"))
-		return (7);
-	if (ft_strequ(str, "xor"))
-		return (8);
-	if (ft_strequ(str, "zjmp"))
-		return (9);
-	if (ft_strequ(str, "ldi"))
+	if (ft_strnequ(str, "ldi", 3))
 		return (10);
-	if (ft_strequ(str, "sti"))
+	if (ft_strnequ(str, "ld", 2))
+		return (2);
+	if (ft_strnequ(str, "sti", 3))
 		return (11);
+	if (ft_strnequ(str, "st", 2))
+		return (3);
+	if (ft_strnequ(str, "add", 3))
+		return (4);
+	if (ft_strnequ(str, "sub", 3))
+		return (5);
+	if (ft_strnequ(str, "and", 3))
+		return (6);
+	if (ft_strnequ(str, "or", 2))
+		return (7);
+	if (ft_strnequ(str, "xor", 3))
+		return (8);
+	if (ft_strnequ(str, "zjmp", 4))
+		return (9);
 	return (next_get_the_op_code(str));
 }
