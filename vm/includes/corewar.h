@@ -291,7 +291,7 @@ void	print_one_process(t_proc *process);
 void	print_regs(t_proc *process);
 void	print_opts(t_arena *arena);
 void	print_exe(t_exe *exe);
-
+void	print_sti_v4(t_exe *exe, unsigned char ocp);
 /* ADD TO LIB ? */
 char			*ft_stradd_c_end(char *s, char c);
 int				ft_power(int nb, int pow);
