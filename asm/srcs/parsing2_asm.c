@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:45:13 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/19 10:36:44 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/20 15:50:31 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,9 @@ char	*ft_strjoin_without_empty(char *file, char *line, int j)
 		tmp = ft_strjoin(file, line);
 		tmp = ft_strjoin(tmp, "\n");
 	}
+//	if (line[j] == '#' || line[j] == ';')
+	else
+		return (file);
 	if (line)
 		free(line);
 	if (file)
