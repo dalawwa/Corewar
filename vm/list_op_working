@@ -1,36 +1,1209 @@
 [4m[36m../tests/test_suite/sti/sti.s[0m
 
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 31 -d 1800
 ../tests/test_suite/sti/sti.s:[32m OK [0m with -v 0
 ../tests/test_suite/sti/sti.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 31
 ../tests/test_suite/sti/sti.s:[32m OK [0m with -v 32
 ../tests/test_suite/sti/sti.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti.s:[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/sti/sti_2.s[0m
 
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 31 -d 1800
 ../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 0
 ../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 31
 ../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 32
 ../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_2.s:[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/sti/sti_3.s[0m
 
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 31 -d 1800
 ../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 0
 ../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 31
 ../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 32
 ../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_3.s:[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/sti/sti_4.s[0m
 
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_4.s:[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/sti/sti_5.s[0m
 
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_5.s:[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/sti/sti_6.s[0m
 
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 31 -d 1800
 ../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 0
 ../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 31
 ../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 32
 ../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_6.s:[32m OK [0m with -v 37
 
 [4m[36m../tests/test_suite/sti/sti_all.s[0m
+
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 35
+
+[4m[36m../tests/test_suite/sti/sti_ind_-1.s[0m
+
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_-1.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_-2.s[0m
+
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_-2.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_00.s[0m
+
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_00.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_01.s[0m
+
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_01.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_02.s[0m
+
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_02.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_03.s[0m
+
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_03.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_1.s[0m
+
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_1.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_10.s[0m
+
+../tests/test_suite/sti/sti_ind_10.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_10.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_10.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_10.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_10.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_10.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_10.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_10.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_10.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_10.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_10.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_10.s:[32m OK [0m with -v 35
+
+[4m[36m../tests/test_suite/sti/sti_ind_11.s[0m
+
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_11.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_12.s[0m
+
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_12.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_13.s[0m
+
+../tests/test_suite/sti/sti_ind_13.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_13.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_13.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_13.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_13.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_13.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_13.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_13.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_13.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_13.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_13.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_13.s:[32m OK [0m with -v 35
+
+[4m[36m../tests/test_suite/sti/sti_ind_14.s[0m
+
+../tests/test_suite/sti/sti_ind_14.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_14.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_14.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_14.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_14.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_14.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_14.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_14.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_14.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_14.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_14.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_14.s:[32m OK [0m with -v 35
+
+[4m[36m../tests/test_suite/sti/sti_ind_15.s[0m
+
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_15.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_16.s[0m
+
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_16.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_17.s[0m
+
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_17.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_18.s[0m
+
+../tests/test_suite/sti/sti_ind_18.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_18.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_18.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_18.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_18.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_18.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_18.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_18.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_18.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_18.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_18.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_18.s:[32m OK [0m with -v 35
+
+[4m[36m../tests/test_suite/sti/sti_ind_19.s[0m
+
+../tests/test_suite/sti/sti_ind_19.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_19.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_19.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_19.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_19.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_19.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_19.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_19.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_19.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_19.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_19.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_19.s:[32m OK [0m with -v 35
+
+[4m[36m../tests/test_suite/sti/sti_ind_2.s[0m
+
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_2.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_20.s[0m
+
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_20.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_21.s[0m
+
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_21.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_22.s[0m
+
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_22.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_3.s[0m
+
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_3.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_4.s[0m
+
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_4.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_5.s[0m
+
+../tests/test_suite/sti/sti_ind_5.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_5.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_5.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_5.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_5.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_5.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_5.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_5.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_5.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_5.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_5.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_5.s:[32m OK [0m with -v 35
+
+[4m[36m../tests/test_suite/sti/sti_ind_6.s[0m
+
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_6.s:[32m OK [0m with -v 35
+
+[4m[36m../tests/test_suite/sti/sti_ind_7.s[0m
+
+../tests/test_suite/sti/sti_ind_7.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_7.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_7.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_7.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_7.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_7.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_7.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_7.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_7.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_7.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_7.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_7.s:[32m OK [0m with -v 35
+
+[4m[36m../tests/test_suite/sti/sti_ind_8.s[0m
+
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_8.s:[32m OK [0m with -v 37
+
+[4m[36m../tests/test_suite/sti/sti_ind_9.s[0m
+
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 31 -d 1800
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 0
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 1
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 2
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 3
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 4
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 5
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 6
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 7
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 8
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 9
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 10
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 12
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 13
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 15
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 20
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 21
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 22
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 23
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 27
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 28
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 29
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 30
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 31
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 32
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 33
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 34
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 35
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 36
+../tests/test_suite/sti/sti_ind_9.s:[32m OK [0m with -v 37
 

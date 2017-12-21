@@ -185,21 +185,22 @@ int		check_size(t_file *file)
 
 	size = 0;
 	size = lseek(file->fd, 0, SEEK_END);
-//	ft_printf("SIZE = %d\n", size);
-	if (size - 140 - 4 - COMMENT_LENGTH < 0)
+	size = size - 140 - 4 - COMMENT_LENGTH;
+//	ft_printf("SIZE = %d\n", size - 140 - 4 - COMMENT_LENGTH);
+	if (size < 0)
 	{
 		ft_printf("Error: File %s is too small to be a champion\n", file->name);
 		return (0);
 	}
 	if (has_nb_magic(file) == 0)
 		return (0);
-	if (size > CHAMP_MAX_SIZE + PROG_NAME_LENGTH + 4 + COMMENT_LENGTH)
+	if (size > 682)
 	{
-		ft_printf("Error: File %s has too large code (%d bytes > 682 bytes)\n", file->name, size - 140 - 4 - COMMENT_LENGTH);
+		ft_printf("Error: File %s has too large code (%d bytes > 682 bytes)\n", file->name, size);
 		return (0);
 	}
 //	(*player)->size = size - 140 - 4 - COMMENT_LENGTH;
-	return (size - 140 - 4 - COMMENT_LENGTH);
+	return (size);
 }
 
 t_play		*init_player(int i)
