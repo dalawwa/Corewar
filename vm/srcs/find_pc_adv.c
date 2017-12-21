@@ -6,12 +6,24 @@ int		find_pc_adv(int pc, int adv, int stop)
 	int	pc_tmp;
 
 	i = 0;
-	pc_tmp = ((pc + adv) % IDX_MOD);
-//	ft_printf("FIRST pc_tmp = %d\n", pc_tmp);
-	if (pc_tmp > IDX_MOD / 2)
-		pc_tmp = pc_tmp - IDX_MOD;
-//	ft_printf("NEXT  pc_tmp = %d\n", pc_tmp);
-	return (pc_tmp);
+	pc_tmp = 0;
+	if (stop == 0)
+	{
+		ft_printf("FIRST pc_tmp = %d\n", pc_tmp);
+		if (adv < 0x8000)
+			pc_tmp = pc + (adv % IDX_MOD);
+		else
+			pc_tmp = pc + (adv - 65536) % IDX_MOD;
+		if (pc_tmp > IDX_MOD)
+			pc_tmp = pc;
+		ft_printf("NEXT  pc_tmp = %d\n", pc_tmp);
+/*		pc_tmp = ((pc + adv) % IDX_MOD);
+	ft_printf("FIRST pc_tmp = %d\n", pc_tmp);
+		if (pc_tmp > IDX_MOD / 2)
+			pc_tmp = pc_tmp - IDX_MOD;
+	ft_printf("NEXT  pc_tmp = %d\n", pc_tmp);*/
+		return (pc_tmp);
+	}
 	pc_tmp = pc;
 //	ft_printf("Process %d : ", process->process_num);
 //	if (process->exe_op != NULL)
