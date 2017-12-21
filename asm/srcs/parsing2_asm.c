@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:45:13 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/18 16:32:46 by bfruchar         ###   ########.fr       */
+/*   Updated: 2017/12/20 15:50:31 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,25 @@ int	line_is_valid(char *str)
 
 char	*ft_strjoin_without_empty(char *file, char *line, int j)
 {
+	char	*tmp;
+
+	tmp = NULL;
 	while (line[j] == '\t' || line[j] == ' ')
 		j++;
 	if (line[j] && line[j] != '#' && line[j] != ';' && line_is_valid(&line[j]))
 	{
-		file = ft_strjoin(file, line);
-		file = ft_strjoin(file, "\n");
+//		tmp = (char *)malloc(sizeof(ft_strlen(file) + ft_strlen(line) + 1);
+		tmp = ft_strjoin(file, line);
+		tmp = ft_strjoin(tmp, "\n");
 	}
+//	if (line[j] == '#' || line[j] == ';')
+	else
+		return (file);
 	if (line)
 		free(line);
-	return (file);
+	if (file)
+		free(file);
+	return (tmp);
 }
 
 //on va checker que c est bien un label, si c est pas le cas et qu on a un char bizarre, on va quitter le programme (get struct in the function because of fucking leaks)
