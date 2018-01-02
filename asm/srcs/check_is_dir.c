@@ -12,6 +12,28 @@
 
 #include "../includes/asm.h"
 
+int		put_in_file_dir(int i, t_champ *champ, char **file, int fd)
+{
+	int	j;
+
+	j = 0;
+	if (**file != '%')
+		return (0);
+	(*file)++;
+	if (*file && **file == ':' && (*file)++)
+		j = position_label(champ, *file);
+	else
+		j = ft_atoi(*file);
+	if (i == 4)
+		j = change_magic_order(j);
+	else
+		j = change_magic_order_second(j);
+	write(fd, &j, i);
+	temp = temp + i;
+	move_in_the_file(file);
+	return (1);
+}
+
 int		check_is_direct(int i, char **str, int opc)
 {
 	if (**str == '%')
