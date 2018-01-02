@@ -88,6 +88,7 @@ typedef struct		s_champ
 
 int	position;
 int	size_line;
+int	temp;
 
 int		main(int ac, char **av);
 void	global_variables_size(void);
@@ -115,5 +116,14 @@ int		ciao_bye(int i, char *str);
 int		ciao_bye_name(int i, header_t *top);
 int		ciao_bye_bye_fr(int i, t_champ *champ);
 int		launch_creation_cor(char *file, t_champ *champ, header_t *op, char *str);
+int             put_in_file_dir(int i, t_champ *champ, char **file, int fd);
+int             change_magic_order_second(int i);
+void    	move_in_the_file(char **str);
+int		change_magic_order(int i);
+int	position_label(t_champ *champ, char *file);
+int             put_in_file_reg(char **file, int fd);
+int             put_in_file_dir(int i, t_champ *champ, char **file, int fd);
+int             put_in_file_indir(t_champ *champ, char **file, int fd);
+int             get_the_op_code2(char *str);
 
 #endif

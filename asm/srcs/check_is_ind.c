@@ -12,6 +12,21 @@
 
 #include "../includes/asm.h"
 
+int             put_in_file_indir(t_champ *champ, char **file, int fd)
+{
+	int	j;
+
+	j = 0;
+	if (**file == ':' && (*file)++)
+		j = position_label(champ, *file);
+	else
+		j = ft_atoi(*file);
+	j = change_magic_order_second(j);
+	write(fd, &j, 2);
+	temp = temp + 2;
+	move_in_the_file(file);
+	return (1);
+}
 
 int		check_is_indirect(int i, char **str)
 {

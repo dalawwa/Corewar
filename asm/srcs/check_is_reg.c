@@ -12,6 +12,21 @@
 
 #include "../includes/asm.h"
 
+
+int		put_in_file_reg(char **file, int fd)
+{
+	int	j;
+
+	j = 0;
+	if (**file != 'r')
+		return (0);
+	j = ft_atoi(++(*file));
+	write(fd, &j, 1);
+	temp = temp + 1;
+	move_in_the_file(file);
+	return (1);
+}
+
 //on va verifier qu il s agit bien d un registre
 //on va regarder si il commence par r et si il est compris entre 1 et 16
 //on va mettre sa taille dans la struct
