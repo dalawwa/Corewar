@@ -39,6 +39,7 @@ int		op_sti(t_arena *arena, t_exe *exe)
 		else
 			ft_printf("%d ", exe->arg2->d_data + exe->arg3->d_data);
 		ft_printf("(with pc and mod %hd)\n", result % IDX_MOD);
+//		ft_printf("(with pc and mod %hd)\n", IDX_MOD + result % IDX_MOD);
 
 //		ft_printf("| -> store to %d + %hd = %d (with pc and mod %hd)\n", exe->arg2->d_data, (short)exe->arg3->d_data, ((exe->arg3->d_data + exe->arg2->d_data) % IDX_MOD), (short)(exe->process->pc + (exe->arg2->d_data + (short)exe->arg3->d_data) % IDX_MOD));
 //		AU DESSUS C'EST TON ORIGINAL QUE J'ai mis en comment pour le garder, j'ai fait une modif par rapport a sti_1.s mais j'ai pas checker si ca casse pas qqch ailleurs, donc j'ai laisse ton code original la
