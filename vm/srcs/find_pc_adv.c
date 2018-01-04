@@ -4,19 +4,35 @@ int		find_pc_adv(int pc, int adv, int stop)
 {
 	int	i;
 	int	pc_tmp;
+	int	adv_tmp;
 
 	i = 0;
 	pc_tmp = 0;
+	adv_tmp = 0;
 	if (stop == 0)
 	{
-		ft_printf("FIRST pc_tmp = %d\n", pc_tmp);
+//		ft_printf("FIRST pc_tmp = %d\n", pc_tmp);
 		if (adv < 0x8000)
+		{
 			pc_tmp = pc + (adv % IDX_MOD);
+//			ft_printf("inf NEXT  pc_tmp = %d\n", pc_tmp);
+			if (pc_tmp >= MEM_SIZE)
+				pc_tmp = pc_tmp - MEM_SIZE;
+		}
 		else
-			pc_tmp = pc + (adv - 65536) % IDX_MOD;
-		if (pc_tmp > IDX_MOD)
-			pc_tmp = pc;
-		ft_printf("NEXT  pc_tmp = %d\n", pc_tmp);
+		{
+			adv_tmp = IDX_MOD - (adv % IDX_MOD);
+			if (adv_tmp == 512)
+				adv_tmp = 0;
+			pc_tmp = pc - adv_tmp;
+//			ft_printf("sup NEXT  pc_tmp = %d\n", pc_tmp);
+			if (pc_tmp < 0)
+				pc_tmp = MEM_SIZE + pc_tmp;
+		}
+
+//		if (pc_tmp > IDX_MOD)
+//			pc_tmp = pc;
+//		ft_printf("END   pc_tmp = %d\n", pc_tmp);
 /*		pc_tmp = ((pc + adv) % IDX_MOD);
 	ft_printf("FIRST pc_tmp = %d\n", pc_tmp);
 		if (pc_tmp > IDX_MOD / 2)
