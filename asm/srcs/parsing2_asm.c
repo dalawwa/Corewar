@@ -26,7 +26,7 @@ int	line_is_valid(char *str)
 	op = get_the_op_code(str);
 	if (op == 0)
 		return (0);
-	if (op)
+//	if (op)
 		position++;
 	if (op == 1 || op == 9 || op == 12 || op == 14)
 		str = str + 4;
@@ -36,11 +36,9 @@ int	line_is_valid(char *str)
 		str = str + 5;
 	else
 		str = str + 3;
-	if (op != 1 && op != 9 && op != 12 & op != 15)
+	if (op != 1 && op != 9 && op != 12 && op != 15)
 		position++;
-	//add check to see if command are well formated
 	check_args_valid(&str, op);
-	//then check if after direct indirect and register, everything is well formated, mean there is just comment or nothing
 	return (1);
 }
 
@@ -53,11 +51,9 @@ char	*ft_strjoin_without_empty(char *file, char *line, int j)
 		j++;
 	if (line[j] && line[j] != '#' && line[j] != ';' && line_is_valid(&line[j]))
 	{
-//		tmp = (char *)malloc(sizeof(ft_strlen(file) + ft_strlen(line) + 1);
-		tmp = ft_strjoin(file, line);
+		tmp = ft_strjoin(file, &line[j]);
 		tmp = ft_strjoin(tmp, "\n");
 	}
-//	if (line[j] == '#' || line[j] == ';')
 	else
 		return (file);
 	if (line)
