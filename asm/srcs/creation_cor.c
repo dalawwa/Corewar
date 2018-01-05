@@ -37,10 +37,17 @@ int	position_label(t_champ *champ, char *file)
 		if (i >= ft_strlen(champ->label))
 		{
 			if (!ft_strncmp(file, champ->label, i))
-				return (champ->position - position);
+			{
+				if (champ->position > position)
+					return (champ->position - position + 1);
+				else
+					return (champ->position - position);
+			}
 		}
+		/*
 		else if (!ft_strncmp(file, champ->label, ft_strlen(champ->label)))
 			return (champ->position - position);
+		*/
 		champ = champ->next;
 	}
 	ciao_bye_bye(12);
