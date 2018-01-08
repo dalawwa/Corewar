@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:45:13 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/20 15:50:31 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/08 14:08:16 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	line_is_valid(char *str)
 	op = get_the_op_code(str);
 	if (op == 0)
 		return (0);
-//	if (op)
+	if (op)
 		position++;
 	if (op == 1 || op == 9 || op == 12 || op == 14)
 		str = str + 4;

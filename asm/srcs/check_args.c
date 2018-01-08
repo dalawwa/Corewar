@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 09:21:43 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/13 15:39:08 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/08 14:07:40 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int		check_args_valid(char **str, int opc)
 		return (1);
 	else if ((opc == 6 || opc == 7 || opc == 8) && (check_is_reg(1, str) || check_is_indirect(1, str) || check_is_direct(1, str, opc)) && (check_is_reg(1, str) || check_is_indirect(1, str) || check_is_direct(1, str, opc)) && check_is_reg(0, str))
 		return (1);
-	else if ((opc == 10 ||opc == 14) && (check_is_reg(1, str) || check_is_indirect(1, str) || check_is_direct(1, str, opc)) && (check_is_reg(0, str) || check_is_direct(1, str, opc)) && check_is_reg(0, str))
+	else if ((opc == 10 || opc == 14) && (check_is_reg(1, str) || check_is_indirect(1, str) || check_is_direct(1, str, opc)) && (check_is_reg(1, str) || check_is_direct(1, str, opc)) && check_is_reg(0, str))
 		return (1);
 	else if (opc == 11 && check_is_reg(1, str) && (check_is_reg(1, str) || check_is_indirect(1, str) || check_is_direct(1, str, opc)) && (check_is_reg(0, str) || check_is_direct(0, str ,opc)))
 		return (1);
