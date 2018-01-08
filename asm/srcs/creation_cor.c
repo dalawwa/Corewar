@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 17:39:50 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/19 17:41:32 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/08 12:52:55 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,15 @@ int	position_label(t_champ *champ, char *file)
 		{
 			if (!ft_strncmp(file, champ->label, i))
 			{
-				if (champ->position > position)
-					return (champ->position - position + 1);
-				else
+//				if (champ->position > position)
 					return (champ->position - position);
+//					return (champ->position - position + 1);
+//				else
+//					return (champ->position - position);
 			}
 		}
-		/*
 		else if (!ft_strncmp(file, champ->label, ft_strlen(champ->label)))
 			return (champ->position - position);
-		*/
 		champ = champ->next;
 	}
 	ciao_bye_bye(12);

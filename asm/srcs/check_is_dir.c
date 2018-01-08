@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/13 15:35:27 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/13 15:37:05 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/08 13:58:32 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,7 @@ int		check_is_direct(int i, char **str, int opc)
 		}
 		return (1);
 	}
+	else
+		return (0);
 	return (0);
 }
