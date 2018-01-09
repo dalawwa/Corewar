@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/18 17:41:53 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/09 16:24:20 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,8 +96,8 @@ int		launch_parsing(char *str);
 int             label_or_not(char *line);
 int             char_label(char c);
 void	start_struct_champ(t_champ *champ);
-t_champ		*get_champ_data(char **file, int fd);
-int		check_name_comment(int fd, header_t *op);
+t_champ		*get_champ_data(char **file, int fd, int i);
+int		check_name_comment(int fd, header_t *op, int x, int y);
 int		check_no_printable_char(char *str);
 int		value_parent(char *str, int x, int j, header_t *op);
 int		check_valid_name(char *str);

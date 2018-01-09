@@ -6,12 +6,11 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/13 15:32:33 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/13 15:34:08 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/09 13:02:01 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/asm.h"
-
 
 int		put_in_file_reg(char **file, int fd)
 {
@@ -27,9 +26,16 @@ int		put_in_file_reg(char **file, int fd)
 	return (1);
 }
 
-//on va verifier qu il s agit bien d un registre
-//on va regarder si il commence par r et si il est compris entre 1 et 16
-//on va mettre sa taille dans la struct
+void	reg_is_not_the_last(char **str)
+{
+	while (**str == '\t' || **str == ' ')
+		(*str)++;
+	if (**str != ',')
+		ciao_bye_bye(1);
+	(*str)++;
+	while (**str == '\t' || **str == ' ')
+		(*str)++;
+}
 
 int		check_is_reg(int i, char **str)
 {
@@ -47,15 +53,7 @@ int		check_is_reg(int i, char **str)
 			(*str)++;
 		position = position + 1;
 		if (i == 1)
-		{
-			while (**str == '\t' || **str == ' ')
-				(*str)++;
-			if (**str != ',')
-				ciao_bye_bye(1);
-			(*str)++;
-			while (**str == '\t' || **str == ' ')
-				(*str)++;
-		}
+			reg_is_not_the_last(str);
 		return (1);
 	}
 	return (0);

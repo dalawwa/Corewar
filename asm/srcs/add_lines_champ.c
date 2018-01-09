@@ -6,11 +6,27 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 16:24:32 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/09 12:17:55 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/09 16:20:53 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/asm.h"
+
+int			check_no_printable_char(char *str)
+{
+	int			i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] == ';' || str[i] == '#')
+			return (1);
+		if (ft_isalpha(str[i]))
+			return (0);
+		i++;
+	}
+	return (1);
+}
 
 t_champ		*ft_lstadd_lines(t_champ *begin, char *line, int i)
 {
