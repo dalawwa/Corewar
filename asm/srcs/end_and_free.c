@@ -6,14 +6,12 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:46:01 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/18 17:14:48 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/09 16:25:59 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/asm.h"
 
-
-//improve syntax error at token
 int		ciao_bye_name(int i, header_t *op)
 {
 	if (op)
@@ -37,8 +35,6 @@ int		ciao_bye(int i, char *str)
 	return (1);
 }
 
-//quitter l ex en cas de pb
-////il faudra rajouter les struct pour tout free
 void	ciao_bye_bye(int i)
 {
 	if (i > 0)

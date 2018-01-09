@@ -6,23 +6,22 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:45:13 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/08 14:08:16 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/09 16:25:36 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/asm.h"
 
-
-int		char_label(char c)
+int			char_label(char c)
 {
 	if ((c >= 97 && c <= 122) || c == 95 || (c >= 48 && c <= 57))
 		return (1);
 	return (0);
 }
 
-int	line_is_valid(char *str)
+int			line_is_valid(char *str)
 {
-	int	op;
+	int		op;
 
 	op = get_the_op_code(str);
 	if (op == 0)
@@ -43,7 +42,7 @@ int	line_is_valid(char *str)
 	return (1);
 }
 
-char	*ft_strjoin_without_empty(char *file, char *line, int j)
+char		*ft_strjoin_without_empty(char *file, char *line, int j)
 {
 	char	*tmp;
 
@@ -64,10 +63,9 @@ char	*ft_strjoin_without_empty(char *file, char *line, int j)
 	return (tmp);
 }
 
-//on va checker que c est bien un label, si c est pas le cas et qu on a un char bizarre, on va quitter le programme (get struct in the function because of fucking leaks)
-int		label_or_not(char *line)
+int			label_or_not(char *line)
 {
-	int	j;
+	int		j;
 
 	j = 0;
 	while (line[j] == '\t' || line[j] == ' ')
@@ -83,26 +81,26 @@ int		label_or_not(char *line)
 			return (1);
 		return (1);
 	}
-	else if (line[j] && line[j] != ' ' && line[j] != '\0' && line[j] != ';' && line[j] != '\n' && line[j] != '\t' && char_label(line[j]) == 1 && line[j] != ',')
+	else if (line[j] && line[j] != ' ' && line[j] != '\0' && line[j] != ';'
+			&& line[j] != '\n' && line[j] != '\t' && char_label(line[j]) == 1
+			&& line[j] != ',')
 		ciao_bye_bye(1);
 	return (0);
 }
 
-// dans cette fonction, on va recuperer les labels et stocker le fichier dans le char * file
-t_champ		*get_champ_data(char **file, int fd)
+t_champ		*get_champ_data(char **file, int fd, int i)
 {
 	char	*line;
-	int		i;
 	t_champ	*new;
 
-	i = 0;
 	line = NULL;
 	new = NULL;
 	while (get_next_line(fd, &line) > 0)
 	{
 		while (line[i] == ' ' || line[i] == '\t')
 			i++;
-		if (line[i] && line[i] != '#' && line[i] != ';' && label_or_not(line) == 1)
+		if (line[i] && line[i] != '#' && line[i] != ';'
+				&& label_or_not(line) == 1)
 		{
 			new = ft_lstadd_lines(new, line, i);
 			while (line[i] != ':')
