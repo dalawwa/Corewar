@@ -45,16 +45,23 @@ int		op_sti(t_arena *arena, t_exe *exe)
 		ft_putchar('\n');
 		put_n_char(' ', intlen((short)(exe->process->process_num)));
 		put_n_char(' ', 6);
-		ft_printf("| -> store to %d + %hd = ", exe->arg2->d_data, (short)exe->arg3->d_data);
+		ft_printf("| -> store to ");
+		if (exe->arg2->type == 'i')
+			ft_printf("%d ", exe->arg2->d_data);
+		else if (exe->arg2->type == 'r')
+			ft_printf("%d ", exe->arg2->d_data);
+		else
+			ft_printf("%hd ", (short)exe->arg2->d_data);
+		ft_printf("+ %hd = ", (short)exe->arg3->d_data);
 		if (exe->arg2->type != 'i')
 			ft_printf("%hd ", test);
 		else
-			ft_printf("%d ", exe->arg2->d_data + exe->arg3->d_data);
+			ft_printf("%d ", exe->arg2->d_data + (short)exe->arg3->d_data);
 
 //			ft_printf("\n\nHANDLE mod --> Datas Available :\nResult = (short int)exe->arg2->d_data + exe->arg3->d_data) =\n%%hd :_%hd_\n%%d :_d\n", result, result);
 //			ft_printf("Test = (exe->arg2->d_data + exe->arg3->d_data) =\n%%hd :_%hd_\n%%d :_%d\ntest %% 512 : %%d = %d\n%%hd : %hd\n\n", test, test, test % 512, test % 512);
 //			ft_printf("Test + PC =\n%%hd :_%hd_\n%%d :_%d\ntest %% 512 + PC : %%d = %d\n%%hd : %hd\n\n", test + exe->process->pc, test + exe->process->pc, test % 512 + exe->process->pc, test % 512 + exe->process->pc);
-		if ((short)(exe->arg2->d_data + exe->arg3->d_data) + exe->process->pc < 0 && (short)(exe->arg2->d_data + exe->arg3->d_data) + exe->process->pc > 65336 )
+		if (((exe->arg2->type != 'i' && (short)test < 0) || (exe->arg2->type == 'i' && (intmax_t)(exe->arg2->d_data + (short)exe->arg3->d_data) < 0 )) && (exe->arg2->d_data + (short)exe->arg3->d_data) + exe->process->pc > -65336 )
 		{
 			if (-IDX_MOD + (test % IDX_MOD) + exe->process->pc == -512)
 				ft_printf("(with pc and mod 0)\n");
