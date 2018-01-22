@@ -1,6 +1,8 @@
 
 PATH_SRC = ./test_suite/
 PATH_STI = $(PATH_SRC)sti/
+PATH_TEST = ./
+PATH_TEST_ADV = $(PATH_SRC)test_cor_wrong_ocp/
 
 STI =	sti.s \
 		sti_2.s \
@@ -47,6 +49,25 @@ STI =	sti.s \
 		sti_ind_51200.s \
 		sti_ind_51201.s \
 		sti_ind_51202.s \
+		sti_ind_32700.s \
+		sti_ind_32710.s \
+		sti_ind_32720.s \
+		sti_ind_32730.s \
+		sti_ind_32740.s \
+		sti_ind_32750.s \
+		sti_ind_32751.s \
+		sti_ind_32752.s \
+		sti_ind_32753.s \
+		sti_ind_32754.s \
+		sti_ind_32755.s \
+		sti_ind_32756.s \
+		sti_ind_32757.s \
+		sti_ind_32758.s \
+		sti_ind_32759.s \
+		sti_ind_32760.s \
+		sti_ind_32761.s \
+		sti_ind_32762.s \
+		sti_ind_32763.s \
 		sti_ind_32764.s \
 		sti_ind_32765.s \
 		sti_ind_32766.s \
@@ -54,6 +75,9 @@ STI =	sti.s \
 		sti_ind_32768.s \
 		sti_ind_32769.s \
 		sti_ind_32770.s \
+		sti_ind_32771.s \
+		sti_ind_32772.s \
+		sti_ind_32773.s \
 		sti_ind_33275.s \
 		sti_ind_33276.s \
 		sti_ind_33277.s \
@@ -69,16 +93,177 @@ STI =	sti.s \
 		sti_ind_33287.s \
 		sti_ind_full.s
 
+TEST_ADV =	 \
+			fork_02_01_54.s \
+			fork_02_02_90.s \
+			fork_02_03_50.s \
+			fork_02_04_54.s \
+			fork_02_05_54.s \
+			fork_02_06_54.s \
+			fork_02_07_54.s \
+			fork_02_08_54.s \
+			fork_02_09_54.s \
+			fork_02_0a_54.s \
+			fork_02_0b_54.s \
+			fork_02_0c_54.s \
+			fork_02_0d_90.s \
+			fork_02_0e_54.s \
+			fork_02_0f_54.s \
+			fork_03_01_54.s \
+			fork_03_02_90.s \
+			fork_03_03_50.s \
+			fork_03_04_54.s \
+			fork_03_05_54.s \
+			fork_03_06_54.s \
+			fork_03_07_54.s \
+			fork_03_08_54.s \
+			fork_03_09_54.s \
+			fork_03_0a_54.s \
+			fork_03_0b_54.s \
+			fork_03_0c_54.s \
+			fork_03_0d_90.s \
+			fork_03_0e_54.s \
+			fork_03_0f_54.s \
+			fork_04_01_54.s \
+			fork_04_02_90.s \
+			fork_04_03_50.s \
+			fork_04_04_54.s \
+			fork_04_05_54.s \
+			fork_04_06_54.s \
+			fork_04_07_54.s \
+			fork_04_08_54.s \
+			fork_04_09_54.s \
+			fork_04_0a_54.s \
+			fork_04_0b_54.s \
+			fork_04_0c_54.s \
+			fork_04_0d_90.s \
+			fork_04_0e_54.s \
+			fork_04_0f_54.s \
+			fork_05_01.s \
+			fork_05_02.s \
+			fork_05_03.s \
+			fork_05_04.s \
+			fork_05_05.s \
+			fork_05_06.s \
+			fork_05_07.s \
+			fork_05_08.s \
+			fork_05_09.s \
+			fork_05_0a.s \
+			fork_05_0b.s \
+			fork_05_0c.s \
+			fork_05_0d.s \
+			fork_05_0e.s \
+			fork_05_0f.s \
+			fork_06_01.s \
+			fork_06_02.s \
+			fork_06_03.s \
+			fork_06_04.s \
+			fork_06_05.s \
+			fork_06_06.s \
+			fork_06_07.s \
+			fork_06_08.s \
+			fork_06_09.s \
+			fork_06_0a.s \
+			fork_06_0b.s \
+			fork_06_0c.s \
+			fork_06_0d.s \
+			fork_06_0e.s \
+			fork_06_0f.s \
+			fork_07_01.s \
+			fork_07_02.s \
+			fork_07_03.s \
+			fork_07_04.s \
+			fork_07_05.s \
+			fork_07_06.s \
+			fork_07_07.s \
+			fork_07_08.s \
+			fork_07_09.s \
+			fork_07_0a.s \
+			fork_07_0b.s \
+			fork_07_0c.s \
+			fork_07_0d.s \
+			fork_07_0e.s \
+			fork_07_0f.s \
+			fork_08_01.s \
+			fork_08_02.s \
+			fork_08_03.s \
+			fork_08_04.s \
+			fork_08_05.s \
+			fork_08_06.s \
+			fork_08_07.s \
+			fork_08_08.s \
+			fork_08_09.s \
+			fork_08_0a.s \
+			fork_08_0b.s \
+			fork_08_0c.s \
+			fork_08_0d.s \
+			fork_08_0e.s \
+			fork_08_0f.s \
+			fork_0a_01.s \
+			fork_0a_02.s \
+			fork_0a_03.s \
+			fork_0a_04.s \
+			fork_0a_05.s \
+			fork_0a_06.s \
+			fork_0a_07.s \
+			fork_0a_08.s \
+			fork_0a_09.s \
+			fork_0a_0a.s \
+			fork_0a_0b.s \
+			fork_0a_0c.s \
+			fork_0a_0d.s \
+			fork_0a_0e.s \
+			fork_0a_0f.s \
+			fork_0b_01.s \
+			fork_0b_02.s \
+			fork_0b_03.s \
+			fork_0b_04.s \
+			fork_0b_05.s \
+			fork_0b_06.s \
+			fork_0b_07.s \
+			fork_0b_08.s \
+			fork_0b_09.s \
+			fork_0b_0a.s \
+			fork_0b_0b.s \
+			fork_0b_0c.s \
+			fork_0b_0d.s \
+			fork_0b_0e.s \
+			fork_0b_0f.s \
+			fork_0d_01.s \
+			fork_0d_02.s \
+			fork_0d_03.s \
+			fork_0d_04.s \
+			fork_0d_05.s \
+			fork_0d_06.s \
+			fork_0d_07.s \
+			fork_0d_08.s \
+			fork_0d_09.s \
+			fork_0d_0a.s \
+			fork_0d_0b.s \
+			fork_0d_0c.s \
+			fork_0d_0d.s \
+			fork_0d_0e.s \
+			fork_0d_0f.s \
+			fork_07_08_wrong.s \
+			fork_02_02_wrong.s
+
 SRC_STI = $(addprefix $(PATH_STI), $(STI))
+SRC_TEST_ADV = $(addprefix $(PATH_TEST_ADV), $(TEST_ADV))
 
 OBJ_STI = $(SRC_STI:.s=.cor)
+OBJ_TEST_ADV = $(SRC_TEST_ADV:.s=.cor)
 
-all : sti
+all : sti test_adv
 
 sti: $(OBJ_STI)
+
+test_adv : $(OBJ_TEST_ADV)
 
 $(PATH_STI)%.cor : $(PATH_STI)%.s
 	./asm $^
 
+$(PATH_TEST_ADV)%.cor : $(PATH_TEST_ADV)%.s 
+	./asm $^
+
 clean :
-	rm $(OBJ_STI)
+	rm $(OBJ_STI) $(OBJ_TEST_ADV)

@@ -136,22 +136,22 @@ int			set_data(t_arg *arg, t_arena *arena, t_proc *process, int i)
 	}
 	else if (arg->type == 'i')
 	{
-		ft_putendl("\nHANDLE DATA");
+//		ft_putendl("\nHANDLE DATA");
 		arg->data = malloc(sizeof(unsigned char) * 4);
 		if (arg->data == NULL)
 			return (perror_int("Error ", 0));
 		pc_tmp = find_pc_adv(pc_tmp, arg->d_value, 0);
 		arg->data[0] = arena->mem[pc_tmp];
-		ft_printf("Char found = %.2x\n", arg->data[0]);
+//		ft_printf("Char found = %.2x\n", arg->data[0]);
 		pc_tmp = find_pc_adv(pc_tmp, 1, 0);
 		arg->data[1] = arena->mem[pc_tmp];
-		ft_printf("Char found = %.2x\n", arg->data[1]);
+//		ft_printf("Char found = %.2x\n", arg->data[1]);
 		pc_tmp = find_pc_adv(pc_tmp, 1, 0);
 		arg->data[2] = arena->mem[pc_tmp];
-		ft_printf("Char found = %.2x\n", arg->data[2]);
+//		ft_printf("Char found = %.2x\n", arg->data[2]);
 		pc_tmp = find_pc_adv(pc_tmp, 1, 0);
 		arg->data[3] = arena->mem[pc_tmp];
-		ft_printf("Char found = %.2x\n\n", arg->data[3]);
+//		ft_printf("Char found = %.2x\n\n", arg->data[3]);
 //		arg->data[1] = arena->mem[process->pc - i + arg->d_value + 1];
 //		arg->data[2] = arena->mem[process->pc - i + arg->d_value + 2];
 //		arg->data[3] = arena->mem[process->pc - i + arg->d_value + 3];
@@ -243,6 +243,8 @@ int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent)
 	if (find_struct_ocp(process->exe_op, process->exe_op->bdd_op) == 0)
 	{
 		inc_pc(process, -i);
+		if (process->exe_op->bdd_op->opcode == 0x0d)
+			process->exe_op->to_wait = 10;
 //		ft_putendl("EXE Created without Struct ocp");
 		return (1);
 
