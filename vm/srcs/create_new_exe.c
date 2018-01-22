@@ -243,6 +243,8 @@ int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent)
 	if (find_struct_ocp(process->exe_op, process->exe_op->bdd_op) == 0)
 	{
 		inc_pc(process, -i);
+		if (process->exe_op->bdd_op->opcode == 0x0d)
+			process->exe_op->to_wait = 10;
 //		ft_putendl("EXE Created without Struct ocp");
 		return (1);
 
