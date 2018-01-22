@@ -254,6 +254,14 @@
 ../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 9
 ../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 10
 ../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 11
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 16
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 17
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 18
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 19
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 24
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 25
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 26
+../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 27
 ../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 32
 ../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 33
 ../tests/test_suite/sti/sti_all.s:[32m OK [0m with -v 34

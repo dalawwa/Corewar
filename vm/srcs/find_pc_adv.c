@@ -11,7 +11,7 @@ int		find_pc_adv(int pc, int adv, int stop)
 	adv_tmp = 0;
 	if (stop == 0)
 	{
-//		ft_printf("FIRST pc_tmp = %d\n", pc_tmp);
+//		ft_printf("\nSTOP = 0 > FIRST pc_tmp = %d\n", pc_tmp);
 		if (adv < 0x8000)
 		{
 			pc_tmp = pc + (adv % IDX_MOD);
@@ -29,6 +29,40 @@ int		find_pc_adv(int pc, int adv, int stop)
 			if (pc_tmp < 0)
 				pc_tmp = MEM_SIZE + pc_tmp;
 		}
+	}
+	else
+	{
+//		ft_printf("\nSTOP = 1 > FIRST pc_tmp = %d\n", pc_tmp);
+		if (adv < 0x8000 && adv > 0)
+		{
+			pc_tmp = pc + (adv % IDX_MOD);
+//			ft_printf("adv = %d\ninf NEXT  pc_tmp = %d\n", adv,  pc_tmp);
+			if (pc_tmp >= MEM_SIZE)
+				return (0);
+		}
+		else if (adv >= 0x8000)
+		{
+			adv_tmp = IDX_MOD - (adv % IDX_MOD);
+			if (adv_tmp == 512)
+				adv_tmp = 0;
+			pc_tmp = pc - adv_tmp;
+//			ft_printf("sup NEXT  pc_tmp = %d\n", pc_tmp);
+			if (pc_tmp < 0)
+				return (0);
+		}
+		else
+		{
+			pc_tmp = pc;
+			while (i > adv)
+			{
+//				ft_printf("pc_tmp = %d\n", pc_tmp);
+				if (pc_tmp == 0)
+					pc_tmp = MEM_SIZE;
+				pc_tmp--;
+				i--;
+			}
+		}
+	}
 
 //		if (pc_tmp > IDX_MOD)
 //			pc_tmp = pc;
@@ -39,7 +73,6 @@ int		find_pc_adv(int pc, int adv, int stop)
 			pc_tmp = pc_tmp - IDX_MOD;
 	ft_printf("NEXT  pc_tmp = %d\n", pc_tmp);*/
 		return (pc_tmp);
-	}
 	pc_tmp = pc;
 //	ft_printf("Process %d : ", process->process_num);
 //	if (process->exe_op != NULL)
