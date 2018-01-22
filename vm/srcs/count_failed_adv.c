@@ -1,5 +1,17 @@
 #include "corewar.h"
 
+int		handle_two_opcode(unsigned char op1, unsigned char op2)
+{
+	if (op1 < 0x04 || op1 == 0x0d || op2 < 0x04)
+		return (2);
+	if (op2 < 0x08)
+		return (3);
+	if (op1 > 0x09 || op2 > 0x0b)
+		return (4);
+	return (6);
+}
+
+
 int		count_failed_adv(t_arena *arena, t_exe *exe)
 {
 	int	i;
@@ -16,6 +28,7 @@ int		count_failed_adv(t_arena *arena, t_exe *exe)
 	{
 		if (find_char_at_mem_pc_adv(exe->process->pc, 1, arena) == arena->bdd[i]->opcode)
 		{
+			return (handle_two_opcode(arena->mem[exe->process->pc], arena->bdd[i]->opcode));
 			if (arena->bdd[i]->has_ocp)
 			{
 				while (j < arena->bdd[i]->nb_ocp && arena->bdd[i]->ocp[j]->ocp != find_char_at_mem_pc_adv(exe->process->pc, 2, arena))
