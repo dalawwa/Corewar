@@ -6,14 +6,12 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 10:34:43 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/20 15:50:59 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/09 16:26:35 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/asm.h"
 
-
-//checker if labels are not present twice
 int		labels_not_multiple(t_champ *champ)
 {
 	t_champ	*test;
@@ -31,7 +29,6 @@ int		labels_not_multiple(t_champ *champ)
 	return (labels_not_multiple(test->next));
 }
 
-//on a le label de la ligne, on va checker avec celui qu on a recupere
 int		check_label_line(char *line, t_champ *champ)
 {
 	int	j;
@@ -52,7 +49,6 @@ int		check_label_line(char *line, t_champ *champ)
 	return (0);
 }
 
-//checker if label in the line is in the line
 int		label_in_the_line(char *line, t_champ *champ)
 {
 	int		i;
@@ -76,8 +72,6 @@ int		label_in_the_line(char *line, t_champ *champ)
 	return (1);
 }
 
-
-//launch controls on labels
 int		label_is_real(char *line, t_champ *champ)
 {
 	if (labels_not_multiple(champ) == 0)

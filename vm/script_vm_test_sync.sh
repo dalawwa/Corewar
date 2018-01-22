@@ -77,14 +77,14 @@ TEST_STR="\$TEST$j"
 champ=$(echo "$name" | sed -e 's/.s$/.cor/g');
 command=$(eval echo "$TEST_STR");
 sleep 1
-./corewar -v $2 $champ;
+./corewar -d $3 -v $2 $champ;
 orig=$(ls /dev > diff1)
 osascript -e 'tell application "System Events" to keystroke "d" using command down'
 sleep 2
 next=$(ls /dev > diff2)
 diff_str=$(eval diff diff2 diff1 | tail -1 | cut -c 3-)
 echo "=======ZAZ======" > /dev/$diff_str
-../tests/corewar -v $2 $champ > /dev/$diff_str;
+../tests/corewar -d $3 -v $2 $champ > /dev/$diff_str;
 rm $champ
 }
-testfile $1 $2
+testfile $1 $2 $3

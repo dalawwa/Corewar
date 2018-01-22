@@ -1,0 +1,31 @@
+Introducing contestants...
+* Player 1, weighing 142 bytes, "LD 42 = * dans r3 puis 58 = : dqns r2" ("let's try ld op") !
+P    1 | sti r6 1946615801 0
+       | -> store to 1946615801 + 0 = 1946615801 (with pc and mod 505)
+P    1 | sti r6 750598 0
+       | -> store to 750598 + 0 = 750598 (with pc and mod 12)
+P    1 | sti r6 192415487 7
+       | -> store to 192415487 + 7 = 192415494 (with pc and mod 315)
+P    1 | sti r6 192415232 -7
+       | -> store to 192415232 + -7 = 192415225 (with pc and mod 565)
+P    1 | sti r6 -488436872 -30543
+       | -> store to -488436872 + -30543 = -488467415 (with pc and mod -404)
+P    1 | sti r6 0 -30101
+       | -> store to 0 + -30101 = -30101 (with pc and mod -331)
+P    1 | sti r6 7 7
+       | -> store to 7 + 7 = 14 (with pc and mod 95)
+P    1 | sti r6 14779 9645
+       | -> store to 14779 + 9645 = 24424 (with pc and mod 448)
+P    1 | sti r6 8457 7453
+       | -> store to 8457 + 7453 = 15910 (with pc and mod 140)
+P    1 | sti r6 -8457 -7453
+       | -> store to -8457 + -7453 = -15910 (with pc and mod 71)
+P    1 | sti r6 0 -7453
+       | -> store to 0 + -7453 = -7453 (with pc and mod -169)
+P    1 | sti r6 0 7453
+       | -> store to 0 + 7453 = 7453 (with pc and mod 408)
+P    1 | sti r6 0 5647
+       | -> store to 0 + 5647 = 5647 (with pc and mod 145)
+P    1 | sti r6 0 0
+       | -> store to 0 + 0 = 0 (with pc and mod 136)
+Contestant 1, "LD 42 = * dans r3 puis 58 = : dqns r2", has won !
