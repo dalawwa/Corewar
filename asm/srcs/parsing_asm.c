@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:37:17 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/23 17:09:37 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/24 16:50:15 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,7 +127,7 @@ int			launch_parsing(char *str, int opt)
 		if (launch_creation_cor(file, champ, &op, str) == 0)
 			ciao_bye_bye(1);
 	if (opt == 0)
-		launch_writing_out(file, champ, &op, str);
+		launch_writing_out(file, champ, &op);
 	if (file)
 		free(file);
 	return (0);

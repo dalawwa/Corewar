@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/23 19:15:05 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/24 16:49:25 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,7 @@ int             put_in_file_reg(char **file, int fd);
 int             put_in_file_dir(int i, t_champ *champ, char **file, int fd);
 int             put_in_file_indir(t_champ *champ, char **file, int fd);
 int             get_the_op_code2(char *str);
-void			launch_writing_out(char *file, t_champ *champ, header_t *op, char *str);
+void			launch_writing_out(char *file, t_champ *champ, header_t *op);
 int			next_order(char *str, int j);
 void		opcod_number(char *str, int *o, int i, int c);
 

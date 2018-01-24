@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/23 17:08:07 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/23 20:05:23 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/24 17:44:42 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,7 @@ char		*delete_comments(char *str)
 int			next_order_space(char *str, int j)
 {
 	while (str[j] != ' ')
-	{
 		j++;
-//		ft_putnbr(j);
-	}
-//	ft_putchar(' ');
-//	j++;
 	while (str[j] == '\t' || str[j] == ' ')
 		j++;
 	return (j);
@@ -60,39 +55,127 @@ int			get_opcode_a(char **str, int i)
 	int		m;
 	int		param;
 
-	if (i == 11 || i == 4 || i == 8)
+	if (i == 11 || i == 4 || i == 8 || i == 5 || i == 6 || i == 10 || i == 7)
 		param = 3;
 	else
 		param = 2;
 	m = 0;
 	o = 0;
 	i=0;
-//	i = next_order_space(str, i);
 	opcod_number(str[1], &o, i, 1);
 	m = o;
 	if (param > 1)
 	{
-	//	i = next_order_space(str, i);
 		opcod_number(str[2], &o, i, 2);
 		m = m + o;
 	}
 	if (param > 2)
 	{
-	//	i = next_order_space(str, i);
 		opcod_number(str[3], &o, i, 3);
 		m = m + o;
 	}
-	temp++;
 	return (m);
 }
 
-void		launch_writing_out(char *file, t_champ *champ, header_t *op, char *str)
+int		put_in_file_reg_a(char *str)
+{
+	int	j;
+
+	j = 0;
+	if (str[0] != 'r')
+		return (0);
+	j = ft_atoi(&str[1]);
+	ft_printf("%-18i", j);
+	return (1);
+}
+
+int		put_in_file_indir_a(t_champ *champ, char *str)
+{
+	int	j;
+
+	j = 0;
+	if (str[1] == ':')
+		j = position_label(champ, str);
+	else
+		j = ft_atoi(&str[1]);
+	ft_putchar('c');
+	ft_printf("%-18i", j);
+	return (1);
+}
+
+int		put_in_file_dir_a(int i, t_champ *champ, char *str)
+{
+	int	j;
+
+	j = 0;
+	i = 0;
+	if (*str != '%')
+		return (0);
+	(str)++;
+	if (str && *str == ':' && (str)++)
+		j = position_label(champ, str);
+	else
+		j = ft_atoi(str);
+	ft_printf("%-18i", j);
+	return (1);
+}
+
+
+int			find_translat_a2(t_champ *champ, char **str, int i)
+{
+	if (i == 9 || i == 12 || i == 15)
+		return (put_in_file_dir_a(2, champ, str[1]));
+	else if ((i == 10 || i == 14) && (((put_in_file_reg_a(str[1])
+						|| put_in_file_dir_a(2, champ, str[1])
+						|| put_in_file_indir_a(champ, str[1]))
+					&& (put_in_file_reg_a(str[2])
+						|| put_in_file_dir_a(2, champ, str[2])))))
+		return (put_in_file_reg_a(str[3]));
+	else if (i == 11 && ((put_in_file_reg_a(str[1]) && (put_in_file_reg_a(str[2])
+						|| put_in_file_dir_a(2, champ, str[2])
+						|| put_in_file_indir_a(champ, str[2]))
+					&& (put_in_file_reg_a(str[3])
+						|| put_in_file_dir_a(2, champ, str[3])))))
+		return (1);
+	else if (i == 16)
+		return (put_in_file_reg_a(str[1]));
+	return (1);
+}
+
+int			find_translat_a(t_champ *champ, char **str, int i)
+{
+	if (i == 1)
+		return (put_in_file_dir_a(4, champ, str[1]));
+	else if ((i == 2 || i == 13)
+			&& ((put_in_file_dir_a(4, champ, str[1]) || put_in_file_indir_a(champ, str[1])))
+			&& (put_in_file_reg_a(str[2])))
+		return (1);
+	else if ((i == 3
+				&& put_in_file_reg_a(str[1])
+				&& (put_in_file_reg_a(str[2])
+					|| put_in_file_indir_a(champ, str[2]))))
+		return (1);
+	else if ((i == 4 || i == 5)
+			&& put_in_file_reg_a(str[1]) && put_in_file_reg_a(str[2])
+			&& put_in_file_reg_a(str[3]))
+		return (1);
+	else if ((i == 6 || i == 7 || i == 8) && ((put_in_file_reg_a(str[1]) || put_in_file_dir_a(4, champ, str[1])
+					|| put_in_file_indir_a(champ, str[1]))
+				&& (put_in_file_reg_a(str[2])
+					|| put_in_file_dir_a(4, champ, str[2])
+					|| put_in_file_indir_a(champ, str[2]))))
+		return (put_in_file_reg_a(str[3]));
+	return (find_translat_a2(champ, str, i));
+}
+
+void		launch_writing_out(char *file, t_champ *champ, header_t *op)
 {
 	char	**tab;
 	int		i;
 	int		j;
 	int		co;
 	char	**opti;
+	t_champ	*test;
 
 	i = 0;
 	ft_printf("Dumping annotated program on standard output\n");
@@ -107,6 +190,16 @@ void		launch_writing_out(char *file, t_champ *champ, header_t *op, char *str)
 		while (tab[i][j] == ' ' || tab[i][j] == '\t')
 			j++;
 		co = get_the_op_code(&tab[i][j]);
+		if (co == 1 || co == 4 || co == 3 || co == 5 || co == 7)
+			temp +=4;
+		if (co == 2 || co == 11)
+			temp += 6;
+		if (co == 8 || co == 6)
+			temp += 7;
+		if (co == 9 || co == 12)
+			temp += 2;
+		if (co == 10)
+			temp += 5;
 		if (co)
 			temp++;
 		opti = ft_strsplit(tab[i], ' ');
@@ -120,34 +213,29 @@ void		launch_writing_out(char *file, t_champ *champ, header_t *op, char *str)
 		if (co == 1 || co == 9 || co == 12)
 		{
 			ft_printf("\n%20c%-10i", ' ', co);
-			ft_printf("\n%20c%-4i\n\n", ' ', co);
+			find_translat_a(champ, opti, co);
+			ft_printf("\n\n");
+//			ft_printf("\n%20c%-4i\n\n", ' ', co);
 		}
 		else
 		{
 			j = get_opcode_a(opti, co);
 			ft_printf("\n%20c%-4i%-6i", ' ', co, j);
-			ft_printf("\n%20c%-4i%-6i\n\n", ' ', co, j);
+			find_translat_a(champ, opti, co);
+			ft_printf("\n\n");
+//			ft_printf("\n%20c%-4i%-6i\n\n", ' ', co, j);
 		}
 		position +=  temp;
+		test = champ;
+		while (test->next != NULL && test->position >= position)
+		{
+			if (test->position == position)
+				ft_printf("%-11i:%4c%s:\n", position, ' ', test->label);
+			test = test->next;
+		}
 		temp = 0;
 		i++;
 		if (opti)
 			free(opti);
 	}
-	//	tab = ft_strsplit(file, '\n');
-	//	while (tab[i] != NULL)
-	//	{
-	//		tab[i] = delete_comments(tab[i]);
-	//		ft_printf("%-5i(%-3i) : %s\n", position, position, tab[i]);
-	//		ft_printf("%20c\n%20c\n", ' ', ' ');
-	//		i++;
-	//	}
-	while (champ->next != NULL)
-	{
-		ft_printf("%s\n%i\n\n", champ->label, champ->position);
-		champ = champ->next;
-	}
-	ft_printf("%s\n%i\n\n", champ->label, champ->position);
-	ft_putchar('\n');
-	ft_putstr(str);
 }
