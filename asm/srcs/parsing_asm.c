@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:37:17 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/09 16:23:58 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/24 16:50:15 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ int			check_name_comment(int fd, header_t *op, int x, int y)
 	return (0);
 }
 
-int			launch_parsing(char *str)
+int			launch_parsing(char *str, int opt)
 {
 	int			fd;
 	int			i;
@@ -123,8 +123,11 @@ int			launch_parsing(char *str)
 	champ = get_champ_data(&file, fd, 0);
 	if (label_is_real(file, champ) == 0)
 		return (ciao_bye_bye_fr(1, champ));
-	if (launch_creation_cor(file, champ, &op, str) == 0)
-		ciao_bye_bye(1);
+	if (opt == 1)
+		if (launch_creation_cor(file, champ, &op, str) == 0)
+			ciao_bye_bye(1);
+	if (opt == 0)
+		launch_writing_out(file, champ, &op);
 	if (file)
 		free(file);
 	return (0);

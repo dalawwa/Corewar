@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/09 16:24:20 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/24 16:49:25 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ int	temp;
 
 int		main(int ac, char **av);
 void	global_variables_size(void);
-int		launch_parsing(char *str);
+int		launch_parsing(char *str, int opt);
 int             label_or_not(char *line);
 int             char_label(char c);
 void	start_struct_champ(t_champ *champ);
@@ -125,5 +125,8 @@ int             put_in_file_reg(char **file, int fd);
 int             put_in_file_dir(int i, t_champ *champ, char **file, int fd);
 int             put_in_file_indir(t_champ *champ, char **file, int fd);
 int             get_the_op_code2(char *str);
+void			launch_writing_out(char *file, t_champ *champ, header_t *op);
+int			next_order(char *str, int j);
+void		opcod_number(char *str, int *o, int i, int c);
 
 #endif
