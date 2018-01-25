@@ -66,8 +66,10 @@ int		op_sti(t_arena *arena, t_exe *exe)
 			if (-IDX_MOD + (test % IDX_MOD) + exe->process->pc == -512)
 				ft_printf("(with pc and mod 0)\n");
 			else
-				ft_printf("(with pc and mod %hd)\n", -IDX_MOD + (test % IDX_MOD) + exe->process->pc);
+				ft_printf("(with pc and mod %d)\n", (unsigned char)(-IDX_MOD + (test % IDX_MOD) + exe->process->pc));
 		}
+		else if (exe->arg2->d_data + (short)exe->arg3->d_data + exe->process->pc > -65336)
+			ft_printf("(with pc and mod %hd)\n", test % IDX_MOD + exe->process->pc);
 		else
 			ft_printf("(with pc and mod %hd)\n", test % IDX_MOD + exe->process->pc);
 //		ft_printf("(with pc and mod %hd)\n", IDX_MOD + result % IDX_MOD);
