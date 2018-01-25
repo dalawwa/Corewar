@@ -58,7 +58,8 @@ TEST35="-v 34"
 TEST36="-v 35"
 TEST37="-v 36"
 TEST38="-v 37"
-TEST_LEN=38
+TEST39="-v 31 -d 100"
+TEST_LEN=39
 
 TARGET_VM='vm_test'
 TARGET_ZAZ='zaz_test'
