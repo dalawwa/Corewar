@@ -181,6 +181,7 @@ typedef struct	s_arena
 	int				total_cycle; // nb_cycle depuis le debut
 	int				max_check;
 	int				c_delta;
+	int				*default_adv; // tableau contenant dans l'ordre de la bdd, l'adv pour chaque op invalide.
 }				t_arena;
 
 typedef struct	s_ocp
@@ -270,6 +271,9 @@ int		inc_pc(t_proc *process, int adv);
 unsigned char	find_char_at_mem_pc_adv(int pc, int adv, t_arena *arena);
 int				count_failed_adv(t_arena *arena, t_exe *exe);
 int				find_pc_adv(int pc, int adv, int stop);
+int		get_opcode_from_exe(t_exe *exe);
+int		is_valid_ocp(int opcode, int ocp);
+int		get_failed_adv_size(t_exe *exe);
 
 /* FREE MEMORY */
 void	free_arena(t_arena **arena);
