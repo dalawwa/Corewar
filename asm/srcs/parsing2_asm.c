@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:45:13 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/09 16:25:36 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/25 13:20:20 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,11 @@ char		*ft_strjoin_without_empty(char *file, char *line, int j)
 		j++;
 	if (line[j] && line[j] != '#' && line[j] != ';' && line_is_valid(&line[j]))
 	{
-		tmp = ft_strjoin(file, &line[j]);
-		tmp = ft_strjoin(tmp, "\n");
+		tmp = ft_strjoin_leakless(file, &line[j]);
+		tmp = ft_strjoin_leakless(tmp, "\n");
 	}
 	else
 		return (file);
-	if (line)
-		free(line);
-	if (file)
-		free(file);
 	return (tmp);
 }
 
@@ -110,6 +106,8 @@ t_champ		*get_champ_data(char **file, int fd, int i)
 		*file = ft_strjoin_without_empty(*file, line, i);
 		size_line++;
 		i = 0;
+		if (line)
+			free(line);
 	}
 	if (line)
 		free(line);

@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 17:39:50 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/09 16:58:27 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/25 13:15:49 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -271,5 +271,7 @@ int			launch_creation_cor(char *f, t_champ *champ, header_t *op, char *s)
 	champ = NULL;
 	op = NULL;
 	f = NULL;
+	if (name)
+		free(name);
 	return (1);
 }
