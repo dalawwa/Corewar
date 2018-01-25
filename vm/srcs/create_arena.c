@@ -74,12 +74,37 @@ void		close_cors(t_arena *arena)
 		close(arena->files[i++]->fd);
 }
 
+void	set_default_adv(t_arena **arena)
+{
+	if (!(*arena)->default_adv)
+		return ;
+	(*arena)->default_adv[0] = 0; // pour garder le meme opcode on commence a [1]
+	(*arena)->default_adv[1] = 5;
+	(*arena)->default_adv[2] = 7;
+	(*arena)->default_adv[3] = 7;
+	(*arena)->default_adv[4] = 7;
+	(*arena)->default_adv[5] = 7;
+	(*arena)->default_adv[6] = 7;
+	(*arena)->default_adv[7] = 7;
+	(*arena)->default_adv[8] = 7;
+	(*arena)->default_adv[13] = 7;
+	(*arena)->default_adv[9] = 3;
+	(*arena)->default_adv[12] = 3;
+	(*arena)->default_adv[14] = 3;
+	(*arena)->default_adv[15] = 3;
+	(*arena)->default_adv[16] = 3;
+}
+
+
 int		init_arena(t_arena **arena)
 {
 	if (!(*arena = (t_arena *)malloc(sizeof(t_arena))))
 		return (0);
 	(*arena)->players = NULL;
 	(*arena)->bdd = NULL;
+	if (!((*arena)->default_adv = (int *)malloc(sizeof(int) * 17)))
+		return (0);
+	set_default_adv(arena);
 	(*arena)->list_proc = NULL;
 	(*arena)->opts = NULL;
 	(*arena)->files = NULL;
@@ -92,7 +117,6 @@ int		init_arena(t_arena **arena)
 	(*arena)->last_player_alive = 0;
 	return (1);
 }
-
 int		 create_arena(int ac, char **av, t_arena **arena)
 {
 //	if (!init_arena(arena))
