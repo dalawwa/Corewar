@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:46:01 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/25 13:46:26 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/26 17:28:08 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,21 @@ int		ciao_bye(int i, char *str)
 
 void	ciao_bye_bye(int i)
 {
-	if (i > 0)
-	{
+	if (i == 9)
+		ft_printf("Lexical error at line [%i]\n", line_error);
+	else if (i == 3)
+		ft_printf("Invalid parameter type register for instruction line %i\n", line_error);
+	else if (i == 4)
+		ft_printf("Invalid parameter type direct for instruction line %i\n", line_error);
+	else if (i == 5)
+		ft_printf("Invalid parameter type indirect for instruction line %i\n", line_error);
+	else if (i == 6)
+		ft_printf("Invalid parameters for line %i\n", line_error);
+	else if (i == 7)
+		ft_printf("Syntax error at token line %i\n", line_error);
+	else
 		ft_putstr("Usage: ./asm <sourcefile.s>\n");
-		_exit(0);
-	}
+	_exit(0);
 }
 
 int			freedom_for_list(t_champ *lab)
@@ -73,24 +83,4 @@ int			freedom_for_list(t_champ *lab)
 	if (lab)
 		free(lab);
 	return (1);
-}
-
-int		ciao_bye_bye_fr(int i, t_champ *champ)
-{
-	t_champ	*ciao;
-
-	ciao = champ->next;
-	while (ciao)
-	{
-		champ->next = NULL;
-		if (champ->label)
-			free(champ->label);
-		champ = ciao;
-		ciao = champ->next;
-	}
-	if (champ->label)
-		free(champ->label);
-	if (i == 1)
-		ft_printf("ERROR\n");
-	return (0);
 }

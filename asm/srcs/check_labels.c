@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 10:34:43 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/09 16:26:35 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/26 16:15:07 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int		check_label_line(char *line, t_champ *champ)
 		}
 		champ = champ->next;
 	}
-	ciao_bye_bye(1);
+	ciao_bye_bye(5);
 	return (0);
 }
 
