@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 09:21:43 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/26 16:33:05 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/26 17:36:53 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,4 @@ int		check_args_valid(char **str, int opc)
 			&& check_is_reg(0, str))
 		return (1);
 	return (check_args_valid_next(str, opc));
-	
 }

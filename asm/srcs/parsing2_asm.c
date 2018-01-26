@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:45:13 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/26 16:04:29 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/26 17:46:43 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,12 +84,10 @@ int			label_or_not(char *line)
 	return (0);
 }
 
-t_champ		*get_champ_data(char **file, int fd, int i)
+t_champ		*get_champ_data(char **file, int fd, int i, char *line)
 {
-	char	*line;
 	t_champ	*new;
 
-	line = NULL;
 	new = NULL;
 	while (get_next_line(fd, &line) > 0)
 	{
