@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/25 13:46:25 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/26 16:41:48 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ int	position;
 int	size_line;
 int	temp;
 int	error_msg;
+int	line_error;
 
 int		main(int ac, char **av);
 void	global_variables_size(void);
@@ -116,7 +117,6 @@ int		check_is_reg(int i, char **str);
 int		label_is_real(char *line, t_champ *champ);
 int		ciao_bye(int i, char *str);
 int		ciao_bye_name(int i, header_t *top);
-int		ciao_bye_bye_fr(int i, t_champ *champ);
 void	ciao_free_end(t_champ *champ);
 int		launch_creation_cor(char *file, t_champ *champ, header_t *op, char *str);
 int             put_in_file_dir(int i, t_champ *champ, char **file, int fd);

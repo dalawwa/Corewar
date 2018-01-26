@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:39:24 by bfruchar          #+#    #+#             */
-/*   Updated: 2017/12/18 17:06:39 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/26 14:48:58 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	global_variables_size(void)
 {
+	line_error = 0;
+	temp = 0;
 	size_line = 0;
 	position = 0;
 }
