@@ -9,7 +9,6 @@ int		op_live(t_arena *arena, t_exe *exe)
 	{
 		ft_printf("P    %d | %s %d\n", exe->process->process_num, exe->bdd_op->name, exe->arg1->d_data);
 	}
-	print_exe_opts(arena, exe);
 	exe->process->nb_live++;
 	arena->list_proc->nb_live_total++;
 	exe->process->last_cycle_alive = arena->total_cycle;
@@ -23,9 +22,11 @@ int		op_live(t_arena *arena, t_exe *exe)
 			arena->last_player_alive = arena->players[i];
 			if (arena->opts->is_v1)
 				ft_printf("Player %d (%s) is said to be alive\n", arena->players[i]->play_num, arena->players[i]->name);
+			print_exe_opts(arena, exe);
 			return (1);
 		}
 		i++;
 	}
+	print_exe_opts(arena, exe);
 	return (0);
 }
