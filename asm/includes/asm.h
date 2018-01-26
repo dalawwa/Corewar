@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/26 16:41:48 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/26 18:45:34 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,11 +94,11 @@ int	line_error;
 
 int		main(int ac, char **av);
 void	global_variables_size(void);
-int		launch_parsing(char *str, int opt);
-int             label_or_not(char *line);
-int             char_label(char c);
+int		launch_parsing(char *str, int opt, char *file, int i);
+int     label_or_not(char *line);
+int     char_label(char c);
 void	start_struct_champ(t_champ *champ);
-t_champ		*get_champ_data(char **file, int fd, int i);
+t_champ	*get_champ_data(char **file, int fd, int i, char *line);
 int		check_name_comment(int fd, header_t *op, int x, int y);
 int		check_no_printable_char(char *str);
 int		value_parent(char *str, int x, int j, header_t *op);
@@ -119,17 +119,30 @@ int		ciao_bye(int i, char *str);
 int		ciao_bye_name(int i, header_t *top);
 void	ciao_free_end(t_champ *champ);
 int		launch_creation_cor(char *file, t_champ *champ, header_t *op, char *str);
-int             put_in_file_dir(int i, t_champ *champ, char **file, int fd);
-int             change_magic_order_second(int i);
-void    	move_in_the_file(char **str);
+int     put_in_file_dir(int i, t_champ *champ, char **file, int fd);
+int     change_magic_order_second(int i);
+void   	move_in_the_file(char **str);
+void	create_up_file(int fd, header_t *op);
 int		change_magic_order(int i);
-int	position_label(t_champ *champ, char *file);
-int             put_in_file_reg(char **file, int fd);
-int             put_in_file_dir(int i, t_champ *champ, char **file, int fd);
-int             put_in_file_indir(t_champ *champ, char **file, int fd);
-int             get_the_op_code2(char *str);
-void			launch_writing_out(char *file, t_champ *champ, header_t *op);
-int			next_order(char *str, int j);
-void		opcod_number(char *str, int *o, int i, int c);
+int		position_label(t_champ *champ, char *file);
+int     put_in_file_reg(char **file, int fd);
+int     put_in_file_dir(int i, t_champ *champ, char **file, int fd);
+int     put_in_file_indir(t_champ *champ, char **file, int fd);
+int     get_the_op_code2(char *str);
+void	launch_writing_out(char *file, t_champ *champ, header_t *op, int i);
+int		next_order(char *str, int j);
+void	opcod_number(char *str, int *o, int i, int c);
+char	*name_dot_cor(char *str);
+char	*after_command(char *str, int i);
+int		next_order(char *str, int j);
+char	*delete_comments(char *str);
+int		next_order_space(char *str, int j);
+int		get_opcode_a(char **str, int i);
+int		put_in_file_reg_a(char *str);
+int		put_in_file_indir_a(t_champ *champ, char *str);
+void	temp_advance(int co);
+int		find_translat_a(t_champ *champ, char **str, int i);
+int		find_translat_a2(t_champ *champ, char **str, int i);
+int		put_in_file_dir_a(int i, t_champ *champ, char *str);
 
 #endif
