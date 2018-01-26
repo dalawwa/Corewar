@@ -1,5 +1,5 @@
 Introducing contestants...
-* Player 1, weighing 42 bytes, "sti_speca.s" ("lulu") !
+* Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 01 54" ("WTF") !
 It is now cycle 1
 It is now cycle 2
 It is now cycle 3
@@ -25,9 +25,9 @@ It is now cycle 22
 It is now cycle 23
 It is now cycle 24
 It is now cycle 25
-P    1 | sti r1 192413952 20
-       | -> store to 192413952 + 20 = 192413972 (with pc and mod 276)
-ADV 7 (0x0000 -> 0x0007) 0b 78 01 00 00 00 14 
+P    1 | sti r11 -1 21759
+       | -> store to -1 + 21759 = 21758 (with pc and mod 254)
+ADV 6 (0x0000 -> 0x0006) 0b 58 0b 01 54 ff 
 It is now cycle 26
 It is now cycle 27
 It is now cycle 28
@@ -38,6 +38,8 @@ It is now cycle 32
 It is now cycle 33
 It is now cycle 34
 It is now cycle 35
+P    1 | add r1 r2 r3
+ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 It is now cycle 36
 It is now cycle 37
 It is now cycle 38
@@ -53,9 +55,6 @@ It is now cycle 47
 It is now cycle 48
 It is now cycle 49
 It is now cycle 50
-P    1 | sti r1 16777728 20
-       | -> store to 16777728 + 20 = 16777748 (with pc and mod 27)
-ADV 7 (0x0007 -> 0x000e) 0b 78 01 00 02 00 14 
 It is now cycle 51
 It is now cycle 52
 It is now cycle 53
@@ -81,9 +80,6 @@ It is now cycle 72
 It is now cycle 73
 It is now cycle 74
 It is now cycle 75
-P    1 | sti r1 0 20
-       | -> store to 0 + 20 = 20 (with pc and mod 34)
-ADV 7 (0x000e -> 0x0015) 0b 78 01 00 78 00 14 
 It is now cycle 76
 It is now cycle 77
 It is now cycle 78
@@ -109,9 +105,6 @@ It is now cycle 97
 It is now cycle 98
 It is now cycle 99
 It is now cycle 100
-P    1 | sti r1 0 255
-       | -> store to 0 + 255 = 255 (with pc and mod 276)
-ADV 7 (0x0015 -> 0x001c) 0b 78 01 01 a4 00 ff 
 It is now cycle 101
 It is now cycle 102
 It is now cycle 103
@@ -135,8 +128,6 @@ It is now cycle 120
 It is now cycle 121
 It is now cycle 122
 It is now cycle 123
-P    1 | zjmp 4096 FAILED
-ADV 3 (0x001f -> 0x0022) 09 10 00 
 It is now cycle 124
 It is now cycle 125
 It is now cycle 126
@@ -166,7 +157,6 @@ It is now cycle 149
 It is now cycle 150
 It is now cycle 151
 It is now cycle 152
-ADV 5 (0x0026 -> 0x002b) 0b 60 00 3c 00 
 It is now cycle 153
 It is now cycle 154
 It is now cycle 155
@@ -850,6 +840,8 @@ It is now cycle 832
 It is now cycle 833
 It is now cycle 834
 It is now cycle 835
+P    1 | fork -9 (2)
+ADV 3 (0x000b -> 0x000e) 0c ff f7 
 It is now cycle 836
 It is now cycle 837
 It is now cycle 838
@@ -875,6 +867,7 @@ It is now cycle 857
 It is now cycle 858
 It is now cycle 859
 It is now cycle 860
+ADV 2 (0x0002 -> 0x0004) 0b 01 
 It is now cycle 861
 It is now cycle 862
 It is now cycle 863
@@ -887,6 +880,8 @@ It is now cycle 869
 It is now cycle 870
 It is now cycle 871
 It is now cycle 872
+P    2 | add r1 r2 r3
+ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 It is now cycle 873
 It is now cycle 874
 It is now cycle 875
@@ -1515,11 +1510,11 @@ It is now cycle 1497
 It is now cycle 1498
 It is now cycle 1499
 It is now cycle 1500
-0x0000 : 0b 78 01 00 00 00 14 0b 78 01 00 02 00 14 0b 78 01 00 78 00 14 0b 78 01 01 a4 00 ff ff ff ff 09 10 00 ff ff ff ff 0b 60 00 3c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0x0000 : 0b 58 0b 01 54 ff 04 54 01 02 03 0c ff f7 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
