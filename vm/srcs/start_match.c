@@ -91,8 +91,8 @@ int		deal_exe(t_arena *arena)
 				}
 				else
 				{
-//					failed_adv = count_failed_adv(arena, elem->exe_op);
-					failed_adv = get_failed_adv_size(elem->exe_op);
+					failed_adv = count_failed_adv(arena, elem->exe_op);
+//					failed_adv = get_failed_adv_size(elem->exe_op);
 					print_failed_exe(arena, elem->exe_op, failed_adv);
 					inc_pc(elem, failed_adv);
 				}
