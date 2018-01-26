@@ -33,7 +33,6 @@ int		op_sti(t_arena *arena, t_exe *exe)
 	arena->mem[find_pc_adv(exe->process->pc, (result) % IDX_MOD + 3, 1)] = exe->process->reg[exe->arg1->d_value][3];*/
 	if (arena->opts->is_v4)
 	{
-		/*
 		ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
 		ft_printf("r%d ", exe->arg1->d_value);
 		if (exe->arg2->type == 'i')
@@ -46,10 +45,7 @@ int		op_sti(t_arena *arena, t_exe *exe)
 		ft_putchar('\n');
 		put_n_char(' ', intlen((short)(exe->process->process_num)));
 		put_n_char(' ', 6);
-<<<<<<< HEAD
-		ft_printf("| -> store to %d + %hd = ", (exe->arg2->type == 'd') ? (short)exe->arg2->d_data : exe->arg2->d_data, (short)exe->arg3->d_data);
-=======
-*/
+//		ft_printf("| -> store to %d + %hd = ", (exe->arg2->type == 'd') ? (short)exe->arg2->d_data : exe->arg2->d_data, (short)exe->arg3->d_data);
 		ft_printf("| -> store to ");
 		if (exe->arg2->type == 'i')
 			ft_printf("%d ", exe->arg2->d_data);
@@ -58,7 +54,6 @@ int		op_sti(t_arena *arena, t_exe *exe)
 		else
 			ft_printf("%hd ", (short)exe->arg2->d_data);
 		ft_printf("+ %hd = ", (short)exe->arg3->d_data);
-//>>>>>>> f15ac84d47846cd252b75c193c25a769e1d33fc1
 		if (exe->arg2->type != 'i')
 			ft_printf("%hd ", test);
 		else
