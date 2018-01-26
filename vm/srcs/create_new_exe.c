@@ -1,5 +1,40 @@
 #include "corewar.h"
 
+int		get_opcode_from_exe(t_exe *exe)
+{
+	return ((int)exe->opcode);
+}
+
+int		is_valid_ocp(int opcode, int ocp)
+{
+	if (opcode == 2 || opcode == 13)
+		return (ocp == 0x90 || ocp == 0xd0);
+	if (opcode == 3)
+		return (ocp == 0x50 || ocp == 0x70);
+	if (opcode == 4 || opcode == 5)
+		return (ocp == 0x54);
+	if (opcode == 6 || opcode == 7 || opcode == 8)
+		return (ocp == 0x54 || ocp == 0x64 || ocp == 0x74 || ocp == 0xa4 || ocp == 0xb4 ||  ocp == 0xe4 ||  ocp == 0xf4 ||  ocp == 0x94 ||  ocp == 0xd4);
+
+	if (opcode == 10 || opcode == 14)
+		return (ocp == 0x54 || ocp == 0x64 || ocp == 0x94 || ocp == 0xa4 || ocp == 0xd4 || ocp == 0xe4);
+	if (opcode == 11)
+		return (ocp == 0x54 || ocp == 0x58 || ocp == 0x64 || ocp == 0x68 || ocp == 0x74 || ocp == 0x78);
+	if (opcode == 16)
+		return (ocp == 64);
+	return (1);
+}
+
+int		get_failed_adv_size(t_exe *exe)
+{
+	if ((exe->opcode >= 2 && exe->opcode <= 8) || exe->opcode == 13)
+		return (7);
+	if (exe->opcode == 10 || exe->opcode == 11 || exe->opcode == 14)
+		return (5);
+	if (exe->opcode == 16)
+		return (3);
+	return (0);
+}
 
 int		is_failed_reg_nbr(t_exe *exe, t_arg *arg)
 {

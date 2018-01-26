@@ -6,7 +6,7 @@
 #    By: dalawwa <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/16 01:01:45 by dalawwa           #+#    #+#              #
-#    Updated: 2017/12/21 13:54:16 by dalawwa          ###   ########.fr        #
+#    Updated: 2018/01/26 01:31:22 by dalawwa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -427,7 +427,11 @@ diff_file: $(NAME)
 	@sh script_vm_test_file.sh $(file)
 
 diff_sync: $(NAME)
+<<<<<<< HEAD
 	@sh script_vm_test_sync.sh $(file) $(v) $(d)
+=======
+	@sh script_vm_test_sync.sh $(file) $(vv) $(dd)
+>>>>>>> f59f5da197a296f3518dc0d087f75910805dcccf
 
 
 fclean: clean

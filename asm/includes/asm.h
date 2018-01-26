@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/09 16:24:20 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/25 13:46:25 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,10 +89,11 @@ typedef struct		s_champ
 int	position;
 int	size_line;
 int	temp;
+int	error_msg;
 
 int		main(int ac, char **av);
 void	global_variables_size(void);
-int		launch_parsing(char *str);
+int		launch_parsing(char *str, int opt);
 int             label_or_not(char *line);
 int             char_label(char c);
 void	start_struct_champ(t_champ *champ);
@@ -102,6 +103,7 @@ int		check_no_printable_char(char *str);
 int		value_parent(char *str, int x, int j, header_t *op);
 int		check_valid_name(char *str);
 void	ciao_bye_bye(int i);
+int		freedom_for_list(t_champ *lab);
 t_champ	*ft_lstadd_lines(t_champ *begin, char *line, int i);
 char	**ft_strsplit_three(const char *s, char c, char d, char e);
 int		get_the_op_code(char *str);
@@ -115,6 +117,7 @@ int		label_is_real(char *line, t_champ *champ);
 int		ciao_bye(int i, char *str);
 int		ciao_bye_name(int i, header_t *top);
 int		ciao_bye_bye_fr(int i, t_champ *champ);
+void	ciao_free_end(t_champ *champ);
 int		launch_creation_cor(char *file, t_champ *champ, header_t *op, char *str);
 int             put_in_file_dir(int i, t_champ *champ, char **file, int fd);
 int             change_magic_order_second(int i);
@@ -125,5 +128,8 @@ int             put_in_file_reg(char **file, int fd);
 int             put_in_file_dir(int i, t_champ *champ, char **file, int fd);
 int             put_in_file_indir(t_champ *champ, char **file, int fd);
 int             get_the_op_code2(char *str);
+void			launch_writing_out(char *file, t_champ *champ, header_t *op);
+int			next_order(char *str, int j);
+void		opcod_number(char *str, int *o, int i, int c);
 
 #endif
