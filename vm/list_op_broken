@@ -5,8 +5,8 @@
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 656, line 29
---- zaz_test1	2018-01-26 08:15:40.000000000 +0100
-+++ vm_test1	2018-01-26 08:15:40.000000000 +0100
+--- zaz_test1	2018-01-26 08:55:26.000000000 +0100
++++ vm_test1	2018-01-26 08:55:26.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -18,8 +18,8 @@ zaz_test1 vm_test1 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 190, line 4
---- zaz_test6	2018-01-26 08:15:40.000000000 +0100
-+++ vm_test6	2018-01-26 08:15:40.000000000 +0100
+--- zaz_test6	2018-01-26 08:55:26.000000000 +0100
++++ vm_test6	2018-01-26 08:55:26.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 02 90" ("WTF") !
@@ -31,8 +31,8 @@ zaz_test6 vm_test6 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 190, line 4
---- zaz_test7	2018-01-26 08:15:40.000000000 +0100
-+++ vm_test7	2018-01-26 08:15:40.000000000 +0100
+--- zaz_test7	2018-01-26 08:55:26.000000000 +0100
++++ vm_test7	2018-01-26 08:55:26.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 02 90" ("WTF") !
@@ -44,8 +44,8 @@ zaz_test7 vm_test7 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 656, line 29
---- zaz_test8	2018-01-26 08:15:40.000000000 +0100
-+++ vm_test8	2018-01-26 08:15:40.000000000 +0100
+--- zaz_test8	2018-01-26 08:55:27.000000000 +0100
++++ vm_test8	2018-01-26 08:55:27.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -57,8 +57,8 @@ zaz_test8 vm_test8 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 656, line 29
---- zaz_test9	2018-01-26 08:15:40.000000000 +0100
-+++ vm_test9	2018-01-26 08:15:40.000000000 +0100
+--- zaz_test9	2018-01-26 08:55:27.000000000 +0100
++++ vm_test9	2018-01-26 08:55:27.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -70,8 +70,8 @@ zaz_test9 vm_test9 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 190, line 4
---- zaz_test14	2018-01-26 08:15:40.000000000 +0100
-+++ vm_test14	2018-01-26 08:15:40.000000000 +0100
+--- zaz_test14	2018-01-26 08:55:27.000000000 +0100
++++ vm_test14	2018-01-26 08:55:27.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 02 90" ("WTF") !
@@ -83,8 +83,8 @@ zaz_test14 vm_test14 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 190, line 4
---- zaz_test15	2018-01-26 08:15:40.000000000 +0100
-+++ vm_test15	2018-01-26 08:15:40.000000000 +0100
+--- zaz_test15	2018-01-26 08:55:27.000000000 +0100
++++ vm_test15	2018-01-26 08:55:27.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 02 90" ("WTF") !
@@ -96,8 +96,8 @@ zaz_test15 vm_test15 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 656, line 29
---- zaz_test16	2018-01-26 08:15:41.000000000 +0100
-+++ vm_test16	2018-01-26 08:15:41.000000000 +0100
+--- zaz_test16	2018-01-26 08:55:27.000000000 +0100
++++ vm_test16	2018-01-26 08:55:27.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -109,8 +109,8 @@ zaz_test16 vm_test16 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 190, line 4
---- zaz_test21	2018-01-26 08:15:41.000000000 +0100
-+++ vm_test21	2018-01-26 08:15:41.000000000 +0100
+--- zaz_test21	2018-01-26 08:55:27.000000000 +0100
++++ vm_test21	2018-01-26 08:55:27.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 02 90" ("WTF") !
@@ -122,8 +122,8 @@ zaz_test21 vm_test21 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 190, line 4
---- zaz_test22	2018-01-26 08:15:41.000000000 +0100
-+++ vm_test22	2018-01-26 08:15:41.000000000 +0100
+--- zaz_test22	2018-01-26 08:55:27.000000000 +0100
++++ vm_test22	2018-01-26 08:55:27.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 02 90" ("WTF") !
@@ -135,8 +135,8 @@ zaz_test22 vm_test22 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 656, line 29
---- zaz_test23	2018-01-26 08:15:41.000000000 +0100
-+++ vm_test23	2018-01-26 08:15:41.000000000 +0100
+--- zaz_test23	2018-01-26 08:55:27.000000000 +0100
++++ vm_test23	2018-01-26 08:55:27.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -148,8 +148,8 @@ zaz_test23 vm_test23 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 656, line 29
---- zaz_test24	2018-01-26 08:15:41.000000000 +0100
-+++ vm_test24	2018-01-26 08:15:41.000000000 +0100
+--- zaz_test24	2018-01-26 08:55:27.000000000 +0100
++++ vm_test24	2018-01-26 08:55:27.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -161,8 +161,8 @@ zaz_test24 vm_test24 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 190, line 4
---- zaz_test29	2018-01-26 08:15:41.000000000 +0100
-+++ vm_test29	2018-01-26 08:15:41.000000000 +0100
+--- zaz_test29	2018-01-26 08:55:27.000000000 +0100
++++ vm_test29	2018-01-26 08:55:27.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 02 90" ("WTF") !
@@ -174,8 +174,8 @@ zaz_test29 vm_test29 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 190, line 4
---- zaz_test30	2018-01-26 08:15:41.000000000 +0100
-+++ vm_test30	2018-01-26 08:15:41.000000000 +0100
+--- zaz_test30	2018-01-26 08:55:27.000000000 +0100
++++ vm_test30	2018-01-26 08:55:27.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 02 90" ("WTF") !
@@ -187,8 +187,8 @@ zaz_test30 vm_test30 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 656, line 29
---- zaz_test31	2018-01-26 08:15:41.000000000 +0100
-+++ vm_test31	2018-01-26 08:15:41.000000000 +0100
+--- zaz_test31	2018-01-26 08:55:27.000000000 +0100
++++ vm_test31	2018-01-26 08:55:27.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -200,8 +200,8 @@ zaz_test31 vm_test31 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 656, line 29
---- zaz_test32	2018-01-26 08:15:41.000000000 +0100
-+++ vm_test32	2018-01-26 08:15:41.000000000 +0100
+--- zaz_test32	2018-01-26 08:55:27.000000000 +0100
++++ vm_test32	2018-01-26 08:55:27.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -213,8 +213,8 @@ zaz_test32 vm_test32 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 190, line 4
---- zaz_test37	2018-01-26 08:15:41.000000000 +0100
-+++ vm_test37	2018-01-26 08:15:41.000000000 +0100
+--- zaz_test37	2018-01-26 08:55:28.000000000 +0100
++++ vm_test37	2018-01-26 08:55:28.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 02 90" ("WTF") !
@@ -226,8 +226,8 @@ zaz_test37 vm_test37 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_02_90.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 190, line 4
---- zaz_test38	2018-01-26 08:15:41.000000000 +0100
-+++ vm_test38	2018-01-26 08:15:41.000000000 +0100
+--- zaz_test38	2018-01-26 08:55:28.000000000 +0100
++++ vm_test38	2018-01-26 08:55:28.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 02 90" ("WTF") !
@@ -275,8 +275,8 @@ zaz_test38 vm_test38 differ: char 190, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 656, line 29
---- zaz_test1	2018-01-26 08:15:57.000000000 +0100
-+++ vm_test1	2018-01-26 08:15:57.000000000 +0100
+--- zaz_test1	2018-01-26 08:55:39.000000000 +0100
++++ vm_test1	2018-01-26 08:55:39.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -288,8 +288,8 @@ zaz_test1 vm_test1 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 190, line 4
---- zaz_test6	2018-01-26 08:15:57.000000000 +0100
-+++ vm_test6	2018-01-26 08:15:57.000000000 +0100
+--- zaz_test6	2018-01-26 08:55:39.000000000 +0100
++++ vm_test6	2018-01-26 08:55:39.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 0d 90" ("WTF") !
@@ -301,8 +301,8 @@ zaz_test6 vm_test6 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 190, line 4
---- zaz_test7	2018-01-26 08:15:57.000000000 +0100
-+++ vm_test7	2018-01-26 08:15:57.000000000 +0100
+--- zaz_test7	2018-01-26 08:55:39.000000000 +0100
++++ vm_test7	2018-01-26 08:55:39.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 0d 90" ("WTF") !
@@ -314,8 +314,8 @@ zaz_test7 vm_test7 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 656, line 29
---- zaz_test8	2018-01-26 08:15:57.000000000 +0100
-+++ vm_test8	2018-01-26 08:15:57.000000000 +0100
+--- zaz_test8	2018-01-26 08:55:39.000000000 +0100
++++ vm_test8	2018-01-26 08:55:39.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -327,8 +327,8 @@ zaz_test8 vm_test8 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 656, line 29
---- zaz_test9	2018-01-26 08:15:57.000000000 +0100
-+++ vm_test9	2018-01-26 08:15:57.000000000 +0100
+--- zaz_test9	2018-01-26 08:55:39.000000000 +0100
++++ vm_test9	2018-01-26 08:55:39.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -340,8 +340,8 @@ zaz_test9 vm_test9 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 190, line 4
---- zaz_test14	2018-01-26 08:15:57.000000000 +0100
-+++ vm_test14	2018-01-26 08:15:57.000000000 +0100
+--- zaz_test14	2018-01-26 08:55:39.000000000 +0100
++++ vm_test14	2018-01-26 08:55:39.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 0d 90" ("WTF") !
@@ -353,8 +353,8 @@ zaz_test14 vm_test14 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 190, line 4
---- zaz_test15	2018-01-26 08:15:57.000000000 +0100
-+++ vm_test15	2018-01-26 08:15:57.000000000 +0100
+--- zaz_test15	2018-01-26 08:55:39.000000000 +0100
++++ vm_test15	2018-01-26 08:55:39.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 0d 90" ("WTF") !
@@ -366,8 +366,8 @@ zaz_test15 vm_test15 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 656, line 29
---- zaz_test16	2018-01-26 08:15:57.000000000 +0100
-+++ vm_test16	2018-01-26 08:15:57.000000000 +0100
+--- zaz_test16	2018-01-26 08:55:39.000000000 +0100
++++ vm_test16	2018-01-26 08:55:39.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -379,8 +379,8 @@ zaz_test16 vm_test16 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 190, line 4
---- zaz_test21	2018-01-26 08:15:58.000000000 +0100
-+++ vm_test21	2018-01-26 08:15:58.000000000 +0100
+--- zaz_test21	2018-01-26 08:55:39.000000000 +0100
++++ vm_test21	2018-01-26 08:55:39.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 0d 90" ("WTF") !
@@ -392,8 +392,8 @@ zaz_test21 vm_test21 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 190, line 4
---- zaz_test22	2018-01-26 08:15:58.000000000 +0100
-+++ vm_test22	2018-01-26 08:15:58.000000000 +0100
+--- zaz_test22	2018-01-26 08:55:40.000000000 +0100
++++ vm_test22	2018-01-26 08:55:40.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 0d 90" ("WTF") !
@@ -405,8 +405,8 @@ zaz_test22 vm_test22 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 656, line 29
---- zaz_test23	2018-01-26 08:15:58.000000000 +0100
-+++ vm_test23	2018-01-26 08:15:58.000000000 +0100
+--- zaz_test23	2018-01-26 08:55:40.000000000 +0100
++++ vm_test23	2018-01-26 08:55:40.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -418,8 +418,8 @@ zaz_test23 vm_test23 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 656, line 29
---- zaz_test24	2018-01-26 08:15:58.000000000 +0100
-+++ vm_test24	2018-01-26 08:15:58.000000000 +0100
+--- zaz_test24	2018-01-26 08:55:40.000000000 +0100
++++ vm_test24	2018-01-26 08:55:40.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -431,8 +431,8 @@ zaz_test24 vm_test24 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 190, line 4
---- zaz_test29	2018-01-26 08:15:58.000000000 +0100
-+++ vm_test29	2018-01-26 08:15:58.000000000 +0100
+--- zaz_test29	2018-01-26 08:55:40.000000000 +0100
++++ vm_test29	2018-01-26 08:55:40.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 0d 90" ("WTF") !
@@ -444,8 +444,8 @@ zaz_test29 vm_test29 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 190, line 4
---- zaz_test30	2018-01-26 08:15:58.000000000 +0100
-+++ vm_test30	2018-01-26 08:15:58.000000000 +0100
+--- zaz_test30	2018-01-26 08:55:40.000000000 +0100
++++ vm_test30	2018-01-26 08:55:40.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 0d 90" ("WTF") !
@@ -457,8 +457,8 @@ zaz_test30 vm_test30 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 656, line 29
---- zaz_test31	2018-01-26 08:15:58.000000000 +0100
-+++ vm_test31	2018-01-26 08:15:58.000000000 +0100
+--- zaz_test31	2018-01-26 08:55:40.000000000 +0100
++++ vm_test31	2018-01-26 08:55:40.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -470,8 +470,8 @@ zaz_test31 vm_test31 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 656, line 29
---- zaz_test32	2018-01-26 08:15:59.000000000 +0100
-+++ vm_test32	2018-01-26 08:15:59.000000000 +0100
+--- zaz_test32	2018-01-26 08:55:40.000000000 +0100
++++ vm_test32	2018-01-26 08:55:40.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -483,8 +483,8 @@ zaz_test32 vm_test32 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 190, line 4
---- zaz_test37	2018-01-26 08:15:59.000000000 +0100
-+++ vm_test37	2018-01-26 08:15:59.000000000 +0100
+--- zaz_test37	2018-01-26 08:55:40.000000000 +0100
++++ vm_test37	2018-01-26 08:55:40.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 0d 90" ("WTF") !
@@ -496,8 +496,8 @@ zaz_test37 vm_test37 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_02_0d_90.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 190, line 4
---- zaz_test38	2018-01-26 08:15:59.000000000 +0100
-+++ vm_test38	2018-01-26 08:15:59.000000000 +0100
+--- zaz_test38	2018-01-26 08:55:40.000000000 +0100
++++ vm_test38	2018-01-26 08:55:40.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 0d 90" ("WTF") !
@@ -521,8 +521,8 @@ zaz_test38 vm_test38 differ: char 190, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 656, line 29
---- zaz_test1	2018-01-26 08:16:02.000000000 +0100
-+++ vm_test1	2018-01-26 08:16:02.000000000 +0100
+--- zaz_test1	2018-01-26 08:55:43.000000000 +0100
++++ vm_test1	2018-01-26 08:55:43.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -534,8 +534,8 @@ zaz_test1 vm_test1 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 190, line 4
---- zaz_test6	2018-01-26 08:16:02.000000000 +0100
-+++ vm_test6	2018-01-26 08:16:02.000000000 +0100
+--- zaz_test6	2018-01-26 08:55:43.000000000 +0100
++++ vm_test6	2018-01-26 08:55:43.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 02 90" ("WTF") !
@@ -547,8 +547,8 @@ zaz_test6 vm_test6 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 190, line 4
---- zaz_test7	2018-01-26 08:16:02.000000000 +0100
-+++ vm_test7	2018-01-26 08:16:02.000000000 +0100
+--- zaz_test7	2018-01-26 08:55:43.000000000 +0100
++++ vm_test7	2018-01-26 08:55:43.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 02 90" ("WTF") !
@@ -560,8 +560,8 @@ zaz_test7 vm_test7 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 656, line 29
---- zaz_test8	2018-01-26 08:16:02.000000000 +0100
-+++ vm_test8	2018-01-26 08:16:02.000000000 +0100
+--- zaz_test8	2018-01-26 08:55:43.000000000 +0100
++++ vm_test8	2018-01-26 08:55:43.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -573,8 +573,8 @@ zaz_test8 vm_test8 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 656, line 29
---- zaz_test9	2018-01-26 08:16:02.000000000 +0100
-+++ vm_test9	2018-01-26 08:16:02.000000000 +0100
+--- zaz_test9	2018-01-26 08:55:44.000000000 +0100
++++ vm_test9	2018-01-26 08:55:44.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -586,8 +586,8 @@ zaz_test9 vm_test9 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 190, line 4
---- zaz_test14	2018-01-26 08:16:03.000000000 +0100
-+++ vm_test14	2018-01-26 08:16:03.000000000 +0100
+--- zaz_test14	2018-01-26 08:55:44.000000000 +0100
++++ vm_test14	2018-01-26 08:55:44.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 02 90" ("WTF") !
@@ -599,8 +599,8 @@ zaz_test14 vm_test14 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 190, line 4
---- zaz_test15	2018-01-26 08:16:03.000000000 +0100
-+++ vm_test15	2018-01-26 08:16:03.000000000 +0100
+--- zaz_test15	2018-01-26 08:55:44.000000000 +0100
++++ vm_test15	2018-01-26 08:55:44.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 02 90" ("WTF") !
@@ -612,8 +612,8 @@ zaz_test15 vm_test15 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 656, line 29
---- zaz_test16	2018-01-26 08:16:03.000000000 +0100
-+++ vm_test16	2018-01-26 08:16:03.000000000 +0100
+--- zaz_test16	2018-01-26 08:55:44.000000000 +0100
++++ vm_test16	2018-01-26 08:55:44.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -625,8 +625,8 @@ zaz_test16 vm_test16 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 190, line 4
---- zaz_test21	2018-01-26 08:16:03.000000000 +0100
-+++ vm_test21	2018-01-26 08:16:03.000000000 +0100
+--- zaz_test21	2018-01-26 08:55:44.000000000 +0100
++++ vm_test21	2018-01-26 08:55:44.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 02 90" ("WTF") !
@@ -638,8 +638,8 @@ zaz_test21 vm_test21 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 190, line 4
---- zaz_test22	2018-01-26 08:16:03.000000000 +0100
-+++ vm_test22	2018-01-26 08:16:03.000000000 +0100
+--- zaz_test22	2018-01-26 08:55:44.000000000 +0100
++++ vm_test22	2018-01-26 08:55:44.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 02 90" ("WTF") !
@@ -651,8 +651,8 @@ zaz_test22 vm_test22 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 656, line 29
---- zaz_test23	2018-01-26 08:16:03.000000000 +0100
-+++ vm_test23	2018-01-26 08:16:03.000000000 +0100
+--- zaz_test23	2018-01-26 08:55:44.000000000 +0100
++++ vm_test23	2018-01-26 08:55:44.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -664,8 +664,8 @@ zaz_test23 vm_test23 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 656, line 29
---- zaz_test24	2018-01-26 08:16:03.000000000 +0100
-+++ vm_test24	2018-01-26 08:16:03.000000000 +0100
+--- zaz_test24	2018-01-26 08:55:44.000000000 +0100
++++ vm_test24	2018-01-26 08:55:44.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -677,8 +677,8 @@ zaz_test24 vm_test24 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 190, line 4
---- zaz_test29	2018-01-26 08:16:03.000000000 +0100
-+++ vm_test29	2018-01-26 08:16:03.000000000 +0100
+--- zaz_test29	2018-01-26 08:55:44.000000000 +0100
++++ vm_test29	2018-01-26 08:55:44.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 02 90" ("WTF") !
@@ -690,8 +690,8 @@ zaz_test29 vm_test29 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 190, line 4
---- zaz_test30	2018-01-26 08:16:03.000000000 +0100
-+++ vm_test30	2018-01-26 08:16:03.000000000 +0100
+--- zaz_test30	2018-01-26 08:55:44.000000000 +0100
++++ vm_test30	2018-01-26 08:55:44.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 02 90" ("WTF") !
@@ -703,8 +703,8 @@ zaz_test30 vm_test30 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 656, line 29
---- zaz_test31	2018-01-26 08:16:03.000000000 +0100
-+++ vm_test31	2018-01-26 08:16:03.000000000 +0100
+--- zaz_test31	2018-01-26 08:55:44.000000000 +0100
++++ vm_test31	2018-01-26 08:55:44.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -716,8 +716,8 @@ zaz_test31 vm_test31 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 656, line 29
---- zaz_test32	2018-01-26 08:16:03.000000000 +0100
-+++ vm_test32	2018-01-26 08:16:03.000000000 +0100
+--- zaz_test32	2018-01-26 08:55:44.000000000 +0100
++++ vm_test32	2018-01-26 08:55:44.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -729,8 +729,8 @@ zaz_test32 vm_test32 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 190, line 4
---- zaz_test37	2018-01-26 08:16:03.000000000 +0100
-+++ vm_test37	2018-01-26 08:16:03.000000000 +0100
+--- zaz_test37	2018-01-26 08:55:45.000000000 +0100
++++ vm_test37	2018-01-26 08:55:45.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 02 90" ("WTF") !
@@ -742,8 +742,8 @@ zaz_test37 vm_test37 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_02_90.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 190, line 4
---- zaz_test38	2018-01-26 08:16:03.000000000 +0100
-+++ vm_test38	2018-01-26 08:16:03.000000000 +0100
+--- zaz_test38	2018-01-26 08:55:45.000000000 +0100
++++ vm_test38	2018-01-26 08:55:45.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 02 90" ("WTF") !
@@ -788,8 +788,8 @@ zaz_test38 vm_test38 differ: char 190, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 656, line 29
---- zaz_test1	2018-01-26 08:16:14.000000000 +0100
-+++ vm_test1	2018-01-26 08:16:14.000000000 +0100
+--- zaz_test1	2018-01-26 08:55:55.000000000 +0100
++++ vm_test1	2018-01-26 08:55:55.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -801,8 +801,8 @@ zaz_test1 vm_test1 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 190, line 4
---- zaz_test6	2018-01-26 08:16:14.000000000 +0100
-+++ vm_test6	2018-01-26 08:16:14.000000000 +0100
+--- zaz_test6	2018-01-26 08:55:55.000000000 +0100
++++ vm_test6	2018-01-26 08:55:55.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 0d 90" ("WTF") !
@@ -814,8 +814,8 @@ zaz_test6 vm_test6 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 190, line 4
---- zaz_test7	2018-01-26 08:16:14.000000000 +0100
-+++ vm_test7	2018-01-26 08:16:14.000000000 +0100
+--- zaz_test7	2018-01-26 08:55:55.000000000 +0100
++++ vm_test7	2018-01-26 08:55:55.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 0d 90" ("WTF") !
@@ -827,8 +827,8 @@ zaz_test7 vm_test7 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 656, line 29
---- zaz_test8	2018-01-26 08:16:14.000000000 +0100
-+++ vm_test8	2018-01-26 08:16:14.000000000 +0100
+--- zaz_test8	2018-01-26 08:55:55.000000000 +0100
++++ vm_test8	2018-01-26 08:55:55.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -840,8 +840,8 @@ zaz_test8 vm_test8 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 656, line 29
---- zaz_test9	2018-01-26 08:16:14.000000000 +0100
-+++ vm_test9	2018-01-26 08:16:14.000000000 +0100
+--- zaz_test9	2018-01-26 08:55:55.000000000 +0100
++++ vm_test9	2018-01-26 08:55:55.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -853,8 +853,8 @@ zaz_test9 vm_test9 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 190, line 4
---- zaz_test14	2018-01-26 08:16:14.000000000 +0100
-+++ vm_test14	2018-01-26 08:16:14.000000000 +0100
+--- zaz_test14	2018-01-26 08:55:55.000000000 +0100
++++ vm_test14	2018-01-26 08:55:55.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 0d 90" ("WTF") !
@@ -866,8 +866,8 @@ zaz_test14 vm_test14 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 190, line 4
---- zaz_test15	2018-01-26 08:16:14.000000000 +0100
-+++ vm_test15	2018-01-26 08:16:14.000000000 +0100
+--- zaz_test15	2018-01-26 08:55:55.000000000 +0100
++++ vm_test15	2018-01-26 08:55:55.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 0d 90" ("WTF") !
@@ -879,8 +879,8 @@ zaz_test15 vm_test15 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 656, line 29
---- zaz_test16	2018-01-26 08:16:15.000000000 +0100
-+++ vm_test16	2018-01-26 08:16:15.000000000 +0100
+--- zaz_test16	2018-01-26 08:55:55.000000000 +0100
++++ vm_test16	2018-01-26 08:55:55.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -892,8 +892,8 @@ zaz_test16 vm_test16 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 190, line 4
---- zaz_test21	2018-01-26 08:16:15.000000000 +0100
-+++ vm_test21	2018-01-26 08:16:15.000000000 +0100
+--- zaz_test21	2018-01-26 08:55:55.000000000 +0100
++++ vm_test21	2018-01-26 08:55:55.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 0d 90" ("WTF") !
@@ -905,8 +905,8 @@ zaz_test21 vm_test21 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 190, line 4
---- zaz_test22	2018-01-26 08:16:15.000000000 +0100
-+++ vm_test22	2018-01-26 08:16:15.000000000 +0100
+--- zaz_test22	2018-01-26 08:55:55.000000000 +0100
++++ vm_test22	2018-01-26 08:55:55.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 0d 90" ("WTF") !
@@ -918,8 +918,8 @@ zaz_test22 vm_test22 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 656, line 29
---- zaz_test23	2018-01-26 08:16:15.000000000 +0100
-+++ vm_test23	2018-01-26 08:16:15.000000000 +0100
+--- zaz_test23	2018-01-26 08:55:55.000000000 +0100
++++ vm_test23	2018-01-26 08:55:55.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -931,8 +931,8 @@ zaz_test23 vm_test23 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 656, line 29
---- zaz_test24	2018-01-26 08:16:15.000000000 +0100
-+++ vm_test24	2018-01-26 08:16:15.000000000 +0100
+--- zaz_test24	2018-01-26 08:55:55.000000000 +0100
++++ vm_test24	2018-01-26 08:55:55.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -944,8 +944,8 @@ zaz_test24 vm_test24 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 190, line 4
---- zaz_test29	2018-01-26 08:16:15.000000000 +0100
-+++ vm_test29	2018-01-26 08:16:15.000000000 +0100
+--- zaz_test29	2018-01-26 08:55:56.000000000 +0100
++++ vm_test29	2018-01-26 08:55:56.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 0d 90" ("WTF") !
@@ -957,8 +957,8 @@ zaz_test29 vm_test29 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 190, line 4
---- zaz_test30	2018-01-26 08:16:15.000000000 +0100
-+++ vm_test30	2018-01-26 08:16:15.000000000 +0100
+--- zaz_test30	2018-01-26 08:55:56.000000000 +0100
++++ vm_test30	2018-01-26 08:55:56.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 0d 90" ("WTF") !
@@ -970,8 +970,8 @@ zaz_test30 vm_test30 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 656, line 29
---- zaz_test31	2018-01-26 08:16:15.000000000 +0100
-+++ vm_test31	2018-01-26 08:16:15.000000000 +0100
+--- zaz_test31	2018-01-26 08:55:56.000000000 +0100
++++ vm_test31	2018-01-26 08:55:56.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -983,8 +983,8 @@ zaz_test31 vm_test31 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 656, line 29
---- zaz_test32	2018-01-26 08:16:15.000000000 +0100
-+++ vm_test32	2018-01-26 08:16:15.000000000 +0100
+--- zaz_test32	2018-01-26 08:55:56.000000000 +0100
++++ vm_test32	2018-01-26 08:55:56.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -996,8 +996,8 @@ zaz_test32 vm_test32 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 190, line 4
---- zaz_test37	2018-01-26 08:16:15.000000000 +0100
-+++ vm_test37	2018-01-26 08:16:15.000000000 +0100
+--- zaz_test37	2018-01-26 08:55:56.000000000 +0100
++++ vm_test37	2018-01-26 08:55:56.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 0d 90" ("WTF") !
@@ -1009,8 +1009,8 @@ zaz_test37 vm_test37 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_03_0d_90.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 190, line 4
---- zaz_test38	2018-01-26 08:16:15.000000000 +0100
-+++ vm_test38	2018-01-26 08:16:15.000000000 +0100
+--- zaz_test38	2018-01-26 08:55:56.000000000 +0100
++++ vm_test38	2018-01-26 08:55:56.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 03 0d 90" ("WTF") !
@@ -1034,8 +1034,8 @@ zaz_test38 vm_test38 differ: char 190, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 656, line 29
---- zaz_test1	2018-01-26 08:16:18.000000000 +0100
-+++ vm_test1	2018-01-26 08:16:18.000000000 +0100
+--- zaz_test1	2018-01-26 08:55:59.000000000 +0100
++++ vm_test1	2018-01-26 08:55:59.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1047,8 +1047,8 @@ zaz_test1 vm_test1 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 190, line 4
---- zaz_test6	2018-01-26 08:16:19.000000000 +0100
-+++ vm_test6	2018-01-26 08:16:19.000000000 +0100
+--- zaz_test6	2018-01-26 08:55:59.000000000 +0100
++++ vm_test6	2018-01-26 08:55:59.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 02 90" ("WTF") !
@@ -1060,8 +1060,8 @@ zaz_test6 vm_test6 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 190, line 4
---- zaz_test7	2018-01-26 08:16:19.000000000 +0100
-+++ vm_test7	2018-01-26 08:16:19.000000000 +0100
+--- zaz_test7	2018-01-26 08:55:59.000000000 +0100
++++ vm_test7	2018-01-26 08:55:59.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 02 90" ("WTF") !
@@ -1073,8 +1073,8 @@ zaz_test7 vm_test7 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 656, line 29
---- zaz_test8	2018-01-26 08:16:19.000000000 +0100
-+++ vm_test8	2018-01-26 08:16:19.000000000 +0100
+--- zaz_test8	2018-01-26 08:55:59.000000000 +0100
++++ vm_test8	2018-01-26 08:55:59.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1086,8 +1086,8 @@ zaz_test8 vm_test8 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 656, line 29
---- zaz_test9	2018-01-26 08:16:19.000000000 +0100
-+++ vm_test9	2018-01-26 08:16:19.000000000 +0100
+--- zaz_test9	2018-01-26 08:55:59.000000000 +0100
++++ vm_test9	2018-01-26 08:55:59.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1099,8 +1099,8 @@ zaz_test9 vm_test9 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 190, line 4
---- zaz_test14	2018-01-26 08:16:19.000000000 +0100
-+++ vm_test14	2018-01-26 08:16:19.000000000 +0100
+--- zaz_test14	2018-01-26 08:55:59.000000000 +0100
++++ vm_test14	2018-01-26 08:55:59.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 02 90" ("WTF") !
@@ -1112,8 +1112,8 @@ zaz_test14 vm_test14 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 190, line 4
---- zaz_test15	2018-01-26 08:16:19.000000000 +0100
-+++ vm_test15	2018-01-26 08:16:19.000000000 +0100
+--- zaz_test15	2018-01-26 08:55:59.000000000 +0100
++++ vm_test15	2018-01-26 08:55:59.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 02 90" ("WTF") !
@@ -1125,8 +1125,8 @@ zaz_test15 vm_test15 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 656, line 29
---- zaz_test16	2018-01-26 08:16:19.000000000 +0100
-+++ vm_test16	2018-01-26 08:16:19.000000000 +0100
+--- zaz_test16	2018-01-26 08:55:59.000000000 +0100
++++ vm_test16	2018-01-26 08:55:59.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1138,8 +1138,8 @@ zaz_test16 vm_test16 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 190, line 4
---- zaz_test21	2018-01-26 08:16:19.000000000 +0100
-+++ vm_test21	2018-01-26 08:16:19.000000000 +0100
+--- zaz_test21	2018-01-26 08:56:00.000000000 +0100
++++ vm_test21	2018-01-26 08:56:00.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 02 90" ("WTF") !
@@ -1151,8 +1151,8 @@ zaz_test21 vm_test21 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 190, line 4
---- zaz_test22	2018-01-26 08:16:19.000000000 +0100
-+++ vm_test22	2018-01-26 08:16:19.000000000 +0100
+--- zaz_test22	2018-01-26 08:56:00.000000000 +0100
++++ vm_test22	2018-01-26 08:56:00.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 02 90" ("WTF") !
@@ -1164,8 +1164,8 @@ zaz_test22 vm_test22 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 656, line 29
---- zaz_test23	2018-01-26 08:16:19.000000000 +0100
-+++ vm_test23	2018-01-26 08:16:19.000000000 +0100
+--- zaz_test23	2018-01-26 08:56:00.000000000 +0100
++++ vm_test23	2018-01-26 08:56:00.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1177,8 +1177,8 @@ zaz_test23 vm_test23 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 656, line 29
---- zaz_test24	2018-01-26 08:16:19.000000000 +0100
-+++ vm_test24	2018-01-26 08:16:19.000000000 +0100
+--- zaz_test24	2018-01-26 08:56:00.000000000 +0100
++++ vm_test24	2018-01-26 08:56:00.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1190,8 +1190,8 @@ zaz_test24 vm_test24 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 190, line 4
---- zaz_test29	2018-01-26 08:16:19.000000000 +0100
-+++ vm_test29	2018-01-26 08:16:19.000000000 +0100
+--- zaz_test29	2018-01-26 08:56:00.000000000 +0100
++++ vm_test29	2018-01-26 08:56:00.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 02 90" ("WTF") !
@@ -1203,8 +1203,8 @@ zaz_test29 vm_test29 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 190, line 4
---- zaz_test30	2018-01-26 08:16:20.000000000 +0100
-+++ vm_test30	2018-01-26 08:16:19.000000000 +0100
+--- zaz_test30	2018-01-26 08:56:00.000000000 +0100
++++ vm_test30	2018-01-26 08:56:00.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 02 90" ("WTF") !
@@ -1216,8 +1216,8 @@ zaz_test30 vm_test30 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 656, line 29
---- zaz_test31	2018-01-26 08:16:20.000000000 +0100
-+++ vm_test31	2018-01-26 08:16:20.000000000 +0100
+--- zaz_test31	2018-01-26 08:56:00.000000000 +0100
++++ vm_test31	2018-01-26 08:56:00.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1229,8 +1229,8 @@ zaz_test31 vm_test31 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 656, line 29
---- zaz_test32	2018-01-26 08:16:20.000000000 +0100
-+++ vm_test32	2018-01-26 08:16:20.000000000 +0100
+--- zaz_test32	2018-01-26 08:56:00.000000000 +0100
++++ vm_test32	2018-01-26 08:56:00.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1242,8 +1242,8 @@ zaz_test32 vm_test32 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 190, line 4
---- zaz_test37	2018-01-26 08:16:20.000000000 +0100
-+++ vm_test37	2018-01-26 08:16:20.000000000 +0100
+--- zaz_test37	2018-01-26 08:56:00.000000000 +0100
++++ vm_test37	2018-01-26 08:56:00.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 02 90" ("WTF") !
@@ -1255,8 +1255,8 @@ zaz_test37 vm_test37 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_02_90.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 190, line 4
---- zaz_test38	2018-01-26 08:16:20.000000000 +0100
-+++ vm_test38	2018-01-26 08:16:20.000000000 +0100
+--- zaz_test38	2018-01-26 08:56:00.000000000 +0100
++++ vm_test38	2018-01-26 08:56:00.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 02 90" ("WTF") !
@@ -1301,8 +1301,8 @@ zaz_test38 vm_test38 differ: char 190, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 656, line 29
---- zaz_test1	2018-01-26 08:16:31.000000000 +0100
-+++ vm_test1	2018-01-26 08:16:31.000000000 +0100
+--- zaz_test1	2018-01-26 08:56:11.000000000 +0100
++++ vm_test1	2018-01-26 08:56:11.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1314,8 +1314,8 @@ zaz_test1 vm_test1 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 190, line 4
---- zaz_test6	2018-01-26 08:16:31.000000000 +0100
-+++ vm_test6	2018-01-26 08:16:31.000000000 +0100
+--- zaz_test6	2018-01-26 08:56:11.000000000 +0100
++++ vm_test6	2018-01-26 08:56:11.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 0d 90" ("WTF") !
@@ -1327,8 +1327,8 @@ zaz_test6 vm_test6 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 190, line 4
---- zaz_test7	2018-01-26 08:16:31.000000000 +0100
-+++ vm_test7	2018-01-26 08:16:31.000000000 +0100
+--- zaz_test7	2018-01-26 08:56:11.000000000 +0100
++++ vm_test7	2018-01-26 08:56:11.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 0d 90" ("WTF") !
@@ -1340,8 +1340,8 @@ zaz_test7 vm_test7 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 656, line 29
---- zaz_test8	2018-01-26 08:16:31.000000000 +0100
-+++ vm_test8	2018-01-26 08:16:31.000000000 +0100
+--- zaz_test8	2018-01-26 08:56:11.000000000 +0100
++++ vm_test8	2018-01-26 08:56:11.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1353,8 +1353,8 @@ zaz_test8 vm_test8 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 656, line 29
---- zaz_test9	2018-01-26 08:16:31.000000000 +0100
-+++ vm_test9	2018-01-26 08:16:31.000000000 +0100
+--- zaz_test9	2018-01-26 08:56:11.000000000 +0100
++++ vm_test9	2018-01-26 08:56:11.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1366,8 +1366,8 @@ zaz_test9 vm_test9 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 190, line 4
---- zaz_test14	2018-01-26 08:16:31.000000000 +0100
-+++ vm_test14	2018-01-26 08:16:31.000000000 +0100
+--- zaz_test14	2018-01-26 08:56:12.000000000 +0100
++++ vm_test14	2018-01-26 08:56:12.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 0d 90" ("WTF") !
@@ -1379,8 +1379,8 @@ zaz_test14 vm_test14 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 190, line 4
---- zaz_test15	2018-01-26 08:16:31.000000000 +0100
-+++ vm_test15	2018-01-26 08:16:31.000000000 +0100
+--- zaz_test15	2018-01-26 08:56:12.000000000 +0100
++++ vm_test15	2018-01-26 08:56:12.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 0d 90" ("WTF") !
@@ -1392,8 +1392,8 @@ zaz_test15 vm_test15 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 656, line 29
---- zaz_test16	2018-01-26 08:16:31.000000000 +0100
-+++ vm_test16	2018-01-26 08:16:31.000000000 +0100
+--- zaz_test16	2018-01-26 08:56:12.000000000 +0100
++++ vm_test16	2018-01-26 08:56:12.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1405,8 +1405,8 @@ zaz_test16 vm_test16 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 190, line 4
---- zaz_test21	2018-01-26 08:16:32.000000000 +0100
-+++ vm_test21	2018-01-26 08:16:32.000000000 +0100
+--- zaz_test21	2018-01-26 08:56:12.000000000 +0100
++++ vm_test21	2018-01-26 08:56:12.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 0d 90" ("WTF") !
@@ -1418,8 +1418,8 @@ zaz_test21 vm_test21 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 190, line 4
---- zaz_test22	2018-01-26 08:16:32.000000000 +0100
-+++ vm_test22	2018-01-26 08:16:32.000000000 +0100
+--- zaz_test22	2018-01-26 08:56:12.000000000 +0100
++++ vm_test22	2018-01-26 08:56:12.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 0d 90" ("WTF") !
@@ -1431,8 +1431,8 @@ zaz_test22 vm_test22 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 656, line 29
---- zaz_test23	2018-01-26 08:16:32.000000000 +0100
-+++ vm_test23	2018-01-26 08:16:32.000000000 +0100
+--- zaz_test23	2018-01-26 08:56:12.000000000 +0100
++++ vm_test23	2018-01-26 08:56:12.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1444,8 +1444,8 @@ zaz_test23 vm_test23 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 656, line 29
---- zaz_test24	2018-01-26 08:16:32.000000000 +0100
-+++ vm_test24	2018-01-26 08:16:32.000000000 +0100
+--- zaz_test24	2018-01-26 08:56:12.000000000 +0100
++++ vm_test24	2018-01-26 08:56:12.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1457,8 +1457,8 @@ zaz_test24 vm_test24 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 190, line 4
---- zaz_test29	2018-01-26 08:16:32.000000000 +0100
-+++ vm_test29	2018-01-26 08:16:32.000000000 +0100
+--- zaz_test29	2018-01-26 08:56:12.000000000 +0100
++++ vm_test29	2018-01-26 08:56:12.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 0d 90" ("WTF") !
@@ -1470,8 +1470,8 @@ zaz_test29 vm_test29 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 190, line 4
---- zaz_test30	2018-01-26 08:16:32.000000000 +0100
-+++ vm_test30	2018-01-26 08:16:32.000000000 +0100
+--- zaz_test30	2018-01-26 08:56:12.000000000 +0100
++++ vm_test30	2018-01-26 08:56:12.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 0d 90" ("WTF") !
@@ -1483,8 +1483,8 @@ zaz_test30 vm_test30 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 656, line 29
---- zaz_test31	2018-01-26 08:16:32.000000000 +0100
-+++ vm_test31	2018-01-26 08:16:32.000000000 +0100
+--- zaz_test31	2018-01-26 08:56:12.000000000 +0100
++++ vm_test31	2018-01-26 08:56:12.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1496,8 +1496,8 @@ zaz_test31 vm_test31 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 656, line 29
---- zaz_test32	2018-01-26 08:16:32.000000000 +0100
-+++ vm_test32	2018-01-26 08:16:32.000000000 +0100
+--- zaz_test32	2018-01-26 08:56:12.000000000 +0100
++++ vm_test32	2018-01-26 08:56:12.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1509,8 +1509,8 @@ zaz_test32 vm_test32 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 190, line 4
---- zaz_test37	2018-01-26 08:16:32.000000000 +0100
-+++ vm_test37	2018-01-26 08:16:32.000000000 +0100
+--- zaz_test37	2018-01-26 08:56:12.000000000 +0100
++++ vm_test37	2018-01-26 08:56:12.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 0d 90" ("WTF") !
@@ -1522,8 +1522,8 @@ zaz_test37 vm_test37 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_04_0d_90.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 190, line 4
---- zaz_test38	2018-01-26 08:16:32.000000000 +0100
-+++ vm_test38	2018-01-26 08:16:32.000000000 +0100
+--- zaz_test38	2018-01-26 08:56:12.000000000 +0100
++++ vm_test38	2018-01-26 08:56:12.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 04 0d 90" ("WTF") !
@@ -1547,8 +1547,8 @@ zaz_test38 vm_test38 differ: char 190, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 656, line 29
---- zaz_test1	2018-01-26 08:16:35.000000000 +0100
-+++ vm_test1	2018-01-26 08:16:35.000000000 +0100
+--- zaz_test1	2018-01-26 08:56:15.000000000 +0100
++++ vm_test1	2018-01-26 08:56:15.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1560,8 +1560,8 @@ zaz_test1 vm_test1 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 190, line 4
---- zaz_test6	2018-01-26 08:16:35.000000000 +0100
-+++ vm_test6	2018-01-26 08:16:35.000000000 +0100
+--- zaz_test6	2018-01-26 08:56:16.000000000 +0100
++++ vm_test6	2018-01-26 08:56:16.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -1573,8 +1573,8 @@ zaz_test6 vm_test6 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 190, line 4
---- zaz_test7	2018-01-26 08:16:35.000000000 +0100
-+++ vm_test7	2018-01-26 08:16:35.000000000 +0100
+--- zaz_test7	2018-01-26 08:56:16.000000000 +0100
++++ vm_test7	2018-01-26 08:56:16.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -1586,8 +1586,8 @@ zaz_test7 vm_test7 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 656, line 29
---- zaz_test8	2018-01-26 08:16:35.000000000 +0100
-+++ vm_test8	2018-01-26 08:16:35.000000000 +0100
+--- zaz_test8	2018-01-26 08:56:16.000000000 +0100
++++ vm_test8	2018-01-26 08:56:16.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1599,8 +1599,8 @@ zaz_test8 vm_test8 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 656, line 29
---- zaz_test9	2018-01-26 08:16:35.000000000 +0100
-+++ vm_test9	2018-01-26 08:16:35.000000000 +0100
+--- zaz_test9	2018-01-26 08:56:16.000000000 +0100
++++ vm_test9	2018-01-26 08:56:16.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1612,8 +1612,8 @@ zaz_test9 vm_test9 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 190, line 4
---- zaz_test14	2018-01-26 08:16:36.000000000 +0100
-+++ vm_test14	2018-01-26 08:16:36.000000000 +0100
+--- zaz_test14	2018-01-26 08:56:16.000000000 +0100
++++ vm_test14	2018-01-26 08:56:16.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -1625,8 +1625,8 @@ zaz_test14 vm_test14 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 190, line 4
---- zaz_test15	2018-01-26 08:16:36.000000000 +0100
-+++ vm_test15	2018-01-26 08:16:36.000000000 +0100
+--- zaz_test15	2018-01-26 08:56:16.000000000 +0100
++++ vm_test15	2018-01-26 08:56:16.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -1638,8 +1638,8 @@ zaz_test15 vm_test15 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 656, line 29
---- zaz_test16	2018-01-26 08:16:36.000000000 +0100
-+++ vm_test16	2018-01-26 08:16:36.000000000 +0100
+--- zaz_test16	2018-01-26 08:56:16.000000000 +0100
++++ vm_test16	2018-01-26 08:56:16.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1651,8 +1651,8 @@ zaz_test16 vm_test16 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 190, line 4
---- zaz_test21	2018-01-26 08:16:36.000000000 +0100
-+++ vm_test21	2018-01-26 08:16:36.000000000 +0100
+--- zaz_test21	2018-01-26 08:56:16.000000000 +0100
++++ vm_test21	2018-01-26 08:56:16.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -1664,8 +1664,8 @@ zaz_test21 vm_test21 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 190, line 4
---- zaz_test22	2018-01-26 08:16:36.000000000 +0100
-+++ vm_test22	2018-01-26 08:16:36.000000000 +0100
+--- zaz_test22	2018-01-26 08:56:16.000000000 +0100
++++ vm_test22	2018-01-26 08:56:16.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -1677,8 +1677,8 @@ zaz_test22 vm_test22 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 656, line 29
---- zaz_test23	2018-01-26 08:16:36.000000000 +0100
-+++ vm_test23	2018-01-26 08:16:36.000000000 +0100
+--- zaz_test23	2018-01-26 08:56:16.000000000 +0100
++++ vm_test23	2018-01-26 08:56:16.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1690,8 +1690,8 @@ zaz_test23 vm_test23 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 656, line 29
---- zaz_test24	2018-01-26 08:16:36.000000000 +0100
-+++ vm_test24	2018-01-26 08:16:36.000000000 +0100
+--- zaz_test24	2018-01-26 08:56:16.000000000 +0100
++++ vm_test24	2018-01-26 08:56:16.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1703,8 +1703,8 @@ zaz_test24 vm_test24 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 190, line 4
---- zaz_test29	2018-01-26 08:16:36.000000000 +0100
-+++ vm_test29	2018-01-26 08:16:36.000000000 +0100
+--- zaz_test29	2018-01-26 08:56:16.000000000 +0100
++++ vm_test29	2018-01-26 08:56:16.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -1716,8 +1716,8 @@ zaz_test29 vm_test29 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 190, line 4
---- zaz_test30	2018-01-26 08:16:36.000000000 +0100
-+++ vm_test30	2018-01-26 08:16:36.000000000 +0100
+--- zaz_test30	2018-01-26 08:56:16.000000000 +0100
++++ vm_test30	2018-01-26 08:56:16.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -1729,8 +1729,8 @@ zaz_test30 vm_test30 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 656, line 29
---- zaz_test31	2018-01-26 08:16:36.000000000 +0100
-+++ vm_test31	2018-01-26 08:16:36.000000000 +0100
+--- zaz_test31	2018-01-26 08:56:16.000000000 +0100
++++ vm_test31	2018-01-26 08:56:16.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1742,8 +1742,8 @@ zaz_test31 vm_test31 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 656, line 29
---- zaz_test32	2018-01-26 08:16:36.000000000 +0100
-+++ vm_test32	2018-01-26 08:16:36.000000000 +0100
+--- zaz_test32	2018-01-26 08:56:17.000000000 +0100
++++ vm_test32	2018-01-26 08:56:17.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1755,8 +1755,8 @@ zaz_test32 vm_test32 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 190, line 4
---- zaz_test37	2018-01-26 08:16:37.000000000 +0100
-+++ vm_test37	2018-01-26 08:16:37.000000000 +0100
+--- zaz_test37	2018-01-26 08:56:17.000000000 +0100
++++ vm_test37	2018-01-26 08:56:17.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -1768,8 +1768,8 @@ zaz_test37 vm_test37 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_02.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 190, line 4
---- zaz_test38	2018-01-26 08:16:37.000000000 +0100
-+++ vm_test38	2018-01-26 08:16:37.000000000 +0100
+--- zaz_test38	2018-01-26 08:56:17.000000000 +0100
++++ vm_test38	2018-01-26 08:56:17.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -1814,8 +1814,8 @@ zaz_test38 vm_test38 differ: char 190, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 656, line 29
---- zaz_test1	2018-01-26 08:16:48.000000000 +0100
-+++ vm_test1	2018-01-26 08:16:48.000000000 +0100
+--- zaz_test1	2018-01-26 08:56:28.000000000 +0100
++++ vm_test1	2018-01-26 08:56:28.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1827,8 +1827,8 @@ zaz_test1 vm_test1 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 190, line 4
---- zaz_test6	2018-01-26 08:16:48.000000000 +0100
-+++ vm_test6	2018-01-26 08:16:48.000000000 +0100
+--- zaz_test6	2018-01-26 08:56:28.000000000 +0100
++++ vm_test6	2018-01-26 08:56:28.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -1840,8 +1840,8 @@ zaz_test6 vm_test6 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 190, line 4
---- zaz_test7	2018-01-26 08:16:48.000000000 +0100
-+++ vm_test7	2018-01-26 08:16:48.000000000 +0100
+--- zaz_test7	2018-01-26 08:56:28.000000000 +0100
++++ vm_test7	2018-01-26 08:56:28.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -1853,8 +1853,8 @@ zaz_test7 vm_test7 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 656, line 29
---- zaz_test8	2018-01-26 08:16:48.000000000 +0100
-+++ vm_test8	2018-01-26 08:16:48.000000000 +0100
+--- zaz_test8	2018-01-26 08:56:28.000000000 +0100
++++ vm_test8	2018-01-26 08:56:28.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1866,8 +1866,8 @@ zaz_test8 vm_test8 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 656, line 29
---- zaz_test9	2018-01-26 08:16:48.000000000 +0100
-+++ vm_test9	2018-01-26 08:16:48.000000000 +0100
+--- zaz_test9	2018-01-26 08:56:28.000000000 +0100
++++ vm_test9	2018-01-26 08:56:28.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1879,8 +1879,8 @@ zaz_test9 vm_test9 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 190, line 4
---- zaz_test14	2018-01-26 08:16:48.000000000 +0100
-+++ vm_test14	2018-01-26 08:16:48.000000000 +0100
+--- zaz_test14	2018-01-26 08:56:28.000000000 +0100
++++ vm_test14	2018-01-26 08:56:28.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -1892,8 +1892,8 @@ zaz_test14 vm_test14 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 190, line 4
---- zaz_test15	2018-01-26 08:16:48.000000000 +0100
-+++ vm_test15	2018-01-26 08:16:48.000000000 +0100
+--- zaz_test15	2018-01-26 08:56:28.000000000 +0100
++++ vm_test15	2018-01-26 08:56:28.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -1905,8 +1905,8 @@ zaz_test15 vm_test15 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 656, line 29
---- zaz_test16	2018-01-26 08:16:48.000000000 +0100
-+++ vm_test16	2018-01-26 08:16:48.000000000 +0100
+--- zaz_test16	2018-01-26 08:56:28.000000000 +0100
++++ vm_test16	2018-01-26 08:56:28.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1918,8 +1918,8 @@ zaz_test16 vm_test16 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 190, line 4
---- zaz_test21	2018-01-26 08:16:48.000000000 +0100
-+++ vm_test21	2018-01-26 08:16:48.000000000 +0100
+--- zaz_test21	2018-01-26 08:56:28.000000000 +0100
++++ vm_test21	2018-01-26 08:56:28.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -1931,8 +1931,8 @@ zaz_test21 vm_test21 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 190, line 4
---- zaz_test22	2018-01-26 08:16:48.000000000 +0100
-+++ vm_test22	2018-01-26 08:16:48.000000000 +0100
+--- zaz_test22	2018-01-26 08:56:28.000000000 +0100
++++ vm_test22	2018-01-26 08:56:28.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -1944,8 +1944,8 @@ zaz_test22 vm_test22 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 656, line 29
---- zaz_test23	2018-01-26 08:16:48.000000000 +0100
-+++ vm_test23	2018-01-26 08:16:48.000000000 +0100
+--- zaz_test23	2018-01-26 08:56:28.000000000 +0100
++++ vm_test23	2018-01-26 08:56:28.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1957,8 +1957,8 @@ zaz_test23 vm_test23 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 656, line 29
---- zaz_test24	2018-01-26 08:16:48.000000000 +0100
-+++ vm_test24	2018-01-26 08:16:48.000000000 +0100
+--- zaz_test24	2018-01-26 08:56:28.000000000 +0100
++++ vm_test24	2018-01-26 08:56:28.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -1970,8 +1970,8 @@ zaz_test24 vm_test24 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 190, line 4
---- zaz_test29	2018-01-26 08:16:49.000000000 +0100
-+++ vm_test29	2018-01-26 08:16:49.000000000 +0100
+--- zaz_test29	2018-01-26 08:56:28.000000000 +0100
++++ vm_test29	2018-01-26 08:56:28.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -1983,8 +1983,8 @@ zaz_test29 vm_test29 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 190, line 4
---- zaz_test30	2018-01-26 08:16:49.000000000 +0100
-+++ vm_test30	2018-01-26 08:16:49.000000000 +0100
+--- zaz_test30	2018-01-26 08:56:28.000000000 +0100
++++ vm_test30	2018-01-26 08:56:28.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -1996,8 +1996,8 @@ zaz_test30 vm_test30 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 656, line 29
---- zaz_test31	2018-01-26 08:16:49.000000000 +0100
-+++ vm_test31	2018-01-26 08:16:49.000000000 +0100
+--- zaz_test31	2018-01-26 08:56:29.000000000 +0100
++++ vm_test31	2018-01-26 08:56:29.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2009,8 +2009,8 @@ zaz_test31 vm_test31 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 656, line 29
---- zaz_test32	2018-01-26 08:16:49.000000000 +0100
-+++ vm_test32	2018-01-26 08:16:49.000000000 +0100
+--- zaz_test32	2018-01-26 08:56:29.000000000 +0100
++++ vm_test32	2018-01-26 08:56:29.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2022,8 +2022,8 @@ zaz_test32 vm_test32 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 190, line 4
---- zaz_test37	2018-01-26 08:16:49.000000000 +0100
-+++ vm_test37	2018-01-26 08:16:49.000000000 +0100
+--- zaz_test37	2018-01-26 08:56:29.000000000 +0100
++++ vm_test37	2018-01-26 08:56:29.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2035,8 +2035,8 @@ zaz_test37 vm_test37 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_05_0d.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 190, line 4
---- zaz_test38	2018-01-26 08:16:49.000000000 +0100
-+++ vm_test38	2018-01-26 08:16:49.000000000 +0100
+--- zaz_test38	2018-01-26 08:56:29.000000000 +0100
++++ vm_test38	2018-01-26 08:56:29.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2060,8 +2060,8 @@ zaz_test38 vm_test38 differ: char 190, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 656, line 29
---- zaz_test1	2018-01-26 08:16:52.000000000 +0100
-+++ vm_test1	2018-01-26 08:16:52.000000000 +0100
+--- zaz_test1	2018-01-26 08:56:32.000000000 +0100
++++ vm_test1	2018-01-26 08:56:32.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2073,8 +2073,8 @@ zaz_test1 vm_test1 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 190, line 4
---- zaz_test6	2018-01-26 08:16:52.000000000 +0100
-+++ vm_test6	2018-01-26 08:16:52.000000000 +0100
+--- zaz_test6	2018-01-26 08:56:32.000000000 +0100
++++ vm_test6	2018-01-26 08:56:32.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 06 02 90" ("WTF") !
@@ -2086,8 +2086,8 @@ zaz_test6 vm_test6 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 190, line 4
---- zaz_test7	2018-01-26 08:16:52.000000000 +0100
-+++ vm_test7	2018-01-26 08:16:52.000000000 +0100
+--- zaz_test7	2018-01-26 08:56:32.000000000 +0100
++++ vm_test7	2018-01-26 08:56:32.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 06 02 90" ("WTF") !
@@ -2099,8 +2099,8 @@ zaz_test7 vm_test7 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 656, line 29
---- zaz_test8	2018-01-26 08:16:52.000000000 +0100
-+++ vm_test8	2018-01-26 08:16:52.000000000 +0100
+--- zaz_test8	2018-01-26 08:56:32.000000000 +0100
++++ vm_test8	2018-01-26 08:56:32.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2112,8 +2112,8 @@ zaz_test8 vm_test8 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 656, line 29
---- zaz_test9	2018-01-26 08:16:52.000000000 +0100
-+++ vm_test9	2018-01-26 08:16:52.000000000 +0100
+--- zaz_test9	2018-01-26 08:56:32.000000000 +0100
++++ vm_test9	2018-01-26 08:56:32.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2125,8 +2125,8 @@ zaz_test9 vm_test9 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 190, line 4
---- zaz_test14	2018-01-26 08:16:53.000000000 +0100
-+++ vm_test14	2018-01-26 08:16:52.000000000 +0100
+--- zaz_test14	2018-01-26 08:56:32.000000000 +0100
++++ vm_test14	2018-01-26 08:56:32.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 06 02 90" ("WTF") !
@@ -2138,8 +2138,8 @@ zaz_test14 vm_test14 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 190, line 4
---- zaz_test15	2018-01-26 08:16:53.000000000 +0100
-+++ vm_test15	2018-01-26 08:16:53.000000000 +0100
+--- zaz_test15	2018-01-26 08:56:32.000000000 +0100
++++ vm_test15	2018-01-26 08:56:32.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 06 02 90" ("WTF") !
@@ -2151,8 +2151,8 @@ zaz_test15 vm_test15 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 656, line 29
---- zaz_test16	2018-01-26 08:16:53.000000000 +0100
-+++ vm_test16	2018-01-26 08:16:53.000000000 +0100
+--- zaz_test16	2018-01-26 08:56:32.000000000 +0100
++++ vm_test16	2018-01-26 08:56:32.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2164,8 +2164,8 @@ zaz_test16 vm_test16 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 190, line 4
---- zaz_test21	2018-01-26 08:16:53.000000000 +0100
-+++ vm_test21	2018-01-26 08:16:53.000000000 +0100
+--- zaz_test21	2018-01-26 08:56:32.000000000 +0100
++++ vm_test21	2018-01-26 08:56:32.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 06 02 90" ("WTF") !
@@ -2177,8 +2177,8 @@ zaz_test21 vm_test21 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 190, line 4
---- zaz_test22	2018-01-26 08:16:53.000000000 +0100
-+++ vm_test22	2018-01-26 08:16:53.000000000 +0100
+--- zaz_test22	2018-01-26 08:56:32.000000000 +0100
++++ vm_test22	2018-01-26 08:56:32.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 06 02 90" ("WTF") !
@@ -2190,8 +2190,8 @@ zaz_test22 vm_test22 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 656, line 29
---- zaz_test23	2018-01-26 08:16:53.000000000 +0100
-+++ vm_test23	2018-01-26 08:16:53.000000000 +0100
+--- zaz_test23	2018-01-26 08:56:33.000000000 +0100
++++ vm_test23	2018-01-26 08:56:33.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2203,8 +2203,8 @@ zaz_test23 vm_test23 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 656, line 29
---- zaz_test24	2018-01-26 08:16:53.000000000 +0100
-+++ vm_test24	2018-01-26 08:16:53.000000000 +0100
+--- zaz_test24	2018-01-26 08:56:33.000000000 +0100
++++ vm_test24	2018-01-26 08:56:33.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2216,8 +2216,8 @@ zaz_test24 vm_test24 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 190, line 4
---- zaz_test29	2018-01-26 08:16:53.000000000 +0100
-+++ vm_test29	2018-01-26 08:16:53.000000000 +0100
+--- zaz_test29	2018-01-26 08:56:33.000000000 +0100
++++ vm_test29	2018-01-26 08:56:33.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 06 02 90" ("WTF") !
@@ -2229,8 +2229,8 @@ zaz_test29 vm_test29 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 190, line 4
---- zaz_test30	2018-01-26 08:16:53.000000000 +0100
-+++ vm_test30	2018-01-26 08:16:53.000000000 +0100
+--- zaz_test30	2018-01-26 08:56:33.000000000 +0100
++++ vm_test30	2018-01-26 08:56:33.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 06 02 90" ("WTF") !
@@ -2242,8 +2242,8 @@ zaz_test30 vm_test30 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 656, line 29
---- zaz_test31	2018-01-26 08:16:53.000000000 +0100
-+++ vm_test31	2018-01-26 08:16:53.000000000 +0100
+--- zaz_test31	2018-01-26 08:56:33.000000000 +0100
++++ vm_test31	2018-01-26 08:56:33.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2255,8 +2255,8 @@ zaz_test31 vm_test31 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 656, line 29
---- zaz_test32	2018-01-26 08:16:53.000000000 +0100
-+++ vm_test32	2018-01-26 08:16:53.000000000 +0100
+--- zaz_test32	2018-01-26 08:56:33.000000000 +0100
++++ vm_test32	2018-01-26 08:56:33.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2268,8 +2268,8 @@ zaz_test32 vm_test32 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 190, line 4
---- zaz_test37	2018-01-26 08:16:53.000000000 +0100
-+++ vm_test37	2018-01-26 08:16:53.000000000 +0100
+--- zaz_test37	2018-01-26 08:56:33.000000000 +0100
++++ vm_test37	2018-01-26 08:56:33.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 06 02 90" ("WTF") !
@@ -2281,8 +2281,8 @@ zaz_test37 vm_test37 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_02.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 190, line 4
---- zaz_test38	2018-01-26 08:16:53.000000000 +0100
-+++ vm_test38	2018-01-26 08:16:53.000000000 +0100
+--- zaz_test38	2018-01-26 08:56:33.000000000 +0100
++++ vm_test38	2018-01-26 08:56:33.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 06 02 90" ("WTF") !
@@ -2327,8 +2327,8 @@ zaz_test38 vm_test38 differ: char 190, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 656, line 29
---- zaz_test1	2018-01-26 08:17:05.000000000 +0100
-+++ vm_test1	2018-01-26 08:17:05.000000000 +0100
+--- zaz_test1	2018-01-26 08:56:45.000000000 +0100
++++ vm_test1	2018-01-26 08:56:45.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2340,8 +2340,8 @@ zaz_test1 vm_test1 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 190, line 4
---- zaz_test6	2018-01-26 08:17:05.000000000 +0100
-+++ vm_test6	2018-01-26 08:17:05.000000000 +0100
+--- zaz_test6	2018-01-26 08:56:45.000000000 +0100
++++ vm_test6	2018-01-26 08:56:45.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2353,8 +2353,8 @@ zaz_test6 vm_test6 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 190, line 4
---- zaz_test7	2018-01-26 08:17:05.000000000 +0100
-+++ vm_test7	2018-01-26 08:17:05.000000000 +0100
+--- zaz_test7	2018-01-26 08:56:45.000000000 +0100
++++ vm_test7	2018-01-26 08:56:45.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2366,8 +2366,8 @@ zaz_test7 vm_test7 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 656, line 29
---- zaz_test8	2018-01-26 08:17:05.000000000 +0100
-+++ vm_test8	2018-01-26 08:17:05.000000000 +0100
+--- zaz_test8	2018-01-26 08:56:45.000000000 +0100
++++ vm_test8	2018-01-26 08:56:45.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2379,8 +2379,8 @@ zaz_test8 vm_test8 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 656, line 29
---- zaz_test9	2018-01-26 08:17:05.000000000 +0100
-+++ vm_test9	2018-01-26 08:17:05.000000000 +0100
+--- zaz_test9	2018-01-26 08:56:45.000000000 +0100
++++ vm_test9	2018-01-26 08:56:45.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2392,8 +2392,8 @@ zaz_test9 vm_test9 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 190, line 4
---- zaz_test14	2018-01-26 08:17:05.000000000 +0100
-+++ vm_test14	2018-01-26 08:17:05.000000000 +0100
+--- zaz_test14	2018-01-26 08:56:45.000000000 +0100
++++ vm_test14	2018-01-26 08:56:45.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2405,8 +2405,8 @@ zaz_test14 vm_test14 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 190, line 4
---- zaz_test15	2018-01-26 08:17:05.000000000 +0100
-+++ vm_test15	2018-01-26 08:17:05.000000000 +0100
+--- zaz_test15	2018-01-26 08:56:45.000000000 +0100
++++ vm_test15	2018-01-26 08:56:45.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2418,8 +2418,8 @@ zaz_test15 vm_test15 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 656, line 29
---- zaz_test16	2018-01-26 08:17:05.000000000 +0100
-+++ vm_test16	2018-01-26 08:17:05.000000000 +0100
+--- zaz_test16	2018-01-26 08:56:45.000000000 +0100
++++ vm_test16	2018-01-26 08:56:45.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2431,8 +2431,8 @@ zaz_test16 vm_test16 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 190, line 4
---- zaz_test21	2018-01-26 08:17:05.000000000 +0100
-+++ vm_test21	2018-01-26 08:17:05.000000000 +0100
+--- zaz_test21	2018-01-26 08:56:45.000000000 +0100
++++ vm_test21	2018-01-26 08:56:45.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2444,8 +2444,8 @@ zaz_test21 vm_test21 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 190, line 4
---- zaz_test22	2018-01-26 08:17:05.000000000 +0100
-+++ vm_test22	2018-01-26 08:17:05.000000000 +0100
+--- zaz_test22	2018-01-26 08:56:45.000000000 +0100
++++ vm_test22	2018-01-26 08:56:45.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2457,8 +2457,8 @@ zaz_test22 vm_test22 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 656, line 29
---- zaz_test23	2018-01-26 08:17:05.000000000 +0100
-+++ vm_test23	2018-01-26 08:17:05.000000000 +0100
+--- zaz_test23	2018-01-26 08:56:45.000000000 +0100
++++ vm_test23	2018-01-26 08:56:45.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2470,8 +2470,8 @@ zaz_test23 vm_test23 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 656, line 29
---- zaz_test24	2018-01-26 08:17:05.000000000 +0100
-+++ vm_test24	2018-01-26 08:17:05.000000000 +0100
+--- zaz_test24	2018-01-26 08:56:45.000000000 +0100
++++ vm_test24	2018-01-26 08:56:45.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2483,8 +2483,8 @@ zaz_test24 vm_test24 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 190, line 4
---- zaz_test29	2018-01-26 08:17:06.000000000 +0100
-+++ vm_test29	2018-01-26 08:17:06.000000000 +0100
+--- zaz_test29	2018-01-26 08:56:45.000000000 +0100
++++ vm_test29	2018-01-26 08:56:45.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2496,8 +2496,8 @@ zaz_test29 vm_test29 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 190, line 4
---- zaz_test30	2018-01-26 08:17:06.000000000 +0100
-+++ vm_test30	2018-01-26 08:17:06.000000000 +0100
+--- zaz_test30	2018-01-26 08:56:45.000000000 +0100
++++ vm_test30	2018-01-26 08:56:45.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2509,8 +2509,8 @@ zaz_test30 vm_test30 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 656, line 29
---- zaz_test31	2018-01-26 08:17:06.000000000 +0100
-+++ vm_test31	2018-01-26 08:17:06.000000000 +0100
+--- zaz_test31	2018-01-26 08:56:45.000000000 +0100
++++ vm_test31	2018-01-26 08:56:45.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2522,8 +2522,8 @@ zaz_test31 vm_test31 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 656, line 29
---- zaz_test32	2018-01-26 08:17:06.000000000 +0100
-+++ vm_test32	2018-01-26 08:17:06.000000000 +0100
+--- zaz_test32	2018-01-26 08:56:46.000000000 +0100
++++ vm_test32	2018-01-26 08:56:46.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2535,8 +2535,8 @@ zaz_test32 vm_test32 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 190, line 4
---- zaz_test37	2018-01-26 08:17:06.000000000 +0100
-+++ vm_test37	2018-01-26 08:17:06.000000000 +0100
+--- zaz_test37	2018-01-26 08:56:46.000000000 +0100
++++ vm_test37	2018-01-26 08:56:46.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2548,8 +2548,8 @@ zaz_test37 vm_test37 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_06_0d.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 190, line 4
---- zaz_test38	2018-01-26 08:17:06.000000000 +0100
-+++ vm_test38	2018-01-26 08:17:06.000000000 +0100
+--- zaz_test38	2018-01-26 08:56:46.000000000 +0100
++++ vm_test38	2018-01-26 08:56:46.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2573,8 +2573,8 @@ zaz_test38 vm_test38 differ: char 190, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 656, line 29
---- zaz_test1	2018-01-26 08:17:09.000000000 +0100
-+++ vm_test1	2018-01-26 08:17:09.000000000 +0100
+--- zaz_test1	2018-01-26 08:56:49.000000000 +0100
++++ vm_test1	2018-01-26 08:56:49.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2586,8 +2586,8 @@ zaz_test1 vm_test1 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 190, line 4
---- zaz_test6	2018-01-26 08:17:09.000000000 +0100
-+++ vm_test6	2018-01-26 08:17:09.000000000 +0100
+--- zaz_test6	2018-01-26 08:56:49.000000000 +0100
++++ vm_test6	2018-01-26 08:56:49.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -2599,8 +2599,8 @@ zaz_test6 vm_test6 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 190, line 4
---- zaz_test7	2018-01-26 08:17:09.000000000 +0100
-+++ vm_test7	2018-01-26 08:17:09.000000000 +0100
+--- zaz_test7	2018-01-26 08:56:49.000000000 +0100
++++ vm_test7	2018-01-26 08:56:49.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -2612,8 +2612,8 @@ zaz_test7 vm_test7 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 656, line 29
---- zaz_test8	2018-01-26 08:17:09.000000000 +0100
-+++ vm_test8	2018-01-26 08:17:09.000000000 +0100
+--- zaz_test8	2018-01-26 08:56:49.000000000 +0100
++++ vm_test8	2018-01-26 08:56:49.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2625,8 +2625,8 @@ zaz_test8 vm_test8 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 656, line 29
---- zaz_test9	2018-01-26 08:17:09.000000000 +0100
-+++ vm_test9	2018-01-26 08:17:09.000000000 +0100
+--- zaz_test9	2018-01-26 08:56:49.000000000 +0100
++++ vm_test9	2018-01-26 08:56:49.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2638,8 +2638,8 @@ zaz_test9 vm_test9 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 190, line 4
---- zaz_test14	2018-01-26 08:17:09.000000000 +0100
-+++ vm_test14	2018-01-26 08:17:09.000000000 +0100
+--- zaz_test14	2018-01-26 08:56:49.000000000 +0100
++++ vm_test14	2018-01-26 08:56:49.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -2651,8 +2651,8 @@ zaz_test14 vm_test14 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 190, line 4
---- zaz_test15	2018-01-26 08:17:09.000000000 +0100
-+++ vm_test15	2018-01-26 08:17:09.000000000 +0100
+--- zaz_test15	2018-01-26 08:56:49.000000000 +0100
++++ vm_test15	2018-01-26 08:56:49.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -2664,8 +2664,8 @@ zaz_test15 vm_test15 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 656, line 29
---- zaz_test16	2018-01-26 08:17:09.000000000 +0100
-+++ vm_test16	2018-01-26 08:17:09.000000000 +0100
+--- zaz_test16	2018-01-26 08:56:49.000000000 +0100
++++ vm_test16	2018-01-26 08:56:49.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2677,8 +2677,8 @@ zaz_test16 vm_test16 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 190, line 4
---- zaz_test21	2018-01-26 08:17:10.000000000 +0100
-+++ vm_test21	2018-01-26 08:17:10.000000000 +0100
+--- zaz_test21	2018-01-26 08:56:49.000000000 +0100
++++ vm_test21	2018-01-26 08:56:49.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -2690,8 +2690,8 @@ zaz_test21 vm_test21 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 190, line 4
---- zaz_test22	2018-01-26 08:17:10.000000000 +0100
-+++ vm_test22	2018-01-26 08:17:10.000000000 +0100
+--- zaz_test22	2018-01-26 08:56:49.000000000 +0100
++++ vm_test22	2018-01-26 08:56:49.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -2703,8 +2703,8 @@ zaz_test22 vm_test22 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 656, line 29
---- zaz_test23	2018-01-26 08:17:10.000000000 +0100
-+++ vm_test23	2018-01-26 08:17:10.000000000 +0100
+--- zaz_test23	2018-01-26 08:56:50.000000000 +0100
++++ vm_test23	2018-01-26 08:56:50.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2716,8 +2716,8 @@ zaz_test23 vm_test23 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 656, line 29
---- zaz_test24	2018-01-26 08:17:10.000000000 +0100
-+++ vm_test24	2018-01-26 08:17:10.000000000 +0100
+--- zaz_test24	2018-01-26 08:56:50.000000000 +0100
++++ vm_test24	2018-01-26 08:56:50.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2729,8 +2729,8 @@ zaz_test24 vm_test24 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 190, line 4
---- zaz_test29	2018-01-26 08:17:10.000000000 +0100
-+++ vm_test29	2018-01-26 08:17:10.000000000 +0100
+--- zaz_test29	2018-01-26 08:56:50.000000000 +0100
++++ vm_test29	2018-01-26 08:56:50.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -2742,8 +2742,8 @@ zaz_test29 vm_test29 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 190, line 4
---- zaz_test30	2018-01-26 08:17:10.000000000 +0100
-+++ vm_test30	2018-01-26 08:17:10.000000000 +0100
+--- zaz_test30	2018-01-26 08:56:50.000000000 +0100
++++ vm_test30	2018-01-26 08:56:50.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -2755,8 +2755,8 @@ zaz_test30 vm_test30 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 656, line 29
---- zaz_test31	2018-01-26 08:17:10.000000000 +0100
-+++ vm_test31	2018-01-26 08:17:10.000000000 +0100
+--- zaz_test31	2018-01-26 08:56:50.000000000 +0100
++++ vm_test31	2018-01-26 08:56:50.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2768,8 +2768,8 @@ zaz_test31 vm_test31 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 656, line 29
---- zaz_test32	2018-01-26 08:17:10.000000000 +0100
-+++ vm_test32	2018-01-26 08:17:10.000000000 +0100
+--- zaz_test32	2018-01-26 08:56:50.000000000 +0100
++++ vm_test32	2018-01-26 08:56:50.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2781,8 +2781,8 @@ zaz_test32 vm_test32 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 190, line 4
---- zaz_test37	2018-01-26 08:17:10.000000000 +0100
-+++ vm_test37	2018-01-26 08:17:10.000000000 +0100
+--- zaz_test37	2018-01-26 08:56:50.000000000 +0100
++++ vm_test37	2018-01-26 08:56:50.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -2794,8 +2794,8 @@ zaz_test37 vm_test37 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_02.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 190, line 4
---- zaz_test38	2018-01-26 08:17:10.000000000 +0100
-+++ vm_test38	2018-01-26 08:17:10.000000000 +0100
+--- zaz_test38	2018-01-26 08:56:50.000000000 +0100
++++ vm_test38	2018-01-26 08:56:50.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -2843,8 +2843,8 @@ zaz_test38 vm_test38 differ: char 190, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 656, line 29
---- zaz_test1	2018-01-26 08:17:23.000000000 +0100
-+++ vm_test1	2018-01-26 08:17:23.000000000 +0100
+--- zaz_test1	2018-01-26 08:57:02.000000000 +0100
++++ vm_test1	2018-01-26 08:57:02.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2856,8 +2856,8 @@ zaz_test1 vm_test1 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 190, line 4
---- zaz_test6	2018-01-26 08:17:23.000000000 +0100
-+++ vm_test6	2018-01-26 08:17:23.000000000 +0100
+--- zaz_test6	2018-01-26 08:57:02.000000000 +0100
++++ vm_test6	2018-01-26 08:57:02.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2869,8 +2869,8 @@ zaz_test6 vm_test6 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 190, line 4
---- zaz_test7	2018-01-26 08:17:23.000000000 +0100
-+++ vm_test7	2018-01-26 08:17:23.000000000 +0100
+--- zaz_test7	2018-01-26 08:57:02.000000000 +0100
++++ vm_test7	2018-01-26 08:57:02.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2882,8 +2882,8 @@ zaz_test7 vm_test7 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 656, line 29
---- zaz_test8	2018-01-26 08:17:23.000000000 +0100
-+++ vm_test8	2018-01-26 08:17:23.000000000 +0100
+--- zaz_test8	2018-01-26 08:57:02.000000000 +0100
++++ vm_test8	2018-01-26 08:57:02.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2895,8 +2895,8 @@ zaz_test8 vm_test8 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 656, line 29
---- zaz_test9	2018-01-26 08:17:23.000000000 +0100
-+++ vm_test9	2018-01-26 08:17:23.000000000 +0100
+--- zaz_test9	2018-01-26 08:57:02.000000000 +0100
++++ vm_test9	2018-01-26 08:57:02.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2908,8 +2908,8 @@ zaz_test9 vm_test9 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 190, line 4
---- zaz_test14	2018-01-26 08:17:23.000000000 +0100
-+++ vm_test14	2018-01-26 08:17:23.000000000 +0100
+--- zaz_test14	2018-01-26 08:57:03.000000000 +0100
++++ vm_test14	2018-01-26 08:57:03.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2921,8 +2921,8 @@ zaz_test14 vm_test14 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 190, line 4
---- zaz_test15	2018-01-26 08:17:23.000000000 +0100
-+++ vm_test15	2018-01-26 08:17:23.000000000 +0100
+--- zaz_test15	2018-01-26 08:57:03.000000000 +0100
++++ vm_test15	2018-01-26 08:57:03.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2934,8 +2934,8 @@ zaz_test15 vm_test15 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 656, line 29
---- zaz_test16	2018-01-26 08:17:23.000000000 +0100
-+++ vm_test16	2018-01-26 08:17:23.000000000 +0100
+--- zaz_test16	2018-01-26 08:57:03.000000000 +0100
++++ vm_test16	2018-01-26 08:57:03.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2947,8 +2947,8 @@ zaz_test16 vm_test16 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 190, line 4
---- zaz_test21	2018-01-26 08:17:23.000000000 +0100
-+++ vm_test21	2018-01-26 08:17:23.000000000 +0100
+--- zaz_test21	2018-01-26 08:57:03.000000000 +0100
++++ vm_test21	2018-01-26 08:57:03.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2960,8 +2960,8 @@ zaz_test21 vm_test21 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 190, line 4
---- zaz_test22	2018-01-26 08:17:23.000000000 +0100
-+++ vm_test22	2018-01-26 08:17:23.000000000 +0100
+--- zaz_test22	2018-01-26 08:57:03.000000000 +0100
++++ vm_test22	2018-01-26 08:57:03.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -2973,8 +2973,8 @@ zaz_test22 vm_test22 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 656, line 29
---- zaz_test23	2018-01-26 08:17:23.000000000 +0100
-+++ vm_test23	2018-01-26 08:17:23.000000000 +0100
+--- zaz_test23	2018-01-26 08:57:03.000000000 +0100
++++ vm_test23	2018-01-26 08:57:03.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2986,8 +2986,8 @@ zaz_test23 vm_test23 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 656, line 29
---- zaz_test24	2018-01-26 08:17:23.000000000 +0100
-+++ vm_test24	2018-01-26 08:17:23.000000000 +0100
+--- zaz_test24	2018-01-26 08:57:03.000000000 +0100
++++ vm_test24	2018-01-26 08:57:03.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -2999,8 +2999,8 @@ zaz_test24 vm_test24 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 190, line 4
---- zaz_test29	2018-01-26 08:17:24.000000000 +0100
-+++ vm_test29	2018-01-26 08:17:23.000000000 +0100
+--- zaz_test29	2018-01-26 08:57:03.000000000 +0100
++++ vm_test29	2018-01-26 08:57:03.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3012,8 +3012,8 @@ zaz_test29 vm_test29 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 190, line 4
---- zaz_test30	2018-01-26 08:17:24.000000000 +0100
-+++ vm_test30	2018-01-26 08:17:24.000000000 +0100
+--- zaz_test30	2018-01-26 08:57:03.000000000 +0100
++++ vm_test30	2018-01-26 08:57:03.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3025,8 +3025,8 @@ zaz_test30 vm_test30 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 656, line 29
---- zaz_test31	2018-01-26 08:17:24.000000000 +0100
-+++ vm_test31	2018-01-26 08:17:24.000000000 +0100
+--- zaz_test31	2018-01-26 08:57:03.000000000 +0100
++++ vm_test31	2018-01-26 08:57:03.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3038,8 +3038,8 @@ zaz_test31 vm_test31 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 656, line 29
---- zaz_test32	2018-01-26 08:17:24.000000000 +0100
-+++ vm_test32	2018-01-26 08:17:24.000000000 +0100
+--- zaz_test32	2018-01-26 08:57:03.000000000 +0100
++++ vm_test32	2018-01-26 08:57:03.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3051,8 +3051,8 @@ zaz_test32 vm_test32 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 190, line 4
---- zaz_test37	2018-01-26 08:17:24.000000000 +0100
-+++ vm_test37	2018-01-26 08:17:24.000000000 +0100
+--- zaz_test37	2018-01-26 08:57:03.000000000 +0100
++++ vm_test37	2018-01-26 08:57:03.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3064,8 +3064,8 @@ zaz_test37 vm_test37 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_07_0d.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 190, line 4
---- zaz_test38	2018-01-26 08:17:24.000000000 +0100
-+++ vm_test38	2018-01-26 08:17:24.000000000 +0100
+--- zaz_test38	2018-01-26 08:57:03.000000000 +0100
++++ vm_test38	2018-01-26 08:57:03.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3089,8 +3089,8 @@ zaz_test38 vm_test38 differ: char 190, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 656, line 29
---- zaz_test1	2018-01-26 08:17:27.000000000 +0100
-+++ vm_test1	2018-01-26 08:17:27.000000000 +0100
+--- zaz_test1	2018-01-26 08:57:06.000000000 +0100
++++ vm_test1	2018-01-26 08:57:06.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3102,8 +3102,8 @@ zaz_test1 vm_test1 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 190, line 4
---- zaz_test6	2018-01-26 08:17:27.000000000 +0100
-+++ vm_test6	2018-01-26 08:17:27.000000000 +0100
+--- zaz_test6	2018-01-26 08:57:07.000000000 +0100
++++ vm_test6	2018-01-26 08:57:07.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3115,8 +3115,8 @@ zaz_test6 vm_test6 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 190, line 4
---- zaz_test7	2018-01-26 08:17:27.000000000 +0100
-+++ vm_test7	2018-01-26 08:17:27.000000000 +0100
+--- zaz_test7	2018-01-26 08:57:07.000000000 +0100
++++ vm_test7	2018-01-26 08:57:07.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3128,8 +3128,8 @@ zaz_test7 vm_test7 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 656, line 29
---- zaz_test8	2018-01-26 08:17:27.000000000 +0100
-+++ vm_test8	2018-01-26 08:17:27.000000000 +0100
+--- zaz_test8	2018-01-26 08:57:07.000000000 +0100
++++ vm_test8	2018-01-26 08:57:07.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3141,8 +3141,8 @@ zaz_test8 vm_test8 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 656, line 29
---- zaz_test9	2018-01-26 08:17:27.000000000 +0100
-+++ vm_test9	2018-01-26 08:17:27.000000000 +0100
+--- zaz_test9	2018-01-26 08:57:07.000000000 +0100
++++ vm_test9	2018-01-26 08:57:07.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3154,8 +3154,8 @@ zaz_test9 vm_test9 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 190, line 4
---- zaz_test14	2018-01-26 08:17:27.000000000 +0100
-+++ vm_test14	2018-01-26 08:17:27.000000000 +0100
+--- zaz_test14	2018-01-26 08:57:07.000000000 +0100
++++ vm_test14	2018-01-26 08:57:07.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3167,8 +3167,8 @@ zaz_test14 vm_test14 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 190, line 4
---- zaz_test15	2018-01-26 08:17:27.000000000 +0100
-+++ vm_test15	2018-01-26 08:17:27.000000000 +0100
+--- zaz_test15	2018-01-26 08:57:07.000000000 +0100
++++ vm_test15	2018-01-26 08:57:07.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3180,8 +3180,8 @@ zaz_test15 vm_test15 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 656, line 29
---- zaz_test16	2018-01-26 08:17:27.000000000 +0100
-+++ vm_test16	2018-01-26 08:17:27.000000000 +0100
+--- zaz_test16	2018-01-26 08:57:07.000000000 +0100
++++ vm_test16	2018-01-26 08:57:07.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3193,8 +3193,8 @@ zaz_test16 vm_test16 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 190, line 4
---- zaz_test21	2018-01-26 08:17:28.000000000 +0100
-+++ vm_test21	2018-01-26 08:17:28.000000000 +0100
+--- zaz_test21	2018-01-26 08:57:07.000000000 +0100
++++ vm_test21	2018-01-26 08:57:07.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3206,8 +3206,8 @@ zaz_test21 vm_test21 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 190, line 4
---- zaz_test22	2018-01-26 08:17:28.000000000 +0100
-+++ vm_test22	2018-01-26 08:17:28.000000000 +0100
+--- zaz_test22	2018-01-26 08:57:07.000000000 +0100
++++ vm_test22	2018-01-26 08:57:07.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3219,8 +3219,8 @@ zaz_test22 vm_test22 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 656, line 29
---- zaz_test23	2018-01-26 08:17:28.000000000 +0100
-+++ vm_test23	2018-01-26 08:17:28.000000000 +0100
+--- zaz_test23	2018-01-26 08:57:07.000000000 +0100
++++ vm_test23	2018-01-26 08:57:07.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3232,8 +3232,8 @@ zaz_test23 vm_test23 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 656, line 29
---- zaz_test24	2018-01-26 08:17:28.000000000 +0100
-+++ vm_test24	2018-01-26 08:17:28.000000000 +0100
+--- zaz_test24	2018-01-26 08:57:07.000000000 +0100
++++ vm_test24	2018-01-26 08:57:07.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3245,8 +3245,8 @@ zaz_test24 vm_test24 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 190, line 4
---- zaz_test29	2018-01-26 08:17:28.000000000 +0100
-+++ vm_test29	2018-01-26 08:17:28.000000000 +0100
+--- zaz_test29	2018-01-26 08:57:07.000000000 +0100
++++ vm_test29	2018-01-26 08:57:07.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3258,8 +3258,8 @@ zaz_test29 vm_test29 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 190, line 4
---- zaz_test30	2018-01-26 08:17:28.000000000 +0100
-+++ vm_test30	2018-01-26 08:17:28.000000000 +0100
+--- zaz_test30	2018-01-26 08:57:07.000000000 +0100
++++ vm_test30	2018-01-26 08:57:07.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3271,8 +3271,8 @@ zaz_test30 vm_test30 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 656, line 29
---- zaz_test31	2018-01-26 08:17:28.000000000 +0100
-+++ vm_test31	2018-01-26 08:17:28.000000000 +0100
+--- zaz_test31	2018-01-26 08:57:07.000000000 +0100
++++ vm_test31	2018-01-26 08:57:07.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3284,8 +3284,8 @@ zaz_test31 vm_test31 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 656, line 29
---- zaz_test32	2018-01-26 08:17:28.000000000 +0100
-+++ vm_test32	2018-01-26 08:17:28.000000000 +0100
+--- zaz_test32	2018-01-26 08:57:08.000000000 +0100
++++ vm_test32	2018-01-26 08:57:08.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3297,8 +3297,8 @@ zaz_test32 vm_test32 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 190, line 4
---- zaz_test37	2018-01-26 08:17:28.000000000 +0100
-+++ vm_test37	2018-01-26 08:17:28.000000000 +0100
+--- zaz_test37	2018-01-26 08:57:08.000000000 +0100
++++ vm_test37	2018-01-26 08:57:08.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3310,8 +3310,8 @@ zaz_test37 vm_test37 differ: char 190, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_02.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 190, line 4
---- zaz_test38	2018-01-26 08:17:28.000000000 +0100
-+++ vm_test38	2018-01-26 08:17:28.000000000 +0100
+--- zaz_test38	2018-01-26 08:57:08.000000000 +0100
++++ vm_test38	2018-01-26 08:57:08.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3356,8 +3356,8 @@ zaz_test38 vm_test38 differ: char 190, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 656, line 29
---- zaz_test1	2018-01-26 08:17:39.000000000 +0100
-+++ vm_test1	2018-01-26 08:17:39.000000000 +0100
+--- zaz_test1	2018-01-26 08:57:19.000000000 +0100
++++ vm_test1	2018-01-26 08:57:19.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3369,8 +3369,8 @@ zaz_test1 vm_test1 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 190, line 4
---- zaz_test6	2018-01-26 08:17:40.000000000 +0100
-+++ vm_test6	2018-01-26 08:17:40.000000000 +0100
+--- zaz_test6	2018-01-26 08:57:19.000000000 +0100
++++ vm_test6	2018-01-26 08:57:19.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3382,8 +3382,8 @@ zaz_test6 vm_test6 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 190, line 4
---- zaz_test7	2018-01-26 08:17:40.000000000 +0100
-+++ vm_test7	2018-01-26 08:17:40.000000000 +0100
+--- zaz_test7	2018-01-26 08:57:19.000000000 +0100
++++ vm_test7	2018-01-26 08:57:19.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3395,8 +3395,8 @@ zaz_test7 vm_test7 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 656, line 29
---- zaz_test8	2018-01-26 08:17:40.000000000 +0100
-+++ vm_test8	2018-01-26 08:17:40.000000000 +0100
+--- zaz_test8	2018-01-26 08:57:19.000000000 +0100
++++ vm_test8	2018-01-26 08:57:19.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3408,8 +3408,8 @@ zaz_test8 vm_test8 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 656, line 29
---- zaz_test9	2018-01-26 08:17:40.000000000 +0100
-+++ vm_test9	2018-01-26 08:17:40.000000000 +0100
+--- zaz_test9	2018-01-26 08:57:19.000000000 +0100
++++ vm_test9	2018-01-26 08:57:19.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3421,8 +3421,8 @@ zaz_test9 vm_test9 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 190, line 4
---- zaz_test14	2018-01-26 08:17:40.000000000 +0100
-+++ vm_test14	2018-01-26 08:17:40.000000000 +0100
+--- zaz_test14	2018-01-26 08:57:19.000000000 +0100
++++ vm_test14	2018-01-26 08:57:19.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3434,8 +3434,8 @@ zaz_test14 vm_test14 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 190, line 4
---- zaz_test15	2018-01-26 08:17:40.000000000 +0100
-+++ vm_test15	2018-01-26 08:17:40.000000000 +0100
+--- zaz_test15	2018-01-26 08:57:19.000000000 +0100
++++ vm_test15	2018-01-26 08:57:19.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3447,8 +3447,8 @@ zaz_test15 vm_test15 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 656, line 29
---- zaz_test16	2018-01-26 08:17:40.000000000 +0100
-+++ vm_test16	2018-01-26 08:17:40.000000000 +0100
+--- zaz_test16	2018-01-26 08:57:19.000000000 +0100
++++ vm_test16	2018-01-26 08:57:19.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3460,8 +3460,8 @@ zaz_test16 vm_test16 differ: char 656, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 190, line 4
---- zaz_test21	2018-01-26 08:17:40.000000000 +0100
-+++ vm_test21	2018-01-26 08:17:40.000000000 +0100
+--- zaz_test21	2018-01-26 08:57:19.000000000 +0100
++++ vm_test21	2018-01-26 08:57:19.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3473,8 +3473,8 @@ zaz_test21 vm_test21 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 190, line 4
---- zaz_test22	2018-01-26 08:17:40.000000000 +0100
-+++ vm_test22	2018-01-26 08:17:40.000000000 +0100
+--- zaz_test22	2018-01-26 08:57:19.000000000 +0100
++++ vm_test22	2018-01-26 08:57:19.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3486,8 +3486,8 @@ zaz_test22 vm_test22 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 656, line 29
---- zaz_test23	2018-01-26 08:17:40.000000000 +0100
-+++ vm_test23	2018-01-26 08:17:40.000000000 +0100
+--- zaz_test23	2018-01-26 08:57:19.000000000 +0100
++++ vm_test23	2018-01-26 08:57:19.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3499,8 +3499,8 @@ zaz_test23 vm_test23 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 656, line 29
---- zaz_test24	2018-01-26 08:17:40.000000000 +0100
-+++ vm_test24	2018-01-26 08:17:40.000000000 +0100
+--- zaz_test24	2018-01-26 08:57:19.000000000 +0100
++++ vm_test24	2018-01-26 08:57:19.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3512,8 +3512,8 @@ zaz_test24 vm_test24 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 190, line 4
---- zaz_test29	2018-01-26 08:17:40.000000000 +0100
-+++ vm_test29	2018-01-26 08:17:40.000000000 +0100
+--- zaz_test29	2018-01-26 08:57:20.000000000 +0100
++++ vm_test29	2018-01-26 08:57:20.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3525,8 +3525,8 @@ zaz_test29 vm_test29 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 190, line 4
---- zaz_test30	2018-01-26 08:17:40.000000000 +0100
-+++ vm_test30	2018-01-26 08:17:40.000000000 +0100
+--- zaz_test30	2018-01-26 08:57:20.000000000 +0100
++++ vm_test30	2018-01-26 08:57:20.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3538,8 +3538,8 @@ zaz_test30 vm_test30 differ: char 190, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 656, line 29
---- zaz_test31	2018-01-26 08:17:40.000000000 +0100
-+++ vm_test31	2018-01-26 08:17:40.000000000 +0100
+--- zaz_test31	2018-01-26 08:57:20.000000000 +0100
++++ vm_test31	2018-01-26 08:57:20.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3551,8 +3551,8 @@ zaz_test31 vm_test31 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 656, line 29
---- zaz_test32	2018-01-26 08:17:40.000000000 +0100
-+++ vm_test32	2018-01-26 08:17:40.000000000 +0100
+--- zaz_test32	2018-01-26 08:57:20.000000000 +0100
++++ vm_test32	2018-01-26 08:57:20.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3564,8 +3564,8 @@ zaz_test32 vm_test32 differ: char 656, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 190, line 4
---- zaz_test37	2018-01-26 08:17:41.000000000 +0100
-+++ vm_test37	2018-01-26 08:17:41.000000000 +0100
+--- zaz_test37	2018-01-26 08:57:20.000000000 +0100
++++ vm_test37	2018-01-26 08:57:20.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3577,8 +3577,8 @@ zaz_test37 vm_test37 differ: char 190, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_08_0d.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 190, line 4
---- zaz_test38	2018-01-26 08:17:41.000000000 +0100
-+++ vm_test38	2018-01-26 08:17:41.000000000 +0100
+--- zaz_test38	2018-01-26 08:57:20.000000000 +0100
++++ vm_test38	2018-01-26 08:57:20.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3602,8 +3602,8 @@ zaz_test38 vm_test38 differ: char 190, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 657, line 29
---- zaz_test1	2018-01-26 08:17:44.000000000 +0100
-+++ vm_test1	2018-01-26 08:17:44.000000000 +0100
+--- zaz_test1	2018-01-26 08:57:23.000000000 +0100
++++ vm_test1	2018-01-26 08:57:23.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3615,8 +3615,8 @@ zaz_test1 vm_test1 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 191, line 4
---- zaz_test6	2018-01-26 08:17:44.000000000 +0100
-+++ vm_test6	2018-01-26 08:17:44.000000000 +0100
+--- zaz_test6	2018-01-26 08:57:23.000000000 +0100
++++ vm_test6	2018-01-26 08:57:23.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3628,8 +3628,8 @@ zaz_test6 vm_test6 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 191, line 4
---- zaz_test7	2018-01-26 08:17:44.000000000 +0100
-+++ vm_test7	2018-01-26 08:17:44.000000000 +0100
+--- zaz_test7	2018-01-26 08:57:23.000000000 +0100
++++ vm_test7	2018-01-26 08:57:23.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3641,8 +3641,8 @@ zaz_test7 vm_test7 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 657, line 29
---- zaz_test8	2018-01-26 08:17:44.000000000 +0100
-+++ vm_test8	2018-01-26 08:17:44.000000000 +0100
+--- zaz_test8	2018-01-26 08:57:23.000000000 +0100
++++ vm_test8	2018-01-26 08:57:23.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3654,8 +3654,8 @@ zaz_test8 vm_test8 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 657, line 29
---- zaz_test9	2018-01-26 08:17:44.000000000 +0100
-+++ vm_test9	2018-01-26 08:17:44.000000000 +0100
+--- zaz_test9	2018-01-26 08:57:23.000000000 +0100
++++ vm_test9	2018-01-26 08:57:23.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3667,8 +3667,8 @@ zaz_test9 vm_test9 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 191, line 4
---- zaz_test14	2018-01-26 08:17:44.000000000 +0100
-+++ vm_test14	2018-01-26 08:17:44.000000000 +0100
+--- zaz_test14	2018-01-26 08:57:23.000000000 +0100
++++ vm_test14	2018-01-26 08:57:23.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3680,8 +3680,8 @@ zaz_test14 vm_test14 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 191, line 4
---- zaz_test15	2018-01-26 08:17:44.000000000 +0100
-+++ vm_test15	2018-01-26 08:17:44.000000000 +0100
+--- zaz_test15	2018-01-26 08:57:23.000000000 +0100
++++ vm_test15	2018-01-26 08:57:23.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3693,8 +3693,8 @@ zaz_test15 vm_test15 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 657, line 29
---- zaz_test16	2018-01-26 08:17:44.000000000 +0100
-+++ vm_test16	2018-01-26 08:17:44.000000000 +0100
+--- zaz_test16	2018-01-26 08:57:23.000000000 +0100
++++ vm_test16	2018-01-26 08:57:23.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3706,8 +3706,8 @@ zaz_test16 vm_test16 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 191, line 4
---- zaz_test21	2018-01-26 08:17:44.000000000 +0100
-+++ vm_test21	2018-01-26 08:17:44.000000000 +0100
+--- zaz_test21	2018-01-26 08:57:24.000000000 +0100
++++ vm_test21	2018-01-26 08:57:24.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3719,8 +3719,8 @@ zaz_test21 vm_test21 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 191, line 4
---- zaz_test22	2018-01-26 08:17:45.000000000 +0100
-+++ vm_test22	2018-01-26 08:17:45.000000000 +0100
+--- zaz_test22	2018-01-26 08:57:24.000000000 +0100
++++ vm_test22	2018-01-26 08:57:24.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3732,8 +3732,8 @@ zaz_test22 vm_test22 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 657, line 29
---- zaz_test23	2018-01-26 08:17:45.000000000 +0100
-+++ vm_test23	2018-01-26 08:17:45.000000000 +0100
+--- zaz_test23	2018-01-26 08:57:24.000000000 +0100
++++ vm_test23	2018-01-26 08:57:24.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3745,8 +3745,8 @@ zaz_test23 vm_test23 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 657, line 29
---- zaz_test24	2018-01-26 08:17:45.000000000 +0100
-+++ vm_test24	2018-01-26 08:17:45.000000000 +0100
+--- zaz_test24	2018-01-26 08:57:24.000000000 +0100
++++ vm_test24	2018-01-26 08:57:24.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3758,8 +3758,8 @@ zaz_test24 vm_test24 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 191, line 4
---- zaz_test29	2018-01-26 08:17:45.000000000 +0100
-+++ vm_test29	2018-01-26 08:17:45.000000000 +0100
+--- zaz_test29	2018-01-26 08:57:24.000000000 +0100
++++ vm_test29	2018-01-26 08:57:24.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3771,8 +3771,8 @@ zaz_test29 vm_test29 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 191, line 4
---- zaz_test30	2018-01-26 08:17:45.000000000 +0100
-+++ vm_test30	2018-01-26 08:17:45.000000000 +0100
+--- zaz_test30	2018-01-26 08:57:24.000000000 +0100
++++ vm_test30	2018-01-26 08:57:24.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3784,8 +3784,8 @@ zaz_test30 vm_test30 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 657, line 29
---- zaz_test31	2018-01-26 08:17:45.000000000 +0100
-+++ vm_test31	2018-01-26 08:17:45.000000000 +0100
+--- zaz_test31	2018-01-26 08:57:24.000000000 +0100
++++ vm_test31	2018-01-26 08:57:24.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3797,8 +3797,8 @@ zaz_test31 vm_test31 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 657, line 29
---- zaz_test32	2018-01-26 08:17:45.000000000 +0100
-+++ vm_test32	2018-01-26 08:17:45.000000000 +0100
+--- zaz_test32	2018-01-26 08:57:24.000000000 +0100
++++ vm_test32	2018-01-26 08:57:24.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3810,8 +3810,8 @@ zaz_test32 vm_test32 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 191, line 4
---- zaz_test37	2018-01-26 08:17:45.000000000 +0100
-+++ vm_test37	2018-01-26 08:17:45.000000000 +0100
+--- zaz_test37	2018-01-26 08:57:24.000000000 +0100
++++ vm_test37	2018-01-26 08:57:24.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3823,8 +3823,8 @@ zaz_test37 vm_test37 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_02.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 191, line 4
---- zaz_test38	2018-01-26 08:17:45.000000000 +0100
-+++ vm_test38	2018-01-26 08:17:45.000000000 +0100
+--- zaz_test38	2018-01-26 08:57:24.000000000 +0100
++++ vm_test38	2018-01-26 08:57:24.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -3869,8 +3869,8 @@ zaz_test38 vm_test38 differ: char 191, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 657, line 29
---- zaz_test1	2018-01-26 08:17:55.000000000 +0100
-+++ vm_test1	2018-01-26 08:17:55.000000000 +0100
+--- zaz_test1	2018-01-26 08:57:35.000000000 +0100
++++ vm_test1	2018-01-26 08:57:35.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3882,8 +3882,8 @@ zaz_test1 vm_test1 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 191, line 4
---- zaz_test6	2018-01-26 08:17:55.000000000 +0100
-+++ vm_test6	2018-01-26 08:17:55.000000000 +0100
+--- zaz_test6	2018-01-26 08:57:35.000000000 +0100
++++ vm_test6	2018-01-26 08:57:35.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3895,8 +3895,8 @@ zaz_test6 vm_test6 differ: char 191, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 191, line 4
---- zaz_test7	2018-01-26 08:17:55.000000000 +0100
-+++ vm_test7	2018-01-26 08:17:55.000000000 +0100
+--- zaz_test7	2018-01-26 08:57:35.000000000 +0100
++++ vm_test7	2018-01-26 08:57:35.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3908,8 +3908,8 @@ zaz_test7 vm_test7 differ: char 191, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 657, line 29
---- zaz_test8	2018-01-26 08:17:55.000000000 +0100
-+++ vm_test8	2018-01-26 08:17:55.000000000 +0100
+--- zaz_test8	2018-01-26 08:57:35.000000000 +0100
++++ vm_test8	2018-01-26 08:57:35.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3921,8 +3921,8 @@ zaz_test8 vm_test8 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 657, line 29
---- zaz_test9	2018-01-26 08:17:56.000000000 +0100
-+++ vm_test9	2018-01-26 08:17:56.000000000 +0100
+--- zaz_test9	2018-01-26 08:57:35.000000000 +0100
++++ vm_test9	2018-01-26 08:57:35.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3934,8 +3934,8 @@ zaz_test9 vm_test9 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 191, line 4
---- zaz_test14	2018-01-26 08:17:56.000000000 +0100
-+++ vm_test14	2018-01-26 08:17:56.000000000 +0100
+--- zaz_test14	2018-01-26 08:57:36.000000000 +0100
++++ vm_test14	2018-01-26 08:57:36.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3947,8 +3947,8 @@ zaz_test14 vm_test14 differ: char 191, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 191, line 4
---- zaz_test15	2018-01-26 08:17:56.000000000 +0100
-+++ vm_test15	2018-01-26 08:17:56.000000000 +0100
+--- zaz_test15	2018-01-26 08:57:36.000000000 +0100
++++ vm_test15	2018-01-26 08:57:36.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3960,8 +3960,8 @@ zaz_test15 vm_test15 differ: char 191, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 657, line 29
---- zaz_test16	2018-01-26 08:17:56.000000000 +0100
-+++ vm_test16	2018-01-26 08:17:56.000000000 +0100
+--- zaz_test16	2018-01-26 08:57:36.000000000 +0100
++++ vm_test16	2018-01-26 08:57:36.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -3973,8 +3973,8 @@ zaz_test16 vm_test16 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 191, line 4
---- zaz_test21	2018-01-26 08:17:56.000000000 +0100
-+++ vm_test21	2018-01-26 08:17:56.000000000 +0100
+--- zaz_test21	2018-01-26 08:57:36.000000000 +0100
++++ vm_test21	2018-01-26 08:57:36.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3986,8 +3986,8 @@ zaz_test21 vm_test21 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 191, line 4
---- zaz_test22	2018-01-26 08:17:56.000000000 +0100
-+++ vm_test22	2018-01-26 08:17:56.000000000 +0100
+--- zaz_test22	2018-01-26 08:57:36.000000000 +0100
++++ vm_test22	2018-01-26 08:57:36.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -3999,8 +3999,8 @@ zaz_test22 vm_test22 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 657, line 29
---- zaz_test23	2018-01-26 08:17:56.000000000 +0100
-+++ vm_test23	2018-01-26 08:17:56.000000000 +0100
+--- zaz_test23	2018-01-26 08:57:36.000000000 +0100
++++ vm_test23	2018-01-26 08:57:36.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4012,8 +4012,8 @@ zaz_test23 vm_test23 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 657, line 29
---- zaz_test24	2018-01-26 08:17:56.000000000 +0100
-+++ vm_test24	2018-01-26 08:17:56.000000000 +0100
+--- zaz_test24	2018-01-26 08:57:36.000000000 +0100
++++ vm_test24	2018-01-26 08:57:36.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4025,8 +4025,8 @@ zaz_test24 vm_test24 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 191, line 4
---- zaz_test29	2018-01-26 08:17:56.000000000 +0100
-+++ vm_test29	2018-01-26 08:17:56.000000000 +0100
+--- zaz_test29	2018-01-26 08:57:36.000000000 +0100
++++ vm_test29	2018-01-26 08:57:36.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4038,8 +4038,8 @@ zaz_test29 vm_test29 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 191, line 4
---- zaz_test30	2018-01-26 08:17:56.000000000 +0100
-+++ vm_test30	2018-01-26 08:17:56.000000000 +0100
+--- zaz_test30	2018-01-26 08:57:36.000000000 +0100
++++ vm_test30	2018-01-26 08:57:36.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4051,8 +4051,8 @@ zaz_test30 vm_test30 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 657, line 29
---- zaz_test31	2018-01-26 08:17:56.000000000 +0100
-+++ vm_test31	2018-01-26 08:17:56.000000000 +0100
+--- zaz_test31	2018-01-26 08:57:36.000000000 +0100
++++ vm_test31	2018-01-26 08:57:36.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4064,8 +4064,8 @@ zaz_test31 vm_test31 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 657, line 29
---- zaz_test32	2018-01-26 08:17:56.000000000 +0100
-+++ vm_test32	2018-01-26 08:17:56.000000000 +0100
+--- zaz_test32	2018-01-26 08:57:36.000000000 +0100
++++ vm_test32	2018-01-26 08:57:36.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4077,8 +4077,8 @@ zaz_test32 vm_test32 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 191, line 4
---- zaz_test37	2018-01-26 08:17:56.000000000 +0100
-+++ vm_test37	2018-01-26 08:17:56.000000000 +0100
+--- zaz_test37	2018-01-26 08:57:37.000000000 +0100
++++ vm_test37	2018-01-26 08:57:37.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4090,8 +4090,8 @@ zaz_test37 vm_test37 differ: char 191, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_0a_0d.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 191, line 4
---- zaz_test38	2018-01-26 08:17:56.000000000 +0100
-+++ vm_test38	2018-01-26 08:17:56.000000000 +0100
+--- zaz_test38	2018-01-26 08:57:37.000000000 +0100
++++ vm_test38	2018-01-26 08:57:37.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4115,8 +4115,8 @@ zaz_test38 vm_test38 differ: char 191, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 657, line 29
---- zaz_test1	2018-01-26 08:18:00.000000000 +0100
-+++ vm_test1	2018-01-26 08:18:00.000000000 +0100
+--- zaz_test1	2018-01-26 08:57:41.000000000 +0100
++++ vm_test1	2018-01-26 08:57:41.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4128,8 +4128,8 @@ zaz_test1 vm_test1 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 191, line 4
---- zaz_test6	2018-01-26 08:18:00.000000000 +0100
-+++ vm_test6	2018-01-26 08:18:00.000000000 +0100
+--- zaz_test6	2018-01-26 08:57:41.000000000 +0100
++++ vm_test6	2018-01-26 08:57:41.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4141,8 +4141,8 @@ zaz_test6 vm_test6 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 191, line 4
---- zaz_test7	2018-01-26 08:18:00.000000000 +0100
-+++ vm_test7	2018-01-26 08:18:00.000000000 +0100
+--- zaz_test7	2018-01-26 08:57:41.000000000 +0100
++++ vm_test7	2018-01-26 08:57:41.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4154,8 +4154,8 @@ zaz_test7 vm_test7 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 657, line 29
---- zaz_test8	2018-01-26 08:18:00.000000000 +0100
-+++ vm_test8	2018-01-26 08:18:00.000000000 +0100
+--- zaz_test8	2018-01-26 08:57:41.000000000 +0100
++++ vm_test8	2018-01-26 08:57:41.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4167,8 +4167,8 @@ zaz_test8 vm_test8 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 657, line 29
---- zaz_test9	2018-01-26 08:18:00.000000000 +0100
-+++ vm_test9	2018-01-26 08:18:00.000000000 +0100
+--- zaz_test9	2018-01-26 08:57:41.000000000 +0100
++++ vm_test9	2018-01-26 08:57:41.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4180,8 +4180,8 @@ zaz_test9 vm_test9 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 191, line 4
---- zaz_test14	2018-01-26 08:18:00.000000000 +0100
-+++ vm_test14	2018-01-26 08:18:00.000000000 +0100
+--- zaz_test14	2018-01-26 08:57:41.000000000 +0100
++++ vm_test14	2018-01-26 08:57:41.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4193,8 +4193,8 @@ zaz_test14 vm_test14 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 191, line 4
---- zaz_test15	2018-01-26 08:18:00.000000000 +0100
-+++ vm_test15	2018-01-26 08:18:00.000000000 +0100
+--- zaz_test15	2018-01-26 08:57:41.000000000 +0100
++++ vm_test15	2018-01-26 08:57:41.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4206,8 +4206,8 @@ zaz_test15 vm_test15 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 657, line 29
---- zaz_test16	2018-01-26 08:18:00.000000000 +0100
-+++ vm_test16	2018-01-26 08:18:00.000000000 +0100
+--- zaz_test16	2018-01-26 08:57:41.000000000 +0100
++++ vm_test16	2018-01-26 08:57:41.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4219,8 +4219,8 @@ zaz_test16 vm_test16 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 191, line 4
---- zaz_test21	2018-01-26 08:18:00.000000000 +0100
-+++ vm_test21	2018-01-26 08:18:00.000000000 +0100
+--- zaz_test21	2018-01-26 08:57:41.000000000 +0100
++++ vm_test21	2018-01-26 08:57:41.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4232,8 +4232,8 @@ zaz_test21 vm_test21 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 191, line 4
---- zaz_test22	2018-01-26 08:18:00.000000000 +0100
-+++ vm_test22	2018-01-26 08:18:00.000000000 +0100
+--- zaz_test22	2018-01-26 08:57:41.000000000 +0100
++++ vm_test22	2018-01-26 08:57:41.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4245,8 +4245,8 @@ zaz_test22 vm_test22 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 657, line 29
---- zaz_test23	2018-01-26 08:18:00.000000000 +0100
-+++ vm_test23	2018-01-26 08:18:00.000000000 +0100
+--- zaz_test23	2018-01-26 08:57:42.000000000 +0100
++++ vm_test23	2018-01-26 08:57:42.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4258,8 +4258,8 @@ zaz_test23 vm_test23 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 657, line 29
---- zaz_test24	2018-01-26 08:18:00.000000000 +0100
-+++ vm_test24	2018-01-26 08:18:00.000000000 +0100
+--- zaz_test24	2018-01-26 08:57:42.000000000 +0100
++++ vm_test24	2018-01-26 08:57:42.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4271,8 +4271,8 @@ zaz_test24 vm_test24 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 191, line 4
---- zaz_test29	2018-01-26 08:18:01.000000000 +0100
-+++ vm_test29	2018-01-26 08:18:01.000000000 +0100
+--- zaz_test29	2018-01-26 08:57:42.000000000 +0100
++++ vm_test29	2018-01-26 08:57:42.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4284,8 +4284,8 @@ zaz_test29 vm_test29 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 191, line 4
---- zaz_test30	2018-01-26 08:18:01.000000000 +0100
-+++ vm_test30	2018-01-26 08:18:01.000000000 +0100
+--- zaz_test30	2018-01-26 08:57:42.000000000 +0100
++++ vm_test30	2018-01-26 08:57:42.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4297,8 +4297,8 @@ zaz_test30 vm_test30 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 657, line 29
---- zaz_test31	2018-01-26 08:18:01.000000000 +0100
-+++ vm_test31	2018-01-26 08:18:01.000000000 +0100
+--- zaz_test31	2018-01-26 08:57:42.000000000 +0100
++++ vm_test31	2018-01-26 08:57:42.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4310,8 +4310,8 @@ zaz_test31 vm_test31 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 657, line 29
---- zaz_test32	2018-01-26 08:18:01.000000000 +0100
-+++ vm_test32	2018-01-26 08:18:01.000000000 +0100
+--- zaz_test32	2018-01-26 08:57:42.000000000 +0100
++++ vm_test32	2018-01-26 08:57:42.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4323,8 +4323,8 @@ zaz_test32 vm_test32 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 191, line 4
---- zaz_test37	2018-01-26 08:18:01.000000000 +0100
-+++ vm_test37	2018-01-26 08:18:01.000000000 +0100
+--- zaz_test37	2018-01-26 08:57:42.000000000 +0100
++++ vm_test37	2018-01-26 08:57:42.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4336,8 +4336,8 @@ zaz_test37 vm_test37 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_02.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 191, line 4
---- zaz_test38	2018-01-26 08:18:01.000000000 +0100
-+++ vm_test38	2018-01-26 08:18:01.000000000 +0100
+--- zaz_test38	2018-01-26 08:57:42.000000000 +0100
++++ vm_test38	2018-01-26 08:57:42.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4382,8 +4382,8 @@ zaz_test38 vm_test38 differ: char 191, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 657, line 29
---- zaz_test1	2018-01-26 08:18:11.000000000 +0100
-+++ vm_test1	2018-01-26 08:18:11.000000000 +0100
+--- zaz_test1	2018-01-26 08:57:52.000000000 +0100
++++ vm_test1	2018-01-26 08:57:52.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4395,8 +4395,8 @@ zaz_test1 vm_test1 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 191, line 4
---- zaz_test6	2018-01-26 08:18:11.000000000 +0100
-+++ vm_test6	2018-01-26 08:18:11.000000000 +0100
+--- zaz_test6	2018-01-26 08:57:52.000000000 +0100
++++ vm_test6	2018-01-26 08:57:52.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4408,8 +4408,8 @@ zaz_test6 vm_test6 differ: char 191, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 191, line 4
---- zaz_test7	2018-01-26 08:18:11.000000000 +0100
-+++ vm_test7	2018-01-26 08:18:11.000000000 +0100
+--- zaz_test7	2018-01-26 08:57:52.000000000 +0100
++++ vm_test7	2018-01-26 08:57:52.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4421,8 +4421,8 @@ zaz_test7 vm_test7 differ: char 191, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 657, line 29
---- zaz_test8	2018-01-26 08:18:11.000000000 +0100
-+++ vm_test8	2018-01-26 08:18:11.000000000 +0100
+--- zaz_test8	2018-01-26 08:57:52.000000000 +0100
++++ vm_test8	2018-01-26 08:57:52.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4434,8 +4434,8 @@ zaz_test8 vm_test8 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 657, line 29
---- zaz_test9	2018-01-26 08:18:11.000000000 +0100
-+++ vm_test9	2018-01-26 08:18:11.000000000 +0100
+--- zaz_test9	2018-01-26 08:57:52.000000000 +0100
++++ vm_test9	2018-01-26 08:57:52.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4447,8 +4447,8 @@ zaz_test9 vm_test9 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 191, line 4
---- zaz_test14	2018-01-26 08:18:12.000000000 +0100
-+++ vm_test14	2018-01-26 08:18:12.000000000 +0100
+--- zaz_test14	2018-01-26 08:57:52.000000000 +0100
++++ vm_test14	2018-01-26 08:57:52.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4460,8 +4460,8 @@ zaz_test14 vm_test14 differ: char 191, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 191, line 4
---- zaz_test15	2018-01-26 08:18:12.000000000 +0100
-+++ vm_test15	2018-01-26 08:18:12.000000000 +0100
+--- zaz_test15	2018-01-26 08:57:52.000000000 +0100
++++ vm_test15	2018-01-26 08:57:52.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4473,8 +4473,8 @@ zaz_test15 vm_test15 differ: char 191, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 657, line 29
---- zaz_test16	2018-01-26 08:18:12.000000000 +0100
-+++ vm_test16	2018-01-26 08:18:12.000000000 +0100
+--- zaz_test16	2018-01-26 08:57:52.000000000 +0100
++++ vm_test16	2018-01-26 08:57:52.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4486,8 +4486,8 @@ zaz_test16 vm_test16 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 191, line 4
---- zaz_test21	2018-01-26 08:18:12.000000000 +0100
-+++ vm_test21	2018-01-26 08:18:12.000000000 +0100
+--- zaz_test21	2018-01-26 08:57:53.000000000 +0100
++++ vm_test21	2018-01-26 08:57:53.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4499,8 +4499,8 @@ zaz_test21 vm_test21 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 191, line 4
---- zaz_test22	2018-01-26 08:18:12.000000000 +0100
-+++ vm_test22	2018-01-26 08:18:12.000000000 +0100
+--- zaz_test22	2018-01-26 08:57:53.000000000 +0100
++++ vm_test22	2018-01-26 08:57:53.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4512,8 +4512,8 @@ zaz_test22 vm_test22 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 657, line 29
---- zaz_test23	2018-01-26 08:18:12.000000000 +0100
-+++ vm_test23	2018-01-26 08:18:12.000000000 +0100
+--- zaz_test23	2018-01-26 08:57:53.000000000 +0100
++++ vm_test23	2018-01-26 08:57:53.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4525,8 +4525,8 @@ zaz_test23 vm_test23 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 657, line 29
---- zaz_test24	2018-01-26 08:18:12.000000000 +0100
-+++ vm_test24	2018-01-26 08:18:12.000000000 +0100
+--- zaz_test24	2018-01-26 08:57:53.000000000 +0100
++++ vm_test24	2018-01-26 08:57:53.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4538,8 +4538,8 @@ zaz_test24 vm_test24 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 191, line 4
---- zaz_test29	2018-01-26 08:18:12.000000000 +0100
-+++ vm_test29	2018-01-26 08:18:12.000000000 +0100
+--- zaz_test29	2018-01-26 08:57:53.000000000 +0100
++++ vm_test29	2018-01-26 08:57:53.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4551,8 +4551,8 @@ zaz_test29 vm_test29 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 191, line 4
---- zaz_test30	2018-01-26 08:18:12.000000000 +0100
-+++ vm_test30	2018-01-26 08:18:12.000000000 +0100
+--- zaz_test30	2018-01-26 08:57:53.000000000 +0100
++++ vm_test30	2018-01-26 08:57:53.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4564,8 +4564,8 @@ zaz_test30 vm_test30 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 657, line 29
---- zaz_test31	2018-01-26 08:18:12.000000000 +0100
-+++ vm_test31	2018-01-26 08:18:12.000000000 +0100
+--- zaz_test31	2018-01-26 08:57:53.000000000 +0100
++++ vm_test31	2018-01-26 08:57:53.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4577,8 +4577,8 @@ zaz_test31 vm_test31 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 657, line 29
---- zaz_test32	2018-01-26 08:18:12.000000000 +0100
-+++ vm_test32	2018-01-26 08:18:12.000000000 +0100
+--- zaz_test32	2018-01-26 08:57:53.000000000 +0100
++++ vm_test32	2018-01-26 08:57:53.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4590,8 +4590,8 @@ zaz_test32 vm_test32 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 191, line 4
---- zaz_test37	2018-01-26 08:18:12.000000000 +0100
-+++ vm_test37	2018-01-26 08:18:12.000000000 +0100
+--- zaz_test37	2018-01-26 08:57:53.000000000 +0100
++++ vm_test37	2018-01-26 08:57:53.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4603,8 +4603,8 @@ zaz_test37 vm_test37 differ: char 191, line 4
  P    2 | add r1 r2 r3
 ../tests/test_suite/test_cor_wrong_ocp/fork_0b_0d.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 191, line 4
---- zaz_test38	2018-01-26 08:18:12.000000000 +0100
-+++ vm_test38	2018-01-26 08:18:12.000000000 +0100
+--- zaz_test38	2018-01-26 08:57:53.000000000 +0100
++++ vm_test38	2018-01-26 08:57:53.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4628,8 +4628,8 @@ zaz_test38 vm_test38 differ: char 191, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 657, line 29
---- zaz_test1	2018-01-26 08:18:15.000000000 +0100
-+++ vm_test1	2018-01-26 08:18:15.000000000 +0100
+--- zaz_test1	2018-01-26 08:57:56.000000000 +0100
++++ vm_test1	2018-01-26 08:57:56.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4641,8 +4641,8 @@ zaz_test1 vm_test1 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 191, line 4
---- zaz_test6	2018-01-26 08:18:16.000000000 +0100
-+++ vm_test6	2018-01-26 08:18:16.000000000 +0100
+--- zaz_test6	2018-01-26 08:57:57.000000000 +0100
++++ vm_test6	2018-01-26 08:57:57.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4654,8 +4654,8 @@ zaz_test6 vm_test6 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 191, line 4
---- zaz_test7	2018-01-26 08:18:16.000000000 +0100
-+++ vm_test7	2018-01-26 08:18:16.000000000 +0100
+--- zaz_test7	2018-01-26 08:57:57.000000000 +0100
++++ vm_test7	2018-01-26 08:57:57.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4667,8 +4667,8 @@ zaz_test7 vm_test7 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 657, line 29
---- zaz_test8	2018-01-26 08:18:16.000000000 +0100
-+++ vm_test8	2018-01-26 08:18:16.000000000 +0100
+--- zaz_test8	2018-01-26 08:57:57.000000000 +0100
++++ vm_test8	2018-01-26 08:57:57.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4680,8 +4680,8 @@ zaz_test8 vm_test8 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 657, line 29
---- zaz_test9	2018-01-26 08:18:16.000000000 +0100
-+++ vm_test9	2018-01-26 08:18:16.000000000 +0100
+--- zaz_test9	2018-01-26 08:57:57.000000000 +0100
++++ vm_test9	2018-01-26 08:57:57.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4693,8 +4693,8 @@ zaz_test9 vm_test9 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 191, line 4
---- zaz_test14	2018-01-26 08:18:16.000000000 +0100
-+++ vm_test14	2018-01-26 08:18:16.000000000 +0100
+--- zaz_test14	2018-01-26 08:57:57.000000000 +0100
++++ vm_test14	2018-01-26 08:57:57.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4706,8 +4706,8 @@ zaz_test14 vm_test14 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 191, line 4
---- zaz_test15	2018-01-26 08:18:16.000000000 +0100
-+++ vm_test15	2018-01-26 08:18:16.000000000 +0100
+--- zaz_test15	2018-01-26 08:57:57.000000000 +0100
++++ vm_test15	2018-01-26 08:57:57.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4719,8 +4719,8 @@ zaz_test15 vm_test15 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 657, line 29
---- zaz_test16	2018-01-26 08:18:16.000000000 +0100
-+++ vm_test16	2018-01-26 08:18:16.000000000 +0100
+--- zaz_test16	2018-01-26 08:57:57.000000000 +0100
++++ vm_test16	2018-01-26 08:57:57.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4732,8 +4732,8 @@ zaz_test16 vm_test16 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 191, line 4
---- zaz_test21	2018-01-26 08:18:16.000000000 +0100
-+++ vm_test21	2018-01-26 08:18:16.000000000 +0100
+--- zaz_test21	2018-01-26 08:57:57.000000000 +0100
++++ vm_test21	2018-01-26 08:57:57.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4745,8 +4745,8 @@ zaz_test21 vm_test21 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 191, line 4
---- zaz_test22	2018-01-26 08:18:16.000000000 +0100
-+++ vm_test22	2018-01-26 08:18:16.000000000 +0100
+--- zaz_test22	2018-01-26 08:57:57.000000000 +0100
++++ vm_test22	2018-01-26 08:57:57.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4758,8 +4758,8 @@ zaz_test22 vm_test22 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 657, line 29
---- zaz_test23	2018-01-26 08:18:16.000000000 +0100
-+++ vm_test23	2018-01-26 08:18:16.000000000 +0100
+--- zaz_test23	2018-01-26 08:57:57.000000000 +0100
++++ vm_test23	2018-01-26 08:57:57.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4771,8 +4771,8 @@ zaz_test23 vm_test23 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 657, line 29
---- zaz_test24	2018-01-26 08:18:16.000000000 +0100
-+++ vm_test24	2018-01-26 08:18:16.000000000 +0100
+--- zaz_test24	2018-01-26 08:57:57.000000000 +0100
++++ vm_test24	2018-01-26 08:57:57.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4784,8 +4784,8 @@ zaz_test24 vm_test24 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 191, line 4
---- zaz_test29	2018-01-26 08:18:16.000000000 +0100
-+++ vm_test29	2018-01-26 08:18:16.000000000 +0100
+--- zaz_test29	2018-01-26 08:57:57.000000000 +0100
++++ vm_test29	2018-01-26 08:57:57.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4797,8 +4797,8 @@ zaz_test29 vm_test29 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 191, line 4
---- zaz_test30	2018-01-26 08:18:17.000000000 +0100
-+++ vm_test30	2018-01-26 08:18:16.000000000 +0100
+--- zaz_test30	2018-01-26 08:57:57.000000000 +0100
++++ vm_test30	2018-01-26 08:57:57.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4810,8 +4810,8 @@ zaz_test30 vm_test30 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 657, line 29
---- zaz_test31	2018-01-26 08:18:17.000000000 +0100
-+++ vm_test31	2018-01-26 08:18:17.000000000 +0100
+--- zaz_test31	2018-01-26 08:57:57.000000000 +0100
++++ vm_test31	2018-01-26 08:57:57.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4823,8 +4823,8 @@ zaz_test31 vm_test31 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 657, line 29
---- zaz_test32	2018-01-26 08:18:17.000000000 +0100
-+++ vm_test32	2018-01-26 08:18:17.000000000 +0100
+--- zaz_test32	2018-01-26 08:57:58.000000000 +0100
++++ vm_test32	2018-01-26 08:57:58.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4836,8 +4836,8 @@ zaz_test32 vm_test32 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 191, line 4
---- zaz_test37	2018-01-26 08:18:17.000000000 +0100
-+++ vm_test37	2018-01-26 08:18:17.000000000 +0100
+--- zaz_test37	2018-01-26 08:57:58.000000000 +0100
++++ vm_test37	2018-01-26 08:57:58.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4849,8 +4849,8 @@ zaz_test37 vm_test37 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_02.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 191, line 4
---- zaz_test38	2018-01-26 08:18:17.000000000 +0100
-+++ vm_test38	2018-01-26 08:18:17.000000000 +0100
+--- zaz_test38	2018-01-26 08:57:58.000000000 +0100
++++ vm_test38	2018-01-26 08:57:58.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 02 90" ("WTF") !
@@ -4895,8 +4895,8 @@ zaz_test38 vm_test38 differ: char 191, line 4
 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 31 -d 1800
 zaz_test1 vm_test1 differ: char 657, line 29
---- zaz_test1	2018-01-26 08:18:27.000000000 +0100
-+++ vm_test1	2018-01-26 08:18:27.000000000 +0100
+--- zaz_test1	2018-01-26 08:58:08.000000000 +0100
++++ vm_test1	2018-01-26 08:58:08.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4908,8 +4908,8 @@ zaz_test1 vm_test1 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 4
 zaz_test6 vm_test6 differ: char 191, line 4
---- zaz_test6	2018-01-26 08:18:27.000000000 +0100
-+++ vm_test6	2018-01-26 08:18:27.000000000 +0100
+--- zaz_test6	2018-01-26 08:58:08.000000000 +0100
++++ vm_test6	2018-01-26 08:58:08.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4921,8 +4921,8 @@ zaz_test6 vm_test6 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 5
 zaz_test7 vm_test7 differ: char 191, line 4
---- zaz_test7	2018-01-26 08:18:27.000000000 +0100
-+++ vm_test7	2018-01-26 08:18:27.000000000 +0100
+--- zaz_test7	2018-01-26 08:58:08.000000000 +0100
++++ vm_test7	2018-01-26 08:58:08.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4934,8 +4934,8 @@ zaz_test7 vm_test7 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 6
 zaz_test8 vm_test8 differ: char 657, line 29
---- zaz_test8	2018-01-26 08:18:27.000000000 +0100
-+++ vm_test8	2018-01-26 08:18:27.000000000 +0100
+--- zaz_test8	2018-01-26 08:58:08.000000000 +0100
++++ vm_test8	2018-01-26 08:58:08.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4947,8 +4947,8 @@ zaz_test8 vm_test8 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 7
 zaz_test9 vm_test9 differ: char 657, line 29
---- zaz_test9	2018-01-26 08:18:27.000000000 +0100
-+++ vm_test9	2018-01-26 08:18:27.000000000 +0100
+--- zaz_test9	2018-01-26 08:58:08.000000000 +0100
++++ vm_test9	2018-01-26 08:58:08.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4960,8 +4960,8 @@ zaz_test9 vm_test9 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 12
 zaz_test14 vm_test14 differ: char 191, line 4
---- zaz_test14	2018-01-26 08:18:28.000000000 +0100
-+++ vm_test14	2018-01-26 08:18:28.000000000 +0100
+--- zaz_test14	2018-01-26 08:58:08.000000000 +0100
++++ vm_test14	2018-01-26 08:58:08.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4973,8 +4973,8 @@ zaz_test14 vm_test14 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 13
 zaz_test15 vm_test15 differ: char 191, line 4
---- zaz_test15	2018-01-26 08:18:28.000000000 +0100
-+++ vm_test15	2018-01-26 08:18:28.000000000 +0100
+--- zaz_test15	2018-01-26 08:58:08.000000000 +0100
++++ vm_test15	2018-01-26 08:58:08.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -4986,8 +4986,8 @@ zaz_test15 vm_test15 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 15
 zaz_test16 vm_test16 differ: char 657, line 29
---- zaz_test16	2018-01-26 08:18:28.000000000 +0100
-+++ vm_test16	2018-01-26 08:18:28.000000000 +0100
+--- zaz_test16	2018-01-26 08:58:08.000000000 +0100
++++ vm_test16	2018-01-26 08:58:08.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -4999,8 +4999,8 @@ zaz_test16 vm_test16 differ: char 657, line 29
  It is now cycle 28
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 20
 zaz_test21 vm_test21 differ: char 191, line 4
---- zaz_test21	2018-01-26 08:18:28.000000000 +0100
-+++ vm_test21	2018-01-26 08:18:28.000000000 +0100
+--- zaz_test21	2018-01-26 08:58:08.000000000 +0100
++++ vm_test21	2018-01-26 08:58:08.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -5012,8 +5012,8 @@ zaz_test21 vm_test21 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 21
 zaz_test22 vm_test22 differ: char 191, line 4
---- zaz_test22	2018-01-26 08:18:28.000000000 +0100
-+++ vm_test22	2018-01-26 08:18:28.000000000 +0100
+--- zaz_test22	2018-01-26 08:58:08.000000000 +0100
++++ vm_test22	2018-01-26 08:58:08.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -5025,8 +5025,8 @@ zaz_test22 vm_test22 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 22
 zaz_test23 vm_test23 differ: char 657, line 29
---- zaz_test23	2018-01-26 08:18:28.000000000 +0100
-+++ vm_test23	2018-01-26 08:18:28.000000000 +0100
+--- zaz_test23	2018-01-26 08:58:09.000000000 +0100
++++ vm_test23	2018-01-26 08:58:09.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -5038,8 +5038,8 @@ zaz_test23 vm_test23 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 23
 zaz_test24 vm_test24 differ: char 657, line 29
---- zaz_test24	2018-01-26 08:18:28.000000000 +0100
-+++ vm_test24	2018-01-26 08:18:28.000000000 +0100
+--- zaz_test24	2018-01-26 08:58:09.000000000 +0100
++++ vm_test24	2018-01-26 08:58:09.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -5051,8 +5051,8 @@ zaz_test24 vm_test24 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 28
 zaz_test29 vm_test29 differ: char 191, line 4
---- zaz_test29	2018-01-26 08:18:28.000000000 +0100
-+++ vm_test29	2018-01-26 08:18:28.000000000 +0100
+--- zaz_test29	2018-01-26 08:58:09.000000000 +0100
++++ vm_test29	2018-01-26 08:58:09.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -5064,8 +5064,8 @@ zaz_test29 vm_test29 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 29
 zaz_test30 vm_test30 differ: char 191, line 4
---- zaz_test30	2018-01-26 08:18:28.000000000 +0100
-+++ vm_test30	2018-01-26 08:18:28.000000000 +0100
+--- zaz_test30	2018-01-26 08:58:09.000000000 +0100
++++ vm_test30	2018-01-26 08:58:09.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -5077,8 +5077,8 @@ zaz_test30 vm_test30 differ: char 191, line 4
  ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 30
 zaz_test31 vm_test31 differ: char 657, line 29
---- zaz_test31	2018-01-26 08:18:28.000000000 +0100
-+++ vm_test31	2018-01-26 08:18:28.000000000 +0100
+--- zaz_test31	2018-01-26 08:58:09.000000000 +0100
++++ vm_test31	2018-01-26 08:58:09.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -5090,8 +5090,8 @@ zaz_test31 vm_test31 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 31
 zaz_test32 vm_test32 differ: char 657, line 29
---- zaz_test32	2018-01-26 08:18:28.000000000 +0100
-+++ vm_test32	2018-01-26 08:18:28.000000000 +0100
+--- zaz_test32	2018-01-26 08:58:09.000000000 +0100
++++ vm_test32	2018-01-26 08:58:09.000000000 +0100
 @@ -26,7 +26,7 @@
  It is now cycle 24
  It is now cycle 25
@@ -5103,8 +5103,8 @@ zaz_test32 vm_test32 differ: char 657, line 29
  It is now cycle 27
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 36
 zaz_test37 vm_test37 differ: char 191, line 4
---- zaz_test37	2018-01-26 08:18:28.000000000 +0100
-+++ vm_test37	2018-01-26 08:18:28.000000000 +0100
+--- zaz_test37	2018-01-26 08:58:09.000000000 +0100
++++ vm_test37	2018-01-26 08:58:09.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
@@ -5116,8 +5116,8 @@ zaz_test37 vm_test37 differ: char 191, line 4
  P    2 | live 72614146
 ../tests/test_suite/test_cor_wrong_ocp/fork_0d_0d.s:[31m KO [0m with -v 37
 zaz_test38 vm_test38 differ: char 191, line 4
---- zaz_test38	2018-01-26 08:18:28.000000000 +0100
-+++ vm_test38	2018-01-26 08:18:28.000000000 +0100
+--- zaz_test38	2018-01-26 08:58:09.000000000 +0100
++++ vm_test38	2018-01-26 08:58:09.000000000 +0100
 @@ -1,7 +1,7 @@
  Introducing contestants...
  * Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !

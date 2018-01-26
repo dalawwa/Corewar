@@ -933,8 +933,10 @@ It is now cycle 914
 It is now cycle 915
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 P    1 | live -1
 ADV 5 (0x0026 -> 0x002b) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 916
 It is now cycle 917
 It is now cycle 918
@@ -973,6 +975,7 @@ It is now cycle 944
 It is now cycle 945
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 946
 It is now cycle 947
 It is now cycle 948
@@ -1007,6 +1010,7 @@ It is now cycle 974
 It is now cycle 975
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 976
 It is now cycle 977
 It is now cycle 978
@@ -1041,6 +1045,7 @@ It is now cycle 1004
 It is now cycle 1005
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1006
 It is now cycle 1007
 It is now cycle 1008
@@ -1075,6 +1080,7 @@ It is now cycle 1034
 It is now cycle 1035
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1036
 It is now cycle 1037
 It is now cycle 1038
@@ -1109,6 +1115,7 @@ It is now cycle 1064
 It is now cycle 1065
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1066
 It is now cycle 1067
 It is now cycle 1068
@@ -1143,6 +1150,7 @@ It is now cycle 1094
 It is now cycle 1095
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1096
 It is now cycle 1097
 It is now cycle 1098
@@ -1177,6 +1185,7 @@ It is now cycle 1124
 It is now cycle 1125
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1126
 It is now cycle 1127
 It is now cycle 1128
@@ -1211,6 +1220,7 @@ It is now cycle 1154
 It is now cycle 1155
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1156
 It is now cycle 1157
 It is now cycle 1158
@@ -1245,6 +1255,7 @@ It is now cycle 1184
 It is now cycle 1185
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1186
 It is now cycle 1187
 It is now cycle 1188
@@ -1279,6 +1290,7 @@ It is now cycle 1214
 It is now cycle 1215
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1216
 It is now cycle 1217
 It is now cycle 1218
@@ -1313,6 +1325,7 @@ It is now cycle 1244
 It is now cycle 1245
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1246
 It is now cycle 1247
 It is now cycle 1248
@@ -1347,6 +1360,7 @@ It is now cycle 1274
 It is now cycle 1275
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1276
 It is now cycle 1277
 It is now cycle 1278
@@ -1381,6 +1395,7 @@ It is now cycle 1304
 It is now cycle 1305
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1306
 It is now cycle 1307
 It is now cycle 1308
@@ -1415,6 +1430,7 @@ It is now cycle 1334
 It is now cycle 1335
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1336
 It is now cycle 1337
 It is now cycle 1338
@@ -1449,6 +1465,7 @@ It is now cycle 1364
 It is now cycle 1365
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1366
 It is now cycle 1367
 It is now cycle 1368
@@ -1483,6 +1500,7 @@ It is now cycle 1394
 It is now cycle 1395
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1396
 It is now cycle 1397
 It is now cycle 1398
@@ -1517,6 +1535,7 @@ It is now cycle 1424
 It is now cycle 1425
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1426
 It is now cycle 1427
 It is now cycle 1428
@@ -1551,6 +1570,7 @@ It is now cycle 1454
 It is now cycle 1455
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1456
 It is now cycle 1457
 It is now cycle 1458
@@ -1585,6 +1605,7 @@ It is now cycle 1484
 It is now cycle 1485
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1486
 It is now cycle 1487
 It is now cycle 1488
@@ -1619,6 +1640,7 @@ It is now cycle 1514
 It is now cycle 1515
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1516
 It is now cycle 1517
 It is now cycle 1518
@@ -1654,6 +1676,7 @@ It is now cycle 1544
 It is now cycle 1545
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1546
 It is now cycle 1547
 It is now cycle 1548
@@ -1688,6 +1711,7 @@ It is now cycle 1574
 It is now cycle 1575
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1576
 It is now cycle 1577
 It is now cycle 1578
@@ -1722,6 +1746,7 @@ It is now cycle 1604
 It is now cycle 1605
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1606
 It is now cycle 1607
 It is now cycle 1608
@@ -1756,6 +1781,7 @@ It is now cycle 1634
 It is now cycle 1635
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1636
 It is now cycle 1637
 It is now cycle 1638
@@ -1790,6 +1816,7 @@ It is now cycle 1664
 It is now cycle 1665
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1666
 It is now cycle 1667
 It is now cycle 1668
@@ -1824,6 +1851,7 @@ It is now cycle 1694
 It is now cycle 1695
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1696
 It is now cycle 1697
 It is now cycle 1698
@@ -1858,6 +1886,7 @@ It is now cycle 1724
 It is now cycle 1725
 P    2 | live -1
 ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 P    1 | fork 174 (231)
 ADV 3 (0x0039 -> 0x003c) 0c 00 ae 
 It is now cycle 1726
@@ -1872,8 +1901,10 @@ It is now cycle 1734
 It is now cycle 1735
 P    3 | live -1
 ADV 5 (0x00e7 -> 0x00ec) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 P    1 | live -1
 ADV 5 (0x003c -> 0x0041) 01 ff ff ff ff 
+Player 1 (turtle) is said to be alive
 It is now cycle 1736
 It is now cycle 1737
 It is now cycle 1738
