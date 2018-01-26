@@ -1,7 +1,5 @@
 #include "corewar.h"
 
-
-
 void		print_exe_opts(t_arena *arena, t_exe *exe)
 {
 	int	i;

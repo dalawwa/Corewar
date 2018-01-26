@@ -120,6 +120,8 @@ void	free_arena(t_arena **arena)
 			free_players((*arena)->players, (*arena)->nb_players);
 		if ((*arena)->bdd)
 			free_bdd((*arena)->bdd);
+		if ((*arena)->default_adv)
+			free((*arena)->default_adv);
 		if ((*arena)->list_proc)
 			free_list_proc((*arena)->list_proc);
 		if ((*arena)->files)
