@@ -12,5 +12,11 @@ vm/vm_test*
 vm/zaz_test*
 vm/list_broken
 vm/list_working
-vm/corewar.dSYM/Contents
+vm/corewar.dSYM
 vm/corewar
+vm/diff1
+vm/diff2
+vm/fawrk
+vm/fawrk2
+vm/my_print_result
+vm/zaz_print_result

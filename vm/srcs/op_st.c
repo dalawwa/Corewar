@@ -15,7 +15,6 @@ int		op_st(t_arena *arena, t_exe *exe)
 {
 	// a tester avec la vraie vm
 	print_st(arena, exe);
-	print_exe_opts(arena, exe);
 	//	ft_printf("PC = %d\n", exe->process->pc);
 	//	ft_putendl("in OP_ST");
 	if (exe->arg2->type == 'r')
@@ -33,6 +32,7 @@ int		op_st(t_arena *arena, t_exe *exe)
 		arena->mem[find_pc_adv(exe->process->pc, exe->arg2->d_value % IDX_MOD + 2, 1)] = exe->process->reg[exe->arg1->d_value][2];
 		arena->mem[find_pc_adv(exe->process->pc, exe->arg2->d_value % IDX_MOD + 3, 1)] = exe->process->reg[exe->arg1->d_value][3];
 	}
+	print_exe_opts(arena, exe);
 	is_carry_to_modify(exe);
 	return (1);
 }
