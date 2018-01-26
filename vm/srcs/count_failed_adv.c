@@ -1,5 +1,18 @@
 #include "corewar.h"
 
+int		get_adv_size(t_exe *exe, char ocp)
+{
+	char first;
+	char second;
+	char third;
+
+	exe = exe + 0;
+	first = ocp >> 6;
+	second = (ocp >> 4) & 0b0011;
+	third = (ocp >> 2) & 0b000011;
+	return (first + second + third);
+}
+
 int		handle_two_opcode(unsigned char op1, unsigned char op2)
 {
 	if (op1 < 0x04 || op1 == 0x0d || op2 < 0x04)
