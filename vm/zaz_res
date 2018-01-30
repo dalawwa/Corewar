@@ -1,5 +1,5 @@
 Introducing contestants...
-* Player 1, weighing 394 bytes, "turtle" ("TURTLE FFS U LAMA") !
+* Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
 It is now cycle 1
 It is now cycle 2
 It is now cycle 3
@@ -25,9 +25,9 @@ It is now cycle 22
 It is now cycle 23
 It is now cycle 24
 It is now cycle 25
-P    1 | sti r1 223 1
-       | -> store to 223 + 1 = 224 (with pc and mod 224)
-ADV 7 (0x0000 -> 0x0007) 0b 68 01 00 df 00 01 
+P    1 | sti r13 0 -28671
+       | -> store to 0 + -28671 = -28671 (with pc and mod -511)
+ADV 6 (0x0000 -> 0x0006) 0b 58 0d 0d 90 01 
 It is now cycle 26
 It is now cycle 27
 It is now cycle 28
@@ -38,6 +38,8 @@ It is now cycle 32
 It is now cycle 33
 It is now cycle 34
 It is now cycle 35
+P    1 | add r1 r2 r3
+ADV 5 (0x0006 -> 0x000b) 04 54 01 02 03 
 It is now cycle 36
 It is now cycle 37
 It is now cycle 38
@@ -53,9 +55,6 @@ It is now cycle 47
 It is now cycle 48
 It is now cycle 49
 It is now cycle 50
-P    1 | sti r1 53 1
-       | -> store to 53 + 1 = 54 (with pc and mod 61)
-ADV 7 (0x0007 -> 0x000e) 0b 68 01 00 35 00 01 
 It is now cycle 51
 It is now cycle 52
 It is now cycle 53
@@ -81,9 +80,6 @@ It is now cycle 72
 It is now cycle 73
 It is now cycle 74
 It is now cycle 75
-P    1 | sti r1 217 1
-       | -> store to 217 + 1 = 218 (with pc and mod 232)
-ADV 7 (0x000e -> 0x0015) 0b 68 01 00 d9 00 01 
 It is now cycle 76
 It is now cycle 77
 It is now cycle 78
@@ -109,16 +105,11 @@ It is now cycle 97
 It is now cycle 98
 It is now cycle 99
 It is now cycle 100
-P    1 | sti r1 17 1
-       | -> store to 17 + 1 = 18 (with pc and mod 39)
-ADV 7 (0x0015 -> 0x001c) 0b 68 01 00 11 00 01 
 It is now cycle 101
 It is now cycle 102
 It is now cycle 103
 It is now cycle 104
 It is now cycle 105
-P    1 | ld 0 r16
-ADV 7 (0x001c -> 0x0023) 02 90 00 00 00 00 10 
 It is now cycle 106
 It is now cycle 107
 It is now cycle 108
@@ -849,6 +840,8 @@ It is now cycle 832
 It is now cycle 833
 It is now cycle 834
 It is now cycle 835
+P    1 | fork -9 (2)
+ADV 3 (0x000b -> 0x000e) 0c ff f7 
 It is now cycle 836
 It is now cycle 837
 It is now cycle 838
@@ -859,6 +852,7 @@ It is now cycle 842
 It is now cycle 843
 It is now cycle 844
 It is now cycle 845
+ADV 2 (0x0002 -> 0x0004) 0d 0d 
 It is now cycle 846
 It is now cycle 847
 It is now cycle 848
@@ -870,11 +864,14 @@ It is now cycle 853
 It is now cycle 854
 It is now cycle 855
 It is now cycle 856
+P    2 | live 72614146
+ADV 5 (0x0005 -> 0x000a) 01 04 54 01 02 
 It is now cycle 857
 It is now cycle 858
 It is now cycle 859
 It is now cycle 860
 It is now cycle 861
+ADV 2 (0x000a -> 0x000c) 03 0c 
 It is now cycle 862
 It is now cycle 863
 It is now cycle 864
@@ -919,8 +916,6 @@ It is now cycle 902
 It is now cycle 903
 It is now cycle 904
 It is now cycle 905
-P    1 | fork 188 (223)
-ADV 3 (0x0023 -> 0x0026) 0c 00 bc 
 It is now cycle 906
 It is now cycle 907
 It is now cycle 908
@@ -931,26 +926,16 @@ It is now cycle 912
 It is now cycle 913
 It is now cycle 914
 It is now cycle 915
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
-P    1 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x0026 -> 0x002b) 01 ff ff ff ff 
 It is now cycle 916
 It is now cycle 917
 It is now cycle 918
 It is now cycle 919
 It is now cycle 920
-P    1 | ld 439025904 r2
-ADV 7 (0x002b -> 0x0032) 02 90 1a 2b 00 f0 02 
 It is now cycle 921
 It is now cycle 922
 It is now cycle 923
 It is now cycle 924
 It is now cycle 925
-P    1 | ld 0 r16
-ADV 7 (0x0032 -> 0x0039) 02 90 00 00 00 00 10 
 It is now cycle 926
 It is now cycle 927
 It is now cycle 928
@@ -961,7 +946,6 @@ It is now cycle 932
 It is now cycle 933
 It is now cycle 934
 It is now cycle 935
-P    2 | zjmp -5 OK
 It is now cycle 936
 It is now cycle 937
 It is now cycle 938
@@ -972,9 +956,6 @@ It is now cycle 942
 It is now cycle 943
 It is now cycle 944
 It is now cycle 945
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 946
 It is now cycle 947
 It is now cycle 948
@@ -995,7 +976,6 @@ It is now cycle 962
 It is now cycle 963
 It is now cycle 964
 It is now cycle 965
-P    2 | zjmp -5 OK
 It is now cycle 966
 It is now cycle 967
 It is now cycle 968
@@ -1006,9 +986,6 @@ It is now cycle 972
 It is now cycle 973
 It is now cycle 974
 It is now cycle 975
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 976
 It is now cycle 977
 It is now cycle 978
@@ -1029,7 +1006,6 @@ It is now cycle 992
 It is now cycle 993
 It is now cycle 994
 It is now cycle 995
-P    2 | zjmp -5 OK
 It is now cycle 996
 It is now cycle 997
 It is now cycle 998
@@ -1040,9 +1016,6 @@ It is now cycle 1002
 It is now cycle 1003
 It is now cycle 1004
 It is now cycle 1005
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 1006
 It is now cycle 1007
 It is now cycle 1008
@@ -1063,7 +1036,6 @@ It is now cycle 1022
 It is now cycle 1023
 It is now cycle 1024
 It is now cycle 1025
-P    2 | zjmp -5 OK
 It is now cycle 1026
 It is now cycle 1027
 It is now cycle 1028
@@ -1074,9 +1046,6 @@ It is now cycle 1032
 It is now cycle 1033
 It is now cycle 1034
 It is now cycle 1035
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 1036
 It is now cycle 1037
 It is now cycle 1038
@@ -1097,7 +1066,6 @@ It is now cycle 1052
 It is now cycle 1053
 It is now cycle 1054
 It is now cycle 1055
-P    2 | zjmp -5 OK
 It is now cycle 1056
 It is now cycle 1057
 It is now cycle 1058
@@ -1108,9 +1076,6 @@ It is now cycle 1062
 It is now cycle 1063
 It is now cycle 1064
 It is now cycle 1065
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 1066
 It is now cycle 1067
 It is now cycle 1068
@@ -1131,7 +1096,6 @@ It is now cycle 1082
 It is now cycle 1083
 It is now cycle 1084
 It is now cycle 1085
-P    2 | zjmp -5 OK
 It is now cycle 1086
 It is now cycle 1087
 It is now cycle 1088
@@ -1142,9 +1106,6 @@ It is now cycle 1092
 It is now cycle 1093
 It is now cycle 1094
 It is now cycle 1095
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 1096
 It is now cycle 1097
 It is now cycle 1098
@@ -1165,7 +1126,6 @@ It is now cycle 1112
 It is now cycle 1113
 It is now cycle 1114
 It is now cycle 1115
-P    2 | zjmp -5 OK
 It is now cycle 1116
 It is now cycle 1117
 It is now cycle 1118
@@ -1176,9 +1136,6 @@ It is now cycle 1122
 It is now cycle 1123
 It is now cycle 1124
 It is now cycle 1125
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 1126
 It is now cycle 1127
 It is now cycle 1128
@@ -1199,7 +1156,6 @@ It is now cycle 1142
 It is now cycle 1143
 It is now cycle 1144
 It is now cycle 1145
-P    2 | zjmp -5 OK
 It is now cycle 1146
 It is now cycle 1147
 It is now cycle 1148
@@ -1210,9 +1166,6 @@ It is now cycle 1152
 It is now cycle 1153
 It is now cycle 1154
 It is now cycle 1155
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 1156
 It is now cycle 1157
 It is now cycle 1158
@@ -1233,7 +1186,6 @@ It is now cycle 1172
 It is now cycle 1173
 It is now cycle 1174
 It is now cycle 1175
-P    2 | zjmp -5 OK
 It is now cycle 1176
 It is now cycle 1177
 It is now cycle 1178
@@ -1244,9 +1196,6 @@ It is now cycle 1182
 It is now cycle 1183
 It is now cycle 1184
 It is now cycle 1185
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 1186
 It is now cycle 1187
 It is now cycle 1188
@@ -1267,7 +1216,6 @@ It is now cycle 1202
 It is now cycle 1203
 It is now cycle 1204
 It is now cycle 1205
-P    2 | zjmp -5 OK
 It is now cycle 1206
 It is now cycle 1207
 It is now cycle 1208
@@ -1278,9 +1226,6 @@ It is now cycle 1212
 It is now cycle 1213
 It is now cycle 1214
 It is now cycle 1215
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 1216
 It is now cycle 1217
 It is now cycle 1218
@@ -1301,7 +1246,6 @@ It is now cycle 1232
 It is now cycle 1233
 It is now cycle 1234
 It is now cycle 1235
-P    2 | zjmp -5 OK
 It is now cycle 1236
 It is now cycle 1237
 It is now cycle 1238
@@ -1312,9 +1256,6 @@ It is now cycle 1242
 It is now cycle 1243
 It is now cycle 1244
 It is now cycle 1245
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 1246
 It is now cycle 1247
 It is now cycle 1248
@@ -1335,7 +1276,6 @@ It is now cycle 1262
 It is now cycle 1263
 It is now cycle 1264
 It is now cycle 1265
-P    2 | zjmp -5 OK
 It is now cycle 1266
 It is now cycle 1267
 It is now cycle 1268
@@ -1346,9 +1286,6 @@ It is now cycle 1272
 It is now cycle 1273
 It is now cycle 1274
 It is now cycle 1275
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 1276
 It is now cycle 1277
 It is now cycle 1278
@@ -1369,7 +1306,6 @@ It is now cycle 1292
 It is now cycle 1293
 It is now cycle 1294
 It is now cycle 1295
-P    2 | zjmp -5 OK
 It is now cycle 1296
 It is now cycle 1297
 It is now cycle 1298
@@ -1380,9 +1316,6 @@ It is now cycle 1302
 It is now cycle 1303
 It is now cycle 1304
 It is now cycle 1305
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 1306
 It is now cycle 1307
 It is now cycle 1308
@@ -1403,7 +1336,6 @@ It is now cycle 1322
 It is now cycle 1323
 It is now cycle 1324
 It is now cycle 1325
-P    2 | zjmp -5 OK
 It is now cycle 1326
 It is now cycle 1327
 It is now cycle 1328
@@ -1414,9 +1346,6 @@ It is now cycle 1332
 It is now cycle 1333
 It is now cycle 1334
 It is now cycle 1335
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 1336
 It is now cycle 1337
 It is now cycle 1338
@@ -1437,7 +1366,6 @@ It is now cycle 1352
 It is now cycle 1353
 It is now cycle 1354
 It is now cycle 1355
-P    2 | zjmp -5 OK
 It is now cycle 1356
 It is now cycle 1357
 It is now cycle 1358
@@ -1448,9 +1376,6 @@ It is now cycle 1362
 It is now cycle 1363
 It is now cycle 1364
 It is now cycle 1365
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 1366
 It is now cycle 1367
 It is now cycle 1368
@@ -1471,7 +1396,6 @@ It is now cycle 1382
 It is now cycle 1383
 It is now cycle 1384
 It is now cycle 1385
-P    2 | zjmp -5 OK
 It is now cycle 1386
 It is now cycle 1387
 It is now cycle 1388
@@ -1482,9 +1406,6 @@ It is now cycle 1392
 It is now cycle 1393
 It is now cycle 1394
 It is now cycle 1395
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 1396
 It is now cycle 1397
 It is now cycle 1398
@@ -1505,7 +1426,6 @@ It is now cycle 1412
 It is now cycle 1413
 It is now cycle 1414
 It is now cycle 1415
-P    2 | zjmp -5 OK
 It is now cycle 1416
 It is now cycle 1417
 It is now cycle 1418
@@ -1516,9 +1436,6 @@ It is now cycle 1422
 It is now cycle 1423
 It is now cycle 1424
 It is now cycle 1425
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 1426
 It is now cycle 1427
 It is now cycle 1428
@@ -1539,7 +1456,6 @@ It is now cycle 1442
 It is now cycle 1443
 It is now cycle 1444
 It is now cycle 1445
-P    2 | zjmp -5 OK
 It is now cycle 1446
 It is now cycle 1447
 It is now cycle 1448
@@ -1550,9 +1466,6 @@ It is now cycle 1452
 It is now cycle 1453
 It is now cycle 1454
 It is now cycle 1455
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 1456
 It is now cycle 1457
 It is now cycle 1458
@@ -1573,7 +1486,6 @@ It is now cycle 1472
 It is now cycle 1473
 It is now cycle 1474
 It is now cycle 1475
-P    2 | zjmp -5 OK
 It is now cycle 1476
 It is now cycle 1477
 It is now cycle 1478
@@ -1584,9 +1496,6 @@ It is now cycle 1482
 It is now cycle 1483
 It is now cycle 1484
 It is now cycle 1485
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
 It is now cycle 1486
 It is now cycle 1487
 It is now cycle 1488
@@ -1602,301 +1511,16 @@ It is now cycle 1497
 It is now cycle 1498
 It is now cycle 1499
 It is now cycle 1500
-It is now cycle 1501
-It is now cycle 1502
-It is now cycle 1503
-It is now cycle 1504
-It is now cycle 1505
-P    2 | zjmp -5 OK
-It is now cycle 1506
-It is now cycle 1507
-It is now cycle 1508
-It is now cycle 1509
-It is now cycle 1510
-It is now cycle 1511
-It is now cycle 1512
-It is now cycle 1513
-It is now cycle 1514
-It is now cycle 1515
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
-It is now cycle 1516
-It is now cycle 1517
-It is now cycle 1518
-It is now cycle 1519
-It is now cycle 1520
-It is now cycle 1521
-It is now cycle 1522
-It is now cycle 1523
-It is now cycle 1524
-It is now cycle 1525
-It is now cycle 1526
-It is now cycle 1527
-It is now cycle 1528
-It is now cycle 1529
-It is now cycle 1530
-It is now cycle 1531
-It is now cycle 1532
-It is now cycle 1533
-It is now cycle 1534
-It is now cycle 1535
-P    2 | zjmp -5 OK
-It is now cycle 1536
-Cycle to die is now 1486
-It is now cycle 1537
-It is now cycle 1538
-It is now cycle 1539
-It is now cycle 1540
-It is now cycle 1541
-It is now cycle 1542
-It is now cycle 1543
-It is now cycle 1544
-It is now cycle 1545
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
-It is now cycle 1546
-It is now cycle 1547
-It is now cycle 1548
-It is now cycle 1549
-It is now cycle 1550
-It is now cycle 1551
-It is now cycle 1552
-It is now cycle 1553
-It is now cycle 1554
-It is now cycle 1555
-It is now cycle 1556
-It is now cycle 1557
-It is now cycle 1558
-It is now cycle 1559
-It is now cycle 1560
-It is now cycle 1561
-It is now cycle 1562
-It is now cycle 1563
-It is now cycle 1564
-It is now cycle 1565
-P    2 | zjmp -5 OK
-It is now cycle 1566
-It is now cycle 1567
-It is now cycle 1568
-It is now cycle 1569
-It is now cycle 1570
-It is now cycle 1571
-It is now cycle 1572
-It is now cycle 1573
-It is now cycle 1574
-It is now cycle 1575
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
-It is now cycle 1576
-It is now cycle 1577
-It is now cycle 1578
-It is now cycle 1579
-It is now cycle 1580
-It is now cycle 1581
-It is now cycle 1582
-It is now cycle 1583
-It is now cycle 1584
-It is now cycle 1585
-It is now cycle 1586
-It is now cycle 1587
-It is now cycle 1588
-It is now cycle 1589
-It is now cycle 1590
-It is now cycle 1591
-It is now cycle 1592
-It is now cycle 1593
-It is now cycle 1594
-It is now cycle 1595
-P    2 | zjmp -5 OK
-It is now cycle 1596
-It is now cycle 1597
-It is now cycle 1598
-It is now cycle 1599
-It is now cycle 1600
-It is now cycle 1601
-It is now cycle 1602
-It is now cycle 1603
-It is now cycle 1604
-It is now cycle 1605
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
-It is now cycle 1606
-It is now cycle 1607
-It is now cycle 1608
-It is now cycle 1609
-It is now cycle 1610
-It is now cycle 1611
-It is now cycle 1612
-It is now cycle 1613
-It is now cycle 1614
-It is now cycle 1615
-It is now cycle 1616
-It is now cycle 1617
-It is now cycle 1618
-It is now cycle 1619
-It is now cycle 1620
-It is now cycle 1621
-It is now cycle 1622
-It is now cycle 1623
-It is now cycle 1624
-It is now cycle 1625
-P    2 | zjmp -5 OK
-It is now cycle 1626
-It is now cycle 1627
-It is now cycle 1628
-It is now cycle 1629
-It is now cycle 1630
-It is now cycle 1631
-It is now cycle 1632
-It is now cycle 1633
-It is now cycle 1634
-It is now cycle 1635
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
-It is now cycle 1636
-It is now cycle 1637
-It is now cycle 1638
-It is now cycle 1639
-It is now cycle 1640
-It is now cycle 1641
-It is now cycle 1642
-It is now cycle 1643
-It is now cycle 1644
-It is now cycle 1645
-It is now cycle 1646
-It is now cycle 1647
-It is now cycle 1648
-It is now cycle 1649
-It is now cycle 1650
-It is now cycle 1651
-It is now cycle 1652
-It is now cycle 1653
-It is now cycle 1654
-It is now cycle 1655
-P    2 | zjmp -5 OK
-It is now cycle 1656
-It is now cycle 1657
-It is now cycle 1658
-It is now cycle 1659
-It is now cycle 1660
-It is now cycle 1661
-It is now cycle 1662
-It is now cycle 1663
-It is now cycle 1664
-It is now cycle 1665
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
-It is now cycle 1666
-It is now cycle 1667
-It is now cycle 1668
-It is now cycle 1669
-It is now cycle 1670
-It is now cycle 1671
-It is now cycle 1672
-It is now cycle 1673
-It is now cycle 1674
-It is now cycle 1675
-It is now cycle 1676
-It is now cycle 1677
-It is now cycle 1678
-It is now cycle 1679
-It is now cycle 1680
-It is now cycle 1681
-It is now cycle 1682
-It is now cycle 1683
-It is now cycle 1684
-It is now cycle 1685
-P    2 | zjmp -5 OK
-It is now cycle 1686
-It is now cycle 1687
-It is now cycle 1688
-It is now cycle 1689
-It is now cycle 1690
-It is now cycle 1691
-It is now cycle 1692
-It is now cycle 1693
-It is now cycle 1694
-It is now cycle 1695
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
-It is now cycle 1696
-It is now cycle 1697
-It is now cycle 1698
-It is now cycle 1699
-It is now cycle 1700
-It is now cycle 1701
-It is now cycle 1702
-It is now cycle 1703
-It is now cycle 1704
-It is now cycle 1705
-It is now cycle 1706
-It is now cycle 1707
-It is now cycle 1708
-It is now cycle 1709
-It is now cycle 1710
-It is now cycle 1711
-It is now cycle 1712
-It is now cycle 1713
-It is now cycle 1714
-It is now cycle 1715
-P    2 | zjmp -5 OK
-It is now cycle 1716
-It is now cycle 1717
-It is now cycle 1718
-It is now cycle 1719
-It is now cycle 1720
-It is now cycle 1721
-It is now cycle 1722
-It is now cycle 1723
-It is now cycle 1724
-It is now cycle 1725
-P    2 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
-P    1 | fork 174 (231)
-ADV 3 (0x0039 -> 0x003c) 0c 00 ae 
-It is now cycle 1726
-It is now cycle 1727
-It is now cycle 1728
-It is now cycle 1729
-It is now cycle 1730
-It is now cycle 1731
-It is now cycle 1732
-It is now cycle 1733
-It is now cycle 1734
-It is now cycle 1735
-P    3 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x00e7 -> 0x00ec) 01 ff ff ff ff 
-P    1 | live -1
-Player 1 (turtle) is said to be alive
-ADV 5 (0x003c -> 0x0041) 01 ff ff ff ff 
-It is now cycle 1736
-It is now cycle 1737
-It is now cycle 1738
-It is now cycle 1739
-It is now cycle 1740
-P    3 | st r2 400
-ADV 5 (0x00ec -> 0x00f1) 03 70 02 01 90 
-P    1 | st r2 -400
-ADV 5 (0x0041 -> 0x0046) 03 70 02 fe 70 
-0x0000 : 0b 68 01 00 df 00 01 0b 68 01 00 35 00 01 0b 68 01 00 d9 00 01 0b 68 01 00 11 00 01 02 90 00 00 00 00 10 0c 00 bc 01 ff ff ff ff 02 90 1a 2b 00 f0 02 02 90 00 00 00 00 10 0c 00 ae 01 ff ff ff 
-0x0040 : ff 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 
-0x0080 : fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 
-0x00c0 : 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 03 70 02 fe 70 09 ff 60 01 ff ff ff ff 09 ff fb 01 ff ff ff ff 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 
-0x0100 : 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 
-0x0140 : 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 01 90 03 70 02 
-0x0180 : 01 90 03 70 02 01 90 09 ff 60 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0x0000 : 0b 58 0d 0d 90 01 04 54 01 02 03 0c ff f7 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0x0100 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0x0140 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0x0180 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x01c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x0200 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1a 2b 00 f0 
+0x0240 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x0280 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x02c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x0300 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
@@ -1945,7 +1569,7 @@ ADV 5 (0x0041 -> 0x0046) 03 70 02 fe 70
 0x0dc0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x0e00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x0e40 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
-0x0e80 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1a 2b 00 f0 00 00 00 00 00 00 00 00 00 00 00 
+0x0e80 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x0ec0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x0f00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x0f40 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
