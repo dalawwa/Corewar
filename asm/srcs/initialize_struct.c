@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:39:24 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/26 14:48:58 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/30 09:11:00 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	global_variables_size(void)
 {
-	line_error = 0;
-	temp = 0;
-	size_line = 0;
-	position = 0;
+	g_line_error = 0;
+	g_temp = 0;
+	g_size_line = 0;
+	g_position = 0;
 }
 
 void	start_struct_champ(t_champ *champ)

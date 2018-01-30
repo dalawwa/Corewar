@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/23 17:08:07 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/26 18:43:36 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/30 09:49:05 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,18 @@ void		write_on_terminal(int co, t_champ *champ, char **opti, int j)
 	}
 }
 
-void		start_writing_prog(header_t *op)
+void		start_writing_prog(t_header *op)
 {
 	ft_printf("Dumping annotated program on standard output\n");
-	ft_printf("Program size : %i bytes\n", position);
+	ft_printf("Program size : %i bytes\n", g_position);
 	ft_printf("Name : \"%s\"\nComment : \"%s\"\n\n",
 			op->prog_name, op->comment);
-	position = 0;
+	g_position = 0;
 }
 
 int			write_beg_line(char **opti, int j, t_champ *champ, int co)
 {
-	ft_printf("%-5i(%-3i) : %7c%-10s", position, temp, ' ', opti[0]);
+	ft_printf("%-5i(%-3i) : %7c%-10s", g_position, g_temp, ' ', opti[0]);
 	j = 1;
 	while (opti[j] != NULL)
 	{
@@ -48,21 +48,21 @@ int			write_beg_line(char **opti, int j, t_champ *champ, int co)
 		j++;
 	}
 	write_on_terminal(co, champ, opti, j);
-	position += temp;
+	g_position += g_temp;
 	return (j);
 }
 
 void		check_if_print_label(t_champ *test)
 {
-	while (test->next != NULL && test->position >= position)
+	while (test->next != NULL && test->position >= g_position)
 	{
-		if (test->position == position)
-			ft_printf("%-11i:%4c%s:\n", position, ' ', test->label);
+		if (test->position == g_position)
+			ft_printf("%-11i:%4c%s:\n", g_position, ' ', test->label);
 		test = test->next;
 	}
 }
 
-void		launch_writing_out(char *file, t_champ *champ, header_t *op, int i)
+void		l_writing_out(char *file, t_champ *champ, t_header *op, int i)
 {
 	char	**tab;
 	int		j;

@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 18:42:43 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/26 18:47:34 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/30 09:13:06 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,15 +83,15 @@ int		find_translat_a(t_champ *champ, char **str, int i)
 void	temp_advance(int co)
 {
 	if (co == 1 || co == 4 || co == 3 || co == 5 || co == 7)
-		temp += 4;
+		g_temp += 4;
 	if (co == 2 || co == 11)
-		temp += 6;
+		g_temp += 6;
 	if (co == 8 || co == 6)
-		temp += 7;
+		g_temp += 7;
 	if (co == 9 || co == 12)
-		temp += 2;
+		g_temp += 2;
 	if (co == 10)
-		temp += 5;
+		g_temp += 5;
 	if (co)
-		temp++;
+		g_temp++;
 }

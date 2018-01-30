@@ -6,21 +6,21 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:46:01 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/26 17:42:44 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/30 09:48:19 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/asm.h"
 
-int		ciao_bye_name(int i, header_t *op)
+int		ciao_bye_name(int i, t_header *op)
 {
 	if (op && i == 10)
 		i = 11;
-	if (i == 3 && error_msg == 2)
+	if (i == 3 && g_error_msg == 2)
 		ft_printf("Champion name should be on one line\n");
 	else if (i == 3)
 		ft_printf("Champion name too long (Max length 128)\n");
-	else if (i == 4 && error_msg == 2)
+	else if (i == 4 && g_error_msg == 2)
 		ft_printf("Champion comment should be on one line\n");
 	else if (i == 4)
 		ft_printf("Champion comment too long (Max length 2048)\n");
@@ -50,20 +50,20 @@ int		ciao_bye(int i, char *str)
 void	ciao_bye_bye(int i)
 {
 	if (i == 9)
-		ft_printf("Lexical error at line [%i]\n", line_error);
+		ft_printf("Lexical error at line [%i]\n", g_line_error);
 	else if (i == 3)
 		ft_printf("Invalid parameter type register for instruction line %i\n",
-				line_error);
+				g_line_error);
 	else if (i == 4)
 		ft_printf("Invalid parameter type direct for instruction line %i\n",
-				line_error);
+				g_line_error);
 	else if (i == 5)
 		ft_printf("Invalid parameter type indirect for instruction line %i\n",
-				line_error);
+				g_line_error);
 	else if (i == 6)
-		ft_printf("Invalid parameters for line %i\n", line_error);
+		ft_printf("Invalid parameters for line %i\n", g_line_error);
 	else if (i == 7)
-		ft_printf("Syntax error at token line %i\n", line_error);
+		ft_printf("Syntax error at token line %i\n", g_line_error);
 	else
 		ft_putstr("Usage: ./asm <sourcefile.s>\n");
 	_exit(0);
