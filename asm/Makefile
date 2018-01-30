@@ -6,7 +6,7 @@
 #    By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/27 17:48:19 by bfruchar          #+#    #+#              #
-#    Updated: 2018/01/26 18:43:55 by bfruchar         ###   ########.fr        #
+#    Updated: 2018/01/30 15:16:23 by bfruchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRC =				srcs/main.c \
 					srcs/creation_cor3.c \
 					srcs/option_a_2.c \
 					srcs/option_a_3.c \
+					srcs/option_a_4.c \
 					srcs/option_a.c
 
 OBJ =				main.o \
@@ -52,6 +53,7 @@ OBJ =				main.o \
 					creation_cor3.o \
 					option_a_2.o \
 					option_a_3.o \
+					option_a_4.o \
 					option_a.o
 
 $(NAME):

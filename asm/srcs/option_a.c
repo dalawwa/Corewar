@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/23 17:08:07 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/30 09:49:05 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/30 13:55:39 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void		l_writing_out(char *file, t_champ *champ, t_header *op, int i)
 		while (tab[i][j] == ' ' || tab[i][j] == '\t')
 			j++;
 		co = get_the_op_code(&tab[i][j]);
-		temp_advance(co);
+		temp_advance(co, tab[i]);
 		opti = ft_strsplit(tab[i], ' ');
 		j = write_beg_line(opti, j, champ, co);
 		i++;
