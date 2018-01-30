@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/13 15:32:33 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/26 17:30:06 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/30 09:18:27 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		put_in_file_reg(char **file, int fd)
 		return (0);
 	j = ft_atoi(++(*file));
 	write(fd, &j, 1);
-	temp = temp + 1;
+	g_temp = g_temp + 1;
 	move_in_the_file(file);
 	return (1);
 }
@@ -64,7 +64,7 @@ int		check_is_reg(int i, char **str)
 		(*str)++;
 		if (j > 9)
 			(*str)++;
-		position = position + 1;
+		g_position = g_position + 1;
 		if (i == 1)
 			reg_is_not_the_last(str);
 		else

@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 18:38:55 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/26 18:47:07 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/30 09:16:15 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char		*delete_comments(char *str)
 	char	*ret;
 	int		i;
 
-	temp = 0;
+	g_temp = 0;
 	i = 0;
 	while (str[i] != '\0')
 	{

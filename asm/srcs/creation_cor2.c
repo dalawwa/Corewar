@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 17:55:28 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/26 17:57:19 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/30 09:47:50 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ int			position_label(t_champ *champ, char *file)
 		{
 			if (!ft_strncmp(file, champ->label, i))
 			{
-				return (champ->position - position);
+				return (champ->position - g_position);
 			}
 		}
 		else if (!ft_strncmp(file, champ->label, ft_strlen(champ->label)))
-			return (champ->position - position);
+			return (champ->position - g_position);
 		champ = champ->next;
 	}
 	ciao_bye_bye(12);
@@ -61,7 +61,7 @@ int			change_magic_order_second(int i)
 	return (i);
 }
 
-void		create_up_file(int fd, header_t *op)
+void		create_up_file(int fd, t_header *op)
 {
 	int		i;
 	int		j;
@@ -73,9 +73,9 @@ void		create_up_file(int fd, header_t *op)
 		write(fd, &op->prog_name[i++], 1);
 	while (i++ < 128)
 		write(fd, "\0", 1);
-	position = change_magic_order(position);
+	g_position = change_magic_order(g_position);
 	write(fd, "\0\0\0\0", 4);
-	write(fd, &position, 4);
+	write(fd, &g_position, 4);
 	i = 0;
 	while (op->comment[i])
 		write(fd, &op->comment[i++], 1);

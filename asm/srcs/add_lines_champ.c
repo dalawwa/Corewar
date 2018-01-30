@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 16:24:32 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/25 13:37:44 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/30 09:18:40 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ t_champ		*ft_lstadd_lines(t_champ *begin, char *line, int i)
 	while (line[j] != ':')
 		j++;
 	next->label = ft_strsub(line, 0, j);
-	next->position = position;
+	next->position = g_position;
 	next->next = begin;
 	return (next);
 }
