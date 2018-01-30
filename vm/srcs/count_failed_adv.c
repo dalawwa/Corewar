@@ -62,8 +62,7 @@ int		count_failed_adv(t_arena *arena, t_exe *exe)
 	while (i < NB_OP)
 	{
 		if (find_char_at_mem_pc_adv(exe->process->pc, 1, arena) == arena->bdd[i]->opcode)
-//			return (handle_two_opcode(arena->mem[exe->process->pc], arena->bdd[i]->opcode));
-			return (2);
+			return (handle_two_opcode(arena->mem[exe->process->pc], arena->bdd[i]->opcode));
 		i++;
 	}
 	return (2 + get_size_from_ocp(exe->ocp, exe));
