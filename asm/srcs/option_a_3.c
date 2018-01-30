@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 18:42:43 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/30 09:13:06 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/30 15:15:36 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int		put_in_file_dir_a(int i, t_champ *champ, char *str)
 {
 	int	j;
 
-	j = 0;
 	i = 0;
+	j = 0;
 	if (*str != '%')
 		return (0);
 	(str)++;
@@ -80,18 +80,21 @@ int		find_translat_a(t_champ *champ, char **str, int i)
 	return (find_translat_a2(champ, str, i));
 }
 
-void	temp_advance(int co)
+void	treat_and_temp(char *str, int i)
 {
-	if (co == 1 || co == 4 || co == 3 || co == 5 || co == 7)
-		g_temp += 4;
-	if (co == 2 || co == 11)
-		g_temp += 6;
-	if (co == 8 || co == 6)
-		g_temp += 7;
-	if (co == 9 || co == 12)
+	g_temp++;
+	while (str[i] == ' ' || str[i] == '\t')
+		i++;
+	while (str[i] != ' ' && str[i] != '\t')
+		i++;
+	while (str[i] == ' ' || str[i] == '\t')
+		i++;
+	while (str[i] != ' ' && str[i] != '\t')
+		i++;
+	while (str[i] == ' ' || str[i] == '\t')
+		i++;
+	if (str[i] == 'r')
 		g_temp += 2;
-	if (co == 10)
-		g_temp += 5;
-	if (co)
-		g_temp++;
+	else
+		g_temp += 3;
 }

@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:30 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/30 09:51:16 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/30 15:16:02 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,9 +125,10 @@ int						next_order_space(char *str, int j);
 int						get_opcode_a(char **str, int i);
 int						put_in_file_reg_a(char *str);
 int						put_in_file_indir_a(t_champ *champ, char *str);
-void					temp_advance(int co);
 int						find_translat_a(t_champ *champ, char **str, int i);
 int						find_translat_a2(t_champ *champ, char **str, int i);
 int						put_in_file_dir_a(int i, t_champ *champ, char *str);
+void					temp_advance(int co, char *str);
+void					treat_and_temp(char *str, int i);
 
 #endif
