@@ -1,5 +1,5 @@
 Introducing contestants...
-* Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 05 0d 90" ("WTF") !
+* Player 1, weighing 14 bytes, "Failed_adv_TEST : Fork sur 02 02 90" ("WTF") !
 It is now cycle 1
 It is now cycle 2
 It is now cycle 3
@@ -25,9 +25,9 @@ It is now cycle 22
 It is now cycle 23
 It is now cycle 24
 It is now cycle 25
-P    1 | sti r13 0 -28671
+P    1 | sti r2 0 -28671
        | -> store to 0 + -28671 = -28671 (with pc and mod -3071)
-ADV 6 (0x0000 -> 0x0006) 0b 58 0d 0d 90 01 
+ADV 6 (0x0000 -> 0x0006) 0b 58 02 02 90 01 
 It is now cycle 26
 It is now cycle 27
 It is now cycle 28
@@ -847,31 +847,31 @@ It is now cycle 837
 It is now cycle 838
 It is now cycle 839
 It is now cycle 840
+ADV 2 (0x0002 -> 0x0004) 02 02 
 It is now cycle 841
 It is now cycle 842
 It is now cycle 843
 It is now cycle 844
 It is now cycle 845
-ADV 2 (0x0002 -> 0x0004) 0d 0d 
 It is now cycle 846
 It is now cycle 847
 It is now cycle 848
 It is now cycle 849
 It is now cycle 850
 It is now cycle 851
+P    2 | live 72614146
+ADV 5 (0x0005 -> 0x000a) 01 04 54 01 02 
 It is now cycle 852
 It is now cycle 853
 It is now cycle 854
 It is now cycle 855
 It is now cycle 856
-P    2 | live 72614146
-ADV 5 (0x0005 -> 0x000a) 01 04 54 01 02 
+ADV 2 (0x000a -> 0x000c) 03 0c 
 It is now cycle 857
 It is now cycle 858
 It is now cycle 859
 It is now cycle 860
 It is now cycle 861
-ADV 2 (0x000a -> 0x000c) 03 0c 
 It is now cycle 862
 It is now cycle 863
 It is now cycle 864
@@ -1511,7 +1511,7 @@ It is now cycle 1497
 It is now cycle 1498
 It is now cycle 1499
 It is now cycle 1500
-0x0000 : 0b 58 0d 0d 90 01 04 54 01 02 03 0c ff f7 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0x0000 : 0b 58 02 02 90 01 04 54 01 02 03 0c ff f7 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x0040 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x0080 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x00c0 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
