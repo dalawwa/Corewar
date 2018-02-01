@@ -1,4 +1,4 @@
-#!bin/sh
+#!/bin/zsh
 DEF='\x1B[0m'
 GRA='\x1B[1m'
 SOU='\x1B[4m'
