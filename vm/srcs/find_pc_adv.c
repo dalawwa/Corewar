@@ -1,4 +1,5 @@
 #include "corewar.h"
+
 int		find_pc_adv(int pc, int adv, int stop)
 {
 	int	i;
@@ -14,7 +15,6 @@ int		find_pc_adv(int pc, int adv, int stop)
 		if (adv < 0x8000)
 		{
 			pc_tmp = pc + (adv % IDX_MOD);
-//			ft_printf("\nadv: %d | pc_tmp: %d\n", adv, pc_tmp);
 //			ft_printf("inf NEXT  pc_tmp = %d\n", pc_tmp);
 			if (pc_tmp >= MEM_SIZE)
 				pc_tmp = pc_tmp - MEM_SIZE;
@@ -22,7 +22,6 @@ int		find_pc_adv(int pc, int adv, int stop)
 		else
 		{
 			adv_tmp = IDX_MOD - (adv % IDX_MOD);
-//			ft_printf("\nadv: %d | pc_tmp: %d\n", adv, adv_tmp);
 			if (adv_tmp == 512)
 				adv_tmp = 0;
 			pc_tmp = pc - adv_tmp;
@@ -36,12 +35,10 @@ int		find_pc_adv(int pc, int adv, int stop)
 //		ft_printf("\nSTOP = 1 | FIRST pc_tmp = %d\n", pc_tmp);
 		if (adv < 0x8000 && adv >= 0)
 		{
-			pc_tmp = pc + (adv % IDX_MOD) % MEM_SIZE;
-//			ft_printf("\nCOUCOU1adv: %d | pc_tmp: %d\n", adv, pc_tmp);
+			pc_tmp = pc + (adv % IDX_MOD);
 //			ft_printf("adv = %d\ninf NEXT  pc_tmp = %d\n", adv,  pc_tmp);
 			if (pc_tmp >= MEM_SIZE)
 			{
-//			ft_printf("\nCOUCOU2adv: %d | pc_tmp: %d | RETURN 0\n", adv, pc_tmp);
 //	ft_printf("\npc_tmp: %d\n", pc_tmp);
 				return (0);
 			}
@@ -49,14 +46,12 @@ int		find_pc_adv(int pc, int adv, int stop)
 		else if (adv >= 0x8000)
 		{
 			adv_tmp = IDX_MOD - (adv % IDX_MOD);
-//			ft_printf("\nCOUCOU3adv: %d | pc_tmp: %d\n", adv, pc_tmp);
 			if (adv_tmp == 512)
 				adv_tmp = 0;
 			pc_tmp = pc - adv_tmp;
 //			ft_printf("sup NEXT  pc_tmp = %d\n", pc_tmp);
 			if (pc_tmp < 0)
 			{
-//			ft_printf("\nCOUCOU4adv: %d | pc_tmp: %d | RETURN 0\n", adv, pc_tmp);
 //				ft_printf("\nfpa pc_tmp < 0\n");
 //	ft_printf("\npc_tmp: %d\n", pc_tmp);
 				return (0);
@@ -69,9 +64,7 @@ int		find_pc_adv(int pc, int adv, int stop)
 			{
 //				ft_printf("pc_tmp = %d\n", pc_tmp);
 				if (pc_tmp == 0)
-				{
 					pc_tmp = MEM_SIZE;
-				}
 				pc_tmp--;
 				i--;
 			}

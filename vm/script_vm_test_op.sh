@@ -70,45 +70,42 @@ LOG_BROKEN='list_op_broken'
 
 echo "$YEL===== launching diff on our testsuite$DEF"
 testfun(){
-> $LOG_WORKING
-> $LOG_BROKEN
+> my_dump_result;
+> zaz_dump_result;
 for i in $TESTSUITE_PATH/$1/**.s; do
 	name=$i;
 	echo "$SOU$CYA$name$DEF"
-	echo "$SOU$CYA$name$DEF" >> $LOG_WORKING
-	echo "" >> $LOG_WORKING
-	echo "$SOU$CYA$name$DEF" >> $LOG_BROKEN
-	echo "" >> $LOG_BROKEN
 	../tests/asm $name;
-	for j in $(seq 1 $TEST_LEN); do
-		TEST_STR="\$TEST$j"
+	sleep 0.5;
+#	for j in $(seq 1 $TEST_LEN); do
+#		TEST_STR="\$TEST$j"
 		champ=$(echo "$name" | sed -e 's/.s$/.cor/g');
-		command=$(eval echo "$TEST_STR");
+#		command=$(eval echo "$TEST_STR");
 		#echo "command is: $command"
 		#echo "./corewar $command $champ > $TARGET_VM$j";
-		./corewar $command $champ > $TARGET_VM$j;
+		./corewar -v $2 -d $3 $champ > $TARGET_VM;
+		sleep 0.5;
 		#echo "../tests/corewar $command $champ > $TARGET_ZAZ$j";
-		../tests/corewar $command $champ > $TARGET_ZAZ$j;
-		res=$(diff -s $TARGET_ZAZ$j $TARGET_VM$j);
+		../tests/corewar -v $2 -d $3 $champ > $TARGET_ZAZ;
+		sleep 0.5;
+		res=$(diff -s $TARGET_ZAZ $TARGET_VM);
+		res1=$(diff -s zaz_dump_result my_dump_result);
 		if [[ $res == "Files $TARGET_ZAZ$j and $TARGET_VM$j are identical" ]] ; then
-			echo "$GRE OK $DEF with $command"
-			echo "$name:$GRE OK $DEF with $command"  >> $LOG_WORKING
+			echo "$GRE OK $DEF"
 		else
-			echo "$RED KO $DEF with $command"
-			echo "$name:$RED KO $DEF with $command" >> $LOG_BROKEN
-			lines_conf="$TARGET_ZAZ$j $TARGET_VM$j";
-			conflicts=$(eval cmp "$lines_conf")
-			echo "$conflicts"
-			echo "$conflicts" >> $LOG_BROKEN
-			conflicts_diff=$(eval diff -u "$lines_conf")
-			echo "$conflicts_diff" >> $LOG_BROKEN
+			./corewar -v $2 -d $3 $champ | tail -n 64 > my_dump_result;
+			sleep 0.5;
+			../tests/corewar -v $2 -d $3 $champ | tail -n 64 > zaz_dump_result;
+			if [[ $res1 == "Files zaz_dump_result and my_dump_result are identical" ]] ; then
+				echo "$GRE DUMP IS OK $DEF"
+			else
+				echo "$RED DUMP IS KO $DEF"
+			fi
 		fi
-	done ;
 	echo '';
-	echo "" >> $LOG_WORKING
-	echo "" >> $LOG_BROKEN
+	sleep 0.5;
 done ;
 rm $TARGET_ZAZ* $TARGET_VM*
 rm $TESTSUITE_PATH/*/*.cor
 }
-testfun $1
+testfun $1 $2 $3
