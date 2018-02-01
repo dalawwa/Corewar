@@ -6,7 +6,7 @@
 #    By: dalawwa <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/16 01:01:45 by dalawwa           #+#    #+#              #
-#    Updated: 2018/01/29 12:18:12 by dalawwa          ###   ########.fr        #
+#    Updated: 2018/01/30 20:33:42 by dalawwa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -420,7 +420,7 @@ diff: $(NAME)
 	@cat list_working list_broken > diff_logs
 
 diff_op: $(NAME)
-	@sh script_vm_test_op.sh $(op)
+	@sh script_vm_test_op.sh $(op) $(dd)
 
 diff_file: $(NAME)
 	@sh script_vm_test_file.sh $(file)

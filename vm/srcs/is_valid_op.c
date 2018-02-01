@@ -7,12 +7,14 @@ int		is_valid_op(t_arena *arena, t_proc *proc)
 
 	i = 0;
 //	j = 0;
+	if (!arena || !arena->bdd || !proc)
+		return (0);
 	while (i < NB_OP)
 	{
-//		ft_printf("bdd[i]->opcode = %.2x - arena->mem[%d] = %.2x\n", arena->bdd[i]->opcode, proc->pc, arena->mem[proc->pc]);
-		if (arena->bdd[i]->opcode == arena->mem[proc->pc])
+		ft_printf("bdd[i]->opcode = %.2x - arena->mem[%d] = %.2x\n", arena->bdd[i]->opcode, proc->pc, arena->mem[proc->pc]);
+		if (arena->bdd[i] && arena->bdd[i]->opcode == arena->mem[proc->pc])
 		{
-//			ft_printf("OP found : %s\n", arena->bdd[i]->name);
+			ft_printf("OP found : %s\n", arena->bdd[i]->name);
 /*			if (arena->bdd[i]->has_ocp == 1)
 			{
 //				ft_printf("has_ocp == 1\n");

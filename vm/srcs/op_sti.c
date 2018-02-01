@@ -12,6 +12,7 @@ int		op_sti(t_arena *arena, t_exe *exe)
 	int			test;
 	int			tmp;
 
+	ft_printf("\nOP_STI_START\n");
 	result = (short int)(exe->arg2->d_data + exe->arg3->d_data);
 	test = (exe->arg2->d_data + exe->arg3->d_data);
 	pc_adv = 0;
@@ -84,7 +85,9 @@ int		op_sti(t_arena *arena, t_exe *exe)
 //					ft_printf("\ntmp is: %d\n", tmp);
 //					ft_printf("abs((short)arg3->d_data: %d\n)", ft_abs((short)exe->arg3->d_data));
 //					ft_printf("test: %d | (short)test: %hd | tmp: %d | exe->arg3->d_data: %d\n", test, (short)test, tmp, exe->arg3->d_data);
+					pc_adv = tmp - 512 * ((ft_abs((short)test) / MEM_SIZE));
 					ft_printf("(with pc and mod %hd)\n", tmp - (512 * ((ft_abs((short)test) / MEM_SIZE))));
+					pc_adv = pc_adv < 0 ? MEM_SIZE + pc_adv : pc_adv;
 				}
 
 			}
@@ -98,12 +101,10 @@ int		op_sti(t_arena *arena, t_exe *exe)
 //		ft_printf("| -> store to %d + %hd = %d (with pc and mod %hd)\n", exe->arg2->d_data, (short)exe->arg3->d_data, ((exe->arg3->d_data + exe->arg2->d_data) % IDX_MOD), (short)(exe->process->pc + (exe->arg2->d_data + (short)exe->arg3->d_data) % IDX_MOD));
 //		AU DESSUS C'EST TON ORIGINAL QUE J'ai mis en comment pour le garder, j'ai fait une modif par rapport a sti_1.s mais j'ai pas checker si ca casse pas qqch ailleurs, donc j'ai laisse ton code original la
 	}
-	if (!pc_adv && exe->arg3->type != 'r' && exe->arg2->type != 'r')
-	{
-//		ft_printf("\nInside !pc && tmp: %d\n", tmp);
 //	pc_adv = find_pc_adv(exe->process->pc, test % IDX_MOD, 1);
 //	ft_printf("\npc_adv: %d | process->pc: %d\n", pc_adv, exe->process->pc);
-	pc_adv = test % IDX_MOD + exe->process->pc;
+	if (!pc_adv)
+		pc_adv = test % IDX_MOD + exe->process->pc;
 	pc_adv = (pc_adv > MEM_SIZE) ? MEM_SIZE - pc_adv : pc_adv;
 	arena->mem[pc_adv++] = exe->process->reg[exe->arg1->d_value][0];
 //	pc_adv = find_pc_adv(pc_adv, 1, 0);
@@ -116,7 +117,6 @@ int		op_sti(t_arena *arena, t_exe *exe)
 //	ft_printf("\npc_adv: %d | process->pc: %d\n", pc_adv, exe->process->pc);
 	arena->mem[pc_adv] = exe->process->reg[exe->arg1->d_value][3];
 //	ft_printf("\npc_adv: %d | process->pc: %d\n", pc_adv, exe->process->pc);
-	}
 	print_exe_opts(arena, exe);
 	return (1);
 }

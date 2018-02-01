@@ -1,0 +1,4 @@
+Introducing contestants...
+* Player 1, weighing 6 bytes, "sti_1.s" ("sti r3 r7 %58367") !
+P    1 | sti r1 0 -7169
+       | -> store to 0 + -7169 = -7169 (with pc and mod -1)
