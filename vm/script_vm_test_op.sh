@@ -1,4 +1,3 @@
-#!bin/sh
 DEF='\x1B[0m'
 GRA='\x1B[1m'
 SOU='\x1B[4m'
@@ -63,8 +62,6 @@ TEST_LEN=38
 
 TARGET_VM='vm_test'
 TARGET_ZAZ='zaz_test'
-TARGET_ZAZ_DUMP='zaz_dump'
-TARGET_MY_DUMP='my_test'
 TEST_PATH=../tests
 TESTSUITE_PATH=../tests/test_suite
 TESTSUITE_PATH_WORKING=../tests/test_suite/working
@@ -73,53 +70,42 @@ LOG_BROKEN='list_op_broken'
 
 echo "$YEL===== launching diff on our testsuite$DEF"
 testfun(){
-> $LOG_WORKING
-> $LOG_BROKEN
+> my_dump_result;
+> zaz_dump_result;
 for i in $TESTSUITE_PATH/$1/**.s; do
 	name=$i;
 	echo "$SOU$CYA$name$DEF"
-	echo "$SOU$CYA$name$DEF" >> $LOG_WORKING
-	echo "" >> $LOG_WORKING
-	echo "$SOU$CYA$name$DEF" >> $LOG_BROKEN
-	echo "" >> $LOG_BROKEN
 	../tests/asm $name;
-	for j in $(seq 1 $TEST_LEN); do
-		TEST_STR="\$TEST$j"
+	sleep 0.5;
+#	for j in $(seq 1 $TEST_LEN); do
+#		TEST_STR="\$TEST$j"
 		champ=$(echo "$name" | sed -e 's/.s$/.cor/g');
-		command=$(eval echo "$TEST_STR");
+#		command=$(eval echo "$TEST_STR");
 		#echo "command is: $command"
 		#echo "./corewar $command $champ > $TARGET_VM$j";
-		./corewar $command $champ -d $2 > $TARGET_VM$j;
+		./corewar -v $2 -d $3 $champ > $TARGET_VM;
+		sleep 0.5;
 		#echo "../tests/corewar $command $champ > $TARGET_ZAZ$j";
-		../tests/corewar $command $champ -d $2 > $TARGET_ZAZ$j;
-
-		./corewar $command $champ -d $2 | tail -n 64 > $TARGET_MY_DUMP$j;
-		../tests/corewar $command $champ -d $2 | tail -n 64 > $TARGET_ZAZ_DUMP$j;
-		res=$(diff -s $TARGET_ZAZ$j $TARGET_VM$j);
+		../tests/corewar -v $2 -d $3 $champ > $TARGET_ZAZ;
+		sleep 0.5;
+		res=$(diff -s $TARGET_ZAZ $TARGET_VM);
+		res1=$(diff -s zaz_dump_result my_dump_result);
 		if [[ $res == "Files $TARGET_ZAZ$j and $TARGET_VM$j are identical" ]] ; then
-			echo "$GRE OK $DEF with $command and -d $2"
-			echo "$name:$GRE OK $DEF with $command"  >> $LOG_WORKING
+			echo "$GRE OK $DEF"
 		else
-			echo "$RED KO $DEF with $command and -d $2"
-			res1=$(diff -s $TARGET_ZAZ_DUMP$j $TARGET_MY_DUMP$j)
-			if [[ $res1 == "Files $TARGET_ZAZ_DUMP$j and $TARGET_MY_DUMP$j are identical" ]] ; then
-				echo "$GRE DUMP IS OK$DEF"
+			./corewar -v $2 -d $3 $champ | tail -n 64 > my_dump_result;
+			sleep 0.5;
+			../tests/corewar -v $2 -d $3 $champ | tail -n 64 > zaz_dump_result;
+			if [[ $res1 == "Files zaz_dump_result and my_dump_result are identical" ]] ; then
+				echo "$GRE DUMP IS OK $DEF"
 			else
-				echo "$name:$RED KO $DEF with $command" >> $LOG_BROKEN
-				lines_conf="$TARGET_ZAZ$j $TARGET_VM$j";
-				conflicts=$(eval cmp "$lines_conf")
-				echo "$conflicts"
-				echo "$conflicts" >> $LOG_BROKEN
-				conflicts_diff=$(eval diff -u "$lines_conf")
-				echo "$conflicts_diff" >> $LOG_BROKEN
+				echo "$RED DUMP IS KO $DEF"
 			fi
 		fi
-	done ;
 	echo '';
-	echo "" >> $LOG_WORKING
-	echo "" >> $LOG_BROKEN
+	sleep 0.5;
 done ;
 rm $TARGET_ZAZ* $TARGET_VM*
 rm $TESTSUITE_PATH/*/*.cor
 }
-testfun $1 $2
+testfun $1 $2 $3

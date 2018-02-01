@@ -1,11 +1,15 @@
 .name "sti_ind_full.s"
 .comment "sti ind FULL -87 --> 87"
 
-sti r1, -654654, %0
-sti r1, -6546, %0
-sti r1, -9876541, %0
-sti r1, 6546879841, %0
-sti r1, 12314, %0
-sti r1, -75, %0
-sti r1, -564, %0
-sti r1, -2078, %0
+sti r1, -45, %0
+sti r1, -44, %0
+sti r1, -43, %0
+sti r1, -42, %0
+sti r1, -41, %0
+sti r1, -40, %0
+sti r1, -39, %0
+sti r1, -38, %0
+sti r1, -37, %0
+sti r1, -36, %0
+sti r1, -35, %0
+sti r1, -34, %0
