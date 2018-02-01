@@ -1,3 +1,4 @@
+#!bin/sh
 DEF='\x1B[0m'
 GRA='\x1B[1m'
 SOU='\x1B[4m'
@@ -62,6 +63,8 @@ TEST_LEN=38
 
 TARGET_VM='vm_test'
 TARGET_ZAZ='zaz_test'
+TARGET_ZAZ_DUMP='zaz_dump'
+TARGET_MY_DUMP='my_test'
 TEST_PATH=../tests
 TESTSUITE_PATH=../tests/test_suite
 TESTSUITE_PATH_WORKING=../tests/test_suite/working
@@ -86,22 +89,30 @@ for i in $TESTSUITE_PATH/$1/**.s; do
 		command=$(eval echo "$TEST_STR");
 		#echo "command is: $command"
 		#echo "./corewar $command $champ > $TARGET_VM$j";
-		./corewar $command $champ > $TARGET_VM$j;
+		./corewar $command $champ -d $2 > $TARGET_VM$j;
 		#echo "../tests/corewar $command $champ > $TARGET_ZAZ$j";
-		../tests/corewar $command $champ > $TARGET_ZAZ$j;
+		../tests/corewar $command $champ -d $2 > $TARGET_ZAZ$j;
+
+		./corewar $command $champ -d $2 | tail -n 64 > $TARGET_MY_DUMP$j;
+		../tests/corewar $command $champ -d $2 | tail -n 64 > $TARGET_ZAZ_DUMP$j;
 		res=$(diff -s $TARGET_ZAZ$j $TARGET_VM$j);
 		if [[ $res == "Files $TARGET_ZAZ$j and $TARGET_VM$j are identical" ]] ; then
-			echo "$GRE OK $DEF with $command"
+			echo "$GRE OK $DEF with $command and -d $2"
 			echo "$name:$GRE OK $DEF with $command"  >> $LOG_WORKING
 		else
-			echo "$RED KO $DEF with $command"
-			echo "$name:$RED KO $DEF with $command" >> $LOG_BROKEN
-			lines_conf="$TARGET_ZAZ$j $TARGET_VM$j";
-			conflicts=$(eval cmp "$lines_conf")
-			echo "$conflicts"
-			echo "$conflicts" >> $LOG_BROKEN
-			conflicts_diff=$(eval diff -u "$lines_conf")
-			echo "$conflicts_diff" >> $LOG_BROKEN
+			echo "$RED KO $DEF with $command and -d $2"
+			res1=$(diff -s $TARGET_ZAZ_DUMP$j $TARGET_MY_DUMP$j)
+			if [[ $res1 == "Files $TARGET_ZAZ_DUMP$j and $TARGET_MY_DUMP$j are identical" ]] ; then
+				echo "$GRE DUMP IS OK$DEF"
+			else
+				echo "$name:$RED KO $DEF with $command" >> $LOG_BROKEN
+				lines_conf="$TARGET_ZAZ$j $TARGET_VM$j";
+				conflicts=$(eval cmp "$lines_conf")
+				echo "$conflicts"
+				echo "$conflicts" >> $LOG_BROKEN
+				conflicts_diff=$(eval diff -u "$lines_conf")
+				echo "$conflicts_diff" >> $LOG_BROKEN
+			fi
 		fi
 	done ;
 	echo '';
@@ -111,4 +122,4 @@ done ;
 rm $TARGET_ZAZ* $TARGET_VM*
 rm $TESTSUITE_PATH/*/*.cor
 }
-testfun $1
+testfun $1 $2

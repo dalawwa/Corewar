@@ -35,26 +35,33 @@ int		deal_exe(t_arena *arena)
 	i = 0;
 	failed_adv = 0;
 	elem = arena->list_proc->last;
+	ft_printf("\nSGF DBG DEALEXE START\n");
 	while (i < arena->list_proc->nb_proc)
 	{
-/*		if (arena->total_cycle > 222)
+	ft_printf("\nSGF INSIDE WHILE i: %d | arena->list_proc->nb_proc: %d\n", i, arena->list_proc->nb_proc);
+		/*
+		if (arena->total_cycle > 222)
 		{
 			ft_printf("Process %d : pc = %d ", elem->process_num, elem->pc);
 			if (elem->exe_op != NULL)
 				ft_printf("exe = %s - to wait = %d\n", elem->exe_op->bdd_op->name, elem->exe_op->to_wait);
 			else
 				ft_putchar('\n');
-		}*/
-		if (elem->exe_op == NULL)
+		}
+		*/
+		if (!elem || elem->exe_op == NULL)
 		{
-//			ft_printf("Cycle %d -- Process NUM = %d Process->PC = %d\n", arena->current_cycle, elem->process_num, elem->pc);
+			ft_printf("Cycle %d -- Process NUM = %d Process->PC = %d\n", arena->current_cycle, elem->process_num, elem->pc);
 			if (is_valid_op(arena, elem) == 1)
 			{
+				ft_printf("\nSGF DBG DEAL_EXEINSIDE if is_valid_op\n");
 				create_new_exe(arena, elem, NULL);
+				ft_printf("\nSGF DBG DEAL_EXE INSIDE if is_valid_op after create_new_exe\n");
 				elem->exe_op->to_wait--;
 			}
 			else
 			{
+				ft_printf("\nSGF DBG DEAL_EXEINSIDE else is_valid_op\n");
 				if (elem->exe_op && elem->exe_op->bdd_op->opcode == 15)
 					ft_printf("to_wait = %d\n", elem->exe_op->to_wait);
 				inc_pc(elem, 1);
@@ -63,6 +70,7 @@ int		deal_exe(t_arena *arena)
 		}
 		if (elem->exe_op)
 		{
+			ft_printf("\nDEAL_EXE L73\n");
 			if (elem->exe_op->to_wait == 0)
 			{
 				if (elem->exe_op->ocp_op != NULL)
@@ -105,7 +113,7 @@ int		deal_exe(t_arena *arena)
 		elem = elem->prev;
 		if (i < arena->list_proc->nb_proc && elem == NULL)
 		{
-//			ft_printf("deal_exe killed by 1 nb_proc = %d\n",arena->list_proc->nb_proc);
+			ft_printf("deal_exe killed by 1 nb_proc = %d\n",arena->list_proc->nb_proc);
 			return (1);
 		}
 	}
@@ -131,12 +139,14 @@ int		start_match(t_arena *arena)
 {
 //	ft_putendl("Let's the MATCH begins ...");
 //	ft_printf("There is %d process to start\n", arena->list_proc->nb_proc);
+	if (!arena || !arena->opts)
+		return (0);
 	if (arena->opts->has_d == 1 && arena->opts->d == 0)
 	{
 		print_mem(arena);
 		return (1);
 	}
-	while (arena->list_proc->nb_proc > 0)
+	while (arena && arena->list_proc && arena->list_proc->nb_proc > 0)
 	{
 		arena->total_cycle++;
 		arena->current_cycle++;
