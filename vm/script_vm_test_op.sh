@@ -71,7 +71,7 @@ LOG_BROKEN='list_op_broken'
 echo "$YEL===== launching diff on our testsuite$DEF"
 testfun(){
 > my_dump_result;
-> zaz_dump_result;
+> zaz_dump_resul;
 for i in $TESTSUITE_PATH/$1/**.s; do
 	name=$i;
 	echo "$SOU$CYA$name$DEF"
@@ -89,13 +89,13 @@ for i in $TESTSUITE_PATH/$1/**.s; do
 		../tests/corewar -v $2 -d $3 $champ > $TARGET_ZAZ;
 		sleep 0.5;
 		res=$(diff -s $TARGET_ZAZ $TARGET_VM);
-		res1=$(diff -s zaz_dump_result my_dump_result);
 		if [[ $res == "Files $TARGET_ZAZ$j and $TARGET_VM$j are identical" ]] ; then
 			echo "$GRE OK $DEF"
 		else
 			./corewar -v $2 -d $3 $champ | tail -n 64 > my_dump_result;
 			sleep 0.5;
 			../tests/corewar -v $2 -d $3 $champ | tail -n 64 > zaz_dump_result;
+			res1=$(diff -s zaz_dump_result my_dump_result);
 			if [[ $res1 == "Files zaz_dump_result and my_dump_result are identical" ]] ; then
 				echo "$GRE DUMP IS OK $DEF"
 			else
