@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 11:29:39 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/25 10:02:34 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/26 17:52:41 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@ int		main(int ac, char **av)
 			}
 			if (i == ac)
 				i = i - 2;
-			launch_parsing(av[i], 0);
+			launch_parsing(av[i], 0, NULL, 0);
 			return (0);
 		}
 		global_variables_size();
-		launch_parsing(av[ac - 1], 1);
+		launch_parsing(av[ac - 1], 1, NULL, 0);
 	}
 	else
 		ft_putstr("Usage: ./asm <sourcefile.s>\n");
