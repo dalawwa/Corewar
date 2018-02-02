@@ -50,10 +50,8 @@ int		get_size_from_ocp(char c, t_exe *exe)
 int		count_failed_adv(t_arena *arena, t_exe *exe)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
 	if (exe->size_failed_adv != 0)
 		return (exe->size_failed_adv);
 	while (i < NB_OP)
