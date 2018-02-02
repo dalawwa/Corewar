@@ -264,7 +264,7 @@ void	kill_process(t_proc *to_kill, t_proc_base *list_proc);
 int		start_match(t_arena *arena);
 unsigned char	*find_reg_ptr(int arg_value, t_exe *exe);
 void			print_usage(void);
-int		a_hexa_to_i(unsigned char *s, int len);
+unsigned int		a_hexa_to_i(unsigned char *s, int len);
 int		is_carry_to_modify(t_exe *exe);
 int		is_valid_op(t_arena *arena, t_proc *proc);
 int		inc_pc(t_proc *process, int adv);
@@ -299,7 +299,6 @@ void	print_sti_v4(t_exe *exe, unsigned char ocp);
 /* ADD TO LIB ? */
 char			*ft_stradd_c_end(char *s, char c);
 int				ft_power(int nb, int pow);
-int				a_hexa_to_i(unsigned char *s, int len);
 unsigned char	*ft_unsi_strdup(unsigned char *s, int len);
 unsigned char	*ft_ito_hexa(uintmax_t n);
 int		intlen(int n);
