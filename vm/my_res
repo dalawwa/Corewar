@@ -26,7 +26,7 @@ It is now cycle 23
 It is now cycle 24
 It is now cycle 25
 P    1 | sti r1 0 0
-       | -> store to 0 + 0 = hahahlala0 YO3(with pc and mod 0)
+       | -> store to 0 + 0 = 0 (with pc and mod 0)
 ADV 7 (0x0000 -> 0x0007) ff ff ff ff d3 00 00 
 It is now cycle 26
 It is now cycle 27
@@ -54,7 +54,7 @@ It is now cycle 48
 It is now cycle 49
 It is now cycle 50
 P    1 | sti r1 0 0
-       | -> store to 0 + 0 = hahahlala0 YO3(with pc and mod 7)
+       | -> store to 0 + 0 = 0 (with pc and mod 7)
 ADV 7 (0x0007 -> 0x000e) ff ff ff ff d4 00 00 
 It is now cycle 51
 It is now cycle 52
@@ -82,7 +82,7 @@ It is now cycle 73
 It is now cycle 74
 It is now cycle 75
 P    1 | sti r1 0 0
-       | -> store to 0 + 0 = hahahlala0 YO3(with pc and mod 14)
+       | -> store to 0 + 0 = 0 (with pc and mod 14)
 ADV 7 (0x000e -> 0x0015) ff ff ff ff d5 00 00 
 It is now cycle 76
 It is now cycle 77
@@ -110,7 +110,7 @@ It is now cycle 98
 It is now cycle 99
 It is now cycle 100
 P    1 | sti r1 0 0
-       | -> store to 0 + 0 = hahahlala0 YO3(with pc and mod 21)
+       | -> store to 0 + 0 = 0 (with pc and mod 21)
 ADV 7 (0x0015 -> 0x001c) ff ff ff ff d6 00 00 
 It is now cycle 101
 It is now cycle 102
@@ -138,7 +138,7 @@ It is now cycle 123
 It is now cycle 124
 It is now cycle 125
 P    1 | sti r1 0 0
-       | -> store to 0 + 0 = hahahlala0 YO3(with pc and mod 28)
+       | -> store to 0 + 0 = 0 (with pc and mod 28)
 ADV 7 (0x001c -> 0x0023) ff ff ff ff d7 00 00 
 It is now cycle 126
 It is now cycle 127
@@ -166,7 +166,7 @@ It is now cycle 148
 It is now cycle 149
 It is now cycle 150
 P    1 | sti r1 0 0
-       | -> store to 0 + 0 = hahahlala0 YO3(with pc and mod 35)
+       | -> store to 0 + 0 = 0 (with pc and mod 35)
 ADV 7 (0x0023 -> 0x002a) ff ff ff ff d8 00 00 
 It is now cycle 151
 It is now cycle 152
@@ -194,7 +194,7 @@ It is now cycle 173
 It is now cycle 174
 It is now cycle 175
 P    1 | sti r1 -2949120 0
-       | -> store to -2949120 + 0 = hahahlala-2949120 YO3(with pc and mod 42)
+       | -> store to -2949120 + 0 = -2949120 (with pc and mod 42)
 ADV 7 (0x002a -> 0x0031) ff ff ff ff d9 00 00 
 It is now cycle 176
 It is now cycle 177
@@ -222,7 +222,7 @@ It is now cycle 198
 It is now cycle 199
 It is now cycle 200
 P    1 | sti r1 65535 0
-       | -> store to 65535 + 0 = hahahlala65535 YO3(with pc and mod 560)
+       | -> store to 65535 + 0 = 65535 (with pc and mod 560)
 ADV 7 (0x0031 -> 0x0038) 0b 78 01 ff db 00 00 
 It is now cycle 201
 It is now cycle 202
@@ -250,7 +250,7 @@ It is now cycle 223
 It is now cycle 224
 It is now cycle 225
 P    1 | sti r1 16777215 0
-       | -> store to 16777215 + 0 = hahahlala16777215 YO3(with pc and mod 567)
+       | -> store to 16777215 + 0 = 16777215 (with pc and mod 567)
 ADV 7 (0x0038 -> 0x003f) 0b 78 01 ff dc 00 00 
 It is now cycle 226
 It is now cycle 227
@@ -278,7 +278,7 @@ It is now cycle 248
 It is now cycle 249
 It is now cycle 250
 P    1 | sti r1 -1 0
-       | -> store to -1 + 0 = hahahlala-1 YO2(with pc and mod 62)
+       | -> store to -1 + 0 = -1 (with pc and mod 62)
 ADV 7 (0x003f -> 0x0046) ff ff ff ff dd 00 00 
 It is now cycle 251
 It is now cycle 252
@@ -306,7 +306,7 @@ It is now cycle 273
 It is now cycle 274
 It is now cycle 275
 P    1 | sti r1 -40 0
-       | -> store to -40 + 0 = hahahlala-40 YO2(with pc and mod 30)
+       | -> store to -40 + 0 = -40 (with pc and mod 30)
 ADV 7 (0x0046 -> 0x004d) 0b 78 01 ff de 00 00 
 It is now cycle 276
 It is now cycle 277
@@ -334,7 +334,7 @@ It is now cycle 298
 It is now cycle 299
 It is now cycle 300
 P    1 | sti r1 -9984 0
-       | -> store to -9984 + 0 = hahahlala-9984 YO1(with pc and mod -179)
+       | -> store to -9984 + 0 = -9984 (with pc and mod -179)
 ADV 7 (0x004d -> 0x0054) 0b 78 01 ff df 00 00 
 It is now cycle 301
 It is now cycle 302
@@ -362,7 +362,7 @@ It is now cycle 323
 It is now cycle 324
 It is now cycle 325
 P    1 | sti r1 -2424832 0
-       | -> store to -2424832 + 0 = hahahlala-2424832 YO3(with pc and mod 84)
+       | -> store to -2424832 + 0 = -2424832 (with pc and mod 84)
 ADV 7 (0x0054 -> 0x005b) ff ff ff ff e0 00 00 
 It is now cycle 326
 It is now cycle 327
@@ -390,7 +390,7 @@ It is now cycle 348
 It is now cycle 349
 It is now cycle 350
 P    1 | sti r1 -603914241 0
-       | -> store to -603914241 + 0 = hahahlala-603914241 YO3(with pc and mod 90)
+       | -> store to -603914241 + 0 = -603914241 (with pc and mod 90)
 ADV 7 (0x005b -> 0x0062) ff ff ff ff e1 00 00 
 It is now cycle 351
 It is now cycle 352
@@ -418,7 +418,7 @@ It is now cycle 373
 It is now cycle 374
 It is now cycle 375
 P    1 | sti r1 2936 0
-       | -> store to 2936 + 0 = hahahlala2936 YO3(with pc and mod 474)
+       | -> store to 2936 + 0 = 2936 (with pc and mod 474)
 ADV 7 (0x0062 -> 0x0069) 0b 78 01 ff e2 00 00 
 It is now cycle 376
 It is now cycle 377
@@ -446,7 +446,7 @@ It is now cycle 398
 It is now cycle 399
 It is now cycle 400
 P    1 | sti r1 751617 0
-       | -> store to 751617 + 0 = hahahlala751617 YO3(with pc and mod 106)
+       | -> store to 751617 + 0 = 751617 (with pc and mod 106)
 ADV 7 (0x0069 -> 0x0070) 0b ff ff ff ff 00 00 
 It is now cycle 401
 It is now cycle 402
@@ -474,7 +474,7 @@ It is now cycle 423
 It is now cycle 424
 It is now cycle 425
 P    1 | sti r1 -1 0
-       | -> store to -1 + 0 = hahahlala-1 YO2(with pc and mod 111)
+       | -> store to -1 + 0 = -1 (with pc and mod 111)
 ADV 7 (0x0070 -> 0x0077) ff ff ff ff e4 00 00 
 It is now cycle 426
 It is now cycle 427
@@ -502,7 +502,7 @@ It is now cycle 448
 It is now cycle 449
 It is now cycle 450
 P    1 | sti r1 -31 0
-       | -> store to -31 + 0 = hahahlala-31 YO2(with pc and mod 88)
+       | -> store to -31 + 0 = -31 (with pc and mod 88)
 ADV 7 (0x0077 -> 0x007e) 0b 78 01 ff e5 00 00 
 It is now cycle 451
 It is now cycle 452
@@ -530,7 +530,7 @@ It is now cycle 473
 It is now cycle 474
 It is now cycle 475
 P    1 | sti r1 33546752 0
-       | -> store to 33546752 + 0 = hahahlala33546752 YO3(with pc and mod 126)
+       | -> store to 33546752 + 0 = 33546752 (with pc and mod 126)
 ADV 7 (0x007e -> 0x0085) ff ff ff ff e6 00 00 
 It is now cycle 476
 It is now cycle 477
@@ -558,7 +558,7 @@ It is now cycle 498
 It is now cycle 499
 It is now cycle 500
 P    1 | sti r1 -65281 0
-       | -> store to -65281 + 0 = hahahlala-65281 YO1(with pc and mod -124)
+       | -> store to -65281 + 0 = -65281 (with pc and mod -124)
 ADV 7 (0x0085 -> 0x008c) 0b 78 01 ff e7 00 00 
 It is now cycle 501
 It is now cycle 502
@@ -586,7 +586,7 @@ It is now cycle 523
 It is now cycle 524
 It is now cycle 525
 P    1 | sti r1 -469762037 0
-       | -> store to -469762037 + 0 = hahahlala-469762037 YO3(with pc and mod -361)
+       | -> store to -469762037 + 0 = -469762037 (with pc and mod -361)
 ADV 7 (0x008c -> 0x0093) 0b 78 01 ff e8 00 00 
 It is now cycle 526
 It is now cycle 527
@@ -614,7 +614,7 @@ It is now cycle 548
 It is now cycle 549
 It is now cycle 550
 P    1 | sti r1 65535 0
-       | -> store to 65535 + 0 = hahahlala65535 YO3(with pc and mod 658)
+       | -> store to 65535 + 0 = 65535 (with pc and mod 658)
 ADV 7 (0x0093 -> 0x009a) 0b 78 01 ff e9 00 00 
 It is now cycle 551
 It is now cycle 552
@@ -642,7 +642,7 @@ It is now cycle 573
 It is now cycle 574
 It is now cycle 575
 P    1 | sti r1 751617 0
-       | -> store to 751617 + 0 = hahahlala751617 YO3(with pc and mod 155)
+       | -> store to 751617 + 0 = 751617 (with pc and mod 155)
 ADV 7 (0x009a -> 0x00a1) 0b ff ff ff ff 00 00 
 It is now cycle 576
 It is now cycle 577
@@ -670,7 +670,7 @@ It is now cycle 598
 It is now cycle 599
 It is now cycle 600
 P    1 | sti r1 192414207 0
-       | -> store to 192414207 + 0 = hahahlala192414207 YO3(with pc and mod 672)
+       | -> store to 192414207 + 0 = 192414207 (with pc and mod 672)
 ADV 7 (0x00a1 -> 0x00a8) 0b 78 01 ff eb 00 00 
 It is now cycle 601
 It is now cycle 602
@@ -698,7 +698,7 @@ It is now cycle 623
 It is now cycle 624
 It is now cycle 625
 P    1 | sti r1 2013396969 0
-       | -> store to 2013396969 + 0 = hahahlala2013396969 YO3(with pc and mod 657)
+       | -> store to 2013396969 + 0 = 2013396969 (with pc and mod 657)
 ADV 7 (0x00a8 -> 0x00af) 0b 78 01 ff ec 00 00 
 It is now cycle 626
 It is now cycle 627
@@ -726,7 +726,7 @@ It is now cycle 648
 It is now cycle 649
 It is now cycle 650
 P    1 | sti r1 -256 0
-       | -> store to -256 + 0 = hahahlala-256 YO1(with pc and mod -81)
+       | -> store to -256 + 0 = -256 (with pc and mod -81)
 ADV 7 (0x00af -> 0x00b6) 0b 78 01 ff ed 00 00 
 It is now cycle 651
 It is now cycle 652
@@ -754,7 +754,7 @@ It is now cycle 673
 It is now cycle 674
 It is now cycle 675
 P    1 | sti r1 -1376256 0
-       | -> store to -1376256 + 0 = hahahlala-1376256 YO3(with pc and mod 182)
+       | -> store to -1376256 + 0 = -1376256 (with pc and mod 182)
 ADV 7 (0x00b6 -> 0x00bd) ff ff ff ff ee 00 00 
 It is now cycle 676
 It is now cycle 677
@@ -782,7 +782,7 @@ It is now cycle 698
 It is now cycle 699
 It is now cycle 700
 P    1 | sti r1 -335544309 0
-       | -> store to -335544309 + 0 = hahahlala-335544309 YO3(with pc and mod -312)
+       | -> store to -335544309 + 0 = -335544309 (with pc and mod -312)
 ADV 7 (0x00bd -> 0x00c4) 0b 78 01 ff ef 00 00 
 It is now cycle 701
 It is now cycle 702
@@ -810,7 +810,7 @@ It is now cycle 723
 It is now cycle 724
 It is now cycle 725
 P    1 | sti r1 65535 0
-       | -> store to 65535 + 0 = hahahlala65535 YO3(with pc and mod 707)
+       | -> store to 65535 + 0 = 65535 (with pc and mod 707)
 ADV 7 (0x00c4 -> 0x00cb) 0b 78 01 ff f0 00 00 
 It is now cycle 726
 It is now cycle 727
@@ -838,7 +838,7 @@ It is now cycle 748
 It is now cycle 749
 It is now cycle 750
 P    1 | sti r1 751617 0
-       | -> store to 751617 + 0 = hahahlala751617 YO3(with pc and mod 204)
+       | -> store to 751617 + 0 = 751617 (with pc and mod 204)
 ADV 7 (0x00cb -> 0x00d2) 0b ff ff ff ff 00 00 
 It is now cycle 751
 It is now cycle 752
@@ -866,7 +866,7 @@ It is now cycle 773
 It is now cycle 774
 It is now cycle 775
 P    1 | sti r1 192414207 0
-       | -> store to 192414207 + 0 = hahahlala192414207 YO3(with pc and mod 721)
+       | -> store to 192414207 + 0 = 192414207 (with pc and mod 721)
 ADV 7 (0x00d2 -> 0x00d9) 0b 78 01 ff f2 00 00 
 It is now cycle 776
 It is now cycle 777
@@ -894,7 +894,7 @@ It is now cycle 798
 It is now cycle 799
 It is now cycle 800
 P    1 | sti r1 -1 0
-       | -> store to -1 + 0 = hahahlala-1 YO2(with pc and mod 216)
+       | -> store to -1 + 0 = -1 (with pc and mod 216)
 ADV 7 (0x00d9 -> 0x00e0) ff ff ff ff f3 00 00 
 It is now cycle 801
 It is now cycle 802
@@ -922,7 +922,7 @@ It is now cycle 823
 It is now cycle 824
 It is now cycle 825
 P    1 | sti r1 33550848 0
-       | -> store to 33550848 + 0 = hahahlala33550848 YO3(with pc and mod 224)
+       | -> store to 33550848 + 0 = 33550848 (with pc and mod 224)
 ADV 7 (0x00e0 -> 0x00e7) ff ff ff ff f4 00 00 
 It is now cycle 826
 It is now cycle 827
@@ -950,7 +950,7 @@ It is now cycle 848
 It is now cycle 849
 It is now cycle 850
 P    1 | sti r1 -851968 0
-       | -> store to -851968 + 0 = hahahlala-851968 YO3(with pc and mod 231)
+       | -> store to -851968 + 0 = -851968 (with pc and mod 231)
 ADV 7 (0x00e7 -> 0x00ee) ff ff ff ff f5 00 00 
 It is now cycle 851
 It is now cycle 852
@@ -978,7 +978,7 @@ It is now cycle 873
 It is now cycle 874
 It is now cycle 875
 P    1 | sti r1 -201326337 0
-       | -> store to -201326337 + 0 = hahahlala-201326337 YO3(with pc and mod -19)
+       | -> store to -201326337 + 0 = -201326337 (with pc and mod -19)
 ADV 7 (0x00ee -> 0x00f5) 0b 78 01 ff f6 00 00 
 It is now cycle 876
 It is now cycle 877
@@ -1006,7 +1006,7 @@ It is now cycle 898
 It is now cycle 899
 It is now cycle 900
 P    1 | sti r1 2936 0
-       | -> store to 2936 + 0 = hahahlala2936 YO3(with pc and mod 621)
+       | -> store to 2936 + 0 = 2936 (with pc and mod 621)
 ADV 7 (0x00f5 -> 0x00fc) 0b 78 01 ff f7 00 00 
 It is now cycle 901
 It is now cycle 902
@@ -1034,7 +1034,7 @@ It is now cycle 923
 It is now cycle 924
 It is now cycle 925
 P    1 | sti r1 751617 0
-       | -> store to 751617 + 0 = hahahlala751617 YO3(with pc and mod 253)
+       | -> store to 751617 + 0 = 751617 (with pc and mod 253)
 ADV 7 (0x00fc -> 0x0103) 0b ff ff ff ff 00 00 
 It is now cycle 926
 It is now cycle 927
@@ -1062,7 +1062,7 @@ It is now cycle 948
 It is now cycle 949
 It is now cycle 950
 P    1 | sti r1 201326591 0
-       | -> store to 201326591 + 0 = hahahlala201326591 YO3(with pc and mod 770)
+       | -> store to 201326591 + 0 = 201326591 (with pc and mod 770)
 ADV 7 (0x0103 -> 0x010a) 0b 78 01 ff f9 00 00 
 It is now cycle 951
 It is now cycle 952
@@ -1090,7 +1090,7 @@ It is now cycle 973
 It is now cycle 974
 It is now cycle 975
 P    1 | sti r1 2013396985 0
-       | -> store to 2013396985 + 0 = hahahlala2013396985 YO3(with pc and mod 771)
+       | -> store to 2013396985 + 0 = 2013396985 (with pc and mod 771)
 ADV 7 (0x010a -> 0x0111) 0b 78 01 ff fa 00 00 
 It is now cycle 976
 It is now cycle 977
@@ -1118,7 +1118,7 @@ It is now cycle 998
 It is now cycle 999
 It is now cycle 1000
 P    1 | sti r1 33552896 0
-       | -> store to 33552896 + 0 = hahahlala33552896 YO3(with pc and mod 273)
+       | -> store to 33552896 + 0 = 33552896 (with pc and mod 273)
 ADV 7 (0x0111 -> 0x0118) ff ff ff ff fb 00 00 
 It is now cycle 1001
 It is now cycle 1002
@@ -1146,7 +1146,7 @@ It is now cycle 1023
 It is now cycle 1024
 It is now cycle 1025
 P    1 | sti r1 -327680 0
-       | -> store to -327680 + 0 = hahahlala-327680 YO3(with pc and mod 280)
+       | -> store to -327680 + 0 = -327680 (with pc and mod 280)
 ADV 7 (0x0118 -> 0x011f) ff ff ff ff fc 00 00 
 It is now cycle 1026
 It is now cycle 1027
@@ -1174,7 +1174,7 @@ It is now cycle 1048
 It is now cycle 1049
 It is now cycle 1050
 P    1 | sti r1 -67108853 0
-       | -> store to -67108853 + 0 = hahahlala-67108853 YO3(with pc and mod -214)
+       | -> store to -67108853 + 0 = -67108853 (with pc and mod -214)
 ADV 7 (0x011f -> 0x0126) 0b 78 01 ff fd 00 00 
 It is now cycle 1051
 It is now cycle 1052
@@ -1202,7 +1202,7 @@ It is now cycle 1073
 It is now cycle 1074
 It is now cycle 1075
 P    1 | sti r1 2936 0
-       | -> store to 2936 + 0 = hahahlala2936 YO3(with pc and mod 670)
+       | -> store to 2936 + 0 = 2936 (with pc and mod 670)
 ADV 7 (0x0126 -> 0x012d) 0b 78 01 ff fe 00 00 
 It is now cycle 1076
 It is now cycle 1077
@@ -1230,7 +1230,7 @@ It is now cycle 1098
 It is now cycle 1099
 It is now cycle 1100
 P    1 | sti r1 751617 0
-       | -> store to 751617 + 0 = hahahlala751617 YO3(with pc and mod 302)
+       | -> store to 751617 + 0 = 751617 (with pc and mod 302)
 ADV 7 (0x012d -> 0x0134) 0b ff ff ff ff 00 00 
 It is now cycle 1101
 It is now cycle 1102
@@ -1258,7 +1258,7 @@ It is now cycle 1123
 It is now cycle 1124
 It is now cycle 1125
 P    1 | sti r1 192413952 0
-       | -> store to 192413952 + 0 = hahahlala192413952 YO3(with pc and mod 564)
+       | -> store to 192413952 + 0 = 192413952 (with pc and mod 564)
 ADV 7 (0x0134 -> 0x013b) 0b 78 01 00 00 00 00 
 It is now cycle 1126
 It is now cycle 1127
@@ -1286,7 +1286,7 @@ It is now cycle 1148
 It is now cycle 1149
 It is now cycle 1150
 P    1 | sti r1 2013331457 0
-       | -> store to 2013331457 + 0 = hahahlala2013331457 YO3(with pc and mod 316)
+       | -> store to 2013331457 + 0 = 2013331457 (with pc and mod 316)
 ADV 7 (0x013b -> 0x0142) 0b ff ff ff ff 00 00 
 It is now cycle 1151
 It is now cycle 1152
@@ -1314,7 +1314,7 @@ It is now cycle 1173
 It is now cycle 1174
 It is now cycle 1175
 P    1 | sti r1 16777728 0
-       | -> store to 16777728 + 0 = hahahlala16777728 YO3(with pc and mod 322)
+       | -> store to 16777728 + 0 = 16777728 (with pc and mod 322)
 ADV 7 (0x0142 -> 0x0149) ff ff ff ff 02 00 00 
 It is now cycle 1176
 It is now cycle 1177
@@ -1342,7 +1342,7 @@ It is now cycle 1198
 It is now cycle 1199
 It is now cycle 1200
 P    1 | sti r1 196608 0
-       | -> store to 196608 + 0 = hahahlala196608 YO3(with pc and mod 329)
+       | -> store to 196608 + 0 = 196608 (with pc and mod 329)
 ADV 7 (0x0149 -> 0x0150) ff ff ff ff 03 00 00 
 It is now cycle 1201
 It is now cycle 1202
@@ -1370,7 +1370,7 @@ It is now cycle 1223
 It is now cycle 1224
 It is now cycle 1225
 P    1 | sti r1 67108875 0
-       | -> store to 67108875 + 0 = hahahlala67108875 YO3(with pc and mod 347)
+       | -> store to 67108875 + 0 = 67108875 (with pc and mod 347)
 ADV 7 (0x0150 -> 0x0157) 0b 78 01 00 04 00 00 
 It is now cycle 1226
 It is now cycle 1227
@@ -1398,7 +1398,7 @@ It is now cycle 1248
 It is now cycle 1249
 It is now cycle 1250
 P    1 | sti r1 2686976 -1
-       | -> store to 2686976 + -1 = hahahlala2686975 YO3(with pc and mod 854)
+       | -> store to 2686976 + -1 = 2686975 (with pc and mod 854)
 ADV 7 (0x0157 -> 0x015e) 0b 78 01 00 ff ff ff 
 It is now cycle 1251
 It is now cycle 1252
@@ -1440,7 +1440,7 @@ It is now cycle 1285
 It is now cycle 1286
 It is now cycle 1287
 P    1 | sti r1 192413952 0
-       | -> store to 192413952 + 0 = hahahlala192413952 YO3(with pc and mod 613)
+       | -> store to 192413952 + 0 = 192413952 (with pc and mod 613)
 ADV 7 (0x0165 -> 0x016c) 0b 78 01 00 07 00 00 
 It is now cycle 1288
 It is now cycle 1289
@@ -1468,7 +1468,7 @@ It is now cycle 1310
 It is now cycle 1311
 It is now cycle 1312
 P    1 | sti r1 2013331465 0
-       | -> store to 2013331465 + 0 = hahahlala2013331465 YO3(with pc and mod 373)
+       | -> store to 2013331465 + 0 = 2013331465 (with pc and mod 373)
 ADV 7 (0x016c -> 0x0173) 0b 78 01 00 08 00 00 
 It is now cycle 1313
 It is now cycle 1314
@@ -1522,7 +1522,7 @@ It is now cycle 1360
 It is now cycle 1361
 It is now cycle 1362
 P    1 | sti r1 720896 0
-       | -> store to 720896 + 0 = hahahlala720896 YO3(with pc and mod 378)
+       | -> store to 720896 + 0 = 720896 (with pc and mod 378)
 ADV 7 (0x017a -> 0x0181) ff ff ff ff 0a 00 00 
 It is now cycle 1363
 It is now cycle 1364
@@ -1550,7 +1550,7 @@ It is now cycle 1385
 It is now cycle 1386
 It is now cycle 1387
 P    1 | sti r1 201326603 0
-       | -> store to 201326603 + 0 = hahahlala201326603 YO3(with pc and mod 396)
+       | -> store to 201326603 + 0 = 201326603 (with pc and mod 396)
 ADV 7 (0x0181 -> 0x0188) 0b 78 01 00 0b 00 00 
 It is now cycle 1388
 It is now cycle 1389
@@ -1578,7 +1578,7 @@ It is now cycle 1410
 It is now cycle 1411
 It is now cycle 1412
 P    1 | sti r1 0 -1
-       | -> store to 0 + -1 = hahahlala-1 YO2(with pc and mod 391)
+       | -> store to 0 + -1 = -1 (with pc and mod 391)
 ADV 7 (0x0188 -> 0x018f) ff ff ff 00 ff ff ff 
 It is now cycle 1413
 It is now cycle 1414
@@ -1620,7 +1620,7 @@ It is now cycle 1447
 It is now cycle 1448
 It is now cycle 1449
 P    1 | sti r1 192413952 0
-       | -> store to 192413952 + 0 = hahahlala192413952 YO3(with pc and mod 662)
+       | -> store to 192413952 + 0 = 192413952 (with pc and mod 662)
 ADV 7 (0x0196 -> 0x019d) 0b 78 01 00 0e 00 00 
 It is now cycle 1450
 It is now cycle 1451
@@ -1648,7 +1648,7 @@ It is now cycle 1472
 It is now cycle 1473
 It is now cycle 1474
 P    1 | sti r1 2013331473 0
-       | -> store to 2013331473 + 0 = hahahlala2013331473 YO3(with pc and mod 430)
+       | -> store to 2013331473 + 0 = 2013331473 (with pc and mod 430)
 ADV 7 (0x019d -> 0x01a4) 0b 78 01 00 0f 00 00 
 It is now cycle 1475
 It is now cycle 1476
@@ -1676,7 +1676,7 @@ It is now cycle 1497
 It is now cycle 1498
 It is now cycle 1499
 P    1 | sti r1 16781824 0
-       | -> store to 16781824 + 0 = hahahlala16781824 YO3(with pc and mod 420)
+       | -> store to 16781824 + 0 = 16781824 (with pc and mod 420)
 ADV 7 (0x01a4 -> 0x01ab) ff ff ff ff 10 00 00 
 It is now cycle 1500
 It is now cycle 1501
@@ -1704,7 +1704,7 @@ It is now cycle 1522
 It is now cycle 1523
 It is now cycle 1524
 P    1 | sti r1 751617 -1
-       | -> store to 751617 + -1 = hahahlala751616 YO3(with pc and mod 427)
+       | -> store to 751617 + -1 = 751616 (with pc and mod 427)
 ADV 7 (0x01ab -> 0x01b2) ff ff ff ff ff ff ff 
 It is now cycle 1525
 It is now cycle 1526
@@ -1732,7 +1732,7 @@ It is now cycle 1547
 It is now cycle 1548
 It is now cycle 1549
 P    1 | sti r1 335544331 0
-       | -> store to 335544331 + 0 = hahahlala335544331 YO3(with pc and mod 445)
+       | -> store to 335544331 + 0 = 335544331 (with pc and mod 445)
 ADV 7 (0x01b2 -> 0x01b9) 0b 78 01 00 12 00 00 
 It is now cycle 1550
 It is now cycle 1551
@@ -1760,7 +1760,7 @@ It is now cycle 1572
 It is now cycle 1573
 It is now cycle 1574
 P    1 | sti r1 0 -1
-       | -> store to 0 + -1 = hahahlala-1 YO2(with pc and mod 440)
+       | -> store to 0 + -1 = -1 (with pc and mod 440)
 ADV 7 (0x01b9 -> 0x01c0) ff ff ff 00 ff ff ff 
 It is now cycle 1575
 It is now cycle 1576
@@ -1802,7 +1802,7 @@ It is now cycle 1609
 It is now cycle 1610
 It is now cycle 1611
 P    1 | sti r1 -65280 0
-       | -> store to -65280 + 0 = hahahlala-65280 YO1(with pc and mod 199)
+       | -> store to -65280 + 0 = -65280 (with pc and mod 199)
 ADV 7 (0x01c7 -> 0x01ce) 0b 78 01 00 15 00 00 
 It is now cycle 1612
 It is now cycle 1613
@@ -1830,7 +1830,7 @@ It is now cycle 1634
 It is now cycle 1635
 It is now cycle 1636
 P    1 | sti r1 2013331481 0
-       | -> store to 2013331481 + 0 = hahahlala2013331481 YO3(with pc and mod 487)
+       | -> store to 2013331481 + 0 = 2013331481 (with pc and mod 487)
 ADV 7 (0x01ce -> 0x01d5) 0b 78 01 00 16 00 00 
 It is now cycle 1637
 It is now cycle 1638
@@ -1858,7 +1858,7 @@ It is now cycle 1659
 It is now cycle 1660
 It is now cycle 1661
 P    1 | sti r1 16783872 -1
-       | -> store to 16783872 + -1 = hahahlala16783871 YO3(with pc and mod 980)
+       | -> store to 16783872 + -1 = 16783871 (with pc and mod 980)
 ADV 7 (0x01d5 -> 0x01dc) 0b 78 01 00 17 ff ff 
 It is now cycle 1662
 It is now cycle 1663
@@ -1900,7 +1900,7 @@ It is now cycle 1696
 It is now cycle 1697
 It is now cycle 1698
 P    1 | sti r1 0 -1
-       | -> store to 0 + -1 = hahahlala-1 YO2(with pc and mod 482)
+       | -> store to 0 + -1 = -1 (with pc and mod 482)
 ADV 7 (0x01e3 -> 0x01ea) ff ff ff 00 ff ff ff 
 It is now cycle 1699
 It is now cycle 1700
@@ -1942,7 +1942,7 @@ It is now cycle 1733
 It is now cycle 1734
 It is now cycle 1735
 P    1 | sti r1 751617 0
-       | -> store to 751617 + 0 = hahahlala751617 YO3(with pc and mod 498)
+       | -> store to 751617 + 0 = 751617 (with pc and mod 498)
 ADV 7 (0x01f1 -> 0x01f8) 0b ff ff ff ff 00 00 
 It is now cycle 1736
 It is now cycle 1737
@@ -1970,7 +1970,7 @@ It is now cycle 1758
 It is now cycle 1759
 It is now cycle 1760
 P    1 | sti r1 192413952 0
-       | -> store to 192413952 + 0 = hahahlala192413952 YO3(with pc and mod 760)
+       | -> store to 192413952 + 0 = 192413952 (with pc and mod 760)
 ADV 7 (0x01f8 -> 0x01ff) 0b 78 01 00 1c 00 00 
 It is now cycle 1761
 It is now cycle 1762
@@ -1998,7 +1998,7 @@ It is now cycle 1783
 It is now cycle 1784
 It is now cycle 1785
 P    1 | sti r1 2013331489 0
-       | -> store to 2013331489 + 0 = hahahlala2013331489 YO3(with pc and mod 544)
+       | -> store to 2013331489 + 0 = 2013331489 (with pc and mod 544)
 ADV 7 (0x01ff -> 0x0206) 0b 78 01 00 1d 00 00 
 It is now cycle 1786
 It is now cycle 1787
@@ -2026,7 +2026,7 @@ It is now cycle 1808
 It is now cycle 1809
 It is now cycle 1810
 P    1 | sti r1 16785920 0
-       | -> store to 16785920 + 0 = hahahlala16785920 YO3(with pc and mod 518)
+       | -> store to 16785920 + 0 = 16785920 (with pc and mod 518)
 ADV 7 (0x0206 -> 0x020d) ff ff ff ff 1e 00 00 
 It is now cycle 1811
 It is now cycle 1812
@@ -2054,7 +2054,7 @@ It is now cycle 1833
 It is now cycle 1834
 It is now cycle 1835
 P    1 | sti r1 2293760 0
-       | -> store to 2293760 + 0 = hahahlala2293760 YO3(with pc and mod 525)
+       | -> store to 2293760 + 0 = 2293760 (with pc and mod 525)
 ADV 7 (0x020d -> 0x0214) ff ff ff ff 1f 00 00 
 It is now cycle 1836
 It is now cycle 1837
@@ -2082,7 +2082,7 @@ It is now cycle 1858
 It is now cycle 1859
 It is now cycle 1860
 P    1 | sti r1 -1 0
-       | -> store to -1 + 0 = hahahlala-1 YO2(with pc and mod 531)
+       | -> store to -1 + 0 = -1 (with pc and mod 531)
 ADV 7 (0x0214 -> 0x021b) ff ff ff 00 20 00 00 
 It is now cycle 1861
 It is now cycle 1862
@@ -2110,7 +2110,7 @@ It is now cycle 1883
 It is now cycle 1884
 It is now cycle 1885
 P    1 | sti r1 2936 -1
-       | -> store to 2936 + -1 = hahahlala2935 YO3(with pc and mod 914)
+       | -> store to 2936 + -1 = 2935 (with pc and mod 914)
 ADV 7 (0x021b -> 0x0222) 0b 78 01 00 21 ff ff 
 It is now cycle 1886
 It is now cycle 1887
@@ -2152,7 +2152,7 @@ It is now cycle 1920
 It is now cycle 1921
 It is now cycle 1922
 P    1 | sti r1 192413952 0
-       | -> store to 192413952 + 0 = hahahlala192413952 YO3(with pc and mod 809)
+       | -> store to 192413952 + 0 = 192413952 (with pc and mod 809)
 ADV 7 (0x0229 -> 0x0230) 0b 78 01 00 23 00 00 
 It is now cycle 1923
 It is now cycle 1924
@@ -2194,7 +2194,7 @@ It is now cycle 1959
 It is now cycle 1960
 It is now cycle 1961
 P    1 | sti r1 16777215 0
-       | -> store to 16777215 + 0 = hahahlala16777215 YO3(with pc and mod 1085)
+       | -> store to 16777215 + 0 = 16777215 (with pc and mod 1085)
 ADV 7 (0x023e -> 0x0245) 0b 78 01 00 26 00 00 
 It is now cycle 1962
 It is now cycle 1963
@@ -2222,7 +2222,7 @@ It is now cycle 1984
 It is now cycle 1985
 It is now cycle 1986
 P    1 | sti r1 754974719 0
-       | -> store to 754974719 + 0 = hahahlala754974719 YO3(with pc and mod 1092)
+       | -> store to 754974719 + 0 = 754974719 (with pc and mod 1092)
 ADV 7 (0x0245 -> 0x024c) 0b 78 01 00 27 00 00 
 It is now cycle 1987
 It is now cycle 1988
@@ -2250,7 +2250,7 @@ It is now cycle 2009
 It is now cycle 2010
 It is now cycle 2011
 P    1 | sti r1 0 0
-       | -> store to 0 + 0 = hahahlala0 YO3(with pc and mod 588)
+       | -> store to 0 + 0 = 0 (with pc and mod 588)
 ADV 7 (0x024c -> 0x0253) ff ff ff ff 28 00 00 
 It is now cycle 2012
 It is now cycle 2013
@@ -2278,7 +2278,7 @@ It is now cycle 2034
 It is now cycle 2035
 It is now cycle 2036
 P    1 | sti r1 0 0
-       | -> store to 0 + 0 = hahahlala0 YO3(with pc and mod 595)
+       | -> store to 0 + 0 = 0 (with pc and mod 595)
 ADV 7 (0x0253 -> 0x025a) ff ff ff ff 29 00 00 
 It is now cycle 2037
 It is now cycle 2038
@@ -2306,7 +2306,7 @@ It is now cycle 2059
 It is now cycle 2060
 It is now cycle 2061
 P    1 | sti r1 0 0
-       | -> store to 0 + 0 = hahahlala0 YO3(with pc and mod 602)
+       | -> store to 0 + 0 = 0 (with pc and mod 602)
 ADV 7 (0x025a -> 0x0261) ff ff ff ff 2a 00 00 
 It is now cycle 2062
 It is now cycle 2063
@@ -2334,7 +2334,7 @@ It is now cycle 2084
 It is now cycle 2085
 It is now cycle 2086
 P    1 | sti r1 0 -1
-       | -> store to 0 + -1 = hahahlala-1 YO2(with pc and mod 608)
+       | -> store to 0 + -1 = -1 (with pc and mod 608)
 ADV 7 (0x0261 -> 0x0268) ff ff ff 00 ff ff ff 
 It is now cycle 2087
 It is now cycle 2088
