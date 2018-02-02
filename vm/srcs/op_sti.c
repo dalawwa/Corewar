@@ -61,9 +61,9 @@ int		op_sti(t_arena *arena, t_exe *exe)
 			ft_printf("%hd ", (short)exe->arg2->d_data);
 		ft_printf("+ %hd = ", (short)exe->arg3->d_data);
 		if (exe->arg2->type != 'i')
-			ft_printf("coucoulu%hd ", dest);
+			ft_printf("%hd ", dest);
 		else
-			ft_printf("hahahlala%d ", exe->arg2->d_data + (short)exe->arg3->d_data);
+			ft_printf("%d ", exe->arg2->d_data + (short)exe->arg3->d_data);
 		if (((exe->arg2->type != 'i' && (short)dest < 0) || (exe->arg2->type == 'i' && (intmax_t)(exe->arg2->d_data + (short)exe->arg3->d_data) < 0 )) && (exe->arg2->d_data + (short)exe->arg3->d_data) + exe->process->pc > -65536 )
 		{
 			if (-IDX_MOD + (dest % IDX_MOD) + exe->process->pc == -512)
@@ -74,7 +74,7 @@ int		op_sti(t_arena *arena, t_exe *exe)
 				{
 					mod = dest - (512 * ((dest / 512)));
 					dest = mod % IDX_MOD + exe->process->pc;
-					ft_printf("YO1(with pc and mod %hd)\n", dest);
+					ft_printf("(with pc and mod %hd)\n", dest);
 					arena->mem[get_adv(dest)] = exe->process->reg[exe->arg1->d_value][0];
 					arena->mem[get_adv(dest + 1)] = exe->process->reg[exe->arg1->d_value][1];
 					arena->mem[get_adv(dest + 2)] = exe->process->reg[exe->arg1->d_value][2];
@@ -90,9 +90,8 @@ int		op_sti(t_arena *arena, t_exe *exe)
 						mod = dest % IDX_MOD + exe->process->pc - IDX_MOD;
 					else
 						mod = (exe->arg2->d_data + exe->arg3->d_data) % IDX_MOD + exe->process->pc;
-					ft_printf("YO2(with pc and mod %hd)\n", mod);
+					ft_printf("(with pc and mod %hd)\n", mod);
 				}
-
 			}
 		}
 		else
@@ -102,7 +101,7 @@ int		op_sti(t_arena *arena, t_exe *exe)
 			else
 				mod = (exe->arg2->d_data + exe->arg3->d_data) % IDX_MOD + exe->process->pc;
 //			ft_printf("\nDEST: %d | DEST % IDX_MOD: %d | exe->process->pc: %d | exe->arg2->d_value: %d | (short)exe->arg2->d_value: %hd | exe->arg3->d_value: %d | (short)exe->arg3->d_value: %hd | exe->arg3->d_data: %d | exe->arg1->d_data: %d | (short)exe->arg1->d_data: %hd | exe->arg1->d_value: %d | (short)exe->arg1->d_value: %hd | exe->arg2->d_data: %d | (short)exe->arg2->d_data: %hd | args->types: %d\n", dest, dest % IDX_MOD, exe->process->pc, exe->arg2->d_value, (short)exe->arg2->d_value, exe->arg3->d_value, (short)exe->arg3->d_value, exe->arg3->d_data, exe->arg1->d_data, (short)exe->arg1->d_data, exe->arg1->d_value, (short)exe->arg1->d_value, exe->arg2->d_data, (short)exe->arg2->d_data, args_types);
-			ft_printf("YO3(with pc and mod %hd)\n", mod);
+			ft_printf("(with pc and mod %hd)\n", mod);
 		}
 	}
 	if (!mod)
