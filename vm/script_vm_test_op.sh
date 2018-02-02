@@ -71,7 +71,7 @@ LOG_BROKEN='list_op_broken'
 echo "$YEL===== launching diff on our testsuite$DEF"
 testfun(){
 > my_dump_result;
-> zaz_dump_resul;
+> zaz_dump_result;
 for i in $TESTSUITE_PATH/$1/**.s; do
 	name=$i;
 	echo "$SOU$CYA$name$DEF"
