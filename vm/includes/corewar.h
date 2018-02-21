@@ -232,6 +232,7 @@ void			*perror_ptr(char *s, void *ret);
 char			*addstr(char *s);
 
 void			print_exe_opts(t_arena *arena, t_exe *exe);
+void			print_proc_num_name(t_exe *exe);
 void			print_add_sub(t_arena *area, t_exe *exe);
 void			print_failed_exe(t_arena *arena, t_exe *exe, int size);
 

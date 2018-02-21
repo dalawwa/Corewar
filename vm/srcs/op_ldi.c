@@ -1,5 +1,5 @@
 #include "corewar.h"
-
+/*
 void	print_ldi(t_arena *arena, t_exe *exe)
 {
 	int mod;
@@ -8,7 +8,10 @@ void	print_ldi(t_arena *arena, t_exe *exe)
 	dest = (exe->arg2->d_data + (short)exe->arg3->d_value);
 	if (arena->opts->is_v4)
 	{
-		ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
+//		ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
+		ft_putchar('P');
+		put_n_char(' ', 5 - intlen((short)exe->process->process_num));
+		ft_printf("%d | %s ", exe->process->process_num, exe->bdd_op->name);
 		ft_printf("%d ", exe->arg1->d_value);
 		if (exe->arg2->type == 'i')
 			ft_printf("%d ", exe->arg2->d_data);
@@ -22,8 +25,8 @@ void	print_ldi(t_arena *arena, t_exe *exe)
 			ft_printf("%hd", (short)exe->arg3->d_data);
 		ft_putchar('\n');
 		put_n_char(' ', intlen((short)(exe->process->process_num)));
-		put_n_char(' ', 6);
-		ft_printf("| -> store to ");
+		put_n_char(' ', 7);
+		ft_printf("| -> load from ");
 		if (exe->arg2->type == 'i')
 		{
 			ft_printf("%d ", exe->arg2->d_data);
@@ -93,7 +96,7 @@ void	print_ldi(t_arena *arena, t_exe *exe)
 			else if ((short)exe->arg3->d_data < 0)
 			{
 //				ft_printf("\nCAS 2\n");
-				mod = dest % IDX_MOD + exe->process->pc; /*Pour faire fonctionner sti_ind_full */
+//				mod = dest % IDX_MOD + exe->process->pc; // faire fonctionner sti_ind_full
 			}
 			else
 			{
@@ -107,7 +110,7 @@ void	print_ldi(t_arena *arena, t_exe *exe)
 	}
 
 }
-
+*/
 int		valid_reg(int value)
 {
 	return (value <= 16 && value >= 1);
@@ -164,7 +167,10 @@ int		op_ldi(t_arena *arena, t_exe *exe)
 	}
 	if (arena->opts->is_v4)
 	{
-		ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
+//		ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
+		ft_putchar('P');
+		put_n_char(' ', 5 - intlen((short)exe->process->process_num));
+		ft_printf("%d | %s ", exe->process->process_num, exe->bdd_op->name);
 		ft_printf("%hd ", (short)exe->arg1->d_value);
 		if (exe->arg2->type == 'i')
 			ft_printf("%d ", exe->arg2->d_data);
@@ -177,8 +183,7 @@ int		op_ldi(t_arena *arena, t_exe *exe)
 		else
 			ft_printf("%hd", (short)exe->arg3->d_data);
 		ft_putchar('\n');
-		put_n_char(' ', intlen((short)(exe->process->process_num)));
-		put_n_char(' ', 6);
+		put_n_char(' ', 7);
 		ft_printf("| -> load from ");
 		if (exe->arg1->type == 'i')
 		{
@@ -276,7 +281,6 @@ int		op_ldi(t_arena *arena, t_exe *exe)
 	print_exe_opts(arena, exe);
 	return (1);
 }
-
 /*
 int		op_ldi(t_arena *arena, t_exe *exe)
 {
@@ -302,7 +306,7 @@ int		op_ldi(t_arena *arena, t_exe *exe)
 	exe->process->reg[exe->arg3->d_value][1] = arena->mem[get_adv(exe->process->pc + result + 1)];
 	exe->process->reg[exe->arg3->d_value][2] = arena->mem[get_adv(exe->process->pc + result + 2)];
 	exe->process->reg[exe->arg3->d_value][3] = arena->mem[get_adv(exe->process->pc + result + 3)];
-	print_ldi(arena, exe);
+//	print_ldi(arena, exe);
 	print_exe_opts(arena, exe);
 	return (1);
 }

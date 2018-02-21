@@ -4,7 +4,8 @@ int		op_zjmp(t_arena *arena, t_exe *exe)
 {
 	if (arena->opts->is_v4)
 	{
-		ft_printf("P    %d | %s %hd", exe->process->process_num, exe->bdd_op->name, (short)exe->arg1->d_value);
+		print_proc_num_name(exe);
+		ft_printf("%hd", (short)exe->arg1->d_value);
 		if (exe->process->carry == 1)
 			ft_printf(" OK\n");
 		else
