@@ -23,6 +23,8 @@ int		op_zjmp(t_arena *arena, t_exe *exe)
 	}
 //	ft_printf("DEBG old pc = %d char = %.2x\n", exe->process->pc, arena->mem[exe->process->pc]);
 	inc_pc(exe->process, exe->ocp_op->size_adv);
+	
+//	exe->process->pc = get_adv((short)(exe->process->pc + exe->ocp_op->size_adv));
 //	ft_printf("DEBG NEW pc = %d char = %.2x\n", exe->process->pc, arena->mem[exe->process->pc]);
 	return (0);
 }
