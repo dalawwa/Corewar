@@ -4,10 +4,10 @@ int		intlen(int n)
 {
 	int res;
 
-	res = 1;
+	res = 0;
 	while (n /= 10)
 		res++;
-	return (res);
+	return (res + 1);
 }
 
 void	put_n_char(char c, int n)
