@@ -42,7 +42,11 @@ int		op_sti(t_arena *arena, t_exe *exe)
 	}
 	if (arena->opts->is_v4)
 	{
-			ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
+
+//			ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
+			ft_putchar('P');
+			put_n_char(' ', 5 - intlen((short)exe->process->process_num));
+			ft_printf("%d | %s ", exe->process->process_num, exe->bdd_op->name);
 		ft_printf("r%d ", exe->arg1->d_value);
 		if (exe->arg2->type == 'i')
 			ft_printf("%d ", exe->arg2->d_data);
@@ -55,8 +59,7 @@ int		op_sti(t_arena *arena, t_exe *exe)
 		else
 			ft_printf("%hd", (short)exe->arg3->d_data);
 		ft_putchar('\n');
-		put_n_char(' ', intlen((short)(exe->process->process_num)));
-		put_n_char(' ', 6);
+		put_n_char(' ', 7);
 		ft_printf("| -> store to ");
 		if (exe->arg2->type == 'i')
 		{
