@@ -98,4 +98,5 @@ void		print_exe_opts(t_arena *arena, t_exe *exe)
 			ft_putchar('\n');
 		}
 	}
+//	print_regs(exe->process);
 }

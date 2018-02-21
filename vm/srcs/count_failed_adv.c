@@ -36,15 +36,31 @@ int		get_size_from_ocp(char c, t_exe *exe)
 	int	first;
 	int	sec;
 	int third;
+	int	fourth;
 
 	first = c >> 6;
 	sec = c >> 4 & 0b0011;
 	third = c >> 2 & 0b000011;
-	if (exe->bdd_op->nb_args == 2)
-		return (get_size_by_param_type(first, exe) + get_size_by_param_type(sec, exe));
-	else if (exe->bdd_op->nb_args == 3)
-		return (get_size_by_param_type(first, exe) + get_size_by_param_type(sec, exe) + get_size_by_param_type(third, exe));
-	return (NB_OP);
+	fourth = c & 0b00000011;
+//	if (exe->bdd_op->nb_args == 2)
+//		return (get_size_by_param_type(first, exe) + get_size_by_param_type(sec, exe));
+//	else if (exe->bdd_op->nb_args == 3)
+		return (get_size_by_param_type(first, exe) + get_size_by_param_type(sec, exe) + get_size_by_param_type(third, exe) + get_size_by_param_type(fourth, exe));
+//	return (NB_OP);
+}
+
+int		get_max_adv(t_exe *exe)
+{
+	 if (exe->opcode == 2)
+		 return (7);
+	 if (exe->opcode == 3 || exe->opcode == 4 || exe->opcode == 5)
+		 return (5);
+	if (exe->opcode == 6 || exe->opcode == 7 || exe->opcode == 8)
+		return (11);
+	if (exe->opcode == 10 || exe->opcode == 11 || exe->opcode == 13 || exe->opcode == 14)
+	 return (7);
+	else
+		return (2);
 }
 
 int		count_failed_adv(t_arena *arena, t_exe *exe)
@@ -61,4 +77,5 @@ int		count_failed_adv(t_arena *arena, t_exe *exe)
 		i++;
 	}
 	return (2 + get_size_from_ocp(exe->ocp, exe));
+	//return (1 + get_max_adv(exe));
 }
