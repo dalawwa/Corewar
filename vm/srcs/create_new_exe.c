@@ -38,7 +38,7 @@ int		get_failed_adv_size(t_exe *exe)
 
 int		is_failed_reg_nbr(t_exe *exe, t_arg *arg)
 {
-	if (arg && arg->type == 'r' && arg->d_value > REG_NUMBER)
+	if (arg && arg->type == 'r' && (arg->d_value > REG_NUMBER || arg->d_value < 1))
 	{
 		if (exe->arg1)
 			free_arg(exe->arg1);
