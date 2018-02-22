@@ -1,5 +1,18 @@
 #include "corewar.h"
 
+int		ft_abs(int n)
+{
+	return (n < 0 ? -n : n);
+}
+
+int		get_adv(int adv)
+{
+	int		tmp;
+
+	tmp = ft_abs(adv) % MEM_SIZE;
+	return (adv < 0 ? (MEM_SIZE - tmp) : tmp);
+}
+
 int		find_pc_adv(int pc, int adv, int stop)
 {
 	int	i;

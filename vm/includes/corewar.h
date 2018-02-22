@@ -276,6 +276,7 @@ int				find_pc_adv(int pc, int adv, int stop);
 int		get_opcode_from_exe(t_exe *exe);
 int		is_valid_ocp(int opcode, int ocp);
 int		get_failed_adv_size(t_exe *exe);
+int		get_size_from_ocp(char c, t_exe *exe);
 
 /* FREE MEMORY */
 void	free_arena(t_arena **arena);
