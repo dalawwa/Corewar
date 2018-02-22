@@ -2,7 +2,8 @@
 
 int		inc_pc(t_proc *process, int adv)
 {
-	process->pc = find_pc_adv(process->pc, adv, 1);
+//	process->pc = find_pc_adv(process->pc, adv, 1);
+	process->pc = get_adv(process->pc + adv);
 	return (1);
 /*
 	int	i;

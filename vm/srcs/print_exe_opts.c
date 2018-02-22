@@ -1,5 +1,12 @@
 #include "corewar.h"
 
+void		print_proc_num_name(t_exe *exe)
+{
+	ft_putchar('P');
+	put_n_char(' ', 5 - intlen((short)exe->process->process_num));
+	ft_printf("%d | %s ", exe->process->process_num, exe->bdd_op->name);
+}
+
 void		print_exe_opts(t_arena *arena, t_exe *exe)
 {
 	int	i;
@@ -98,4 +105,5 @@ void		print_exe_opts(t_arena *arena, t_exe *exe)
 			ft_putchar('\n');
 		}
 	}
+//	print_regs(exe->process);
 }

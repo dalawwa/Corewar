@@ -232,6 +232,7 @@ void			*perror_ptr(char *s, void *ret);
 char			*addstr(char *s);
 
 void			print_exe_opts(t_arena *arena, t_exe *exe);
+void			print_proc_num_name(t_exe *exe);
 void			print_add_sub(t_arena *area, t_exe *exe);
 void			print_failed_exe(t_arena *arena, t_exe *exe, int size);
 
@@ -259,6 +260,7 @@ int		op_lfork(t_arena *arena, t_exe *exe);
 int		op_zjmp(t_arena *arena, t_exe *exe);
 
 /* GO MATCH */
+int		get_adv(int adv);
 void	go_match(t_arena *arena);
 void	kill_process(t_proc *to_kill, t_proc_base *list_proc);
 int		start_match(t_arena *arena);
@@ -297,6 +299,7 @@ void	print_opts(t_arena *arena);
 void	print_exe(t_exe *exe);
 void	print_sti_v4(t_exe *exe, unsigned char ocp);
 /* ADD TO LIB ? */
+int		ft_abs(int n);
 char			*ft_stradd_c_end(char *s, char c);
 int				ft_power(int nb, int pow);
 unsigned char	*ft_unsi_strdup(unsigned char *s, int len);
