@@ -7154,79 +7154,6 @@ It is now cycle 4926
 It is now cycle 4927
 It is now cycle 4928
 It is now cycle 4929
-It is now cycle 4930
-P   14 | ldi 8 -193 r15
-       | -> load from 8 + -193 = -185 (with pc and mod 21)
-ADV 7 (0x00ce -> 0x00d5) 0a a4 00 08 ff 3f 0f 
-P   13 | ldi 8 -193 r15
-       | -> load from 8 + -193 = -185 (with pc and mod 21)
-ADV 7 (0x00ce -> 0x00d5) 0a a4 00 08 ff 3f 0f 
-P   11 | ldi 8 -193 r15
-       | -> load from 8 + -193 = -185 (with pc and mod 21)
-ADV 7 (0x00ce -> 0x00d5) 0a a4 00 08 ff 3f 0f 
-P    6 | live -1
-Player 1 (Celebration Funebre v0.99pl42) is said to be alive
-ADV 5 (0x035e -> 0x0363) 01 ff ff ff ff 
-P    5 | live -1
-Player 1 (Celebration Funebre v0.99pl42) is said to be alive
-ADV 5 (0x035e -> 0x0363) 01 ff ff ff ff 
-P    4 | ldi 8 -193 r15
-       | -> load from 8 + -193 = -185 (with pc and mod 21)
-ADV 7 (0x00ce -> 0x00d5) 0a a4 00 08 ff 3f 0f 
-P    3 | live -1
-Player 1 (Celebration Funebre v0.99pl42) is said to be alive
-ADV 5 (0x035e -> 0x0363) 01 ff ff ff ff 
-P    1 | live -1
-Player 1 (Celebration Funebre v0.99pl42) is said to be alive
-ADV 5 (0x035e -> 0x0363) 01 ff ff ff ff 
-It is now cycle 4931
-It is now cycle 4932
-It is now cycle 4933
-It is now cycle 4934
-It is now cycle 4935
-P   14 | ld -186 r14
-ADV 7 (0x00d5 -> 0x00dc) 02 90 ff ff ff 46 0e 
-P   13 | ld -186 r14
-ADV 7 (0x00d5 -> 0x00dc) 02 90 ff ff ff 46 0e 
-P   11 | ld -186 r14
-ADV 7 (0x00d5 -> 0x00dc) 02 90 ff ff ff 46 0e 
-P    4 | ld -186 r14
-ADV 7 (0x00d5 -> 0x00dc) 02 90 ff ff ff 46 0e 
-It is now cycle 4936
-It is now cycle 4937
-It is now cycle 4938
-It is now cycle 4939
-It is now cycle 4940
-P   14 | ld 0 r2
-ADV 7 (0x00dc -> 0x00e3) 02 90 00 00 00 00 02 
-P   13 | ld 0 r2
-ADV 7 (0x00dc -> 0x00e3) 02 90 00 00 00 00 02 
-P   11 | ld 0 r2
-ADV 7 (0x00dc -> 0x00e3) 02 90 00 00 00 00 02 
-P    4 | ld 0 r2
-ADV 7 (0x00dc -> 0x00e3) 02 90 00 00 00 00 02 
-It is now cycle 4941
-It is now cycle 4942
-It is now cycle 4943
-It is now cycle 4944
-It is now cycle 4945
-It is now cycle 4946
-It is now cycle 4947
-It is now cycle 4948
-It is now cycle 4949
-It is now cycle 4950
-P   10 | sti r15 0 -182
-       | -> store to 0 + -182 = -182 (with pc and mod 3723)
-ADV 6 (0x0f41 -> 0x0f47) 0b 64 0f 00 00 0e 
-P    9 | sti r15 0 -194
-       | -> store to 0 + -194 = -194 (with pc and mod 3711)
-ADV 6 (0x0f41 -> 0x0f47) 0b 64 0f 00 00 0e 
-P    7 | sti r15 0 -190
-       | -> store to 0 + -190 = -190 (with pc and mod 3715)
-ADV 6 (0x0f41 -> 0x0f47) 0b 64 0f 00 00 0e 
-P    2 | sti r15 0 -186
-       | -> store to 0 + -186 = -186 (with pc and mod 3719)
-ADV 6 (0x0f41 -> 0x0f47) 0b 64 0f 00 00 0e 
 0x0000 : 0f 00 00 0e 09 ff 38 01 ff 06 00 00 00 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff ff 0b 64 0f 00 
 0x0040 : 00 0e 09 ff 38 0b ff ff ff ff 0e 09 ff 38 0b 64 0f 00 00 0e ff ff ff ff 68 01 ff b6 00 01 0b 68 01 ff af 00 0f 0b 68 01 ff a8 00 1d 0b 68 01 ff a1 00 2b 0b 68 01 ff 9a 00 39 0b 68 01 ff 93 00 
 0x0080 : 47 02 90 00 06 00 00 04 02 90 00 0e 00 00 0c 02 90 00 00 00 01 0b 02 90 00 00 00 06 0a 01 00 00 00 2a 0b 68 04 ff 65 00 01 ff ff ff ff 00 00 00 00 00 0e 09 ff 38 01 ff ff ff ff 0b 64 0f 00 00 
@@ -7285,7 +7212,7 @@ ADV 6 (0x0f41 -> 0x0f47) 0b 64 0f 00 00 0e
 0x0dc0 : ff 38 01 ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 
 0x0e00 : 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x0e40 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 
-0x0e80 : ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff 
+0x0e80 : ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff 
 0x0ec0 : ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 0x0f00 : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff 
 0x0f40 : ff 0b 64 0f 00 00 0e 09 ff 38 01 ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff ff 0b 
