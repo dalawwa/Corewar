@@ -36,16 +36,13 @@ int		get_size_from_ocp(char c, t_exe *exe)
 	int	first;
 	int	sec;
 	int third;
-	int	fourth;
 
-	first = c >> 6;
-	sec = c >> 4 & 0b0011;
-	third = c >> 2 & 0b000011;
-	fourth = c & 0b00000011;
-//	if (exe->bdd_op->nb_args == 2)
-//		return (get_size_by_param_type(first, exe) + get_size_by_param_type(sec, exe));
-//	else if (exe->bdd_op->nb_args == 3)
-		return (get_size_by_param_type(first, exe) + get_size_by_param_type(sec, exe) + get_size_by_param_type(third, exe) + get_size_by_param_type(fourth, exe));
+	first = c >> 6 & 0b11;
+	sec = (c >> 4) & 0b0011;
+	third = (c >> 2) & 0b000011;
+	if (exe->bdd_op->nb_args == 2)
+		return (get_size_by_param_type(first, exe) + get_size_by_param_type(sec, exe));
+		return (get_size_by_param_type(first, exe) + get_size_by_param_type(sec, exe) + get_size_by_param_type(third, exe));
 //	return (NB_OP);
 }
 

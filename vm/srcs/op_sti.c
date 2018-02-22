@@ -1,18 +1,5 @@
 #include "corewar.h"
 
-int		ft_abs(int n)
-{
-	return (n < 0 ? -n : n);
-}
-
-int		get_adv(int adv)
-{
-	int		tmp;
-
-	tmp = ft_abs(adv) % MEM_SIZE;
-	return (adv < 0 ? (MEM_SIZE - tmp) : tmp);
-}
-
 int		args_signs(int arg1, int arg2)
 {
 	if ((short)arg1 >= 0 && (short)arg2 >= 0)
@@ -35,7 +22,7 @@ int		op_sti(t_arena *arena, t_exe *exe)
 	dest = (exe->arg2->d_data + (short)exe->arg3->d_value);
 	pc_adv = 0;
 	mod = 0;
-		if ((exe->arg1->type == 'r' && exe->arg1->d_value < 1 && exe->arg1->d_value < REG_NUMBER) || (exe->arg3->type == 'r' && exe->arg3->d_value < 1 && exe->arg3->d_value < REG_NUMBER))
+		if ((exe->arg1->type == 'r' && exe->arg1->d_value < 1 && exe->arg1->d_value > REG_NUMBER) || (exe->arg3->type == 'r' && exe->arg3->d_value < 1 && exe->arg3->d_value > REG_NUMBER))
 	{
 		print_exe_opts(arena, exe);
 		return (1);
