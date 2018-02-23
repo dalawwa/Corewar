@@ -91,6 +91,12 @@ int			find_struct_ocp(t_exe *exe_op, t_bdd *bdd_op)
 		i++;
 	}
 	exe_op->ocp_op = NULL;
+	if (exe_op->opcode == 3 && exe_op->ocp >= 0x71 && exe_op->ocp <= 0x7f)
+	{
+		exe_op->ocp_op = bdd_op->ocp[1];
+		exe_op->ocp = 0x70;
+		return (1);
+	}
 //	ft_putendl("no STRUCT OCP FOUND");
 	return (0);
 }
