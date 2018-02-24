@@ -22,7 +22,7 @@ int		op_sti(t_arena *arena, t_exe *exe)
 	dest = (exe->arg2->d_data + (short)exe->arg3->d_value);
 	pc_adv = 0;
 	mod = 0;
-		if ((exe->arg1->type == 'r' && exe->arg1->d_value < 1 && exe->arg1->d_value > REG_NUMBER) || (exe->arg3->type == 'r' && exe->arg3->d_value < 1 && exe->arg3->d_value > REG_NUMBER))
+	if ((exe->arg1->type == 'r' && (exe->arg1->d_value < 1 || exe->arg1->d_value > REG_NUMBER)) || (exe->arg3->type == 'r' && (exe->arg3->d_value < 1 || exe->arg3->d_value > REG_NUMBER)))
 	{
 		print_exe_opts(arena, exe);
 		return (1);
@@ -100,7 +100,7 @@ int		op_sti(t_arena *arena, t_exe *exe)
 					else
 					{
 //						ft_printf("\nCAS C\n");
-						mod = ((exe->arg2->d_data + exe->arg3->d_data) % IDX_MOD + exe->process->pc) % IDX_MOD;
+						mod = ((exe->arg2->d_data + exe->arg3->d_data + exe->process->pc) % IDX_MOD );
 					}
 					ft_printf("(with pc and mod %hd)\n", mod);
 //					ft_printf("RORO(with pc and mod %hd)\n", mod);

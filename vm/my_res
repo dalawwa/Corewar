@@ -7159,7 +7159,7 @@ P   14 | ldi 8 -193 r15
        | -> load from 8 + -193 = -185 (with pc and mod 21)
 ADV 7 (0x00ce -> 0x00d5) 0a a4 00 08 ff 3f 0f 
 P   13 | ldi 8 -193 r15
-       | -> load from 8 + -193 = -185 (with pc and mod -491)
+       | -> load from 8 + -193 = -185 (with pc and mod 21)
 ADV 7 (0x00ce -> 0x00d5) 0a a4 00 08 ff 3f 0f 
 P   11 | ldi 8 -193 r15
        | -> load from 8 + -193 = -185 (with pc and mod 21)
