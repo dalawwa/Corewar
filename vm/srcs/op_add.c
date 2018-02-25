@@ -5,7 +5,7 @@ void	print_add_sub(t_arena *arena, t_exe *exe)
 	if (arena->opts->is_v4)
 	{
 		print_proc_num_name(exe);
-		ft_printf("r%hd r%hd r%hd\n", (short int)exe->arg1->d_value, (short int)exe->arg2->d_value, (short int)exe->arg3->d_value);
+		ft_printf("r%hd r%hd r%hd\n", (short)exe->arg1->d_value, (short)exe->arg2->d_value, (short)exe->arg3->d_value);
 	}
 }
 
