@@ -157,10 +157,10 @@ int		op_ldi(t_arena *arena, t_exe *exe)
 	int			mod;
 	int			dest;
 
-	dest = ((short)exe->arg1->d_data + (short)exe->arg2->d_value);
+	dest = ((short)exe->arg1->d_data + (short)exe->arg2->d_data);
 	pc_adv = 0;
 	mod = 0;
-	if ((exe->arg1->type == 'r' && exe->arg1->d_value < 1 && exe->arg1->d_value < REG_NUMBER) || (exe->arg3->type == 'r' && exe->arg3->d_value < 1 && exe->arg3->d_value < REG_NUMBER))
+	if ((exe->arg1->type == 'r' && (exe->arg1->d_value < 1 || exe->arg1->d_value > REG_NUMBER)) || (exe->arg3->type == 'r' && (exe->arg3->d_value < 1 || exe->arg3->d_value > REG_NUMBER)))
 	{
 		print_exe_opts(arena, exe);
 		return (1);
@@ -194,31 +194,31 @@ int		op_ldi(t_arena *arena, t_exe *exe)
 		else
 			ft_printf("%hd ", (short)exe->arg1->d_data);
 		if (exe->arg2->type == 'r')
-			ft_printf("+ %hd = ", (short)exe->arg2->d_data);
+			ft_printf("+ %d = ", exe->arg2->d_data);
 		else
 			ft_printf("+ %hd = ", (short)exe->arg2->d_data);
-		if (exe->arg2->type != 'i' && exe->arg3->type != 'r')
-			ft_printf("%hd ", dest);
+		if (exe->arg2->type != 'i')
+			ft_printf("%hd ", exe->arg2->d_data + (short)exe->arg1->d_data);
 		else if (exe->arg3->type == 'r')
 			ft_printf("%d ", (short)(exe->arg1->d_data + exe->arg2->d_data));
 		else
-			ft_printf("%d ", exe->arg2->d_data + (short)exe->arg3->d_data);
+			ft_printf("%d ", exe->arg2->d_data + (short)exe->arg1->d_data);
 		if (((exe->arg2->type != 'i' && (short)dest < 0) || (exe->arg2->type == 'i' && (intmax_t)(exe->arg2->d_data + (short)exe->arg3->d_data) < 0 )) && (exe->arg2->d_data + (short)exe->arg3->d_data) + exe->process->pc > -65536 )
 		{
 			if (-IDX_MOD + (dest % IDX_MOD) + exe->process->pc == -512)
 				ft_printf("(with pc and mod 0)\n");
 			else
 			{
-				if (exe->arg2->d_data + exe->arg3->d_data + exe->process->pc < 0)
+				if (exe->arg2->d_data + exe->arg1->d_data + exe->process->pc < 0)
 				{
 					mod = dest - (512 * ((dest / 512)));
 					dest = mod % IDX_MOD + exe->process->pc;
 					ft_printf("(with pc and mod %hd)\n", dest);
 //					ft_printf("LALA(with pc and mod %hd)\n", dest);
-					exe->process->reg[exe->arg3->d_value][0] = arena->mem[get_adv(dest)];
-					exe->process->reg[exe->arg3->d_value][1] = arena->mem[get_adv(dest + 1)];
-					exe->process->reg[exe->arg3->d_value][2] = arena->mem[get_adv(dest + 2)];
-					exe->process->reg[exe->arg3->d_value][3] = arena->mem[get_adv(dest + 3)];
+					exe->process->reg[exe->arg3->d_value][0] = arena->mem[get_adv(mod)];
+					exe->process->reg[exe->arg3->d_value][1] = arena->mem[get_adv(mod + 1)];
+					exe->process->reg[exe->arg3->d_value][2] = arena->mem[get_adv(mod + 2)];
+					exe->process->reg[exe->arg3->d_value][3] = arena->mem[get_adv(mod + 3)];
 					/*
 					arena->mem[get_adv(dest)] = exe->process->reg[exe->arg1->d_value][0];
 					arena->mem[get_adv(dest + 1)] = exe->process->reg[exe->arg1->d_value][1];
@@ -238,12 +238,12 @@ int		op_ldi(t_arena *arena, t_exe *exe)
 					else if ((short)exe->arg3->d_data < 0 && (short)exe->arg2->d_data < 0)
 					{
 //						ft_printf("\nCAS B\n");
-						mod = dest % IDX_MOD + exe->process->pc - IDX_MOD;
+						mod = dest % IDX_MOD + exe->process->pc;
 					}
 					else
 					{
 //						ft_printf("\nCAS C\n");
-						mod = ((exe->arg1->d_data + exe->arg2->d_data) % IDX_MOD + exe->process->pc) % IDX_MOD;
+						mod = exe->process->pc + ((short)exe->arg1->d_data + (short)exe->arg2->d_data) % IDX_MOD;
 					}
 					ft_printf("(with pc and mod %hd)\n", mod);
 //					ft_printf("RORO(with pc and mod %hd)\n", mod);
@@ -255,9 +255,9 @@ int		op_ldi(t_arena *arena, t_exe *exe)
 			if (exe->arg1->type == 'r')
 			{
 //				ft_printf("\nCAS 1\n");
-				mod = exe->process->pc + (exe->arg2->d_data + exe->arg3->d_data) % IDX_MOD;
+				mod = exe->process->pc + (exe->arg2->d_data + exe->arg1->d_data) % IDX_MOD;
 			}
-			else if ((short)exe->arg3->d_data < 0)
+			else if ((short)exe->arg2->d_data < 0)
 			{
 //				ft_printf("\nCAS 2\n");
 				mod = dest % IDX_MOD + exe->process->pc; /*Pour faire fonctionner sti_ind_full */
@@ -265,7 +265,7 @@ int		op_ldi(t_arena *arena, t_exe *exe)
 			else
 			{
 //				ft_printf("\nCAS 3\n");
-				mod = (exe->arg2->d_data + exe->arg3->d_data) % IDX_MOD + exe->process->pc;
+				mod = (exe->arg1->d_data + exe->arg2->d_data) % IDX_MOD + exe->process->pc;
 			}
 //			ft_printf("\nDEST: %d | DEST % IDX_MOD: %d | exe->process->pc: %d | exe->arg2->d_value: %d | (short)exe->arg2->d_value: %hd | exe->arg3->d_value: %d | (short)exe->arg3->d_value: %hd | exe->arg3->d_data: %d | exe->arg1->d_data: %d | (short)exe->arg1->d_data: %hd | exe->arg1->d_value: %d | (short)exe->arg1->d_value: %hd | exe->arg2->d_data: %d | (short)exe->arg2->d_data: %hd | args->types: %d\n", dest, dest % IDX_MOD, exe->process->pc, exe->arg2->d_value, (short)exe->arg2->d_value, exe->arg3->d_value, (short)exe->arg3->d_value, exe->arg3->d_data, exe->arg1->d_data, (short)exe->arg1->d_data, exe->arg1->d_value, (short)exe->arg1->d_value, exe->arg2->d_data, (short)exe->arg2->d_data, args_types);
 			ft_printf("(with pc and mod %hd)\n", mod);
@@ -278,6 +278,7 @@ int		op_ldi(t_arena *arena, t_exe *exe)
 	exe->process->reg[exe->arg3->d_value][1] = arena->mem[get_adv(mod + 1)];
 	exe->process->reg[exe->arg3->d_value][2] = arena->mem[get_adv(mod + 2)];
 	exe->process->reg[exe->arg3->d_value][3] = arena->mem[get_adv(mod + 3)];
+//	print_regs(exe->process);
 	print_exe_opts(arena, exe);
 	return (1);
 }
