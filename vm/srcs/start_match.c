@@ -5,6 +5,8 @@ int		kill_processes_dead(t_arena *arena, t_proc_base *list)
 	int		i;
 	t_proc	*elem;
 
+	if (!list)
+		return (1);
 	elem = list->last;
 	i = 0;
 	while (i < list->nb_proc)

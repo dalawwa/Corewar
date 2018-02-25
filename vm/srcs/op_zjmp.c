@@ -2,6 +2,7 @@
 
 int		op_zjmp(t_arena *arena, t_exe *exe)
 {
+//	ft_printf("\narena->mem[exe->process->pc]: %d | exe->process->pc: %d\n\n", arena->mem[exe->process->pc], exe->process->pc);
 	if (arena->opts->is_v4)
 	{
 		print_proc_num_name(exe);
@@ -17,7 +18,7 @@ int		op_zjmp(t_arena *arena, t_exe *exe)
 	if (exe->process->carry == 1)
 	{
 //		ft_printf("DBG OLD PC = %d\n", exe->process->pc);
-		inc_pc(exe->process, (short int)exe->arg1->d_value % IDX_MOD); // % IDX_MOD ???
+		inc_pc(exe->process, (short)exe->arg1->d_value % IDX_MOD); // % IDX_MOD ???
 //		ft_printf("DEBG NEW PC = %d\n", exe->process->pc);
 		return (1);
 	}
