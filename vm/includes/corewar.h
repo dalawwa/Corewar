@@ -114,6 +114,7 @@ typedef struct	s_proc
 	int				op_success; // retour de la fct appele par l'exe (vias la BDD)
 	int				nb_live; // nb live init 0
 	int				last_cycle_alive;
+	struct s_proc	*parent;
 	struct s_proc	*next;
 	struct s_proc	*prev;
 }				t_proc;

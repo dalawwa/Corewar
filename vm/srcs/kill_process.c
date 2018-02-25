@@ -6,6 +6,8 @@ void	print_all_process_short_way(t_proc_base *list)
 	t_proc	*elem;
 
 	i = 0;
+	if (!list)
+		return ;
 	elem = list->first;
 //	ft_printf("There is %d Process\n", list->nb_proc);
 	while (i < list->nb_proc)

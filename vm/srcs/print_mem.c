@@ -6,6 +6,7 @@ void	print_mem(t_arena *arena)
 
 	i = 0;
 //	ft_putendl("____________print_MEM");
+//	print_all_process(arena);
 	if (arena)
 	{
 		while (i < MEM_SIZE)

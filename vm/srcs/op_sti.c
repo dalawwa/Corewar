@@ -22,6 +22,12 @@ int		op_sti(t_arena *arena, t_exe *exe)
 	dest = (exe->arg2->d_data + (short)exe->arg3->d_value);
 	pc_adv = 0;
 	mod = 0;
+//	ft_printf("\n\nARENA->MEM[(PC)]: %d | (PC): %d | OCP: %d | arg1->d_value: %d | arg1->d_data: %d\n", arena->mem[(exe->process->pc)], exe->process->pc, exe->ocp_op->ocp, exe->arg1->d_value, exe->arg1->d_data);
+	if (arena->mem[exe->process->pc + 1] == 0)
+	{
+		print_failed_exe(arena, exe, 2);
+		return (1);
+	}
 	if ((exe->arg1->type == 'r' && (exe->arg1->d_value < 1 || exe->arg1->d_value > REG_NUMBER)) || (exe->arg3->type == 'r' && (exe->arg3->d_value < 1 || exe->arg3->d_value > REG_NUMBER)))
 	{
 		print_exe_opts(arena, exe);
