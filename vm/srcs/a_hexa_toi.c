@@ -1,6 +1,6 @@
 #include "corewar.h"
 
-int		a_hexa_to_i(unsigned char *s, int len)
+unsigned int		a_hexa_to_i(unsigned char *s, int len)
 {
 	int		result;
 	int		i;
@@ -14,6 +14,6 @@ int		a_hexa_to_i(unsigned char *s, int len)
 	}
 //	ft_printf("len = %d -  result = %d - S = %.2x %.2x %.2x %.2x\n", len, result, s[0], s[1], s[2], s[3]);
 	if (s[0] > 127)
-		return ((int)(0xffffffff00000000 + result));
+		return ((unsigned int)(0xffffffff00000000 + result));
 	return (result);
 }

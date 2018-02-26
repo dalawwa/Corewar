@@ -114,6 +114,7 @@ typedef struct	s_proc
 	int				op_success; // retour de la fct appele par l'exe (vias la BDD)
 	int				nb_live; // nb live init 0
 	int				last_cycle_alive;
+	struct s_proc	*parent;
 	struct s_proc	*next;
 	struct s_proc	*prev;
 }				t_proc;
@@ -181,6 +182,7 @@ typedef struct	s_arena
 	int				total_cycle; // nb_cycle depuis le debut
 	int				max_check;
 	int				c_delta;
+	int				*default_adv; // tableau contenant dans l'ordre de la bdd, l'adv pour chaque op invalide.
 }				t_arena;
 
 typedef struct	s_ocp
@@ -231,12 +233,14 @@ void			*perror_ptr(char *s, void *ret);
 char			*addstr(char *s);
 
 void			print_exe_opts(t_arena *arena, t_exe *exe);
+void			print_proc_num_name(t_exe *exe);
 void			print_add_sub(t_arena *area, t_exe *exe);
 void			print_failed_exe(t_arena *arena, t_exe *exe, int size);
 
 /* Initialized Process */
 int		create_new_process(t_arena *arena, t_play *player, t_proc *parent);
 int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent);
+int		fill_new_exe(t_arena *arena, t_proc *process);
 
 /* OP & Outils pour les OP */
 //unsigned char	*find_reg_ptr(int arg_value, t_exe *exe);
@@ -258,18 +262,23 @@ int		op_lfork(t_arena *arena, t_exe *exe);
 int		op_zjmp(t_arena *arena, t_exe *exe);
 
 /* GO MATCH */
+int		get_adv(int adv);
 void	go_match(t_arena *arena);
 void	kill_process(t_proc *to_kill, t_proc_base *list_proc);
 int		start_match(t_arena *arena);
 unsigned char	*find_reg_ptr(int arg_value, t_exe *exe);
 void			print_usage(void);
-int		a_hexa_to_i(unsigned char *s, int len);
+unsigned int		a_hexa_to_i(unsigned char *s, int len);
 int		is_carry_to_modify(t_exe *exe);
 int		is_valid_op(t_arena *arena, t_proc *proc);
 int		inc_pc(t_proc *process, int adv);
 unsigned char	find_char_at_mem_pc_adv(int pc, int adv, t_arena *arena);
 int				count_failed_adv(t_arena *arena, t_exe *exe);
 int				find_pc_adv(int pc, int adv, int stop);
+int		get_opcode_from_exe(t_exe *exe);
+int		is_valid_ocp(int opcode, int ocp);
+int		get_failed_adv_size(t_exe *exe);
+int		get_size_from_ocp(char c, t_exe *exe);
 
 /* FREE MEMORY */
 void	free_arena(t_arena **arena);
@@ -291,11 +300,11 @@ void	print_one_process(t_proc *process);
 void	print_regs(t_proc *process);
 void	print_opts(t_arena *arena);
 void	print_exe(t_exe *exe);
-
+void	print_sti_v4(t_exe *exe, unsigned char ocp);
 /* ADD TO LIB ? */
+int		ft_abs(int n);
 char			*ft_stradd_c_end(char *s, char c);
 int				ft_power(int nb, int pow);
-int				a_hexa_to_i(unsigned char *s, int len);
 unsigned char	*ft_unsi_strdup(unsigned char *s, int len);
 unsigned char	*ft_ito_hexa(uintmax_t n);
 int		intlen(int n);

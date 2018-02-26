@@ -6,7 +6,7 @@
 /*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 17:45:13 by bfruchar          #+#    #+#             */
-/*   Updated: 2018/01/09 16:25:36 by bfruchar         ###   ########.fr       */
+/*   Updated: 2018/01/30 09:13:44 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int			line_is_valid(char *str)
 
 	op = get_the_op_code(str);
 	if (op == 0)
-		return (0);
+		ciao_bye_bye(9);
 	if (op)
-		position++;
+		g_position++;
 	if (op == 1 || op == 9 || op == 12 || op == 14)
 		str = str + 4;
 	else if (op == 2 || op == 3 || op == 7)
@@ -37,7 +37,7 @@ int			line_is_valid(char *str)
 	else
 		str = str + 3;
 	if (op != 1 && op != 9 && op != 12 && op != 15)
-		position++;
+		g_position++;
 	check_args_valid(&str, op);
 	return (1);
 }
@@ -51,15 +51,11 @@ char		*ft_strjoin_without_empty(char *file, char *line, int j)
 		j++;
 	if (line[j] && line[j] != '#' && line[j] != ';' && line_is_valid(&line[j]))
 	{
-		tmp = ft_strjoin(file, &line[j]);
-		tmp = ft_strjoin(tmp, "\n");
+		tmp = ft_strjoin_leakless(file, &line[j]);
+		tmp = ft_strjoin_leakless(tmp, "\n");
 	}
 	else
 		return (file);
-	if (line)
-		free(line);
-	if (file)
-		free(file);
 	return (tmp);
 }
 
@@ -84,19 +80,18 @@ int			label_or_not(char *line)
 	else if (line[j] && line[j] != ' ' && line[j] != '\0' && line[j] != ';'
 			&& line[j] != '\n' && line[j] != '\t' && char_label(line[j]) == 1
 			&& line[j] != ',')
-		ciao_bye_bye(1);
+		ciao_bye_bye(2);
 	return (0);
 }
 
-t_champ		*get_champ_data(char **file, int fd, int i)
+t_champ		*get_champ_data(char **file, int fd, int i, char *line)
 {
-	char	*line;
 	t_champ	*new;
 
-	line = NULL;
 	new = NULL;
 	while (get_next_line(fd, &line) > 0)
 	{
+		g_line_error++;
 		while (line[i] == ' ' || line[i] == '\t')
 			i++;
 		if (line[i] && line[i] != '#' && line[i] != ';'
@@ -108,8 +103,10 @@ t_champ		*get_champ_data(char **file, int fd, int i)
 			i++;
 		}
 		*file = ft_strjoin_without_empty(*file, line, i);
-		size_line++;
+		g_size_line++;
 		i = 0;
+		if (line)
+			free(line);
 	}
 	if (line)
 		free(line);
