@@ -37,10 +37,10 @@ int		op_st(t_arena *arena, t_exe *exe)
 		arena->mem[find_pc_adv(exe->process->pc, exe->arg2->d_value % IDX_MOD + 2, 1)] = exe->process->reg[exe->arg1->d_value][2];
 		arena->mem[find_pc_adv(exe->process->pc, exe->arg2->d_value % IDX_MOD + 3, 1)] = exe->process->reg[exe->arg1->d_value][3];
 		*/
-		arena->mem[get_adv(exe->process->pc + exe->arg2->d_value)] = exe->process->reg[exe->arg1->d_value][0];
-		arena->mem[get_adv(exe->process->pc + exe->arg2->d_value + 1)] = exe->process->reg[exe->arg1->d_value][1];
-		arena->mem[get_adv(exe->process->pc + exe->arg2->d_value + 2)] = exe->process->reg[exe->arg1->d_value][2];
-		arena->mem[get_adv(exe->process->pc + exe->arg2->d_value + 3)] = exe->process->reg[exe->arg1->d_value][3];
+		arena->mem[get_adv(exe->process->pc + exe->arg2->d_value) % IDX_MOD] = exe->process->reg[exe->arg1->d_value][0];
+		arena->mem[get_adv(exe->process->pc + exe->arg2->d_value + 1) % IDX_MOD] = exe->process->reg[exe->arg1->d_value][1];
+		arena->mem[get_adv(exe->process->pc + exe->arg2->d_value + 2) % IDX_MOD] = exe->process->reg[exe->arg1->d_value][2];
+		arena->mem[get_adv(exe->process->pc + exe->arg2->d_value + 3) % IDX_MOD] = exe->process->reg[exe->arg1->d_value][3];
 	}
 	print_exe_opts(arena, exe);
 	is_carry_to_modify(exe);

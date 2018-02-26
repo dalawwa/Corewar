@@ -120,7 +120,7 @@ int		op_sti(t_arena *arena, t_exe *exe)
 		else
 		{
 			if (exe->arg1->type == 'r')
-			{
+		{
 //				ft_printf("\nCAS 1\n");
 				mod = exe->process->pc + (exe->arg2->d_data + exe->arg3->d_data) % IDX_MOD;
 			}
