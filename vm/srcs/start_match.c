@@ -5,6 +5,8 @@ int		kill_processes_dead(t_arena *arena, t_proc_base *list)
 	int		i;
 	t_proc	*elem;
 
+	if (!list)
+		return (1);
 	elem = list->last;
 	i = 0;
 	while (i < list->nb_proc)
@@ -35,36 +37,50 @@ int		deal_exe(t_arena *arena)
 	i = 0;
 	failed_adv = 0;
 	elem = arena->list_proc->last;
+//	ft_printf("\nSGF DBG DEALEXE START\n");
 	while (i < arena->list_proc->nb_proc)
 	{
-/*		if (arena->total_cycle > 222)
+		// if (elem->process_num == 20) {
+		// 	print_one_process(elem);
+		// 	if (elem->exe_op)
+		// 		print_exe(elem->exe_op);
+		// }
+//	ft_printf("\nSGF INSIDE WHILE i: %d | arena->list_proc->nb_proc: %d\n", i, arena->list_proc->nb_proc);
+		/*
+		if (arena->total_cycle > 222)
 		{
 			ft_printf("Process %d : pc = %d ", elem->process_num, elem->pc);
 			if (elem->exe_op != NULL)
 				ft_printf("exe = %s - to wait = %d\n", elem->exe_op->bdd_op->name, elem->exe_op->to_wait);
 			else
 				ft_putchar('\n');
-		}*/
-		if (elem->exe_op == NULL)
+		}
+		*/
+		if (!elem || elem->exe_op == NULL)
 		{
 //			ft_printf("Cycle %d -- Process NUM = %d Process->PC = %d\n", arena->current_cycle, elem->process_num, elem->pc);
 			if (is_valid_op(arena, elem) == 1)
 			{
+//				ft_printf("\nSGF DBG DEAL_EXEINSIDE if is_valid_op\n");
 				create_new_exe(arena, elem, NULL);
+//				ft_printf("\nSGF DBG DEAL_EXE INSIDE if is_valid_op after create_new_exe\n");
 				elem->exe_op->to_wait--;
 			}
 			else
 			{
-				if (elem->exe_op && elem->exe_op->bdd_op->opcode == 15)
-					ft_printf("to_wait = %d\n", elem->exe_op->to_wait);
+//				ft_printf("\nSGF DBG DEAL_EXEINSIDE else is_valid_op\n");
+				// if (elem->exe_op && elem->exe_op->bdd_op->opcode == 15)
+				// 	ft_printf("to_wait = %d\n", elem->exe_op->to_wait);
 				inc_pc(elem, 1);
 //			ft_printf("ELSE Cycle %d -- INCREASE Process->PC = %d\n", arena->current_cycle, elem->pc);
 			}
 		}
 		if (elem->exe_op)
 		{
+//			ft_printf("\nDEAL_EXE L73\n");
 			if (elem->exe_op->to_wait == 0)
 			{
+				fill_new_exe(arena, elem);
 				if (elem->exe_op->ocp_op != NULL)
 				{
 					if (elem->exe_op->ocp_op->fct != NULL)
@@ -92,6 +108,8 @@ int		deal_exe(t_arena *arena)
 				else
 				{
 					failed_adv = count_failed_adv(arena, elem->exe_op);
+//					failed_adv = get_failed_adv_size(elem->exe_op);
+//					ft_printf("\nGo To Failed -> %d\n", failed_adv);
 					print_failed_exe(arena, elem->exe_op, failed_adv);
 					inc_pc(elem, failed_adv);
 				}
@@ -130,12 +148,14 @@ int		start_match(t_arena *arena)
 {
 //	ft_putendl("Let's the MATCH begins ...");
 //	ft_printf("There is %d process to start\n", arena->list_proc->nb_proc);
+	if (!arena || !arena->opts)
+		return (0);
 	if (arena->opts->has_d == 1 && arena->opts->d == 0)
 	{
 		print_mem(arena);
 		return (1);
 	}
-	while (arena->list_proc->nb_proc > 0)
+	while (arena && arena->list_proc && arena->list_proc->nb_proc > 0)
 	{
 		arena->total_cycle++;
 		arena->current_cycle++;

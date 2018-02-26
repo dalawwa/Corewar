@@ -31,6 +31,10 @@ void print_tab_cors(int *tab)
 
 void		print_one_process(t_proc *process)
 {
+	if (process->parent)
+	{
+		ft_printf("\nProcess %d is the parent of Process: %d\n", process->parent->process_num, process->process_num);
+	}
 	ft_putendl("__________print_ONE_PROCESS");
 	ft_printf("Process num %d :\nPlayer : %s\nCarry = %d - pc = %d\n", process->process_num, process->player->name, process->carry, process->pc);
 	print_regs(process);
@@ -63,38 +67,41 @@ void		print_exe(t_exe *exe)
 	ft_putendl("__________print_EXE");
 	if (exe)
 	{
-		ft_printf("EXE from Process %d :\nOpcode = %.2x - OCP = %.2x\nBDD_op = %s\n", exe->process->process_num, exe->opcode, exe->ocp, exe->bdd_op->name);
-		ft_printf("Arg1 : type = %c - ", exe->arg1->type);
-		if (exe->arg1->type == 'r')
-			ft_printf("value = %.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->data[2], exe->arg1->data[3], exe->arg1->d_value, exe->arg1->d_data);
-		else if (exe->arg1->type == 'd' && exe->arg1->size == 2)
-			ft_printf("value = %.2x%.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->value[1], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->d_value, exe->arg1->d_data);
-		else if (exe->arg1->type == 'd' && exe->arg1->size == 4)
-			ft_printf("value = %.2x%.2x %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->value[1], exe->arg1->value[2], exe->arg1->value[3], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->data[2], exe->arg1->data[3], exe->arg1->d_value, exe->arg1->d_data);
-		else if (exe->arg1->type == 'i')
-			ft_printf("value = %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->value[1], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->data[2], exe->arg1->data[3], exe->arg1->d_value, exe->arg1->d_data);
-		if (exe->arg2)
+		if (exe->ocp && exe->arg1)
 		{
-			ft_printf("Arg2 : type = %c - ", exe->arg2->type);
-			if (exe->arg2->type == 'r')
-				ft_printf("value = %.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->data[2], exe->arg2->data[3], exe->arg2->d_value, exe->arg2->d_data);
-			else if (exe->arg2->type == 'd' && exe->arg2->size == 2)
-				ft_printf("value = %.2x%.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->value[1], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->d_value, exe->arg2->d_data);
-			else if (exe->arg2->type == 'd' && exe->arg2->size == 4)
-				ft_printf("value = %.2x%.2x %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->value[1], exe->arg2->value[2], exe->arg2->value[3], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->data[2], exe->arg2->data[3], exe->arg2->d_value, exe->arg2->d_data);
-			else if (exe->arg2->type == 'i')
-				ft_printf("value = %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->value[1], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->data[2], exe->arg2->data[3], exe->arg2->d_value, exe->arg2->d_data);
-			if (exe->arg3)
+			ft_printf("EXE from Process %d :\nOpcode = %.2x - OCP = %.2x\nBDD_op = %s\n", exe->process->process_num, exe->opcode, exe->ocp, exe->bdd_op->name);
+			ft_printf("Arg1 : type = %c - ", exe->arg1->type);
+			if (exe->arg1->type == 'r')
+				ft_printf("value = %.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->data[2], exe->arg1->data[3], exe->arg1->d_value, exe->arg1->d_data);
+			else if (exe->arg1->type == 'd' && exe->arg1->size == 2)
+				ft_printf("value = %.2x%.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->value[1], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->d_value, exe->arg1->d_data);
+			else if (exe->arg1->type == 'd' && exe->arg1->size == 4)
+				ft_printf("value = %.2x%.2x %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->value[1], exe->arg1->value[2], exe->arg1->value[3], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->data[2], exe->arg1->data[3], exe->arg1->d_value, exe->arg1->d_data);
+			else if (exe->arg1->type == 'i')
+				ft_printf("value = %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg1->value[0], exe->arg1->value[1], exe->arg1->data[0], exe->arg1->data[1], exe->arg1->data[2], exe->arg1->data[3], exe->arg1->d_value, exe->arg1->d_data);
+			if (exe->arg2)
 			{
-				ft_printf("Arg3 : type = %c - ", exe->arg3->type);
-				if (exe->arg3->type == 'r')
-					ft_printf("value = %.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->data[2], exe->arg3->data[3], exe->arg3->d_value, exe->arg3->d_data);
-				else if (exe->arg3->type == 'd' && exe->arg3->size == 2)
-					ft_printf("value = %.2x%.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->value[1], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->d_value, exe->arg3->d_data);
-				else if (exe->arg3->type == 'd' && exe->arg3->size == 4)
-				ft_printf("value = %.2x%.2x %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->value[1], exe->arg3->value[2], exe->arg3->value[3], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->data[2], exe->arg3->data[3], exe->arg3->d_value, exe->arg3->d_data);
-				else if (exe->arg3->type == 'i')
-				ft_printf("value = %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->value[1], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->data[2], exe->arg3->data[3], exe->arg3->d_value, exe->arg3->d_data);
+				ft_printf("Arg2 : type = %c - ", exe->arg2->type);
+				if (exe->arg2->type == 'r')
+					ft_printf("value = %.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->data[2], exe->arg2->data[3], exe->arg2->d_value, exe->arg2->d_data);
+				else if (exe->arg2->type == 'd' && exe->arg2->size == 2)
+					ft_printf("value = %.2x%.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->value[1], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->d_value, exe->arg2->d_data);
+				else if (exe->arg2->type == 'd' && exe->arg2->size == 4)
+					ft_printf("value = %.2x%.2x %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->value[1], exe->arg2->value[2], exe->arg2->value[3], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->data[2], exe->arg2->data[3], exe->arg2->d_value, exe->arg2->d_data);
+				else if (exe->arg2->type == 'i')
+					ft_printf("value = %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg2->value[0], exe->arg2->value[1], exe->arg2->data[0], exe->arg2->data[1], exe->arg2->data[2], exe->arg2->data[3], exe->arg2->d_value, exe->arg2->d_data);
+				if (exe->arg3)
+				{
+					ft_printf("Arg3 : type = %c - ", exe->arg3->type);
+					if (exe->arg3->type == 'r')
+						ft_printf("value = %.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->data[2], exe->arg3->data[3], exe->arg3->d_value, exe->arg3->d_data);
+					else if (exe->arg3->type == 'd' && exe->arg3->size == 2)
+						ft_printf("value = %.2x%.2x - data = %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->value[1], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->d_value, exe->arg3->d_data);
+					else if (exe->arg3->type == 'd' && exe->arg3->size == 4)
+					ft_printf("value = %.2x%.2x %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->value[1], exe->arg3->value[2], exe->arg3->value[3], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->data[2], exe->arg3->data[3], exe->arg3->d_value, exe->arg3->d_data);
+					else if (exe->arg3->type == 'i')
+					ft_printf("value = %.2x%.2x - data = %.2x%.2x %.2x%.2x - d_value = %d - d_data = %d\n", exe->arg3->value[0], exe->arg3->value[1], exe->arg3->data[0], exe->arg3->data[1], exe->arg3->data[2], exe->arg3->data[3], exe->arg3->d_value, exe->arg3->d_data);
+				}
 			}
 		}
 	}
@@ -167,8 +174,8 @@ void	print_arena(t_arena *arena)
 	ft_putendl("____________PRINT ARENA______________");
 	if (arena)
 	{
-//		if (arena->opts)
-//			print_opts(arena);
+		if (arena->opts)
+			print_opts(arena);
 //		ft_putchar('\n');
 //		if (arena->files)
 //			print_files(arena);

@@ -1,5 +1,18 @@
 #include "corewar.h"
 
+int		ft_abs(int n)
+{
+	return (n < 0 ? -n : n);
+}
+
+int		get_adv(int adv)
+{
+	int		tmp;
+
+	tmp = ft_abs(adv) % MEM_SIZE;
+	return (adv < 0 ? (MEM_SIZE - tmp) : tmp);
+}
+
 int		find_pc_adv(int pc, int adv, int stop)
 {
 	int	i;
@@ -11,7 +24,7 @@ int		find_pc_adv(int pc, int adv, int stop)
 	adv_tmp = 0;
 	if (stop == 0)
 	{
-//		ft_printf("\nSTOP = 0 > FIRST pc_tmp = %d\n", pc_tmp);
+//		ft_printf("\nSTOP = 0 | FIRST pc_tmp = %d\n", pc_tmp);
 		if (adv < 0x8000)
 		{
 			pc_tmp = pc + (adv % IDX_MOD);
@@ -32,13 +45,16 @@ int		find_pc_adv(int pc, int adv, int stop)
 	}
 	else
 	{
-//		ft_printf("\nSTOP = 1 > FIRST pc_tmp = %d\n", pc_tmp);
-		if (adv < 0x8000 && adv > 0)
+//		ft_printf("\nSTOP = 1 | FIRST pc_tmp = %d\n", pc_tmp);
+		if (adv < 0x8000 && adv >= 0)
 		{
 			pc_tmp = pc + (adv % IDX_MOD);
 //			ft_printf("adv = %d\ninf NEXT  pc_tmp = %d\n", adv,  pc_tmp);
 			if (pc_tmp >= MEM_SIZE)
+			{
+//	ft_printf("\npc_tmp: %d\n", pc_tmp);
 				return (0);
+			}
 		}
 		else if (adv >= 0x8000)
 		{
@@ -48,7 +64,11 @@ int		find_pc_adv(int pc, int adv, int stop)
 			pc_tmp = pc - adv_tmp;
 //			ft_printf("sup NEXT  pc_tmp = %d\n", pc_tmp);
 			if (pc_tmp < 0)
+			{
+//				ft_printf("\nfpa pc_tmp < 0\n");
+//	ft_printf("\npc_tmp: %d\n", pc_tmp);
 				return (0);
+			}
 		}
 		else
 		{
@@ -72,7 +92,10 @@ int		find_pc_adv(int pc, int adv, int stop)
 		if (pc_tmp > IDX_MOD / 2)
 			pc_tmp = pc_tmp - IDX_MOD;
 	ft_printf("NEXT  pc_tmp = %d\n", pc_tmp);*/
+//	ft_printf("\npc_tmp: %d\n", pc_tmp);
 		return (pc_tmp);
+}
+		/*
 	pc_tmp = pc;
 //	ft_printf("Process %d : ", process->process_num);
 //	if (process->exe_op != NULL)
@@ -92,6 +115,7 @@ int		find_pc_adv(int pc, int adv, int stop)
 				else
 				{
 //					ft_printf(" - End PC = %d\n", 0);
+//					ft_printf("\nBOYA\n");
 					return (0);
 				}
 			}
@@ -99,7 +123,7 @@ int		find_pc_adv(int pc, int adv, int stop)
 			i++;
 			if (pc_tmp == MEM_SIZE && i == adv)
 			{
-//				ft_printf(" - End PC = %d\n", 0);
+//				ft_printf("HAHA - End PC = %d\n", 0);
 				return (0);
 			}
 //			ft_printf("OUT : i = %d - pc_tmp = %d\n", i, pc_tmp);
@@ -117,6 +141,7 @@ int		find_pc_adv(int pc, int adv, int stop)
 			i--;
 		}
 	}
-//	ft_printf(" - End PC = %d\n", pc_tmp);
+	ft_printf("__EOfind_pc_adv_last - End PC = %d\n", pc_tmp);
 	return (pc_tmp);
 }
+*/

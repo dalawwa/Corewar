@@ -1,6 +1,11 @@
 #include "corewar.h"
 
-
+void		print_proc_num_name(t_exe *exe)
+{
+	ft_putchar('P');
+	put_n_char(' ', 5 - intlen((short)exe->process->process_num));
+	ft_printf("%d | %s ", exe->process->process_num, exe->bdd_op->name);
+}
 
 void		print_exe_opts(t_arena *arena, t_exe *exe)
 {
@@ -94,10 +99,12 @@ void		print_exe_opts(t_arena *arena, t_exe *exe)
 				ft_printf("ADV %d (%#.4x -> %#.4x) ", exe->ocp_op->size_adv, exe->process->pc, exe->process->pc + exe->ocp_op->size_adv);
 			while (i < exe->ocp_op->size_adv)
 			{
-				ft_printf("%.2x ", arena->mem[find_pc_adv(exe->process->pc, i, 0)]);
+//				ft_printf("%.2x ", arena->mem[find_pc_adv(exe->process->pc, i, 0)]);
+				ft_printf("%.2x ", arena->mem[get_adv(exe->process->pc + i)]);
 				i++;
 			}
 			ft_putchar('\n');
 		}
 	}
+//	print_regs(exe->process);
 }

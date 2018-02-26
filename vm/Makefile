@@ -6,8 +6,7 @@
 #    By: dalawwa <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/16 01:01:45 by dalawwa           #+#    #+#              #
-#    Updated: 2017/12/16 01:02:47 by dalawwa          ###   ########.fr        #
-#                                                                              #
+#    Updated: 2018/02/01 15:11:46 by dalawwa          ###   ########.fr        #
 # **************************************************************************** #
 
 # **************************************************************************** #
@@ -325,6 +324,7 @@ SRCS_NAME = main.c \
 			initialized_start_process.c \
 			create_new_process.c \
 			create_new_exe.c \
+			fill_new_exe.c \
 			kill_process.c \
 			ft_power.c \
 			ft_unsi_strdup.c \
@@ -356,7 +356,8 @@ SRCS_NAME = main.c \
 			is_carry_to_modify.c \
 			is_valid_op.c \
 			int_len.c \
-			ft_unsi_strcmp.c
+			ft_unsi_strcmp.c \
+			print_sti.c
 
 CW_SRCS = $(addprefix $(PATH_SRCS), $(SRCS_NAME))
 CW_OBJS = $(addprefix $(PATH_OBJS), $(SRCS_NAME:.c=.o))
@@ -420,13 +421,13 @@ diff: $(NAME)
 	@cat list_working list_broken > diff_logs
 
 diff_op: $(NAME)
-	@sh script_vm_test_op.sh $(op)
+	@sh script_vm_test_op.sh $(op) $(vv) $(dd)
 
 diff_file: $(NAME)
 	@sh script_vm_test_file.sh $(file)
 
 diff_sync: $(NAME)
-	@sh script_vm_test_sync.sh $(file) $(opts)
+	@sh script_vm_test_sync.sh $(file) $(vv) $(dd)
 
 
 fclean: clean

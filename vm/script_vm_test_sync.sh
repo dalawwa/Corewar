@@ -64,27 +64,41 @@ TEST_LEN=38
 TARGET_VM='vm_test'
 TARGET_ZAZ='zaz_test'
 TEST_PATH=../tests
-TESTSUITE_PATH=**/tests/test_suite
-TESTSUITE_PATH_WORKING=../tests/test_suite/working
+TESTSUITE_PATH=**/tests/test_suiteTESTSUITE_PATH_WORKING=../tests/test_suite/working
 
 echo "$YEL===== launching diff on our testsuite$DEF"
 clear
 testfile(){
-name=$(find ../tests/test_suite/**/$1);
-echo "$SOU$CYA$name$DEF"
-../tests/asm $name;
-TEST_STR="\$TEST$j"
-champ=$(echo "$name" | sed -e 's/.s$/.cor/g');
-command=$(eval echo "$TEST_STR");
-sleep 1
-./corewar -v $2 $champ;
-orig=$(ls /dev > diff1)
-osascript -e 'tell application "System Events" to keystroke "d" using command down'
-sleep 2
-next=$(ls /dev > diff2)
-diff_str=$(eval diff diff2 diff1 | tail -1 | cut -c 3-)
-echo "=======ZAZ======" > /dev/$diff_str
-../tests/corewar -v $2 $champ > /dev/$diff_str;
-rm $champ
+	name=$(find ../tests/**/**/$1);
+	echo "$SOU$CYA$name$DEF"
+	../tests/asm $name;
+	TEST_STR="\$TEST$j"
+	champ=$(echo "$name" | sed -e 's/.s$/.cor/g');
+	command=$(eval echo "$TEST_STR");
+	./corewar -d $3 -v $2 $champ;
+	./corewar -d $3 -v $2 $champ > my_res;
+	./corewar -d $3 -v $2 $champ | tail -n 64 > my_dump_result;
+	orig=$(ls /dev > diff1)
+	osascript -e 'tell application "System Events" to keystroke "d" using command down'
+	sleep 2
+	next=$(ls /dev > diff2)
+	diff_str=$(eval diff diff2 diff1 | tail -1 | cut -c 3-)
+	echo "=======ZAZ======" > /dev/$diff_str
+	../tests/corewar -d $3 -v $2 $champ > /dev/$diff_str;
+	../tests/corewar -d $3 -v $2 $champ > zaz_res;
+	../tests/corewar -d $3 -v $2 $champ | tail -n 64 > zaz_dump_result;
+	res=$(diff -s zaz_dump_result my_dump_result);
+	res1=$(diff -s zaz_res my_res);
+	if [[ $res1 == "Files zaz_res and my_res are identical" ]] ; then
+			echo "$GRE RESULT IS OK $DEF"
+	else
+			echo "$RED RESULT IS KO $DEF"
+	fi
+	if [[ $res == "Files zaz_dump_result and my_dump_result are identical" ]] ; then
+		echo "$GRE DUMP IS OK $DEF"
+	else
+		echo "$RED DUMP IS KO $DEF"
+	fi
+	rm $champ
 }
-testfile $1 $2
+testfile $1 $2 $3
