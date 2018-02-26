@@ -244,6 +244,21 @@ TEST_ADV =	 \
 			fork_0d_0d.s \
 			fork_0d_0e.s \
 			fork_0d_0f.s \
+			fork_0e_01.s \
+			fork_0e_02.s \
+			fork_0e_03.s \
+			fork_0e_04.s \
+			fork_0e_05.s \
+			fork_0e_06.s \
+			fork_0e_07.s \
+			fork_0e_08.s \
+			fork_0e_09.s \
+			fork_0e_0a.s \
+			fork_0e_0b.s \
+			fork_0e_0c.s \
+			fork_0e_0d.s \
+			fork_0e_0e.s \
+			fork_0e_0f.s \
 			fork_07_08_wrong.s \
 			fork_02_02_wrong.s
 
