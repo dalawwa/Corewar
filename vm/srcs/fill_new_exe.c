@@ -53,6 +53,21 @@ int		is_failed_reg_nbr(t_exe *exe, t_arg *arg)
 	return (0);
 }
 
+int			check_nbits_val(char c, char bdd_ocp, int n)
+{
+	if (n == 2)
+	{
+		if (c >> 4  == bdd_ocp >> 4)
+			return (1);
+	}
+	if (n == 3)
+	{
+		if (c >> 2 == bdd_ocp >> 2)
+			return (1);
+	}
+	return (0);
+}
+
 int			find_struct_ocp(t_exe *exe_op, t_bdd *bdd_op)
 {
 	int	i;
@@ -66,7 +81,7 @@ int			find_struct_ocp(t_exe *exe_op, t_bdd *bdd_op)
 	while (i < bdd_op->nb_ocp)
 	{
 //		ft_printf("exe->ocp = %.2x - bbd->ocp[%d] = %.2x\n", exe_op->ocp, i, bdd_op->ocp[i]->ocp);
-		if (exe_op->ocp == bdd_op->ocp[i]->ocp)
+		if (check_nbits_val(exe_op->ocp, bdd_op->ocp[i]->ocp, bdd_op->nb_args) || exe_op->ocp == bdd_op->ocp[i]->ocp)
 		{
 			exe_op->ocp_op = bdd_op->ocp[i];
 			return (1);
@@ -74,12 +89,21 @@ int			find_struct_ocp(t_exe *exe_op, t_bdd *bdd_op)
 		i++;
 	}
 	exe_op->ocp_op = NULL;
+	/*
 	if (exe_op->opcode == 3 && exe_op->ocp >= 0x71 && exe_op->ocp <= 0x7f)
 	{
 		exe_op->ocp_op = bdd_op->ocp[1];
 		exe_op->ocp = 0x70;
 		return (1);
 	}
+	if (exe_op->opcode == 3 && exe_op->ocp >= 0x51 && exe_op->ocp <= 0x5f)
+	{
+		exe_op->ocp_op = bdd_op->ocp[0];
+		exe_op->ocp = 0x50;
+		return (1);
+	}
+	*/
+
 //	ft_putendl("no STRUCT OCP FOUND");
 	return (0);
 }
