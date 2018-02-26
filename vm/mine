@@ -17367,23 +17367,10 @@ It is now cycle 8411
 It is now cycle 8412
 It is now cycle 8413
 It is now cycle 8414
-It is now cycle 8415
-P   10 | sti r15 0 -182
-       | -> store to 0 + -182 = -182 (with pc and mod 8)
-ADV 6 (0x00be -> 0x00c4) 0b 64 0f 00 00 0e 
-P    9 | sti r15 0 -194
-       | -> store to 0 + -194 = -194 (with pc and mod -4)
-ADV 6 (0x00be -> 0x00c4) 0b 64 0f 00 00 0e 
-P    7 | sti r15 0 -190
-       | -> store to 0 + -190 = -190 (with pc and mod 0)
-ADV 6 (0x00be -> 0x00c4) 0b 64 0f 00 00 0e 
-P    2 | sti r15 0 -186
-       | -> store to 0 + -186 = -186 (with pc and mod 4)
-ADV 6 (0x00be -> 0x00c4) 0b 64 0f 00 00 0e 
-0x0000 : 0f 00 00 0e 00 00 0e 09 ff 38 01 ff 00 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff ff 0b 
+0x0000 : 0f 00 00 0e 09 ff 38 01 ff 06 00 00 00 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff ff 0b 
 0x0040 : 64 0f 00 00 0e 09 ff 38 01 ff 0e 09 ff 38 0b 64 0f 00 00 0e ff ff ff ff 68 01 ff b6 00 01 0b 68 01 ff af 00 0f 0b 68 01 ff a8 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff ff 0b 64 0f 
 0x0080 : 00 00 0e 09 ff 38 01 ff 02 90 00 0e 00 00 0c 02 90 00 00 00 01 0b 02 90 00 00 00 06 0a 01 00 00 00 2a 0b 68 04 ff 65 00 01 ff ff 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff ff 0b 64 
-0x00c0 : 0f 00 00 0e 09 ff 38 01 ff 01 00 00 ff 0b 64 0f 00 08 ff 3f 0f 02 90 ff ff ff 46 0e 02 90 00 00 00 00 02 09 ff 24 01 00 00 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff ff 0b 64 0f 00 
+0x00c0 : 0f 00 00 0e 09 ff 38 01 ff 01 00 00 00 2a 0a a4 00 08 ff 3f 0f 02 90 ff ff ff 46 0e 02 90 00 00 00 00 02 09 ff 24 01 00 00 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff ff 0b 64 0f 00 
 0x0100 : 00 0e 09 ff 38 01 ff 02 09 fe ff 01 00 00 00 2a 0a a4 00 0c fe fd 0f 02 90 ff ff ff 4a 0e 02 90 00 00 00 00 02 09 fe 01 ff ff ff ff 00 00 00 00 00 0e 09 ff 38 01 ff ff ff ff 0b 64 0f 00 00 0e 
 0x0140 : 09 ff 38 01 ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 ff ff 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff ff 0b 64 0f 00 00 
 0x0180 : 0e 09 ff 38 01 ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff ff 0b 64 0f 00 00 0e 09 
@@ -17443,4 +17430,4 @@ ADV 6 (0x00be -> 0x00c4) 0b 64 0f 00 00 0e
 0x0f00 : ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 ff ff 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 
 0x0f40 : ff 0b 64 0f 00 00 0e 09 ff 38 01 ff 00 00 00 00 00 00 00 00 ff 0b 64 0f 00 00 0e 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 ff ff 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff 
 0x0f80 : ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff ff 
-0x0fc0 : 0b 64 0f 00 00 0e 09 ff 38 01 ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 ff ff 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff ff ff 
+0x0fc0 : 0b 64 0f 00 00 0e 09 ff 38 01 ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 ff ff 01 ff ff ff ff 0b 64 0f 00 00 0e 09 ff 38 01 ff 0b 64 
