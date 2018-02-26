@@ -40,6 +40,11 @@ int		deal_exe(t_arena *arena)
 //	ft_printf("\nSGF DBG DEALEXE START\n");
 	while (i < arena->list_proc->nb_proc)
 	{
+		// if (elem->process_num == 20) {
+		// 	print_one_process(elem);
+		// 	if (elem->exe_op)
+		// 		print_exe(elem->exe_op);
+		// }
 //	ft_printf("\nSGF INSIDE WHILE i: %d | arena->list_proc->nb_proc: %d\n", i, arena->list_proc->nb_proc);
 		/*
 		if (arena->total_cycle > 222)
@@ -64,8 +69,8 @@ int		deal_exe(t_arena *arena)
 			else
 			{
 //				ft_printf("\nSGF DBG DEAL_EXEINSIDE else is_valid_op\n");
-				if (elem->exe_op && elem->exe_op->bdd_op->opcode == 15)
-					ft_printf("to_wait = %d\n", elem->exe_op->to_wait);
+				// if (elem->exe_op && elem->exe_op->bdd_op->opcode == 15)
+				// 	ft_printf("to_wait = %d\n", elem->exe_op->to_wait);
 				inc_pc(elem, 1);
 //			ft_printf("ELSE Cycle %d -- INCREASE Process->PC = %d\n", arena->current_cycle, elem->pc);
 			}
@@ -75,6 +80,7 @@ int		deal_exe(t_arena *arena)
 //			ft_printf("\nDEAL_EXE L73\n");
 			if (elem->exe_op->to_wait == 0)
 			{
+				fill_new_exe(arena, elem);
 				if (elem->exe_op->ocp_op != NULL)
 				{
 					if (elem->exe_op->ocp_op->fct != NULL)
@@ -103,6 +109,7 @@ int		deal_exe(t_arena *arena)
 				{
 					failed_adv = count_failed_adv(arena, elem->exe_op);
 //					failed_adv = get_failed_adv_size(elem->exe_op);
+//					ft_printf("\nGo To Failed -> %d\n", failed_adv);
 					print_failed_exe(arena, elem->exe_op, failed_adv);
 					inc_pc(elem, failed_adv);
 				}

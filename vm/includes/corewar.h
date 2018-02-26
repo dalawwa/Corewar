@@ -240,6 +240,7 @@ void			print_failed_exe(t_arena *arena, t_exe *exe, int size);
 /* Initialized Process */
 int		create_new_process(t_arena *arena, t_play *player, t_proc *parent);
 int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent);
+int		fill_new_exe(t_arena *arena, t_proc *process);
 
 /* OP & Outils pour les OP */
 //unsigned char	*find_reg_ptr(int arg_value, t_exe *exe);
