@@ -87,7 +87,8 @@ int		op_sti(t_arena *arena, t_exe *exe)
 					dest = mod % IDX_MOD + exe->process->pc;
 					ft_printf("(with pc and mod %hd)\n", dest);
 //					ft_printf("LALA(with pc and mod %hd)\n", dest);
-					if (dest < 0)
+
+					if (dest < 0) {
 					arena->mem[get_adv(dest)] = exe->process->reg[exe->arg1->d_value][0];
 					arena->mem[get_adv(dest + 1)] = exe->process->reg[exe->arg1->d_value][1];
 					arena->mem[get_adv(dest + 2)] = exe->process->reg[exe->arg1->d_value][2];
@@ -99,12 +100,10 @@ int		op_sti(t_arena *arena, t_exe *exe)
 				{
 					if ((short)exe->arg3->d_data < 0 && (short)exe->arg2->d_data >= 0)
 					{
-						// ft_printf("\nCAS A\n");
 						mod = dest % IDX_MOD + exe->process->pc;
 					}
 					else if ((short)exe->arg3->d_data < 0 && (short)exe->arg2->d_data < 0)
 					{
-						// ft_printf("\nCAS B\n");
 						mod = dest % IDX_MOD + exe->process->pc - IDX_MOD;
 					}
 					else
@@ -122,7 +121,7 @@ int		op_sti(t_arena *arena, t_exe *exe)
 			if (exe->arg1->type == 'r')
 			{
 //				ft_printf("\nCAS 1\n");
-				mod = exe->process->pc + (exe->arg2->d_data + exe->arg3->d_data) % IDX_MOD;
+				mod = exe->process->pc + ((short)exe->arg2->d_data + (short)exe->arg3->d_data) % IDX_MOD;
 			}
 			else if ((short)exe->arg3->d_data < 0)
 			{
@@ -142,6 +141,7 @@ int		op_sti(t_arena *arena, t_exe *exe)
 	// if (!mod)
 	// 	mod = (dest % MEM_SIZE % IDX_MOD + exe->process->pc);
 	// ft_printf("\nget_adv(mod++): %d\n", get_adv(mod));
+
 	arena->mem[get_adv(mod)] = exe->process->reg[exe->arg1->d_value][0];
 //	ft_printf("\nget_adv(mod++): %d\n", get_adv(mod + 1));
 	arena->mem[get_adv(mod + 1)] = exe->process->reg[exe->arg1->d_value][1];
