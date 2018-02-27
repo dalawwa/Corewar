@@ -161,6 +161,8 @@ int		start_match(t_arena *arena)
 		arena->current_cycle++;
 		if (arena->opts->has_v == 1 && arena->opts->is_v2)
 			ft_printf("It is now cycle %d\n", arena->total_cycle);
+		if (deal_exe(arena) == 0)
+			return (-1);
 		if (arena->current_cycle == arena->ctd)
 		{
 			arena->current_nb_check++;
@@ -177,8 +179,6 @@ int		start_match(t_arena *arena)
 			put_all_processes_live_zero(arena->list_proc);
 			arena->current_cycle = 0;
 		}
-		if (deal_exe(arena) == 0)
-			return (-1);
 		if (arena->opts->has_d == 1 && arena->total_cycle == arena->opts->d)
 		{
 			print_mem(arena);
