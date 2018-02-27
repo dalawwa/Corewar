@@ -14,12 +14,13 @@ int		kill_processes_dead(t_arena *arena, t_proc_base *list)
 		if (elem->nb_live == 0)
 		{
 //			print_one_process(elem);
-//			if (elem->process_num == 21)
-//				ft_printf("Creation cycle = %d\n Is_proc = %d\n", elem->creation_cycle, elem->is_process_launched);
+			// if (elem->process_num == 22 || elem->process_num == 21){
+			// 	ft_printf("Last Parent Live = %d\n", elem->parent_last_live);
+			// }
 			if (arena->opts->has_v == 1 && arena->opts->is_v8)
 			{
-				if (elem->is_process_launched != 0)
-					ft_printf("Process %d hasn't lived for %d cycles (CTD %d)\n", elem->process_num, arena->total_cycle - elem->creation_cycle + elem->is_process_launched, arena->ctd);
+				if (elem->is_process_launched == 0)
+					ft_printf("Process %d hasn't lived for %d cycles (CTD %d)\n", elem->process_num, arena->total_cycle - elem->parent_last_live, arena->ctd);
 				else
 					ft_printf("Process %d hasn't lived for %d cycles (CTD %d)\n", elem->process_num, arena->total_cycle - elem->last_cycle_alive, arena->ctd);
 			}
@@ -89,8 +90,8 @@ int		deal_exe(t_arena *arena)
 			if (elem->exe_op->to_wait == 0)
 			{
 				fill_new_exe(arena, elem);
-				if (elem->is_process_launched != 0)
-					elem->is_process_launched = 0;
+				if (elem->is_process_launched == 0)
+					elem->is_process_launched = 1;
 				if (elem->exe_op->ocp_op != NULL)
 				{
 					if (elem->exe_op->ocp_op->fct != NULL)
