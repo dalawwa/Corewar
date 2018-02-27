@@ -182,8 +182,10 @@ int		start_match(t_arena *arena)
 				break ;
 			if (arena->list_proc->nb_live_total >= NBR_LIVE || arena->current_nb_check >= MAX_CHECKS)
 			{
+//				ft_printf("arena->list_proc->nb_live_total : %d >= NBR_LIVE : %d ||\narena->current_nb_check : %d >= MAX_CHECKS : %d\n",arena->list_proc->nb_live_total, NBR_LIVE, arena->current_nb_check, MAX_CHECKS);
 				arena->current_nb_check = 0;
 				arena->ctd -= CYCLE_DELTA;
+				arena->list_proc->nb_live_total = 0;
 				if (arena->opts->has_v == 1 && arena->opts->is_v2)
 					ft_printf("Cycle to die is now %d\n", arena->ctd);
 			}
