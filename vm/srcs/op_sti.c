@@ -95,6 +95,7 @@ int		op_sti(t_arena *arena, t_exe *exe)
 					arena->mem[get_adv(dest + 3)] = exe->process->reg[exe->arg1->d_value][3];
 					print_exe_opts(arena, exe);
 					return (1);
+					}
 				}
 				else
 				{
@@ -152,4 +153,3 @@ int		op_sti(t_arena *arena, t_exe *exe)
 	print_exe_opts(arena, exe);
 	return (1);
 }
-/* attention si result + 3 > mem_size */
