@@ -175,7 +175,7 @@ int		start_match(t_arena *arena)
 			ft_printf("It is now cycle %d\n", arena->total_cycle);
 		if (deal_exe(arena) == 0)
 			return (-1);
-		if (arena->current_cycle == arena->ctd)
+		if (arena->current_cycle == arena->ctd || arena->ctd < 0)
 		{
 //			ft_printf("arena->ctd : %d - arena->current_Cycle : %d\n",arena->ctd, arena->current_cycle);
 			arena->current_nb_check++;
