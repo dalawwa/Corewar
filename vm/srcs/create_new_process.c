@@ -126,8 +126,8 @@ int			create_new_process(t_arena *arena, t_play *player, t_proc *parent)
 	arena->list_proc->nb_proc++;
 	arena->list_proc->total_proc++;
 	process->process_num = arena->list_proc->total_proc;
-	if (parent)
-		ft_printf("Process %d created by Process %d\n", process->process_num, parent->process_num);
+//	if (parent)
+//		ft_printf("Process %d created by Process %d\n", process->process_num, parent->process_num);
 	process->creation_cycle = arena->total_cycle;
 	//    if (process->process_num == 619)
 	//    	ft_printf("Cycle : %d Process 619 created : pc = %d\n", arena->total_cycle, process->pc);
