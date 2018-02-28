@@ -51,7 +51,7 @@ void		copy_parent_data(t_proc *parent, t_proc *son)
 	{
 //		ft_printf("d_value %d\n", parent->exe_op->arg1->d_value);
 		if (parent->exe_op->arg1->d_value > 0x7fff)
-			son->pc = (short)((parent->exe_op->arg1->d_value + parent->pc) - 0x10000) % IDX_MOD;
+			son->pc = (short)((parent->exe_op->arg1->d_value + parent->pc) - 0x10000);
 		else
 			son->pc = (short)(parent->exe_op->arg1->d_value + parent->pc);
 		son->is_process_launched = 0;
@@ -59,7 +59,8 @@ void		copy_parent_data(t_proc *parent, t_proc *son)
 //		else
 //			inc_pc(son, parent->exe_op->arg1->d_value);
 	}
-	else if (ft_strcmp(parent->exe_op->bdd_op->name, "lfork") == 0) {
+	else if (ft_strcmp(parent->exe_op->bdd_op->name, "lfork") == 0)
+	{
 		inc_pc(son, parent->exe_op->arg1->d_value);
 		son->is_process_launched = 0;
 	}
@@ -121,12 +122,9 @@ int			create_new_process(t_arena *arena, t_play *player, t_proc *parent)
 	process->player = player;
 	process->exe_op = NULL;
 	process->op_success = 0;
-	// process->creation_cycle = arena->total_cycle;
 	link_it(arena->list_proc, process);
 	arena->list_proc->nb_proc++;
 	arena->list_proc->total_proc++;
 	process->process_num = arena->list_proc->total_proc;
-	//  if (process->process_num == 4)
-	//  	ft_printf("Process 4 created : pc = %d\n", process->pc);
 	return (1);
 }
