@@ -69,7 +69,7 @@ TESTSUITE_PATH=**/tests/test_suiteTESTSUITE_PATH_WORKING=../tests/test_suite/wor
 echo "$YEL===== launching diff on our testsuite$DEF"
 clear
 testfile(){
-	name=$(find ../tests/**/$1);
+	name=$(find ../tests/**/**/$1);
 	echo "$SOU$CYA$name$DEF"
 	../tests/asm $name;
 	TEST_STR="\$TEST$j"
