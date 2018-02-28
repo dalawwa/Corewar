@@ -10,7 +10,7 @@ void		print_failed_exe(t_arena *arena, t_exe *exe, int size)
 //		return ;
 	if (arena->opts->has_v && arena->opts->is_v16)
 	{
-//		ft_printf("Process num %d\n", exe->process->process_num);
+//		ft_printf("Process num %d - PC = %d - ADv = %d\n", exe->process->process_num, exe->process->pc, size);
 		ft_printf("ADV %d (%#.4x -> %#.4x) ", size, exe->process->pc, find_pc_adv(exe->process->pc, size, 0));
 		while (i < size)
 		{
