@@ -11,7 +11,7 @@ int		kill_processes_dead(t_arena *arena, t_proc_base *list)
 	i = 0;
 	while (i < list->nb_proc)
 	{
-		if (elem->nb_live == 0)
+		if ((elem->is_process_launched ==  1 && elem->nb_live == 0) || (elem->is_process_launched == 0 && arena->total_cycle - elem->parent_last_live >= arena->ctd))
 		{
 //			print_one_process(elem);
 			// if (elem->process_num == 22 || elem->process_num == 21){
