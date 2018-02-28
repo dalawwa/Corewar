@@ -11,13 +11,18 @@ int		kill_processes_dead(t_arena *arena, t_proc_base *list)
 	i = 0;
 	while (i < list->nb_proc)
 	{
-		if ((elem->is_process_launched ==  1 && elem->nb_live == 0) || (elem->is_process_launched == 0 && arena->total_cycle - elem->parent_last_live >= arena->ctd))
+		if ((elem->is_process_launched == 1 && elem->nb_live == 0 && arena->total_cycle - elem->creation_cycle >= arena->ctd) || (elem->is_process_launched == 0 && arena->total_cycle - elem->parent_last_live >= arena->ctd))
 		{
 //			print_one_process(elem);
+			/*
 			 if (elem->process_num == 22 || elem->process_num == 21)
 			 {
 			 	ft_printf("Last Parent Live = %d\n", elem->parent_last_live);
 			 }
+			// if (elem->process_num == 619){
+			//  	ft_printf("creation_cycle = %d - is proc = %d - Last Parent Live = %d - elem->last_cycle_alive = %d\n",elem->creation_cycle, elem->is_process_launched, elem->parent_last_live, elem->last_cycle_alive);
+			//  }
+			*/
 			if (arena->opts->has_v == 1 && arena->opts->is_v8)
 			{
 				if (elem->is_process_launched == 0)
@@ -32,6 +37,8 @@ int		kill_processes_dead(t_arena *arena, t_proc_base *list)
 		}
 		else
 		{
+			// if (elem->is_process_launched ==  1 && elem->nb_live == 0 && elem->parent_last_live != 0)
+			// 	elem->parent_last_live = 0;
 			elem = elem->prev;
 			i++;
 		}
