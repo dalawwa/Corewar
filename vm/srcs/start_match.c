@@ -24,7 +24,7 @@ int		kill_processes_dead(t_arena *arena, t_proc_base *list)
 				else
 					ft_printf("Process %d hasn't lived for %d cycles (CTD %d)\n", elem->process_num, arena->total_cycle - elem->last_cycle_alive, arena->ctd);
 			}
-			list->nb_live_total -= elem->nb_live; //ajout recent --> a Check (28/fev)
+
 			kill_process(elem, list);
 			elem = list->last;
 			i = 0;
@@ -187,11 +187,11 @@ int		start_match(t_arena *arena)
 //				ft_printf("arena->list_proc->nb_live_total : %d >= NBR_LIVE : %d ||\narena->current_nb_check : %d >= MAX_CHECKS : %d\n",arena->list_proc->nb_live_total, NBR_LIVE, arena->current_nb_check, MAX_CHECKS);
 				arena->current_nb_check = 0;
 				arena->ctd -= CYCLE_DELTA;
-				arena->list_proc->nb_live_total = 0;
 				if (arena->opts->has_v == 1 && arena->opts->is_v2)
 					ft_printf("Cycle to die is now %d\n", arena->ctd);
 			}
 			put_all_processes_live_zero(arena->list_proc);
+			arena->list_proc->nb_live_total = 0;
 			arena->current_cycle = 0;
 		}
 		if (arena->opts->has_d == 1 && arena->total_cycle == arena->opts->d)
