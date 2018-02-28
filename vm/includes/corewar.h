@@ -115,7 +115,7 @@ typedef struct	s_proc
 	int				nb_live; // nb live init 0
 	int				last_cycle_alive;
 	int				parent_last_live;
-	// int				creation_cycle; // cycle auquel le process est cree
+	int				creation_cycle; // cycle auquel le process est cree
 	int				is_process_launched; // cas fork ou lfork --> to_wait avant de start
 	struct s_proc	*parent;
 	struct s_proc	*next;
