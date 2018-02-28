@@ -31,10 +31,10 @@ void print_tab_cors(int *tab)
 
 void		print_one_process(t_proc *process)
 {
-	if (process->parent)
-	{
-		ft_printf("\nProcess %d is the parent of Process: %d\n", process->parent->process_num, process->process_num);
-	}
+	// if (process->parent != NULL)
+	// {
+	// 	ft_printf("\nProcess %d is the parent of Process: %d\n", process->parent->process_num, process->process_num);
+	// }
 	ft_putendl("__________print_ONE_PROCESS");
 	ft_printf("Process num %d :\nPlayer : %s\nCarry = %d - pc = %d\n", process->process_num, process->player->name, process->carry, process->pc);
 	print_regs(process);
