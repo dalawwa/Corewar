@@ -28,6 +28,8 @@ void		initialized_from_scratch(t_play *player, t_proc *process)
 	process->carry = 0;
 	process->nb_live = 0;
 	process->last_cycle_alive = 0;
+	process->is_process_launched = 1;
+	process->parent_last_live = 0;
 }
 
 void		copy_parent_data(t_proc *parent, t_proc *son)
@@ -51,19 +53,23 @@ void		copy_parent_data(t_proc *parent, t_proc *son)
 		if (parent->exe_op->arg1->d_value > 0x7fff)
 			son->pc = (short)((parent->exe_op->arg1->d_value + parent->pc) - 0x10000) % IDX_MOD;
 		else
-			son->pc = (short)(parent->exe_op->arg1->d_value + parent->pc) % IDX_MOD;
+			son->pc = (short)(parent->exe_op->arg1->d_value + parent->pc);
+		son->is_process_launched = 0;
 //			inc_pc(son, parent->exe_op->arg1->d_value);
 //		else
 //			inc_pc(son, parent->exe_op->arg1->d_value);
 	}
-	else if (ft_strcmp(parent->exe_op->bdd_op->name, "lfork") == 0)
+	else if (ft_strcmp(parent->exe_op->bdd_op->name, "lfork") == 0) {
 		inc_pc(son, parent->exe_op->arg1->d_value);
+		son->is_process_launched = 0;
+	}
 	else
 		ft_putendl("Something Wrong with creation EXE with Parent");
 	son->carry = parent->carry;
 //	ft_printf("New Process : parent pc = %d new pc = %d\n", parent->pc, son->pc);
 	son->nb_live = 0; // REALLY ??
 	son->last_cycle_alive = 0;
+	son->parent_last_live = parent->last_cycle_alive;
 }
 
 void		link_it(t_proc_base *list, t_proc *process)
@@ -115,12 +121,12 @@ int			create_new_process(t_arena *arena, t_play *player, t_proc *parent)
 	process->player = player;
 	process->exe_op = NULL;
 	process->op_success = 0;
+	// process->creation_cycle = arena->total_cycle;
 	link_it(arena->list_proc, process);
 	arena->list_proc->nb_proc++;
 	arena->list_proc->total_proc++;
 	process->process_num = arena->list_proc->total_proc;
-//	ft_printf("--------> Process %d created\n", process->process_num);
-	if (arena->list_proc->nb_proc > 30)
-		return (-1);
+	//  if (process->process_num == 4)
+	//  	ft_printf("Process 4 created : pc = %d\n", process->pc);
 	return (1);
 }
