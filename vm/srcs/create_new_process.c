@@ -126,7 +126,7 @@ int			create_new_process(t_arena *arena, t_play *player, t_proc *parent)
 	arena->list_proc->nb_proc++;
 	arena->list_proc->total_proc++;
 	process->process_num = arena->list_proc->total_proc;
-	if (arena->list_proc->nb_proc > 30)
-		return (-1);
+	// if (arena->list_proc->nb_proc > 30)
+	// 	return (-1);
 	return (1);
 }
