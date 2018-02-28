@@ -1,0 +1,64 @@
+It is now cycle 40426
+It is now cycle 40427
+It is now cycle 40428
+It is now cycle 40429
+It is now cycle 40430
+It is now cycle 40431
+It is now cycle 40432
+It is now cycle 40433
+It is now cycle 40434
+It is now cycle 40435
+It is now cycle 40436
+It is now cycle 40437
+It is now cycle 40438
+It is now cycle 40439
+It is now cycle 40440
+It is now cycle 40441
+It is now cycle 40442
+It is now cycle 40443
+It is now cycle 40444
+It is now cycle 40445
+P    2 | zjmp -5 OK
+It is now cycle 40446
+It is now cycle 40447
+It is now cycle 40448
+It is now cycle 40449
+It is now cycle 40450
+It is now cycle 40451
+It is now cycle 40452
+It is now cycle 40453
+It is now cycle 40454
+It is now cycle 40455
+P    2 | live -1
+Player 1 (turtle) is said to be alive
+ADV 5 (0x00df -> 0x00e4) 01 ff ff ff ff 
+It is now cycle 40456
+It is now cycle 40457
+It is now cycle 40458
+It is now cycle 40459
+It is now cycle 40460
+It is now cycle 40461
+It is now cycle 40462
+It is now cycle 40463
+It is now cycle 40464
+It is now cycle 40465
+It is now cycle 40466
+It is now cycle 40467
+It is now cycle 40468
+It is now cycle 40469
+It is now cycle 40470
+It is now cycle 40471
+It is now cycle 40472
+It is now cycle 40473
+It is now cycle 40474
+It is now cycle 40475
+P    2 | zjmp -5 OK
+It is now cycle 40476
+It is now cycle 40477
+It is now cycle 40478
+It is now cycle 40479
+It is now cycle 40480
+Cycle to die is now -14
+It is now cycle 40481
+Process 2 hasn't lived for 26 cycles (CTD -14)
+Contestant 1, "turtle", has won !
