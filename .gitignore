@@ -22,3 +22,5 @@ vm/my_print_result
 vm/zaz_print_result
 vm/my_res
 vm/zaz_res
+vm/my_dump_result
+vm/zaz_dump_result
