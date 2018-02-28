@@ -75,18 +75,18 @@ testfile(){
 	TEST_STR="\$TEST$j"
 	champ=$(echo "$name" | sed -e 's/.s$/.cor/g');
 	command=$(eval echo "$TEST_STR");
-	./corewar -d $3 -v $2 $champ;
 	./corewar -d $3 -v $2 $champ > my_res;
-	./corewar -d $3 -v $2 $champ | tail -n 64 > my_dump_result;
+	cat my_res
+	cat my_res | tail -n 64 > my_dump_result;
 	orig=$(ls /dev > diff1)
 	osascript -e 'tell application "System Events" to keystroke "d" using command down'
 	sleep 2
 	next=$(ls /dev > diff2)
 	diff_str=$(eval diff diff2 diff1 | tail -1 | cut -c 3-)
 	echo "=======ZAZ======" > /dev/$diff_str
-	../tests/corewar -d $3 -v $2 $champ > /dev/$diff_str;
-	../tests/corewar -d $3 -v $2 $champ > zaz_res;
-	../tests/corewar -d $3 -v $2 $champ | tail -n 64 > zaz_dump_result;
+	../tests/corewar -d $3 -v $2 $champ > zaz_res
+	cat zaz_res > /dev/$diff_str;
+	cat zaz_res  | tail -n 64 > zaz_dump_result;
 	res=$(diff -s zaz_dump_result my_dump_result);
 	res1=$(diff -s zaz_res my_res);
 	if [[ $res1 == "Files zaz_res and my_res are identical" ]] ; then
