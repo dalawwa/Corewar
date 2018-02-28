@@ -11,15 +11,18 @@ int		kill_processes_dead(t_arena *arena, t_proc_base *list)
 	i = 0;
 	while (i < list->nb_proc)
 	{
-		if ((elem->is_process_launched == 1 && elem->nb_live == 0 && arena->total_cycle - elem->creation_cycle >= arena->ctd) || (elem->is_process_launched == 0 && arena->total_cycle - elem->parent_last_live >= arena->ctd))
+			// if (elem->process_num == 1769 || elem->process_num == 1762 || elem->process_num == 1754){
+			//  	ft_printf("PROCESS %d -->  nb_live = %d - creation_cycle = %d - is proc = %d - Last Parent Live = %d - elem->last_cycle_alive = %d\n",elem->process_num, elem->nb_live, elem->creation_cycle, elem->is_process_launched, elem->parent_last_live, elem->last_cycle_alive);
+			//  }
+		if ((elem->parent == NULL && elem->nb_live == 0 && arena->total_cycle - elem->creation_cycle >= arena->ctd) || (elem->parent != NULL && (elem->is_process_launched == 0 || elem->nb_live == 0) && arena->total_cycle - elem->parent_last_live >= arena->ctd))
 		{
 //			print_one_process(elem);
-			// if (elem->process_num == 619){
+			// if (elem->process_num == 1769 || elem->process_num == 1762 || elem->process_num == 1754){
 			//  	ft_printf("creation_cycle = %d - is proc = %d - Last Parent Live = %d - elem->last_cycle_alive = %d\n",elem->creation_cycle, elem->is_process_launched, elem->parent_last_live, elem->last_cycle_alive);
 			//  }
 			if (arena->opts->has_v == 1 && arena->opts->is_v8)
 			{
-				if (elem->is_process_launched == 0)
+				if (elem->is_process_launched == 0 || (elem->parent != NULL && elem->last_cycle_alive == 0))
 					ft_printf("Process %d hasn't lived for %d cycles (CTD %d)\n", elem->process_num, arena->total_cycle - elem->parent_last_live, arena->ctd);
 				else
 					ft_printf("Process %d hasn't lived for %d cycles (CTD %d)\n", elem->process_num, arena->total_cycle - elem->last_cycle_alive, arena->ctd);
