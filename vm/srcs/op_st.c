@@ -5,11 +5,12 @@ void	print_st(t_arena *arena, t_exe *exe)
 {
 	if (arena->opts->is_v4)
 	{
-		ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
+//		ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
 		/*
 		ft_putchar('P');
 		put_n_char(' ', 5 - intlen((short)exe->process->process_num));
 		*/
+		print_proc_num_name(exe);
 		ft_printf("r%hd ", (short int)exe->arg1->d_value);
 		ft_printf("%hd\n", (short int)exe->arg2->d_value);
 	}
