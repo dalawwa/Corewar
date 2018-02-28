@@ -13,8 +13,18 @@ int		kill_processes_dead(t_arena *arena, t_proc_base *list)
 	{
 		if (elem->nb_live == 0)
 		{
+//			print_one_process(elem);
+			// if (elem->process_num == 22 || elem->process_num == 21){
+			// 	ft_printf("Last Parent Live = %d\n", elem->parent_last_live);
+			// }
 			if (arena->opts->has_v == 1 && arena->opts->is_v8)
-				ft_printf("Process %d hasn't lived for %d cycles (CTD %d)\n", elem->process_num, arena->total_cycle - elem->last_cycle_alive, arena->ctd);
+			{
+				if (elem->is_process_launched == 0)
+					ft_printf("Process %d hasn't lived for %d cycles (CTD %d)\n", elem->process_num, arena->total_cycle - elem->parent_last_live, arena->ctd);
+				else
+					ft_printf("Process %d hasn't lived for %d cycles (CTD %d)\n", elem->process_num, arena->total_cycle - elem->last_cycle_alive, arena->ctd);
+			}
+
 			kill_process(elem, list);
 			elem = list->last;
 			i = 0;
@@ -81,6 +91,8 @@ int		deal_exe(t_arena *arena)
 			if (elem->exe_op->to_wait == 0)
 			{
 				fill_new_exe(arena, elem);
+				if (elem->is_process_launched == 0)
+					elem->is_process_launched = 1;
 				if (elem->exe_op->ocp_op != NULL)
 				{
 					if (elem->exe_op->ocp_op->fct != NULL)
@@ -161,24 +173,27 @@ int		start_match(t_arena *arena)
 		arena->current_cycle++;
 		if (arena->opts->has_v == 1 && arena->opts->is_v2)
 			ft_printf("It is now cycle %d\n", arena->total_cycle);
-		if (arena->current_cycle == arena->ctd)
+		if (deal_exe(arena) == 0)
+			return (-1);
+		if (arena->current_cycle == arena->ctd || arena->ctd < 0)
 		{
+//			ft_printf("arena->ctd : %d - arena->current_Cycle : %d\n",arena->ctd, arena->current_cycle);
 			arena->current_nb_check++;
 			kill_processes_dead(arena, arena->list_proc);
 			if (arena->list_proc->nb_proc == 0)
 				break ;
 			if (arena->list_proc->nb_live_total >= NBR_LIVE || arena->current_nb_check >= MAX_CHECKS)
 			{
+//				ft_printf("arena->list_proc->nb_live_total : %d >= NBR_LIVE : %d ||\narena->current_nb_check : %d >= MAX_CHECKS : %d\n",arena->list_proc->nb_live_total, NBR_LIVE, arena->current_nb_check, MAX_CHECKS);
 				arena->current_nb_check = 0;
 				arena->ctd -= CYCLE_DELTA;
 				if (arena->opts->has_v == 1 && arena->opts->is_v2)
 					ft_printf("Cycle to die is now %d\n", arena->ctd);
 			}
 			put_all_processes_live_zero(arena->list_proc);
+			arena->list_proc->nb_live_total = 0;
 			arena->current_cycle = 0;
 		}
-		if (deal_exe(arena) == 0)
-			return (-1);
 		if (arena->opts->has_d == 1 && arena->total_cycle == arena->opts->d)
 		{
 			print_mem(arena);
