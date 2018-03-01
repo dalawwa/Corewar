@@ -139,10 +139,20 @@ int		op_sti(t_arena *arena, t_exe *exe)
 //			ft_printf("HUIHIH(with pc and mod %hd)\n", mod);
 		}
 	}
-	// if (!mod)
-	// 	mod = (dest % MEM_SIZE % IDX_MOD + exe->process->pc);
-	// ft_printf("\nget_adv(mod++): %d\n", get_adv(mod));
-
+	result = exe->arg2->d_data + exe->arg3->d_data;
+	if (exe->arg2->type == 'i' && exe->arg3->type == 'r')
+		mod = pc + (result % IDX_MOD);
+	else
+		mod = (short)(pc + ((short)result % IDX_MOD));
+	if (mod < 0)
+		where = MEM_SIZE + mod;
+	else
+		where = mod;
+	arena->mem[where] = exe->process->reg[exe->arg1->d_value][0];
+	arena->mem[get_adv(where + 1)] = exe->process->reg[exe->arg1->d_value][1];
+	arena->mem[get_adv(where + 2)] = exe->process->reg[exe->arg1->d_value][2];
+	arena->mem[get_adv(where + 3)] = exe->process->reg[exe->arg1->d_value][3];
+/*
 	arena->mem[get_adv(mod)] = exe->process->reg[exe->arg1->d_value][0];
 //	ft_printf("\nget_adv(mod++): %d\n", get_adv(mod + 1));
 	arena->mem[get_adv(mod + 1)] = exe->process->reg[exe->arg1->d_value][1];
@@ -150,6 +160,7 @@ int		op_sti(t_arena *arena, t_exe *exe)
 	arena->mem[get_adv(mod + 2)] = exe->process->reg[exe->arg1->d_value][2];
 //	ft_printf("\nget_adv(mod++): %d\n", get_adv(mod + 3));
 	arena->mem[get_adv(mod + 3)] = exe->process->reg[exe->arg1->d_value][3];
+	*/
 	print_exe_opts(arena, exe);
 	return (1);
 }
