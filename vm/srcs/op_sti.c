@@ -10,7 +10,7 @@ int		args_signs(int arg1, int arg2)
 		return (3);
 	return (4);
 }
-
+/*
 int		op_sti_2(t_arena *arena, t_exe *exe)
 {
 	int			pc_adv;
@@ -22,7 +22,7 @@ int		op_sti_2(t_arena *arena, t_exe *exe)
 	dest = (exe->arg2->d_data + (short)exe->arg3->d_value);
 	pc_adv = 0;
 	mod = 0;
-    ft_printf("---------->     OLD STI\n");
+//    ft_printf("---------->     OLD STI\n");
 //	ft_printf("\n\nARENA->MEM[(PC)]: %d | (PC): %d | OCP: %d | arg1->d_value: %d | arg1->d_data: %d\n", arena->mem[(exe->process->pc)], exe->process->pc, exe->ocp_op->ocp, exe->arg1->d_value, exe->arg1->d_data);
 	// if (arena->mem[exe->process->pc + 1] == 0)
 	// {
@@ -128,7 +128,7 @@ int		op_sti_2(t_arena *arena, t_exe *exe)
 			else if ((short)exe->arg3->d_data < 0)
 			{
 //				ft_printf("\nCAS 2\n");
-				mod = dest % IDX_MOD + exe->process->pc; /*Pour faire fonctionner sti_ind_full */
+				mod = dest % IDX_MOD + exe->process->pc;
 			}
 			else
 			{
@@ -153,7 +153,6 @@ int		op_sti_2(t_arena *arena, t_exe *exe)
 	arena->mem[get_adv(where + 1)] = exe->process->reg[exe->arg1->d_value][1];
 	arena->mem[get_adv(where + 2)] = exe->process->reg[exe->arg1->d_value][2];
 	arena->mem[get_adv(where + 3)] = exe->process->reg[exe->arg1->d_value][3];
-/*
 	arena->mem[get_adv(mod)] = exe->process->reg[exe->arg1->d_value][0];
 //	ft_printf("\nget_adv(mod++): %d\n", get_adv(mod + 1));
 	arena->mem[get_adv(mod + 1)] = exe->process->reg[exe->arg1->d_value][1];
@@ -161,11 +160,10 @@ int		op_sti_2(t_arena *arena, t_exe *exe)
 	arena->mem[get_adv(mod + 2)] = exe->process->reg[exe->arg1->d_value][2];
 //	ft_printf("\nget_adv(mod++): %d\n", get_adv(mod + 3));
 	arena->mem[get_adv(mod + 3)] = exe->process->reg[exe->arg1->d_value][3];
-	*/
 	print_exe_opts(arena, exe);
 	return (1);
 }
-
+*/
 void    print_sti(t_exe *exe, int mod)
 {
     ft_putchar('P');
