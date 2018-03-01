@@ -118,6 +118,11 @@ int		create_bdd(t_arena *arena)
 	set_meaning(arena->bdd);
 	if (set_bdd_ocp(arena) == 0)
 		return (0);
+<<<<<<< HEAD
+	if (arena->opts->has_b == 1)
+		print_bdd(arena);
+=======
 //	print_bdd(arena);
+>>>>>>> c5879539f445180edaa1f1d041e44ce267846e53
 	return (1);
 }
