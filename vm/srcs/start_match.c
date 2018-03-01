@@ -124,6 +124,8 @@ int		deal_exe(t_arena *arena)
 				}
 				else
 				{
+					if ((elem->exe_op->opcode >= 4 && elem->exe_op->opcode <= 6) || elem->exe_op->opcode == 14 || elem->exe_op->opcode == 2 || elem->exe_op->opcode == 13)
+						elem->carry = 0;
 					failed_adv = count_failed_adv(arena, elem->exe_op);
 //					failed_adv = get_failed_adv_size(elem->exe_op);
 //					ft_printf("\nGo To Failed -> %d\n", failed_adv);

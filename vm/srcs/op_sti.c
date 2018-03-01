@@ -247,7 +247,11 @@ int		op_sti(t_arena *arena, t_exe *exe)
     // NEW HYPOTHESE
     result = exe->arg2->d_data + exe->arg3->d_data;
     if (exe->arg2->type == 'i')
-            mod = pc + (result % IDX_MOD);
+	{
+		if (exe->arg3->type == 'd')
+			result = exe->arg2->d_data + (short)exe->arg3->d_data;
+        mod = pc + (result % IDX_MOD);
+	}
     else
         mod = (short)(pc + ((short)result % IDX_MOD));
 
