@@ -11,7 +11,11 @@ int		args_signs(int arg1, int arg2)
 	return (4);
 }
 
+<<<<<<< HEAD
 int		op_sti_2(t_arena *arena, t_exe *exe)
+=======
+int		op_sti(t_arena *arena, t_exe *exe)
+>>>>>>> c5879539f445180edaa1f1d041e44ce267846e53
 {
 	int			pc_adv;
 	int			mod;
@@ -22,7 +26,10 @@ int		op_sti_2(t_arena *arena, t_exe *exe)
 	dest = (exe->arg2->d_data + (short)exe->arg3->d_value);
 	pc_adv = 0;
 	mod = 0;
+<<<<<<< HEAD
     ft_printf("---------->     OLD STI\n");
+=======
+>>>>>>> c5879539f445180edaa1f1d041e44ce267846e53
 //	ft_printf("\n\nARENA->MEM[(PC)]: %d | (PC): %d | OCP: %d | arg1->d_value: %d | arg1->d_data: %d\n", arena->mem[(exe->process->pc)], exe->process->pc, exe->ocp_op->ocp, exe->arg1->d_value, exe->arg1->d_data);
 	// if (arena->mem[exe->process->pc + 1] == 0)
 	// {
@@ -87,7 +94,11 @@ int		op_sti_2(t_arena *arena, t_exe *exe)
 					mod = dest - (512 * ((dest / 512)));
 					dest = mod % IDX_MOD + exe->process->pc;
 					ft_printf("(with pc and mod %hd)\n", dest);
+<<<<<<< HEAD
 					ft_printf("LALA(with pc and mod %hd)\n", dest);
+=======
+//					ft_printf("LALA(with pc and mod %hd)\n", dest);
+>>>>>>> c5879539f445180edaa1f1d041e44ce267846e53
 
 					if (dest < 0) {
 					arena->mem[get_adv(dest)] = exe->process->reg[exe->arg1->d_value][0];
@@ -114,7 +125,11 @@ int		op_sti_2(t_arena *arena, t_exe *exe)
 						mod = ((exe->arg2->d_data + exe->arg3->d_data + exe->process->pc) % IDX_MOD );
 					}
 					ft_printf("(with pc and mod %hd)\n", mod);
+<<<<<<< HEAD
 					 ft_printf("RORO(with pc and mod %hd)\n", mod);
+=======
+					// ft_printf("RORO(with pc and mod %hd)\n", mod);
+>>>>>>> c5879539f445180edaa1f1d041e44ce267846e53
 				}
 			}
 		}
