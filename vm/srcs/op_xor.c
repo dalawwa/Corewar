@@ -16,6 +16,7 @@ int		op_xor(t_arena *arena, t_exe *exe)
 	}*/
 //	result = result % IDX_MOD;
 	s = ft_ito_hexa(result);
+	ft_printf("RESULT = %s\n", s);
 	if (s == NULL)
 		return (-1);
 	exe->process->reg[exe->arg3->d_value][0] = s[0];

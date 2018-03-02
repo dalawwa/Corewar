@@ -7,6 +7,8 @@ int		op_zjmp(t_arena *arena, t_exe *exe)
 	{
 		print_proc_num_name(exe);
 		ft_printf("%hd", (short)exe->arg1->d_value);
+		// if (exe->process->process_num == 4)
+		// 	ft_printf(" carry ");
 		if (exe->process->carry == 1)
 			ft_printf(" OK\n");
 		else
