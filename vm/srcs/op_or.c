@@ -45,6 +45,7 @@ int		op_or(t_arena *arena, t_exe *exe)
 //ft_printf("op or debug\n");
 	}
 	print_exe_opts(arena, exe);
-	is_carry_to_modify(exe);
+	exe->process->carry = result ? 0 : 1;
+//	is_carry_to_modify(exe);
 	return (1);
 }
