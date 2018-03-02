@@ -25,6 +25,7 @@ int		op_sub(t_arena *arena, t_exe *exe)
 	exe->process->reg[exe->arg3->d_value][3] = s[3];
 	free(s);
 	s = NULL;
-	is_carry_to_modify(exe);
+	exe->process->carry = result ? 0 : 1;
+//	is_carry_to_modify(exe);
 	return (1);
 }
