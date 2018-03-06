@@ -7,6 +7,10 @@ int		op_xor(t_arena *arena, t_exe *exe)
 
 //	print_exe_opts(arena, exe);
 	result = (uintmax_t)(exe->arg1->d_data ^ exe->arg2->d_data);
+// ft_printf("Arg 1 : type = %c   -   d_data = %d   -   (short)d_data = %hd\n", exe->arg1->type, exe->arg1->d_data, (short)exe->arg2->d_data);
+// ft_printf("Arg 2 : type = %c   -   d_data = %d   -   (short)d_data = %hd\n", exe->arg2->type, exe->arg2->d_data, (short)exe->arg2->d_data);
+// ft_printf("Arg 3 : type = %c   -   d_data = %d   -   (short)d_data = %hd\n\n", exe->arg3->type, exe->arg3->d_data, (short)exe->arg3->d_data);
+
 //	ft_printf("op_xor : Result = %u\n", result);
 /*	if (result > 0xffffffff)
 	{
@@ -28,16 +32,8 @@ int		op_xor(t_arena *arena, t_exe *exe)
 	if (arena->opts->is_v4)
 	{
 		print_proc_num_name(exe);
-		if (exe->arg1->type == 'i')
-			ft_printf("%d ", exe->arg1->d_data);
-		else
-			ft_printf("%hd ", (short)exe->arg1->d_data);
-		if (exe->arg2->type == 'i')
-			ft_printf("%d ", exe->arg2->d_data);
-		else if (exe->arg2->type == 'r')
-			ft_printf("%d ", exe->arg2->d_data);
-		else
-			ft_printf("%hd ", (short)exe->arg2->d_data);
+		ft_printf("%d ", exe->arg1->d_data);
+		ft_printf("%d ", exe->arg2->d_data);
 		ft_printf("r%d", (short)(exe->arg3->d_value));
 		ft_putchar('\n');
 	}

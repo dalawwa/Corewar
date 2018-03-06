@@ -29,17 +29,9 @@ int		op_or(t_arena *arena, t_exe *exe)
 	s = NULL;
 	if (arena->opts->is_v4)
 	{
-		ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
-		if (exe->arg1->type == 'i')
-			ft_printf("%d ", exe->arg1->d_data);
-		else
-			ft_printf("%hd ", (short)exe->arg1->d_data);
-		if (exe->arg2->type == 'i')
-			ft_printf("%d ", exe->arg2->d_data);
-		else if (exe->arg2->type == 'r')
-			ft_printf("%d ", exe->arg2->d_data);
-		else
-			ft_printf("%hd ", (short)exe->arg2->d_data);
+		print_proc_num_name(exe);
+		ft_printf("%d ", exe->arg1->d_data);
+		ft_printf("%d ", exe->arg2->d_data);
 		ft_printf("r%d", (short)(exe->arg3->d_value));
 		ft_putchar('\n');
 //ft_printf("op or debug\n");
