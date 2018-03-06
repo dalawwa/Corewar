@@ -357,6 +357,9 @@ SRCS_NAME = main.c \
 			is_valid_op.c \
 			int_len.c \
 			ft_unsi_strcmp.c \
+			copy_parent_data.c \
+			set_arg_values.c \
+			fill_player.c \
 			print_sti.c
 
 CW_SRCS = $(addprefix $(PATH_SRCS), $(SRCS_NAME))

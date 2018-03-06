@@ -10,6 +10,5 @@ int		create_mem(t_arena *arena)
 		arena->mem[i] = 0;
 		i++;
 	}
-//	print_mem(arena);
 	return (1);
 }

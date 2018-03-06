@@ -1,6 +1,6 @@
 #include "corewar.h"
 
-void		initialized_from_scratch(t_play *player, t_proc *process)
+void		initialized_reg(t_play *player, t_proc *process)
 {
 	int	i;
 
@@ -23,54 +23,17 @@ void		initialized_from_scratch(t_play *player, t_proc *process)
 		process->reg[i][3] = 0;
 		i++;
 	}
+}
+
+void		initialized_from_scratch(t_play *player, t_proc *process)
+{
+	initialized_reg(player, process);
 	process->parent = NULL;
 	process->pc = player->idx_start;
 	process->carry = 0;
 	process->nb_live = 0;
 	process->last_cycle_alive = 0;
 	process->is_process_launched = 1;
-	process->parent_last_live = 0;
-}
-
-void		copy_parent_data(t_proc *parent, t_proc *son)
-{
-	int	i;
-
-	i = 0;
-	while (i <= REG_NUMBER)
-	{
-		son->reg[i][0] = parent->reg[i][0];
-		son->reg[i][1] = parent->reg[i][1];
-		son->reg[i][2] = parent->reg[i][2];
-		son->reg[i][3] = parent->reg[i][3];
-		i++;
-	}
-	son->pc = parent->pc;
-	son->parent = parent;
-	if (ft_strcmp(parent->exe_op->bdd_op->name, "fork") == 0)
-	{
-//		ft_printf("d_value %d\n", parent->exe_op->arg1->d_value);
-		if (parent->exe_op->arg1->d_value < 0x8000)
-			son->pc = (short)(parent->exe_op->arg1->d_data % IDX_MOD + parent->pc);
-		else
-			son->pc = (short)(parent->exe_op->arg1->d_value + parent->pc);
-		son->is_process_launched = 0;
-//			inc_pc(son, parent->exe_op->arg1->d_value);
-//		else
-//			inc_pc(son, parent->exe_op->arg1->d_value);
-	}
-	else if (ft_strcmp(parent->exe_op->bdd_op->name, "lfork") == 0)
-	{
-		inc_pc(son, parent->exe_op->arg1->d_value);
-		son->is_process_launched = 0;
-	}
-	else
-		ft_putendl("Something Wrong with creation EXE with Parent");
-	son->carry = parent->carry;
-//	ft_printf("New Process : parent pc = %d new pc = %d\n", parent->pc, son->pc);
-	son->nb_live = 0; // REALLY ??
-	son->last_cycle_alive = 0;
-	son->parent_last_live = parent->last_cycle_alive;
 }
 
 void		link_it(t_proc_base *list, t_proc *process)
@@ -113,6 +76,7 @@ int			create_new_process(t_arena *arena, t_play *player, t_proc *parent)
 		return (perror_int("Error ", 0));
 	if (arena->list_proc == NULL && initialized_proc_base(arena) == 0)
 		return (0);
+	process->creation_cycle = arena->total_cycle;
 	if (parent != NULL)
 		copy_parent_data(parent, process);
 	else
@@ -126,10 +90,5 @@ int			create_new_process(t_arena *arena, t_play *player, t_proc *parent)
 	arena->list_proc->nb_proc++;
 	arena->list_proc->total_proc++;
 	process->process_num = arena->list_proc->total_proc;
-//	if (parent)
-//		ft_printf("Process %d created by Process %d\n", process->process_num, parent->process_num);
-	process->creation_cycle = arena->total_cycle;
-	//    if (process->process_num == 619)
-//	ft_printf("Process %d created : pc = %d\n", process->process_num, process->pc);
 	return (1);
 }

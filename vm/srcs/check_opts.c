@@ -72,30 +72,6 @@ void	set_v_values(t_opt *opts, int val)
 	opts->is_v16 = val & 16;
 }
 
-/*
-static void		append_fds_tab(t_opt *opts, int i, int size, int val)
-{
-	// free_leaks
-	int j;
-	int	old;
-
-	j = 0;
-	old = opts->files[i]->fd;
-	opts->files[i]->fd = NULL;
-	if (size < 0)
-		return ;
-//	if (!(opts->files[i]->fd = (int *)malloc(sizeof(int) * (size + 1))))
-		return ;
-	while (j < size)
-	{
-		opts->files[i]->fd = old;
-		i++;
-	}
-	opts->files[i]->fd[size] = val;
-	free(old);
-	old = NULL;
-}*/
-
 static int		check_opts_flags(t_opt *opts, int *flag_indx, int ac, char **av)
 {
 	if (flag_indx[0] < 4 && flag_indx[0] > 0 && flag_indx[1] + 1 >= ac)

@@ -5,22 +5,8 @@ int		op_xor(t_arena *arena, t_exe *exe)
 	uintmax_t		result;
 	unsigned char	*s;
 
-//	print_exe_opts(arena, exe);
 	result = (uintmax_t)(exe->arg1->d_data ^ exe->arg2->d_data);
-// ft_printf("Arg 1 : type = %c   -   d_data = %d   -   (short)d_data = %hd\n", exe->arg1->type, exe->arg1->d_data, (short)exe->arg2->d_data);
-// ft_printf("Arg 2 : type = %c   -   d_data = %d   -   (short)d_data = %hd\n", exe->arg2->type, exe->arg2->d_data, (short)exe->arg2->d_data);
-// ft_printf("Arg 3 : type = %c   -   d_data = %d   -   (short)d_data = %hd\n\n", exe->arg3->type, exe->arg3->d_data, (short)exe->arg3->d_data);
-
-//	ft_printf("op_xor : Result = %u\n", result);
-/*	if (result > 0xffffffff)
-	{
-		ft_putendl("op_xor FAILED");
-		exe->process->carry = 0;
-		return (0);
-	}*/
-//	result = result % IDX_MOD;
 	s = ft_ito_hexa(result);
-//	ft_printf("RESULT = %s\n", s);
 	if (s == NULL)
 		return (-1);
 	exe->process->reg[exe->arg3->d_value][0] = s[0];
@@ -38,10 +24,6 @@ int		op_xor(t_arena *arena, t_exe *exe)
 		ft_putchar('\n');
 	}
 	print_exe_opts(arena, exe);
-//	ft_printf("carry Before %d\n", exe->process->carry);
 	exe->process->carry = result ? 0 : 1;
-//	ft_printf("carry After  %d\n", exe->process->carry);
-//	if (exe->process->carry == 0)
-//		is_carry_to_modify(exe);
 	return (1);
 }
