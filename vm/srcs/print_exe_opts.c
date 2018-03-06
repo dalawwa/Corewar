@@ -105,7 +105,10 @@ void		print_exe_opts(t_arena *arena, t_exe *exe)
 			while (i < exe->ocp_op->size_adv)
 			{
 //				ft_printf("%.2x ", arena->mem[find_pc_adv(exe->process->pc, i, 0)]);
-				ft_printf("%.2x ", arena->mem[get_adv(exe->process->pc + i)]);
+				// if (i == exe->ocp_op->size_adv - 1)
+				// 	ft_printf("%.2x", arena->mem[get_adv(exe->process->pc + i)]);
+				// else
+					ft_printf("%.2x ", arena->mem[get_adv(exe->process->pc + i)]);
 				i++;
 			}
 			ft_putchar('\n');

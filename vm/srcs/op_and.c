@@ -40,7 +40,9 @@ int		op_and(t_arena *arena, t_exe *exe)
 		ft_putchar('\n');
 	}
 	print_exe_opts(arena, exe);
+//	ft_printf("carry Before %d\n", exe->process->carry);
 	exe->process->carry = result ? 0 : 1;
+//	ft_printf("carry After  %d\n", exe->process->carry);
 	//is_carry_to_modify(exe);
 	return (1);
 }

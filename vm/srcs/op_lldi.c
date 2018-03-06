@@ -36,7 +36,9 @@ int		op_lldi(t_arena *arena, t_exe *exe)
 		ft_printf("| -> load from %d + %d = %d (with pc %d)\n", exe->arg1->d_data, exe->arg2->d_data, exe->arg1->d_data + exe->arg2->d_data, exe->process->pc + exe->arg1->d_data + exe->arg2->d_data);
 	}
 	print_exe_opts(arena, exe);
-	is_carry_to_modify(exe);
+//	ft_printf("carry Before %d\n", exe->process->carry);
+	exe->process->carry = result ? 0 : 1;
+//	ft_printf("carry After  %d\n", exe->process->carry);
 	return (1);
 }
 /* attention si result + 3 > mem_size */

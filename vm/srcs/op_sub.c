@@ -25,7 +25,9 @@ int		op_sub(t_arena *arena, t_exe *exe)
 	exe->process->reg[exe->arg3->d_value][3] = s[3];
 	free(s);
 	s = NULL;
+//	ft_printf("carry Before %d\n", exe->process->carry);
 	exe->process->carry = result ? 0 : 1;
+//	ft_printf("carry After  %d\n", exe->process->carry);
 //	is_carry_to_modify(exe);
 	return (1);
 }

@@ -41,7 +41,9 @@ int		op_ld(t_arena *arena, t_exe *exe)
 	exe->process->reg[exe->arg2->d_value][3] = exe->arg1->data[3];
 	//	}
 	print_exe_opts(arena, exe);
+//	printf("carry Before %d\n", exe->process->carry);
 	is_carry_to_modify(exe);
+//	printf("carry After  %d\n", exe->process->carry);
 	return (1);
 }
 
