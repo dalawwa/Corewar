@@ -1,24 +1,5 @@
 #include "corewar.h"
 
-void	print_all_process_short_way(t_proc_base *list)
-{
-	int	i;
-	t_proc	*elem;
-
-	i = 0;
-	if (!list)
-		return ;
-	elem = list->first;
-	ft_printf("There is %d Process\n", list->nb_proc);
-	while (i < list->nb_proc)
-	{
-		ft_printf("Process %d\n", elem->process_num);
-		elem = elem->next;
-		i++;
-	}
-	ft_putendl("END of Print");
-}
-
 void	free_arg(t_arg *arg)
 {
 	if (arg)
@@ -86,23 +67,18 @@ void	kill_first(t_proc *to_kill, t_proc_base *list)
 	free_process(to_kill);
 }
 
-void	kill_last(t_proc *to_kill, t_proc_base *list)
-{
-	list->last = to_kill->prev;
-	list->last->next = NULL;
-	free_process(to_kill);
-}
-
 void		kill_process(t_proc *to_kill, t_proc_base *list_proc)
 {
 	if (to_kill)
 	{
-//		ft_printf("\nProcess to Kill num %d\nSTART:\n", to_kill->process_num);
-//		print_all_process_short_way(list_proc);
 		if (list_proc->first == to_kill)
 			kill_first(to_kill, list_proc);
 		else if (list_proc->last == to_kill)
-			kill_last(to_kill, list_proc);
+		{
+			list_proc->last = to_kill->prev;
+			list_proc->last->next = NULL;
+			free_process(to_kill);
+		}
 		else
 		{
 			to_kill->next->prev = to_kill->prev;
@@ -110,8 +86,5 @@ void		kill_process(t_proc *to_kill, t_proc_base *list_proc)
 			free_process(to_kill);
 		}
 		list_proc->nb_proc--;
-//		ft_printf("END :\n");
-//		print_all_process_short_way(list_proc);
-//		ft_printf("Process KILLED\n");
 	}
 }

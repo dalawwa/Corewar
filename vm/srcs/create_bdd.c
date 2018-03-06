@@ -107,7 +107,7 @@ int		create_bdd(t_arena *arena)
 			return (perror_int("Error ", 0));
 		set_cycle(arena->bdd[i], i);
 		set_nb_args(arena->bdd[i], i);
-		arena->bdd[i]->opcode = i + 1; // comment mettre l'opcode ?
+		arena->bdd[i]->opcode = i + 1;
 		if (i == 0 || i == 8 || i == 11 || i == 14)
 			arena->bdd[i]->has_ocp = 0;
 		else
@@ -118,7 +118,5 @@ int		create_bdd(t_arena *arena)
 	set_meaning(arena->bdd);
 	if (set_bdd_ocp(arena) == 0)
 		return (0);
-	if (arena->opts->has_b == 1)
-		print_bdd(arena);
 	return (1);
 }

@@ -11,31 +11,20 @@ int		kill_processes_dead(t_arena *arena, t_proc_base *list)
 	i = 0;
 	while (i < list->nb_proc)
 	{
-			// if (elem->process_num == 1769 || elem->process_num == 1762 || elem->process_num == 1754){
-			//  	ft_printf("PROCESS %d -->  nb_live = %d - creation_cycle = %d - is proc = %d - Last Parent Live = %d - elem->last_cycle_alive = %d\n",elem->process_num, elem->nb_live, elem->creation_cycle, elem->is_process_launched, elem->parent_last_live, elem->last_cycle_alive);
-			//  }
-		if (arena->ctd < 0 || (elem->parent == NULL && elem->nb_live == 0 && arena->total_cycle - elem->creation_cycle >= arena->ctd) || (elem->parent != NULL && (elem->is_process_launched == 0 || elem->nb_live == 0) && arena->total_cycle - elem->parent_last_live >= arena->ctd))
+		// OLD
+		// if (arena->ctd < 0 || (elem->parent == NULL && elem->nb_live == 0 && arena->total_cycle - elem->creation_cycle >= arena->ctd) || (elem->parent != NULL && (elem->is_process_launched == 0 || elem->nb_live == 0) && arena->total_cycle - elem->parent_last_live >= arena->ctd))
+		
+		// NEW
+		if (arena->ctd < 0 || ((elem->is_process_launched == 0 || elem->nb_live == 0) && arena->total_cycle - elem->creation_cycle >= arena->ctd))
 		{
-//			print_one_process(elem);
-			// if (elem->process_num == 1769 || elem->process_num == 1762 || elem->process_num == 1754){
-			//  	ft_printf("creation_cycle = %d - is proc = %d - Last Parent Live = %d - elem->last_cycle_alive = %d\n",elem->creation_cycle, elem->is_process_launched, elem->parent_last_live, elem->last_cycle_alive);
-			//  }
 			if (arena->opts->has_v == 1 && arena->opts->is_v8)
-			{
-				if (elem->is_process_launched == 0 || (elem->parent != NULL && elem->last_cycle_alive == 0))
-					ft_printf("Process %d hasn't lived for %d cycles (CTD %d)\n", elem->process_num, arena->total_cycle - elem->parent_last_live, arena->ctd);
-				else
-					ft_printf("Process %d hasn't lived for %d cycles (CTD %d)\n", elem->process_num, arena->total_cycle - elem->last_cycle_alive, arena->ctd);
-			}
-
+				ft_printf("Process %d hasn't lived for %d cycles (CTD %d)\n", elem->process_num, arena->total_cycle - elem->last_cycle_alive, arena->ctd);
 			kill_process(elem, list);
 			elem = list->last;
 			i = 0;
 		}
 		else
 		{
-			// if (elem->is_process_launched ==  1 && elem->nb_live == 0 && elem->parent_last_live != 0)
-			// 	elem->parent_last_live = 0;
 			elem = elem->prev;
 			i++;
 		}
@@ -52,47 +41,20 @@ int		deal_exe(t_arena *arena)
 	i = 0;
 	failed_adv = 0;
 	elem = arena->list_proc->last;
-//	ft_printf("\nSGF DBG DEALEXE START\n");
 	while (i < arena->list_proc->nb_proc)
 	{
-		// if (elem->process_num == 20) {
-		// 	print_one_process(elem);
-		// 	if (elem->exe_op)
-		// 		print_exe(elem->exe_op);
-		// }
-//	ft_printf("\nSGF INSIDE WHILE i: %d | arena->list_proc->nb_proc: %d\n", i, arena->list_proc->nb_proc);
-		/*
-		if (arena->total_cycle > 222)
-		{
-			ft_printf("Process %d : pc = %d ", elem->process_num, elem->pc);
-			if (elem->exe_op != NULL)
-				ft_printf("exe = %s - to wait = %d\n", elem->exe_op->bdd_op->name, elem->exe_op->to_wait);
-			else
-				ft_putchar('\n');
-		}
-		*/
 		if (!elem || elem->exe_op == NULL)
 		{
-//			ft_printf("Cycle %d -- Process NUM = %d Process->PC = %d\n", arena->current_cycle, elem->process_num, elem->pc);
 			if (is_valid_op(arena, elem) == 1)
 			{
-//				ft_printf("\nSGF DBG DEAL_EXEINSIDE if is_valid_op\n");
-				create_new_exe(arena, elem, NULL);
-//				ft_printf("\nSGF DBG DEAL_EXE INSIDE if is_valid_op after create_new_exe\n");
+				create_new_exe(arena, elem);
 				elem->exe_op->to_wait--;
 			}
 			else
-			{
-//				ft_printf("\nSGF DBG DEAL_EXEINSIDE else is_valid_op\n");
-				// if (elem->exe_op && elem->exe_op->bdd_op->opcode == 15)
-				// 	ft_printf("to_wait = %d\n", elem->exe_op->to_wait);
 				inc_pc(elem, 1);
-//			ft_printf("ELSE Cycle %d -- INCREASE Process->PC = %d\n", arena->current_cycle, elem->pc);
-			}
 		}
 		if (elem->exe_op)
 		{
-//			ft_printf("\nDEAL_EXE L73\n");
 			if (elem->exe_op->to_wait == 0)
 			{
 				fill_new_exe(arena, elem);
@@ -101,34 +63,13 @@ int		deal_exe(t_arena *arena)
 				if (elem->exe_op->ocp_op != NULL)
 				{
 					if (elem->exe_op->ocp_op->fct != NULL)
-					{
-						if (arena->opts->has_b == 1)
-						{
-							ft_putendl("______________Process AVANT OP_____________");
-							print_one_process(elem);
-						}
 						elem->exe_op->ocp_op->fct(arena, elem->exe_op);
-						if (arena->opts->has_b == 1)
-						{
-							ft_putendl("______________Process APRES OP_____________");
-							print_one_process(elem);
-						}
-					}
-					else
-						ft_putendl("OP Not linked - But everything is allright");
-				}
-				if (elem->exe_op->ocp_op != NULL)
-				{
 					if (elem->exe_op->opcode != 9)
 						inc_pc(elem, elem->exe_op->ocp_op->size_adv);
 				}
 				else
 				{
-					// if ((elem->exe_op->opcode >= 4 && elem->exe_op->opcode <= 8) || elem->exe_op->opcode == 14 || elem->exe_op->opcode == 2 || elem->exe_op->opcode == 13)
-					//  	elem->carry = 0;
 					failed_adv = count_failed_adv(arena, elem->exe_op);
-//					failed_adv = get_failed_adv_size(elem->exe_op);
-//					ft_printf("\nGo To Failed -> %d\n", failed_adv);
 					print_failed_exe(arena, elem->exe_op, failed_adv);
 					inc_pc(elem, failed_adv);
 				}
@@ -140,10 +81,7 @@ int		deal_exe(t_arena *arena)
 		i++;
 		elem = elem->prev;
 		if (i < arena->list_proc->nb_proc && elem == NULL)
-		{
-//			ft_printf("deal_exe killed by 1 nb_proc = %d\n",arena->list_proc->nb_proc);
 			return (1);
-		}
 	}
 	return (1);
 }
@@ -165,8 +103,6 @@ void			put_all_processes_live_zero(t_proc_base *list)
 
 int		start_match(t_arena *arena)
 {
-//	ft_putendl("Let's the MATCH begins ...");
-//	ft_printf("There is %d process to start\n", arena->list_proc->nb_proc);
 	if (!arena || !arena->opts)
 		return (0);
 	if (arena->opts->has_d == 1 && arena->opts->d == 0)
@@ -206,14 +142,7 @@ int		start_match(t_arena *arena)
 			print_mem(arena);
 			return (1);
 		}
-	//	arena->current_cycle++;
-	//	arena->total_cycle++;
 	}
 	ft_printf("Contestant %d, \"%s\", has won !\n", arena->last_player_alive->play_num, arena->last_player_alive->name);
-//	ft_putendl("End of MATCH");
 	return (1);
 }
-
-/* TODOs
- * les MAX_CHECKS ne sont pas pris en comptent
- */

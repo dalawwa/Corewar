@@ -1,0 +1,64 @@
+It is now cycle 24644
+It is now cycle 24645
+It is now cycle 24646
+It is now cycle 24647
+It is now cycle 24648
+It is now cycle 24649
+It is now cycle 24650
+It is now cycle 24651
+P    2 | zjmp -25 OK
+It is now cycle 24652
+It is now cycle 24653
+It is now cycle 24654
+It is now cycle 24655
+It is now cycle 24656
+It is now cycle 24657
+It is now cycle 24658
+It is now cycle 24659
+It is now cycle 24660
+It is now cycle 24661
+P    2 | live -1
+Player 1 (Jumper !) is said to be alive
+ADV 5 (0x00a4 -> 0x00a9) 01 ff ff ff ff 
+It is now cycle 24662
+It is now cycle 24663
+It is now cycle 24664
+It is now cycle 24665
+It is now cycle 24666
+It is now cycle 24667
+It is now cycle 24668
+It is now cycle 24669
+It is now cycle 24670
+It is now cycle 24671
+P    2 | live -1
+Player 1 (Jumper !) is said to be alive
+ADV 5 (0x00a9 -> 0x00ae) 01 ff ff ff ff 
+It is now cycle 24672
+It is now cycle 24673
+It is now cycle 24674
+It is now cycle 24675
+It is now cycle 24676
+It is now cycle 24677
+It is now cycle 24678
+It is now cycle 24679
+It is now cycle 24680
+It is now cycle 24681
+P    2 | live -1
+Player 1 (Jumper !) is said to be alive
+ADV 5 (0x00ae -> 0x00b3) 01 ff ff ff ff 
+It is now cycle 24682
+It is now cycle 24683
+It is now cycle 24684
+It is now cycle 24685
+It is now cycle 24686
+It is now cycle 24687
+It is now cycle 24688
+It is now cycle 24689
+It is now cycle 24690
+Cycle to die is now -14
+It is now cycle 24691
+P    2 | live -1
+Player 1 (Jumper !) is said to be alive
+ADV 5 (0x00b3 -> 0x00b8) 01 ff ff ff ff 
+Process 2 hasn't lived for 0 cycles (CTD -14)
+Contestant 1, "Jumper !", has won !

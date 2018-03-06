@@ -5,19 +5,7 @@ int		op_or(t_arena *arena, t_exe *exe)
 	uintmax_t		result;
 	unsigned char	*s;
 
-//	print_exe_opts(arena, exe);
 	result = (uintmax_t)(exe->arg1->d_data | exe->arg2->d_data);
-//	ft_printf("op_AND : Result = %u\n", result);
-/*	if (result > 0xffffffff)
-	{
-		ft_putendl("op_or > 0xffffffff put it in reg");
-		exe->process->reg[exe->arg3->d_value][0] = 0xff;
-		exe->process->reg[exe->arg3->d_value][1] = 0xff;
-		exe->process->reg[exe->arg3->d_value][2] = 0xff;
-		exe->process->reg[exe->arg3->d_value][3] = 0xff;
-		exe->process->carry = 0;
-		return (0);
-	}*/
 	s = ft_ito_hexa(result);
 	if (s == NULL)
 		return (-1);
@@ -34,10 +22,8 @@ int		op_or(t_arena *arena, t_exe *exe)
 		ft_printf("%d ", exe->arg2->d_data);
 		ft_printf("r%d", (short)(exe->arg3->d_value));
 		ft_putchar('\n');
-//ft_printf("op or debug\n");
 	}
 	print_exe_opts(arena, exe);
 	exe->process->carry = result ? 0 : 1;
-//	is_carry_to_modify(exe);
 	return (1);
 }

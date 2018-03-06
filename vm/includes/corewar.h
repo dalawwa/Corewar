@@ -114,8 +114,7 @@ typedef struct	s_proc
 	int				op_success; // retour de la fct appele par l'exe (vias la BDD)
 	int				nb_live; // nb live init 0
 	int				last_cycle_alive;
-	int				parent_last_live;
-	int				creation_cycle; // cycle auquel le process est cree
+	int				creation_cycle; // cycle auquel le process est cree ou parent last cycle for if parent
 	int				is_process_launched; // cas fork ou lfork --> to_wait avant de start
 	struct s_proc	*parent;
 	struct s_proc	*next;
@@ -185,7 +184,6 @@ typedef struct	s_arena
 	int				total_cycle; // nb_cycle depuis le debut
 	int				max_check;
 	int				c_delta;
-	int				*default_adv; // tableau contenant dans l'ordre de la bdd, l'adv pour chaque op invalide.
 }				t_arena;
 
 typedef struct	s_ocp
@@ -219,8 +217,13 @@ int				init_arena(t_arena **arena);
 int				get_nb_cors(int ac, char **av, int **tab);
 int				check_opts(t_arena *arena, int ac, char **av);
 void			set_v_values(t_opt *opts, int val);
+/* Create Player */
 int				create_players(t_arena *arena);
-int			create_arena(int ac, char **av, t_arena **arena);
+int				has_nb_magic(t_file *file);
+unsigned char	*add_that(unsigned char *body, char c, int where);
+unsigned char	*clean_body(unsigned char *body, t_play **player);
+
+int				create_arena(int ac, char **av, t_arena **arena);
 int				*get_fds(t_arena **arena, int ac, char **av);
 int				is_cor(char *s);
 void			close_cors(t_arena *arena);
@@ -242,8 +245,11 @@ void			print_failed_exe(t_arena *arena, t_exe *exe, int size);
 
 /* Initialized Process */
 int		create_new_process(t_arena *arena, t_play *player, t_proc *parent);
-int		create_new_exe(t_arena *arena, t_proc *process, t_proc *parent);
+void	copy_parent_data(t_proc *parent, t_proc *son);
+int		create_new_exe(t_arena *arena, t_proc *process);
 int		fill_new_exe(t_arena *arena, t_proc *process);
+int		set_args_values(t_proc *process, t_arena *arena, int *i);
+int		set_data(t_arg *arg, t_arena *arena, t_proc *process, int i);
 
 /* OP & Outils pour les OP */
 //unsigned char	*find_reg_ptr(int arg_value, t_exe *exe);

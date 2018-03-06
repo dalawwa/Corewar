@@ -2,7 +2,6 @@
 
 int		handle_two_opcode(unsigned char op1, unsigned char op2)
 {
-	// ft_printf("Handle 2 Opcode\nop 1 = %.2x op 2 = %.2x\n", op1, op2);
 	if (op1 < 0x04 || op1 == 0x0d || op2 < 0x04 || op1 == 0x10)
 		return (2);
 	if (op2 < 0x08)
@@ -19,7 +18,6 @@ int		get_size_by_param_type(int type, t_exe *exe)
 	res = 0;
 	if (type == 0b10)
 	{
-		/* difference entre exe qui prennent les directs sur 2 octets et les autres */
 		if (exe->opcode == 0x9 || exe->opcode == 0xa || exe->opcode == 0xb || exe->opcode == 0xc || exe->opcode == 0xe || exe->opcode == 0xf)
 			res = 2;
 		else
@@ -44,7 +42,6 @@ int		get_size_from_ocp(char c, t_exe *exe)
 	if (exe->bdd_op->nb_args == 2)
 		return (get_size_by_param_type(first, exe) + get_size_by_param_type(sec, exe));
 		return (get_size_by_param_type(first, exe) + get_size_by_param_type(sec, exe) + get_size_by_param_type(third, exe));
-//	return (NB_OP);
 }
 
 int		get_max_adv(t_exe *exe)
@@ -75,5 +72,4 @@ int		count_failed_adv(t_arena *arena, t_exe *exe)
 		i++;
 	}
 	return (2 + get_size_from_ocp(exe->ocp, exe));
-	//return (1 + get_max_adv(exe));
 }
