@@ -164,65 +164,47 @@ int		op_sti_2(t_arena *arena, t_exe *exe)
 	return (1);
 }
 */
-void    print_sti(t_exe *exe, int mod)
+void    print_sti(t_exe *exe)
 {
     ft_putchar('P');
     put_n_char(' ', 5 - intlen((short)exe->process->process_num));
     ft_printf("%d | %s ", exe->process->process_num, exe->bdd_op->name);
-    ft_printf("r%d ", exe->arg1->d_value);
+//    ft_printf("r%d ", exe->arg1->d_value);
 
-    // ARG 2
+    // ARG 1
+	ft_printf("r%d ", exe->arg1->d_value);
+
+	// ARG 2
     if (exe->arg2->type == 'd')
-        ft_printf("%hd ", (short)exe->arg2->d_data);
-    else
-        ft_printf("%d ", exe->arg2->d_data);
+		ft_printf("%hd ", (short)exe->arg2->d_data);
+	else
+    	ft_printf("%d ", exe->arg2->d_data);
 
-    // ARG 3
-    if (exe->arg3->type == 'r')
-        ft_printf("%d", exe->arg3->d_data);
-    else
-        ft_printf("%hd", (short)exe->arg3->d_data);
+ 	// ARG 3   
+    if (exe->arg3->type == 'd')
+		ft_printf("%hd", (short)exe->arg3->d_data);
+	else
+    	ft_printf("%d", exe->arg3->d_data);
     
-    // STORE TO
+
+    // LOAD FROM
 
     ft_putchar('\n');
     put_n_char(' ', 7);
     ft_printf("| -> store to ");
 
     // ARG 2
-    if (exe->arg2->type == 'd')
-        ft_printf("%hd ", (short)exe->arg2->d_data);
-    else
-        ft_printf("%d ", exe->arg2->d_data);
+	if (exe->arg2->type == 'd')
+		ft_printf("%hd ", (short)exe->arg2->d_data);
+	else
+    	ft_printf("%d ", exe->arg2->d_data);
     
     // ARG 3
-    if (exe->arg3->type == 'r')
-        ft_printf("+ %d = ", exe->arg3->d_data);
-    else
-        ft_printf("+ %hd = ", (short)exe->arg3->d_data);
+	if (exe->arg3->type == 'd')
+		ft_printf("+ %hd = ", (short)exe->arg3->d_data);
+	else
+    	ft_printf("+ %d = ", exe->arg3->d_data);
     
-    // RESULT
-
-    // if (exe->arg2->type != 'i' && exe->arg3->type != 'r')
-    //     ft_printf("%hd ", exe->arg2->d_data + (short)exe->arg3->d_value);
-    // else if (exe->arg3->type == 'r')
-    //     ft_printf("%d ", exe->arg2->d_data + exe->arg3->d_data);
-    // else
-    //     ft_printf("%d ", exe->arg2->d_data + (short)exe->arg3->d_data);
-
-    if (exe->arg2->type == 'i')
-    {
-        if (exe->arg3->type == 'd')
-            ft_printf("%d ", exe->arg2->d_data + (short)exe->arg3->d_data);
-        else
-            ft_printf("%d ", exe->arg2->d_data + exe->arg3->d_data);
-    }
-    else
-        ft_printf("%hd ", exe->arg2->d_data + exe->arg3->d_data);
-
-    
-    // MOD
-    ft_printf("(with pc and mod %hd)\n", (short)mod);
 
     // Debug
     // ft_printf("Result 1 : %hd\n", exe->arg2->d_data + (short)exe->arg3->d_value);
@@ -234,35 +216,81 @@ void    print_sti(t_exe *exe, int mod)
 
 int		op_sti(t_arena *arena, t_exe *exe)
 {
-	int			pc_adv;
 	int			mod;
-	int			args_types;
-	int			dest;
-    int         where;
+	int         where;
     int         result;
     int         pc;
 
-	args_types = args_signs(exe->arg2->d_data, exe->arg3->d_data);
-	dest = (exe->arg2->d_data + (short)exe->arg3->d_value);
-	pc_adv = 0;
 	mod = 0;
     where = 0;
     pc = exe->process->pc;
+	result = 0;
     
 
     // OLD STI
     // return(op_sti_2(arena, exe));
 
     // NEW HYPOTHESE
-    result = exe->arg2->d_data + exe->arg3->d_data;
-    if (exe->arg2->type == 'i')
-            mod = pc + (result % IDX_MOD);
-    else
-        mod = (short)(pc + ((short)result % IDX_MOD));
+    // result = exe->arg2->d_data + exe->arg3->d_data;
+    // if (exe->arg2->type == 'i' || exe->arg3->type == 'r')
+    //         mod = pc + (result % IDX_MOD);
+    // else
+    //     mod = (short)(pc + ((short)result % IDX_MOD));
 
+	// LAST 
+	// if (exe->arg2->type == 'i')
+	// {
+	// 	// Result 2.%d
+	// 	result = exe->arg2->d_data + (short)exe->arg3->d_data;
+	// 	mod = pc + (result % IDX_MOD);
+	// }
+	// else if (exe->arg2->type == 'r')
+	// {
+	// 	// 
+	// }
 
+		if (exe->arg2->type == 'i' || exe->arg2->type == 'r')
+	{
+		if (exe->arg3->type == 'd')
+		{
+			// Result 2.%d
+			result = exe->arg2->d_data + (short)exe->arg3->d_data;
+			mod = pc + (result % IDX_MOD);
+		}
+		else 
+		{
+			// Result 1.%d
+			result = exe->arg2->d_data + exe->arg3->d_data;
+			mod = pc + (result % IDX_MOD);
+		}
+	}
+	else	
+	{
+		if (exe->arg3->type == 'd')
+		{
+			// Result 3.%hd
+			result = (short)exe->arg2->d_data + (short)exe->arg3->d_data;
+			mod = pc + ((short)result % IDX_MOD);
+		}
+		else
+		{
+			// Result 4.%d
+			result = (short)exe->arg2->d_data + exe->arg3->d_data;
+			mod = pc + (result % IDX_MOD);
+		}
+	}
 
-    // ft_printf("---------->     NEW STI\n\nBASE\n");
+  if (arena->opts->is_v4)
+	{
+        print_sti(exe);
+		if (exe->arg2->type == 'd' && exe->arg3->type == 'd')
+			ft_printf("%hd ", (short)result);
+		else
+			ft_printf("%d ", result);
+		ft_printf("(with pc and mod %hd)\n", (short)mod);
+	}
+
+    // ft_printf("\n---------->     NEW STI\n\nBASE\n");
     // ft_printf("PC = %d\n", pc);
 
     // ft_printf("Arg 2 : type = %c   -   d_data = %d   -   (short)d_data = %hd\n", exe->arg2->type, exe->arg2->d_data, (short)exe->arg2->d_data);
@@ -343,16 +371,13 @@ int		op_sti(t_arena *arena, t_exe *exe)
         where = mod;
 
     // ft_printf("\nWHERE : %d\n", where);
-    arena->mem[where] = exe->process->reg[exe->arg1->d_value][0];
+    arena->mem[get_adv(where)] = exe->process->reg[exe->arg1->d_value][0];
 	// ft_printf("\nget_adv(mod++): %d\n", get_adv(where + 1));
 	arena->mem[get_adv(where + 1)] = exe->process->reg[exe->arg1->d_value][1];
 	// ft_printf("\nget_adv(mod++): %d\n", get_adv(where + 2));
 	arena->mem[get_adv(where + 2)] = exe->process->reg[exe->arg1->d_value][2];
 	// ft_printf("\nget_adv(mod++): %d\n", get_adv(where + 3));
 	arena->mem[get_adv(where + 3)] = exe->process->reg[exe->arg1->d_value][3];
-
-    if (arena->opts->is_v4)
-        print_sti(exe, mod);
 
 	print_exe_opts(arena, exe);
     return (1);

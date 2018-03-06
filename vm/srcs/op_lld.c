@@ -44,6 +44,8 @@ int		op_lld(t_arena *arena, t_exe *exe)
 		ft_putchar('\n');
 	}
 	print_exe_opts(arena, exe);
+//	ft_printf("carry Before %d\n", exe->process->carry);
 	is_carry_to_modify(exe);
+//	ft_printf("carry After  %d\n", exe->process->carry);
 	return (1);
 }
