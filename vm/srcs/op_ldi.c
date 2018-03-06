@@ -286,9 +286,7 @@ int		op_ldi_2(t_arena *arena, t_exe *exe)
 void    print_ldi(t_exe *exe)
 {
 
-    ft_putchar('P');
-    put_n_char(' ', 5 - intlen((short)exe->process->process_num));
-    ft_printf("%d | %s ", exe->process->process_num, exe->bdd_op->name);
+   print_proc_num_name(exe);
 //    ft_printf("r%d ", exe->arg1->d_value);
 
     // ARG 1

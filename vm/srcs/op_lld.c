@@ -30,7 +30,7 @@ int		op_lld(t_arena *arena, t_exe *exe)
 	}
 	if (arena->opts->is_v4)
 	{
-		ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
+		print_proc_num_name(exe);
 		if (exe->arg1->type == 'd')
 			ft_printf("%d ", exe->arg1->d_data);
 		else

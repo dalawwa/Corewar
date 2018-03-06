@@ -14,7 +14,7 @@ int		kill_processes_dead(t_arena *arena, t_proc_base *list)
 			// if (elem->process_num == 1769 || elem->process_num == 1762 || elem->process_num == 1754){
 			//  	ft_printf("PROCESS %d -->  nb_live = %d - creation_cycle = %d - is proc = %d - Last Parent Live = %d - elem->last_cycle_alive = %d\n",elem->process_num, elem->nb_live, elem->creation_cycle, elem->is_process_launched, elem->parent_last_live, elem->last_cycle_alive);
 			//  }
-		if ((elem->parent == NULL && elem->nb_live == 0 && arena->total_cycle - elem->creation_cycle >= arena->ctd) || (elem->parent != NULL && (elem->is_process_launched == 0 || elem->nb_live == 0) && arena->total_cycle - elem->parent_last_live >= arena->ctd))
+		if (arena->ctd < 0 || (elem->parent == NULL && elem->nb_live == 0 && arena->total_cycle - elem->creation_cycle >= arena->ctd) || (elem->parent != NULL && (elem->is_process_launched == 0 || elem->nb_live == 0) && arena->total_cycle - elem->parent_last_live >= arena->ctd))
 		{
 //			print_one_process(elem);
 			// if (elem->process_num == 1769 || elem->process_num == 1762 || elem->process_num == 1754){

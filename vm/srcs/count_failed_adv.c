@@ -3,7 +3,7 @@
 int		handle_two_opcode(unsigned char op1, unsigned char op2)
 {
 	// ft_printf("Handle 2 Opcode\nop 1 = %.2x op 2 = %.2x\n", op1, op2);
-	if (op1 < 0x04 || op1 == 0x0d || op2 < 0x04)
+	if (op1 < 0x04 || op1 == 0x0d || op2 < 0x04 || op1 == 0x10)
 		return (2);
 	if (op2 < 0x08)
 		return (3);

@@ -50,8 +50,8 @@ void		copy_parent_data(t_proc *parent, t_proc *son)
 	if (ft_strcmp(parent->exe_op->bdd_op->name, "fork") == 0)
 	{
 //		ft_printf("d_value %d\n", parent->exe_op->arg1->d_value);
-		if (parent->exe_op->arg1->d_value > 0x7fff)
-			son->pc = (short)((parent->exe_op->arg1->d_value + parent->pc) - 0x10000);
+		if (parent->exe_op->arg1->d_value < 0x8000)
+			son->pc = (short)(parent->exe_op->arg1->d_data % IDX_MOD + parent->pc);
 		else
 			son->pc = (short)(parent->exe_op->arg1->d_value + parent->pc);
 		son->is_process_launched = 0;
@@ -130,6 +130,6 @@ int			create_new_process(t_arena *arena, t_play *player, t_proc *parent)
 //		ft_printf("Process %d created by Process %d\n", process->process_num, parent->process_num);
 	process->creation_cycle = arena->total_cycle;
 	//    if (process->process_num == 619)
-	//    	ft_printf("Cycle : %d Process 619 created : pc = %d\n", arena->total_cycle, process->pc);
+//	ft_printf("Process %d created : pc = %d\n", process->process_num, process->pc);
 	return (1);
 }

@@ -21,7 +21,7 @@ int		op_lldi(t_arena *arena, t_exe *exe)
 	exe->process->reg[exe->arg3->d_value][3] = find_char_at_mem_pc_adv(exe->process->pc, result + 3, arena);
 	if (arena->opts->is_v4)
 	{
-		ft_printf("P    %d | %s ", exe->process->process_num, exe->bdd_op->name);
+		print_proc_num_name(exe);
 		if (exe->arg1->type == 'i')
 			ft_printf("%d ", exe->arg1->d_data);
 		else
