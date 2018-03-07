@@ -8,12 +8,6 @@ int		op_sub(t_arena *arena, t_exe *exe)
 	print_add_sub(arena, exe);
 	print_exe_opts(arena, exe);
 	result = exe->arg1->d_data - exe->arg2->d_data;
-	if (result > 0xffffffff)
-	{
-		ft_putendl("op_add FAILED");
-		exe->process->carry = 0;
-		return (0);
-	}
 	s = ft_ito_hexa(result);
 	if (s == NULL)
 		return (-1);

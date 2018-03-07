@@ -60,7 +60,7 @@ int		set_arg_1_value(t_arg *arg, t_arena *arena, t_proc *process)
 	return (1);
 }
 
-int         malloc_args(t_proc *process)
+int     malloc_args(t_proc *process)
 {
     process->exe_op->arg1 = (t_arg *)malloc(sizeof(t_arg));
 	if (process->exe_op->arg1 == NULL)
@@ -80,7 +80,7 @@ int         malloc_args(t_proc *process)
     return (1);
 }
 
-int			set_args_values(t_proc *process, t_arena *arena, int *i)
+int		set_args_values(t_proc *process, t_arena *arena, int *i)
 {
 	if (malloc_args(process) == 0)
         return (0);

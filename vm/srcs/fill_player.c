@@ -1,5 +1,18 @@
 #include "corewar.h"
 
+unsigned char	*add_that_from_start(char c)
+{
+	unsigned char	*tmp;
+
+	tmp = NULL;
+	tmp = malloc(sizeof(char) * 2);
+	if (tmp == NULL)
+		return (NULL);
+	tmp[0] = c;
+	tmp[1] = '\0';
+	return (tmp);
+}
+
 unsigned char	*add_that(unsigned char *body, char c, int where)
 {
 	int		len;
@@ -10,13 +23,7 @@ unsigned char	*add_that(unsigned char *body, char c, int where)
 	i = 0;
 	tmp = NULL;
 	if (where == 0)
-	{
-		tmp = malloc(sizeof(char) * 2);
-		if (tmp == NULL)
-			return (NULL);
-		tmp[0] = c;
-		tmp[1] = '\0';
-	}
+		return (add_that_from_start(c));
 	else
 	{
 		tmp = malloc(sizeof(char) * (len + 1));
@@ -35,35 +42,44 @@ unsigned char	*add_that(unsigned char *body, char c, int where)
 	return (tmp);
 }
 
+unsigned char	*find_magic(t_file *file, unsigned char	*magic, int i)
+{
+	unsigned char	*tmp;
+	int				j;
+
+	tmp = NULL;
+	j = 0;
+	tmp = (unsigned char*)malloc(sizeof(unsigned char) * 4);
+	if (tmp == NULL)
+		return (perror_ptr("Error ", NULL));
+	while (j < 4)
+		tmp[j++] = 0;
+	if (i != 0)
+		lseek(file->fd, i, SEEK_SET);
+	read(file->fd, tmp, 1);
+	magic = add_that((unsigned char*)magic, tmp[0], i);
+	if (magic == NULL)
+		return (NULL);
+	free(tmp);
+	tmp = NULL;
+	return (magic);
+}
+
+
 int		has_nb_magic(t_file *file)
 {
 	unsigned char	*magic;
-	unsigned char	*tmp;
 	int		ret;
 	int		i;
-	int		j;
 
 	i = 0;
 	ret = 0;
 	magic = NULL;
-	tmp = NULL;
 	while (i < 4)
 	{
-		j = 0;
-		tmp = (unsigned char*)malloc(sizeof(unsigned char) * 4);
-		if (tmp == NULL)
-			return (perror_int("Error ", 0));
-		while (j < 4)
-			tmp[j++] = 0;
-		if (i != 0)
-			lseek(file->fd, i, SEEK_SET);
-		read(file->fd, tmp, 1);
-		magic = add_that((unsigned char*)magic, tmp[0], i);
-		if (magic == NULL)
+		if ((magic = find_magic(file, magic, i)) == NULL)
 			return (0);
 		i++;
-		free(tmp);
-		tmp = NULL;
 	}
 	if (magic[0] == 0 && magic[1] == (unsigned char)4294967274 && magic[2] == (unsigned char)4294967171 && magic[3] == (unsigned char)4294967283)
 		ret = 1;

@@ -1,6 +1,5 @@
 #include "corewar.h"
 
-
 void		print_failed_exe(t_arena *arena, t_exe *exe, int size)
 {
 	int	i;
