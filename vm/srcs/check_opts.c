@@ -37,6 +37,7 @@ int		init_opts(t_arena **arena)
 	(*arena)->opts->s = -1;
 	(*arena)->opts->a_stealth = 0;
 	(*arena)->opts->b_stealth = 0;
+	(*arena)->opts->current_s = 0;
 	return (1);
 }
 

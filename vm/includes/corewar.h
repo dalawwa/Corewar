@@ -91,6 +91,7 @@ typedef struct	s_opt
 	int		show_live;
 	int		show_pc_mvt; 
 	int		s;
+	int		current_s;
 	int		has_a;
 	int		a_stealth;
 	int		has_b;
