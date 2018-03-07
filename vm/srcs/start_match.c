@@ -62,6 +62,20 @@ int		end_of_cycle(t_arena *arena)
 	return (1);
 }
 
+void	handle_s_opt(t_arena *arena)
+{
+	if (arena->opts->has_s == 1)
+	{
+		if (arena->opts->s == arena->opts->current_s)
+		{
+			print_memory(arena);
+			arena->opts->current_s = 0;
+		}
+		else
+			arena->opts->current_s++;
+	}
+}
+
 int		start_match(t_arena *arena)
 {
 	if (arena->opts->has_d == 1 && arena->opts->d == 0)
@@ -69,6 +83,7 @@ int		start_match(t_arena *arena)
 		print_mem(arena);
 		return (1);
 	}
+	handle_s_opt(t_arena *arena);
 	while (arena && arena->list_proc && arena->list_proc->nb_proc > 0)
 	{
 		arena->total_cycle++;
