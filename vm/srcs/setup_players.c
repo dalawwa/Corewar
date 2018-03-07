@@ -1,6 +1,6 @@
 #include "corewar.h"
 
-void		set_player_i(t_play *player_i, unsigned char *mem)
+void	set_player_i(t_play *player_i, unsigned char *mem)
 {
 	int	i;
 
@@ -22,7 +22,5 @@ int		setup_players(t_arena *arena)
 		set_player_i(arena->players[i], arena->mem);
 		i++;
 	}
-//	print_mem(arena);
 	return (1);
 }
-

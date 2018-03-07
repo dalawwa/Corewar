@@ -12,6 +12,15 @@
 
 #include "corewar.h"
 
+void			ito_hexa_last(uintmax_t n, unsigned char **res)
+{
+	(*res)[0] = n >> 24;
+	(*res)[1] = (n >> 16) & 0xff;
+	(*res)[2] = (n >> 8) & 0xff;
+	(*res)[3] = n & 0xff;
+}
+
+
 unsigned char	*ft_ito_hexa(uintmax_t n)
 {
 	unsigned char *res;
@@ -34,11 +43,6 @@ unsigned char	*ft_ito_hexa(uintmax_t n)
 		res[3] = n & 0xff;
 	}
 	else
-	{
-		res[0] = n >> 24;
-		res[1] = (n >> 16) & 0xff;
-		res[2] = (n >> 8) & 0xff;
-		res[3] = n & 0xff;
-	}
+		ito_hexa_last(n, &res);
 	return (res);
 }

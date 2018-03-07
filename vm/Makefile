@@ -303,15 +303,16 @@ PATH_LIBFT_HEAD = ../libft/includes/
 PATH_OBJS = ./objs/
 
 SRCS_NAME = main.c \
-			get_nb_cors.c \
+			is_cor.c \
 			check_opts.c \
 			create_players.c \
-			ft_stradd_c_end.c \
-			print_debug.c \
+			set_bdd_arg_type.c \
+			deal_exe.c \
+			create_ocp.c \
 			go_match.c \
 			create_arena.c \
 			free_all.c \
-			print_players.c \
+			free_all_2.c \
 			create_mem.c \
 			print_mem.c \
 			create_bdd.c \
@@ -326,7 +327,6 @@ SRCS_NAME = main.c \
 			create_new_exe.c \
 			fill_new_exe.c \
 			kill_process.c \
-			ft_power.c \
 			ft_unsi_strdup.c \
 			start_match.c \
 			op_ld.c \
@@ -356,11 +356,10 @@ SRCS_NAME = main.c \
 			is_carry_to_modify.c \
 			is_valid_op.c \
 			int_len.c \
-			ft_unsi_strcmp.c \
 			copy_parent_data.c \
 			set_arg_values.c \
 			fill_player.c \
-			print_sti.c
+			find_player_info.c
 
 CW_SRCS = $(addprefix $(PATH_SRCS), $(SRCS_NAME))
 CW_OBJS = $(addprefix $(PATH_OBJS), $(SRCS_NAME:.c=.o))

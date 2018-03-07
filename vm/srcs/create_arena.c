@@ -16,16 +16,6 @@ int		get_cors_no(int ac, char **av)
 	return (res);
 }
 
-// int		cors_no(int *fds)
-// {
-// 	int i;
-
-// 	i = 0;
-// 	while (fds && fds[i] != -1)
-// 		i++;
-// 	return (i);
-// }
-
 int		handle_is_cor(int *fds, int i, int *j, char **av)
 {
 	fds[*j] = open(av[i], O_RDONLY);

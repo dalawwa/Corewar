@@ -1,64 +1,64 @@
-It is now cycle 24644
-It is now cycle 24645
-It is now cycle 24646
-It is now cycle 24647
-It is now cycle 24648
-It is now cycle 24649
-It is now cycle 24650
-It is now cycle 24651
-P    2 | zjmp -25 OK
-It is now cycle 24652
-It is now cycle 24653
-It is now cycle 24654
-It is now cycle 24655
-It is now cycle 24656
-It is now cycle 24657
-It is now cycle 24658
-It is now cycle 24659
-It is now cycle 24660
-It is now cycle 24661
-P    2 | live -1
-Player 1 (Jumper !) is said to be alive
-ADV 5 (0x00a4 -> 0x00a9) 01 ff ff ff ff 
-It is now cycle 24662
-It is now cycle 24663
-It is now cycle 24664
-It is now cycle 24665
-It is now cycle 24666
-It is now cycle 24667
-It is now cycle 24668
-It is now cycle 24669
-It is now cycle 24670
-It is now cycle 24671
-P    2 | live -1
-Player 1 (Jumper !) is said to be alive
-ADV 5 (0x00a9 -> 0x00ae) 01 ff ff ff ff 
-It is now cycle 24672
-It is now cycle 24673
-It is now cycle 24674
-It is now cycle 24675
-It is now cycle 24676
-It is now cycle 24677
-It is now cycle 24678
-It is now cycle 24679
-It is now cycle 24680
-It is now cycle 24681
-P    2 | live -1
-Player 1 (Jumper !) is said to be alive
-ADV 5 (0x00ae -> 0x00b3) 01 ff ff ff ff 
-It is now cycle 24682
-It is now cycle 24683
-It is now cycle 24684
-It is now cycle 24685
-It is now cycle 24686
-It is now cycle 24687
-It is now cycle 24688
-It is now cycle 24689
-It is now cycle 24690
-Cycle to die is now -14
-It is now cycle 24691
-P    2 | live -1
-Player 1 (Jumper !) is said to be alive
-ADV 5 (0x00b3 -> 0x00b8) 01 ff ff ff ff 
-Process 2 hasn't lived for 0 cycles (CTD -14)
-Contestant 1, "Jumper !", has won !
+P    1 | sti r15 0 -186
+       | -> store to 0 + -186 = -186 (with pc and mod 1720)
+ADV 6 (0x0772 -> 0x0778) 0b 64 0f 00 00 0e 
+It is now cycle 26000
+It is now cycle 26001
+It is now cycle 26002
+It is now cycle 26003
+It is now cycle 26004
+P   18 | sti r15 0 -182
+       | -> store to 0 + -182 = -182 (with pc and mod 968)
+ADV 6 (0x047e -> 0x0484) 0b 64 0f 00 00 0e 
+It is now cycle 26005
+It is now cycle 26006
+It is now cycle 26007
+It is now cycle 26008
+It is now cycle 26009
+P   14 | sti r15 0 -186
+       | -> store to 0 + -186 = -186 (with pc and mod 964)
+ADV 6 (0x047e -> 0x0484) 0b 64 0f 00 00 0e 
+P   13 | sti r15 0 -186
+       | -> store to 0 + -186 = -186 (with pc and mod 964)
+ADV 6 (0x047e -> 0x0484) 0b 64 0f 00 00 0e 
+P   11 | sti r15 0 -186
+       | -> store to 0 + -186 = -186 (with pc and mod 964)
+ADV 6 (0x047e -> 0x0484) 0b 64 0f 00 00 0e 
+P    4 | sti r15 0 -186
+       | -> store to 0 + -186 = -186 (with pc and mod 964)
+ADV 6 (0x047e -> 0x0484) 0b 64 0f 00 00 0e 
+It is now cycle 26010
+It is now cycle 26011
+P   24 | sti r15 0 0
+       | -> store to 0 + 0 = 0 (with pc and mod 3480)
+ADV 6 (0x0d98 -> 0x0d9e) 00 00 00 00 00 0e 
+It is now cycle 26012
+It is now cycle 26013
+It is now cycle 26014
+It is now cycle 26015
+It is now cycle 26016
+It is now cycle 26017
+It is now cycle 26018
+It is now cycle 26019
+P   20 | zjmp -200 OK
+P    6 | zjmp -200 OK
+P    5 | zjmp -200 OK
+P    3 | zjmp -200 OK
+P    1 | zjmp -200 OK
+It is now cycle 26020
+It is now cycle 26021
+It is now cycle 26022
+It is now cycle 26023
+It is now cycle 26024
+P   18 | zjmp -200 OK
+Process 24 hasn't lived for 41 cycles (CTD 36)
+Process 20 hasn't lived for 50 cycles (CTD 36)
+Process 18 hasn't lived for 45 cycles (CTD 36)
+Process 14 hasn't lived for 40 cycles (CTD 36)
+Process 13 hasn't lived for 40 cycles (CTD 36)
+Process 11 hasn't lived for 40 cycles (CTD 36)
+Process 6 hasn't lived for 50 cycles (CTD 36)
+Process 5 hasn't lived for 50 cycles (CTD 36)
+Process 4 hasn't lived for 40 cycles (CTD 36)
+Process 3 hasn't lived for 50 cycles (CTD 36)
+Process 1 hasn't lived for 50 cycles (CTD 36)
+Contestant 1, "Celebration Funebre v0.99pl42", has won !

@@ -16,7 +16,7 @@ int		op_zjmp(t_arena *arena, t_exe *exe)
 	}
 	if (exe->process->carry == 1)
 	{
-		inc_pc(exe->process, (short)exe->arg1->d_value % IDX_MOD); // % IDX_MOD ???
+		inc_pc(exe->process, (short)exe->arg1->d_value % IDX_MOD);
 		return (1);
 	}
 	inc_pc(exe->process, 3);
