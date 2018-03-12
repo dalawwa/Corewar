@@ -216,6 +216,7 @@ typedef struct	s_bdd
  */
 int				init_arena(t_arena **arena);
 int				check_opts(t_arena *arena, int ac, char **av);
+int				check_opts_flags(t_opt *opts, int *flag_indx, int ac, char **av);
 void			set_v_values(t_opt *opts, int val);
 int				create_arena(int ac, char **av, t_arena **arena);
 int				*get_fds(t_arena **arena, int ac, char **av);
