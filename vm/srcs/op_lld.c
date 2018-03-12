@@ -16,19 +16,12 @@ int		op_lld(t_arena *arena, t_exe *exe)
 		exe->process->reg[exe->arg2->d_value][2] = find_char_at_mem_pc_adv(exe->process->pc, exe->arg1->d_value + 2, arena);
 		exe->process->reg[exe->arg2->d_value][3] = find_char_at_mem_pc_adv(exe->process->pc, exe->arg1->d_value + 3, arena);
 	}
+
 	if (arena->opts->is_v4)
 	{
 		print_proc_num_name(exe);
-		if (exe->arg1->type == 'd')
-			ft_printf("%d ", exe->arg1->d_data);
-		else
-			ft_printf("%hd ", exe->arg1->d_data);
-		if (exe->arg2->type == 'i')
-			ft_printf("%d", exe->arg2->d_data);
-		else if (exe->arg2->type == 'r')
-			ft_printf("r%d", exe->arg2->d_value);
-		else
-			ft_printf("%hd", (short)exe->arg2->d_data);
+		ft_printf("%d ", a_hexa_to_i(exe->process->reg[exe->arg2->d_value], 4));
+		ft_printf("r%d", exe->arg2->d_value);
 		ft_putchar('\n');
 	}
 	print_exe_opts(arena, exe);
