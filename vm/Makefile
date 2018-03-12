@@ -304,6 +304,7 @@ PATH_OBJS = ./objs/
 
 SRCS_NAME = main.c \
 			is_cor.c \
+			print_usage.c \
 			check_opts.c \
 			check_opts_1.c \
 			create_players.c \

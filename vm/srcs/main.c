@@ -19,11 +19,6 @@ int		init_arena(t_arena **arena)
 	return (1);
 }
 
-void	print_usage()
-{
-	ft_printf("Print usage here\n");
-}
-
 int		main(int ac, char **av)
 {
 	t_arena		*arena;

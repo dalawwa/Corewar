@@ -299,7 +299,7 @@ int				is_valid_ocp(int opcode, int ocp);
 /*
  * Gestion PRINT
  */
-void			print_usage(void);
+int   			print_usage(void);
 void			print_exe_opts(t_arena *arena, t_exe *exe);
 void			print_proc_num_name(t_exe *exe);
 void			print_add_sub(t_arena *area, t_exe *exe);
