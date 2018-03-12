@@ -68,7 +68,7 @@ void	handle_s_opt(t_arena *arena)
 	{
 		if (arena->opts->s == arena->opts->current_s)
 		{
-			print_memory(arena);
+			print_mem(arena);
 			arena->opts->current_s = 0;
 		}
 		else
@@ -83,7 +83,7 @@ int		start_match(t_arena *arena)
 		print_mem(arena);
 		return (1);
 	}
-	handle_s_opt(t_arena *arena);
+	handle_s_opt(arena);
 	while (arena && arena->list_proc && arena->list_proc->nb_proc > 0)
 	{
 		arena->total_cycle++;
