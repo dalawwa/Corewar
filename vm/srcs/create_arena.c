@@ -75,10 +75,7 @@ int		 create_arena(int ac, char **av, t_arena **arena)
 	if (!(check_opts(*arena, ac, av)))
 		return (0);
 	if ((*arena)->nb_players == 0)
-	{
-		ft_putendl("Print Usage here");
-		return (0);
-	}
+		return (print_usage(*arena));
 	if (create_players(*arena) == 0)
 		return (0);
 	if (create_mem(*arena) == 0)
