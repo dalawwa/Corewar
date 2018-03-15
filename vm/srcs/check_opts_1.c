@@ -6,7 +6,7 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:21:55 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/03/13 10:21:56 by vbaudron         ###   ########.fr       */
+/*   Updated: 2018/03/15 11:51:42 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void	set_opt_flag(t_opt *opts, int flag, int val)
 	}
 }
 
-void	set_v_values(t_opt *opts, int val)
+void		set_v_values(t_opt *opts, int val)
 {
 	if (val > 31)
 		val = val % 32;
@@ -44,13 +44,14 @@ void	set_v_values(t_opt *opts, int val)
 	opts->is_v16 = val & 16;
 }
 
-void	handle_a_b(t_opt *opts, int **flag_indx, int ac, char **av)
+void		handle_a_b(t_opt *opts, int **flag_indx, int ac, char **av)
 {
 	if (*flag_indx[0] == 4)
 	{
 		opts->a_stealth = 0;
 		opts->has_a = 1;
-		if (*flag_indx[1] + 1 < ac && !ft_strcmp(av[*flag_indx[1] + 1], "--stealth"))
+		if (*flag_indx[1] + 1 < ac && !ft_strcmp(av[*flag_indx[1] + 1],
+					"--stealth"))
 		{
 			opts->a_stealth = 1;
 			(*flag_indx)[1]++;
@@ -60,7 +61,8 @@ void	handle_a_b(t_opt *opts, int **flag_indx, int ac, char **av)
 	{
 		opts->b_stealth = 0;
 		opts->has_b = 1;
-		if (*flag_indx[1] + 1 < ac && !ft_strcmp(av[*flag_indx[1] + 1], "--stealth"))
+		if (*flag_indx[1] + 1 < ac && !ft_strcmp(av[*flag_indx[1] + 1],
+					"--stealth"))
 		{
 			opts->b_stealth = 1;
 			(*flag_indx)[1]++;
@@ -69,7 +71,7 @@ void	handle_a_b(t_opt *opts, int **flag_indx, int ac, char **av)
 	}
 }
 
-int		check_opts_flags(t_opt *opts, int *flag_indx, int ac, char **av)
+int			check_opts_flags(t_opt *opts, int *flag_indx, int ac, char **av)
 {
 	if (flag_indx[0] < 4 && flag_indx[0] > 0 && flag_indx[1] + 1 >= ac)
 	{

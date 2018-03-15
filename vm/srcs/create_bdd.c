@@ -6,17 +6,14 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:22:12 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/03/13 10:22:12 by vbaudron         ###   ########.fr       */
+/*   Updated: 2018/03/15 12:06:00 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 
-int		set_name(t_bdd **bdd)
+int		set_name(t_bdd **bdd, int i)
 {
-	int	i;
-
-	i = 0;
 	bdd[0]->name = addstr("live");
 	bdd[1]->name = addstr("ld");
 	bdd[2]->name = addstr("st");
@@ -42,7 +39,7 @@ int		set_name(t_bdd **bdd)
 	return (1);
 }
 
-void		set_cycle(t_bdd *bdd_i, int i)
+void	set_cycle(t_bdd *bdd_i, int i)
 {
 	if (i == 0 || i == 3 || i == 4 || i == 12)
 		bdd_i->nb_cycle = 10;
@@ -64,11 +61,8 @@ void		set_cycle(t_bdd *bdd_i, int i)
 		bdd_i->nb_cycle = 2;
 }
 
-int		set_meaning(t_bdd **bdd)
+int		set_meaning(t_bdd **bdd, int i)
 {
-	int	i;
-
-	i = 0;
 	bdd[0]->meaning = addstr("alive");
 	bdd[1]->meaning = addstr("load");
 	bdd[2]->meaning = addstr("store");
@@ -94,7 +88,7 @@ int		set_meaning(t_bdd **bdd)
 	return (1);
 }
 
-void		set_nb_args(t_bdd *bdd_i, int i)
+void	set_nb_args(t_bdd *bdd_i, int i)
 {
 	if (i == 0 || i == 8 || i == 11 || i == 14 || i == 15)
 		bdd_i->nb_args = 1;
@@ -126,8 +120,8 @@ int		create_bdd(t_arena *arena)
 			arena->bdd[i]->has_ocp = 1;
 		i++;
 	}
-	set_name(arena->bdd);
-	set_meaning(arena->bdd);
+	set_name(arena->bdd, 0);
+	set_meaning(arena->bdd, 0);
 	if (set_bdd_ocp(arena) == 0)
 		return (0);
 	return (1);

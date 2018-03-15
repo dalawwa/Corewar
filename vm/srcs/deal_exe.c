@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   deal_exe.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/03/15 12:26:33 by bfruchar          #+#    #+#             */
+/*   Updated: 2018/03/15 12:27:12 by bfruchar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "corewar.h"
 
 void		execute_exe(t_arena *arena, t_proc *elem)
@@ -24,7 +36,7 @@ void		execute_exe(t_arena *arena, t_proc *elem)
 	free_exe(elem->exe_op, elem);
 }
 
-void	create_or_adv(t_arena *arena, t_proc *elem)
+void		create_or_adv(t_arena *arena, t_proc *elem)
 {
 	if (is_valid_op(arena, elem) == 1)
 	{
@@ -35,7 +47,7 @@ void	create_or_adv(t_arena *arena, t_proc *elem)
 		inc_pc(elem, 1);
 }
 
-int		deal_exe(t_arena *arena)
+int			deal_exe(t_arena *arena)
 {
 	int		i;
 	t_proc	*elem;

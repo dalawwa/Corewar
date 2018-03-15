@@ -6,7 +6,7 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:24:08 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/03/13 10:24:09 by vbaudron         ###   ########.fr       */
+/*   Updated: 2018/03/15 12:34:23 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ void	print_add_sub(t_arena *arena, t_exe *exe)
 	if (arena->opts->is_v4)
 	{
 		print_proc_num_name(exe);
-		ft_printf("r%hd r%hd r%hd\n", (short)exe->arg1->d_value, (short)exe->arg2->d_value, (short)exe->arg3->d_value);
+		ft_printf("r%hd r%hd r%hd\n", (short)exe->arg1->d_value,
+		(short)exe->arg2->d_value, (short)exe->arg3->d_value);
 	}
 }
 

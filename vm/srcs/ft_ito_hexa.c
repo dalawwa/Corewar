@@ -6,7 +6,7 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 11:31:09 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/02/02 18:23:13 by dalawwa          ###   ########.fr       */
+/*   Updated: 2018/03/15 12:32:50 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void			ito_hexa_last(uintmax_t n, unsigned char **res)
 	(*res)[2] = (n >> 8) & 0xff;
 	(*res)[3] = n & 0xff;
 }
-
 
 unsigned char	*ft_ito_hexa(uintmax_t n)
 {

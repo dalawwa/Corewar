@@ -6,7 +6,7 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:21:51 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/03/13 10:21:52 by vbaudron         ###   ########.fr       */
+/*   Updated: 2018/03/15 11:46:00 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int		is_flag(char *s)
 	return (0);
 }
 
-int		init_opts(t_arena **arena)
+int				init_opts(t_arena **arena)
 {
 	if (!((*arena)->opts = (t_opt *)malloc(sizeof(t_opt))))
 		return (perror_int("error ", 0));
@@ -53,7 +53,7 @@ int		init_opts(t_arena **arena)
 	return (1);
 }
 
-static int			check_opts_fds(t_file *file, int *flag_indx, char **av)
+static int		check_opts_fds(t_file *file, int *flag_indx, char **av)
 {
 	file->name = addstr(av[flag_indx[1]]);
 	if ((file->fd = open(av[flag_indx[1]], O_RDONLY)) == -1)
@@ -65,7 +65,7 @@ static int			check_opts_fds(t_file *file, int *flag_indx, char **av)
 	return (1);
 }
 
-int		init_files(t_arena *arena)
+int				init_files(t_arena *arena)
 {
 	int	i;
 
@@ -77,7 +77,7 @@ int		init_files(t_arena *arena)
 	{
 		arena->files[i] = malloc(sizeof(t_file));
 		if (arena->files[i] == NULL)
-			return(perror_int("Error ", 0));
+			return (perror_int("Error ", 0));
 		arena->files[i]->name = NULL;
 		arena->files[i]->fd = -1;
 		i++;
@@ -85,7 +85,7 @@ int		init_files(t_arena *arena)
 	return (1);
 }
 
-int		check_opts(t_arena *arena, int ac, char **av)
+int				check_opts(t_arena *arena, int ac, char **av)
 {
 	int		flag_indx[2];
 
@@ -104,8 +104,9 @@ int		check_opts(t_arena *arena, int ac, char **av)
 		{
 			arena->nb_players++;
 			if (arena->nb_players > 4)
-				return(perror_int("Error : Too many champions", 0));
-			if (!(check_opts_fds(arena->files[arena->nb_players - 1], flag_indx, av)))
+				return (perror_int("Error : Too many champions", 0));
+			if (!(check_opts_fds(arena->files[arena->nb_players - 1],
+			flag_indx, av)))
 				return (0);
 		}
 		flag_indx[1]++;

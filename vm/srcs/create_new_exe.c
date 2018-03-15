@@ -6,13 +6,13 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:22:20 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/03/13 10:22:21 by vbaudron         ###   ########.fr       */
+/*   Updated: 2018/03/15 12:02:01 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 
-int		find_bdd_op(t_exe *exe_op, t_bdd **bdd)
+int			find_bdd_op(t_exe *exe_op, t_bdd **bdd)
 {
 	int	i;
 
@@ -29,7 +29,6 @@ int		find_bdd_op(t_exe *exe_op, t_bdd **bdd)
 	return (0);
 }
 
-
 void		init_exe(t_exe *exe_op, t_proc *process)
 {
 	exe_op->opcode = 0;
@@ -42,7 +41,7 @@ void		init_exe(t_exe *exe_op, t_proc *process)
 	exe_op->process = process;
 }
 
-int		create_new_exe(t_arena *arena, t_proc *process)
+int			create_new_exe(t_arena *arena, t_proc *process)
 {
 	process->exe_op = (t_exe *)malloc(sizeof(t_exe));
 	if (process->exe_op == NULL)
@@ -51,5 +50,5 @@ int		create_new_exe(t_arena *arena, t_proc *process)
 	process->exe_op->opcode = arena->mem[process->pc];
 	find_bdd_op(process->exe_op, arena->bdd);
 	process->exe_op->to_wait = process->exe_op->bdd_op->nb_cycle;
-    return (1);
+	return (1);
 }

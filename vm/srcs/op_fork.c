@@ -6,7 +6,7 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:24:19 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/03/13 10:24:19 by vbaudron         ###   ########.fr       */
+/*   Updated: 2018/03/15 12:34:53 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ int		op_fork(t_arena *arena, t_exe *exe)
 	{
 		print_proc_num_name(exe);
 		if (exe->arg1->d_data < 0x8000)
-			ft_printf("%hd (%hd)\n", exe->arg1->d_data, exe->arg1->d_data % IDX_MOD + pc);
+			ft_printf("%hd (%hd)\n", exe->arg1->d_data,
+					exe->arg1->d_data % IDX_MOD + pc);
 		else
 			ft_printf("%hd (%hd)\n", exe->arg1->d_data, exe->arg1->d_data + pc);
 	}

@@ -6,7 +6,7 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:22:43 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/03/13 10:22:44 by vbaudron         ###   ########.fr       */
+/*   Updated: 2018/03/15 12:26:01 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ unsigned char	*add_that_from_start(char c)
 
 unsigned char	*add_that(unsigned char *body, char c, int where)
 {
-	int		len;
+	int				len;
 	unsigned char	*tmp;
-	int		i;
+	int				i;
 
 	len = where + 1;
 	i = 0;
@@ -54,7 +54,7 @@ unsigned char	*add_that(unsigned char *body, char c, int where)
 	return (tmp);
 }
 
-unsigned char	*find_magic(t_file *file, unsigned char	*magic, int i)
+unsigned char	*find_magic(t_file *file, unsigned char *magic, int i)
 {
 	unsigned char	*tmp;
 	int				j;
@@ -77,12 +77,11 @@ unsigned char	*find_magic(t_file *file, unsigned char	*magic, int i)
 	return (magic);
 }
 
-
-int		has_nb_magic(t_file *file)
+int				has_nb_magic(t_file *file)
 {
 	unsigned char	*magic;
-	int		ret;
-	int		i;
+	int				ret;
+	int				i;
 
 	i = 0;
 	ret = 0;
@@ -93,7 +92,8 @@ int		has_nb_magic(t_file *file)
 			return (0);
 		i++;
 	}
-	if (magic[0] == 0 && magic[1] == (unsigned char)4294967274 && magic[2] == (unsigned char)4294967171 && magic[3] == (unsigned char)4294967283)
+	if (magic[0] == 0 && magic[1] == (unsigned char)4294967274 && magic[2]
+	== (unsigned char)4294967171 && magic[3] == (unsigned char)4294967283)
 		ret = 1;
 	free(magic);
 	magic = NULL;
@@ -105,8 +105,8 @@ int		has_nb_magic(t_file *file)
 unsigned char	*clean_body(unsigned char *body, t_play **player)
 {
 	unsigned char	*cleaned;
-	int		i;
-	int		j;
+	int				i;
+	int				j;
 
 	i = CHAMP_MAX_SIZE - 1;
 	cleaned = NULL;

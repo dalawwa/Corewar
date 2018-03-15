@@ -6,7 +6,7 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:24:00 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/03/13 10:24:00 by vbaudron         ###   ########.fr       */
+/*   Updated: 2018/03/15 12:36:26 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	kill_first(t_proc *to_kill, t_proc_base *list)
 	free_process(to_kill);
 }
 
-void		kill_process(t_proc *to_kill, t_proc_base *list_proc)
+void	kill_process(t_proc *to_kill, t_proc_base *list_proc)
 {
 	if (to_kill)
 	{

@@ -238,7 +238,7 @@ char			*find_name(t_file *file);
  * Create BDD 
  */
 int				create_bdd(t_arena *arena);
-int				create_ocp(t_bdd *bdd_i, int i);
+int				create_ocp(t_bdd *bdd_i, int i, int j);
 int				set_bdd_ocp(t_arena *arena);
 int				set_ocp_and_size(t_bdd **bdd);
 int				set_args_type(t_bdd *bdd_i, int i);

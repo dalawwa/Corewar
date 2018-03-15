@@ -6,7 +6,7 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:22:07 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/03/13 10:22:08 by vbaudron         ###   ########.fr       */
+/*   Updated: 2018/03/15 12:03:50 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ int		get_cors_no(int ac, char **av)
 int		handle_is_cor(int *fds, int i, int *j, char **av)
 {
 	fds[*j] = open(av[i], O_RDONLY);
-			if (fds[*j] == -1)
-			{
-				free(fds);
-				ft_printf("Can't read source file %s\n", av[i]);
-				return (0);
-			}
+	if (fds[*j] == -1)
+	{
+		free(fds);
+		ft_printf("Can't read source file %s\n", av[i]);
+		return (0);
+	}
 	j++;
 	return (1);
 }
@@ -70,7 +70,7 @@ int		*get_fds(t_arena **arena, int ac, char **av)
 	return (fds);
 }
 
-void		close_cors(t_arena *arena)
+void	close_cors(t_arena *arena)
 {
 	int i;
 
@@ -81,13 +81,12 @@ void		close_cors(t_arena *arena)
 		close(arena->files[i++]->fd);
 }
 
-int		 create_arena(int ac, char **av, t_arena **arena)
+int		create_arena(int ac, char **av, t_arena **arena)
 {
-
 	if (!(check_opts(*arena, ac, av)))
 		return (0);
 	if ((*arena)->nb_players == 0)
-		return (print_usage(*arena));
+		return (print_usage());
 	if (create_players(*arena) == 0)
 		return (0);
 	if (create_mem(*arena) == 0)
@@ -99,5 +98,5 @@ int		 create_arena(int ac, char **av, t_arena **arena)
 		return (0);
 	close_cors(*arena);
 	(*arena)->last_player_alive = (*arena)->players[(*arena)->nb_players - 1];
-    return (1);
+	return (1);
 }

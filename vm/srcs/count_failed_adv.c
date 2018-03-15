@@ -6,7 +6,7 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:22:02 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/03/13 10:22:03 by vbaudron         ###   ########.fr       */
+/*   Updated: 2018/03/15 13:14:18 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ int		get_size_by_param_type(int type, t_exe *exe)
 	res = 0;
 	if (type == 0b10)
 	{
-		if (exe->opcode == 0x9 || exe->opcode == 0xa || exe->opcode == 0xb || exe->opcode == 0xc || exe->opcode == 0xe || exe->opcode == 0xf)
+		if (exe->opcode == 0x9 || exe->opcode == 0xa || exe->opcode == 0xb ||
+				exe->opcode == 0xc || exe->opcode == 0xe || exe->opcode == 0xf)
 			res = 2;
 		else
 			res = 4;
@@ -52,20 +53,26 @@ int		get_size_from_ocp(char c, t_exe *exe)
 	sec = (c >> 4) & 0b0011;
 	third = (c >> 2) & 0b000011;
 	if (exe->bdd_op->nb_args == 2)
-		return (get_size_by_param_type(first, exe) + get_size_by_param_type(sec, exe));
-		return (get_size_by_param_type(first, exe) + get_size_by_param_type(sec, exe) + get_size_by_param_type(third, exe));
+	{
+		return (get_size_by_param_type(first, exe) +
+				get_size_by_param_type(sec, exe));
+	}
+	return (get_size_by_param_type(first, exe) +
+			get_size_by_param_type(sec, exe) +
+			get_size_by_param_type(third, exe));
 }
 
 int		get_max_adv(t_exe *exe)
 {
-	 if (exe->opcode == 2)
-		 return (7);
-	 if (exe->opcode == 3 || exe->opcode == 4 || exe->opcode == 5)
-		 return (5);
+	if (exe->opcode == 2)
+		return (7);
+	if (exe->opcode == 3 || exe->opcode == 4 || exe->opcode == 5)
+		return (5);
 	if (exe->opcode == 6 || exe->opcode == 7 || exe->opcode == 8)
 		return (11);
-	if (exe->opcode == 10 || exe->opcode == 11 || exe->opcode == 13 || exe->opcode == 14)
-	 return (7);
+	if (exe->opcode == 10 || exe->opcode == 11 || exe->opcode == 13
+			|| exe->opcode == 14)
+		return (7);
 	else
 		return (2);
 }
@@ -79,8 +86,12 @@ int		count_failed_adv(t_arena *arena, t_exe *exe)
 		return (exe->size_failed_adv);
 	while (i < NB_OP)
 	{
-		if (find_char_at_mem_pc_adv(exe->process->pc, 1, arena) == arena->bdd[i]->opcode)
-			return (handle_two_opcode(arena->mem[exe->process->pc], arena->bdd[i]->opcode));
+		if (find_char_at_mem_pc_adv(exe->process->pc, 1, arena) ==
+				arena->bdd[i]->opcode)
+		{
+			return (handle_two_opcode(arena->mem[exe->process->pc],
+						arena->bdd[i]->opcode));
+		}
 		i++;
 	}
 	return (2 + get_size_from_ocp(exe->ocp, exe));

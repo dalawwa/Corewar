@@ -6,7 +6,7 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:22:31 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/03/13 10:22:32 by vbaudron         ###   ########.fr       */
+/*   Updated: 2018/03/15 12:11:49 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ unsigned char	*find_body(t_file *file)
 	return (body);
 }
 
-int		check_size(t_file *file)
+int				check_size(t_file *file)
 {
 	int size;
 
@@ -55,13 +55,14 @@ int		check_size(t_file *file)
 		return (0);
 	if (size > 682)
 	{
-		ft_printf("Error: File %s has too large code (%d bytes > 682 bytes)\n", file->name, size);
+		ft_printf("Error: File %s has too large code (%d bytes > 682 bytes)\n",
+				file->name, size);
 		return (0);
 	}
 	return (size);
 }
 
-t_play		*init_player(int i)
+t_play			*init_player(int i)
 {
 	t_play *player;
 
@@ -83,7 +84,7 @@ t_play		*init_player(int i)
 	return (player);
 }
 
-t_play		*create_a_player(int i, t_file *file)
+t_play			*create_a_player(int i, t_file *file)
 {
 	t_play	*player;
 	int		size;
@@ -110,7 +111,7 @@ t_play		*create_a_player(int i, t_file *file)
 	return (player);
 }
 
-int		create_players(t_arena *arena)
+int				create_players(t_arena *arena)
 {
 	int		i;
 

@@ -6,7 +6,7 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:53:59 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/03/13 10:54:00 by vbaudron         ###   ########.fr       */
+/*   Updated: 2018/03/15 12:10:17 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ void	set_ptr_op_3(t_bdd *bdd_i, int i, int j)
 			j++;
 		}
 	}
-	else if (i == 11)
-		bdd_i->ocp[j]->fct = &op_fork;
 	else if (i == 12)
 	{
 		while (j < bdd_i->nb_ocp)
@@ -68,10 +66,7 @@ void	set_ptr_op_2(t_bdd *bdd_i, int i, int j)
 			j++;
 		}
 	}
-	else if (i == 8)
-		bdd_i->ocp[j]->fct = &op_zjmp;
 }
-
 
 void	set_ptr_op_1(t_bdd *bdd_i, int i, int j)
 {
@@ -105,10 +100,14 @@ void	set_ptr_op(t_bdd *bdd_i, int i, int j)
 {
 	if (i <= 4 || i == 14)
 		set_ptr_op_1(bdd_i, i, 0);
-	else if (i > 4 && i <= 8)
+	else if (i > 4 && i < 8)
 		set_ptr_op_2(bdd_i, i, 0);
-	else if (i > 8 && i <= 12)
+	else if (i > 8 && i <= 12 && i != 11)
 		set_ptr_op_3(bdd_i, i, 0);
+	else if (i == 8)
+		bdd_i->ocp[j]->fct = &op_zjmp;
+	else if (i == 11)
+		bdd_i->ocp[j]->fct = &op_fork;
 	else if (i == 13)
 	{
 		while (j < bdd_i->nb_ocp)
@@ -129,7 +128,7 @@ int		set_bdd_ocp(t_arena *arena)
 	while (i < NB_OP)
 	{
 		arena->bdd[i]->nb_ocp = 0;
-		create_ocp(arena->bdd[i], i);
+		create_ocp(arena->bdd[i], i, 0);
 		if (arena->bdd[i]->ocp == NULL)
 			return (0);
 		i++;

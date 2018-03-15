@@ -6,15 +6,16 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:22:38 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/03/13 10:22:39 by vbaudron         ###   ########.fr       */
+/*   Updated: 2018/03/15 12:28:39 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 
-int		is_failed_reg_nbr(t_exe *exe, t_arg *arg)
+int			is_failed_reg_nbr(t_exe *exe, t_arg *arg)
 {
-	if (arg && arg->type == 'r' && (arg->d_value > REG_NUMBER || arg->d_value < 1))
+	if (arg && arg->type == 'r' && (arg->d_value > REG_NUMBER
+				|| arg->d_value < 1))
 	{
 		if (exe->arg1)
 			free_arg(exe->arg1);
@@ -94,7 +95,7 @@ int			set_data(t_arg *arg, t_arena *arena, t_proc *process, int i)
 	return (1);
 }
 
-int		fill_new_exe(t_arena *arena, t_proc *process)
+int			fill_new_exe(t_arena *arena, t_proc *process)
 {
 	int	i;
 
@@ -116,7 +117,8 @@ int		fill_new_exe(t_arena *arena, t_proc *process)
 	inc_pc(process, -process->exe_op->ocp_op->size_adv);
 	if (is_failed_reg_nbr(process->exe_op, process->exe_op->arg1) == 0)
 	{
-		if (process->exe_op->arg2 && is_failed_reg_nbr(process->exe_op, process->exe_op->arg2) == 0)
+		if (process->exe_op->arg2 && is_failed_reg_nbr(process->exe_op,
+					process->exe_op->arg2) == 0)
 			is_failed_reg_nbr(process->exe_op, process->exe_op->arg3);
 	}
 	return (1);

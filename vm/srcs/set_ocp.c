@@ -6,7 +6,7 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:54:02 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/03/13 10:54:03 by vbaudron         ###   ########.fr       */
+/*   Updated: 2018/03/15 13:14:32 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ int				set_size_adv(t_ocp *ocp_j, t_bdd *bdd_i, int i)
 	ocp_j->size_arg1 = count_size_arg(ocp_j->type_arg1, is_idx);
 	ocp_j->size_arg2 = count_size_arg(ocp_j->type_arg2, is_idx);
 	ocp_j->size_arg3 = count_size_arg(ocp_j->type_arg3, is_idx);
-	ocp_j->size_adv = ocp_j->size_arg1 + ocp_j->size_arg2 + ocp_j->size_arg3 + bdd_i->has_ocp + 1;
+	ocp_j->size_adv = ocp_j->size_arg1 + ocp_j->size_arg2 +
+		ocp_j->size_arg3 + bdd_i->has_ocp + 1;
 	return (1);
 }
 
@@ -65,7 +66,7 @@ void			set_binary(t_ocp *ocp)
 	ocp->ocp += binary_val_arg(ocp->type_arg3) << 2;
 }
 
-int		set_ocp_and_size(t_bdd **bdd)
+int				set_ocp_and_size(t_bdd **bdd)
 {
 	int	i;
 	int	j;

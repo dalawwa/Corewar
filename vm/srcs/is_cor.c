@@ -6,7 +6,7 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:23:53 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/03/13 10:23:54 by vbaudron         ###   ########.fr       */
+/*   Updated: 2018/03/15 12:33:57 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 int		is_cor(char *s)
 {
 	int	len;
-	
+
 	len = (int)ft_strlen(s);
 	if (len < 4)
 		return (0);
-	if (s[len - 1] == 'r' && s[len - 2] == 'o' && s[len - 3] == 'c' && s[len - 4] == '.')
+	if (s[len - 1] == 'r' && s[len - 2] == 'o' && s[len - 3] == 'c'
+		&& s[len - 4] == '.')
 		return (1);
 	return (0);
 }

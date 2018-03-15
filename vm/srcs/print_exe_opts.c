@@ -6,7 +6,7 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:53:38 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/03/13 10:53:39 by vbaudron         ###   ########.fr       */
+/*   Updated: 2018/03/15 13:06:17 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,17 @@ void		print_exe_opts(t_arena *arena, t_exe *exe)
 		if (arena->opts->is_v16)
 		{
 			if (exe->process->pc == 0)
-				ft_printf("ADV %d (0x0000 -> %#.4x) ", exe->ocp_op->size_adv, exe->process->pc + (exe->ocp_op->size_adv));
+				ft_printf("ADV %d (0x0000 -> %#.4x) ", exe->ocp_op->size_adv,
+						exe->process->pc + (exe->ocp_op->size_adv));
 			else if (exe->process->pc + (exe->ocp_op->size_adv) == 0)
-				ft_printf("ADV %d (0x%.4x -> 0x0000) ", exe->ocp_op->size_adv, exe->process->pc);
+				ft_printf("ADV %d (0x%.4x -> 0x0000) ", exe->ocp_op->size_adv,
+						exe->process->pc);
 			else
-				ft_printf("ADV %d (0x%.4x -> 0x%.4x) ", exe->ocp_op->size_adv, exe->process->pc, exe->process->pc + exe->ocp_op->size_adv);
+				ft_printf("ADV %d (0x%.4x -> 0x%.4x) ", exe->ocp_op->size_adv,
+					exe->process->pc, exe->process->pc + exe->ocp_op->size_adv);
 			while (i < exe->ocp_op->size_adv)
 			{
-					ft_printf("%.2x ", arena->mem[get_adv(exe->process->pc + i)]);
+				ft_printf("%.2x ", arena->mem[get_adv(exe->process->pc + i)]);
 				i++;
 			}
 			ft_putchar('\n');

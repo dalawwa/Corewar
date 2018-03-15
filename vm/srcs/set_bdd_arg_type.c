@@ -6,7 +6,7 @@
 /*   By: vbaudron <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/13 10:53:55 by vbaudron          #+#    #+#             */
-/*   Updated: 2018/03/13 10:53:56 by vbaudron         ###   ########.fr       */
+/*   Updated: 2018/03/15 13:07:46 by bfruchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ void	set_args_type3(t_bdd *bdd_i)
 	bdd_i->ocp[5]->type_arg2 = 'd';
 	bdd_i->ocp[5]->type_arg3 = 'r';
 }
-
 
 void	set_args_type2(t_bdd *bdd_i)
 {
@@ -100,7 +99,6 @@ void	set_args_type1(t_bdd *bdd_i, int i)
 		bdd_i->ocp[0]->type_arg1 = 'r';
 		bdd_i->ocp[0]->type_arg2 = 'r';
 		bdd_i->ocp[0]->type_arg3 = 'r';
-		
 	}
 }
 
