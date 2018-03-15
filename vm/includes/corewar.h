@@ -1,15 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   corewar.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bfruchar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/03/15 13:16:27 by bfruchar          #+#    #+#             */
+/*   Updated: 2018/03/15 13:59:36 by bfruchar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef COREWAR_H
 # define COREWAR_H
 # include "../../libft/includes/libft.h"
 # include "../../libft/includes/get_next_line.h"
 # include "../../libft/includes/ft_printf.h"
 # include <fcntl.h>
-
-//typedef int		(*t_fct)(struct s_vm*, struct s_exe*);
-// op.h
-//
-
-// checker la taille des datas...
 
 # define IND_SIZE				2
 # define REG_SIZE				4
@@ -42,17 +48,12 @@
 # define NBR_LIVE				21
 # define MAX_CHECKS				10
 
-/*
- * **
- * */
-
 typedef char					t_arg_type;
 
 # define T_REG					1
 # define T_DIR					2
 # define T_IND					4
 # define T_LAB					8
-
 
 # define PROG_NAME_LENGTH		(128)
 # define COMMENT_LENGTH			(2048)
@@ -69,8 +70,8 @@ typedef struct	s_header
 }				t_header;
 
 /*
- * FIN DE op.h
- */
+** FIN DE op.h
+*/
 
 typedef struct	s_opt
 {
@@ -89,7 +90,7 @@ typedef struct	s_opt
 	int		show_op;
 	int		show_death;
 	int		show_live;
-	int		show_pc_mvt; 
+	int		show_pc_mvt;
 	int		s;
 	int		current_s;
 	int		has_a;
@@ -189,14 +190,14 @@ typedef struct	s_arena
 typedef struct	s_ocp
 {
 	unsigned char		ocp;
-	int		size_adv;
-	char	type_arg1;
-	int		size_arg1;
-	char	type_arg2;
-	int		size_arg2;
-	char	type_arg3;
-	int		size_arg3;
-	int		(*fct)(t_arena*, t_exe*);
+	int					size_adv;
+	char				type_arg1;
+	int					size_arg1;
+	char				type_arg2;
+	int					size_arg2;
+	char				type_arg3;
+	int					size_arg3;
+	int					(*fct)(t_arena*, t_exe*);
 }				t_ocp;
 
 typedef struct	s_bdd
@@ -211,12 +212,13 @@ typedef struct	s_bdd
 	char			*meaning;
 }				t_bdd;
 
-/* 
- * Create ARENA 
- */
+/*
+** Create ARENA
+*/
 int				init_arena(t_arena **arena);
 int				check_opts(t_arena *arena, int ac, char **av);
-int				check_opts_flags(t_opt *opts, int *flag_indx, int ac, char **av);
+int				check_opts_flags(t_opt *opts, int
+		*flag_indx, int ac, char **av);
 void			set_v_values(t_opt *opts, int val);
 int				create_arena(int ac, char **av, t_arena **arena);
 int				*get_fds(t_arena **arena, int ac, char **av);
@@ -224,9 +226,9 @@ int				is_cor(char *s);
 void			close_cors(t_arena *arena);
 int				create_mem(t_arena *arena);
 
-/* 
- * Create PLAYERS 
- */
+/*
+** Create PLAYERS
+*/
 int				create_players(t_arena *arena);
 int				has_nb_magic(t_file *file);
 unsigned char	*add_that(unsigned char *body, char c, int where);
@@ -234,35 +236,35 @@ unsigned char	*clean_body(unsigned char *body, t_play **player);
 char			*find_comment(t_file *file);
 char			*find_name(t_file *file);
 
-/* 
- * Create BDD 
- */
+/*
+** Create BDD
+*/
 int				create_bdd(t_arena *arena);
 int				create_ocp(t_bdd *bdd_i, int i, int j);
 int				set_bdd_ocp(t_arena *arena);
 int				set_ocp_and_size(t_bdd **bdd);
 int				set_args_type(t_bdd *bdd_i, int i);
 
-/* 
- * Setup Match
- */
+/*
+** Setup Match
+*/
 int				setup_players(t_arena *arena);
 int				initialized_start_process(t_arena *arena);
 
-
-/* 
- * Gestion PROCESS & EXE
- */
-int				create_new_process(t_arena *arena, t_play *player, t_proc *parent);
+/*
+** Gestion PROCESS & EXE
+*/
+int				create_new_process(t_arena *arena, t_play *player,
+		t_proc *parent);
 void			copy_parent_data(t_proc *parent, t_proc *son);
 int				create_new_exe(t_arena *arena, t_proc *process);
 int				fill_new_exe(t_arena *arena, t_proc *process);
 int				set_args_values(t_proc *process, t_arena *arena, int *i);
 int				set_data(t_arg *arg, t_arena *arena, t_proc *process, int i);
 
-/* 
- * OP
- */
+/*
+** OP
+*/
 int				op_ld(t_arena *arena, t_exe *exe);
 int				op_lld(t_arena *arena, t_exe *exe);
 int				op_lldi(t_arena *arena, t_exe *exe);
@@ -280,9 +282,9 @@ int				op_fork(t_arena *arena, t_exe *exe);
 int				op_lfork(t_arena *arena, t_exe *exe);
 int				op_zjmp(t_arena *arena, t_exe *exe);
 
-/* 
- * Gestion MATCH & OP
- */
+/*
+** Gestion MATCH & OP
+*/
 int				get_adv(int adv);
 void			go_match(t_arena *arena);
 int				deal_exe(t_arena *arena);
@@ -297,18 +299,18 @@ int				find_pc_adv(int pc, int adv, int stop);
 int				is_valid_ocp(int opcode, int ocp);
 
 /*
- * Gestion PRINT
- */
-int   			print_usage(void);
+** Gestion PRINT
+*/
+int				print_usage(void);
 void			print_exe_opts(t_arena *arena, t_exe *exe);
 void			print_proc_num_name(t_exe *exe);
 void			print_add_sub(t_arena *area, t_exe *exe);
 void			print_failed_exe(t_arena *arena, t_exe *exe, int size);
 void			print_mem(t_arena *arena);
 
-/* 
- * FREE Memory
- */
+/*
+** FREE Memory
+*/
 void			free_arena(t_arena **arena);
 void			free_fds(int **fds);
 void			free_opts(t_opt *opts);
@@ -317,9 +319,9 @@ void			free_bdd(t_bdd **bdd);
 void			free_exe(t_exe *exe, t_proc *process);
 void			free_arg(t_arg *arg);
 
-/* 
- * UTILS
- */
+/*
+** UTILS
+*/
 int				ft_abs(int n);
 unsigned char	*ft_unsi_strdup(unsigned char *s, int len);
 unsigned char	*ft_ito_hexa(uintmax_t n);
