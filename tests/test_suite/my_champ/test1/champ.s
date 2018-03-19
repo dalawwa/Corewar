@@ -1,21 +1,11 @@
-.name "champ"
+.name "champ.s"
 .comment "let's make it"
 
 sti  r1, %8, %0
 live    %0
-fork %-12
-sti  r1, %8, %0
-live    %0
-fork %-24
-sti  r1, %8, %0
-live    %0
-fork %-36
-sti  r1, %8, %0
-live    %0
-fork %-48
-sti  r1, %8, %0
-live    %0
-fork %-60
-sti  r1, %8, %0
-live    %0
-fork %-72
+sti r1, %43, %0
+ld %1, r2
+sti r2, %29, %-4
+ldi -16, %0, r3
+sti r3, %-23, %33
+fork %-47
